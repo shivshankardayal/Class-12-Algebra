@@ -1,0 +1,145 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic Progression}
+
+\author[Shiv Shankar Dayal]
+       {
+	       Shiv Shankar Dayal
+       }
+
+       % The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+
+\begin{frame}{Sequence and Series}
+  \textbf{Sequence:} A succession of numbers $t_1, t_2, t_3, \ldots ,t_n,
+  \ldots$ formed according to some definite rule is called a sequence. $t_1,
+  t_2, t_3, \ldots, t_n$ are called first, second, third, \ldots, $n$th term
+  respectively.
+
+  Alternatively, a sequence is a function whose domain is the set of natural
+  numbers $N$ or a subset of $N$ and range is a set of real numbers.
+
+  \textbf{Finite and Infinite Sequences:} A sequnece is called a finite
+  sequence if it has finite number of elements and is called an infinite
+  sequence if it has infinite number of elements.
+
+  \textbf{Series:}By adding or subtracting the terms of a sequence, we get an
+  expression which is called a series. If $a_1, a_2, a_3, \ldots, a_n$` is a
+  sequence then $a_1 + a_2 + a_3 + \ldots +a_n$ is a series.
+
+  \textbf{Progression:} It is not mandatory for terms of a sequence to follow a
+  pattern or formula for its $n$th term but when it does it is called a
+  progression.
+
+  \textbf{Arithmetic Progression:} It is a progression where consecutive terms
+  differ by a constant known as common difference.\\
+  Examples: \\$1 + 2 + 3 + 4 + \ldots + 10$\linebreak
+  $20 + 18 + 16 + 14 \ldots + 2$
+\end{frame}
+
+\begin{frame}{$n$th term of an Arithmetic Progression}
+  Let $a$ be the first term and $d$ be the common difference of an A. P., then
+
+  \vspace*{.5cm}
+  \begin{tabular}{ll}
+  First term &$t_1 = a = a + (1 - 1)d$\\
+  Second term &$t_2 = a + d = a + (2 - 1)d$\\
+  Third term &$t_3 = a + 2d = a + (3 - 1)d$\\
+  ...............................&\\
+  $n$th term &$t_n = a + (n - 1)d$
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{To find the sum of $n$ terms of an A.P.}
+  Let $a$ be the first term, $d$ the c.d., $t_n$ the $n$th term and $S_n$ the
+  sum of $n$ terms of an A. P.
+
+  $$S_n = a + (a + d) + (a + 2d) + \ldots + (t_n - 2d) + (t_n - d) + t_n$$
+  $$S_n = t_n + (t_n - d) + (t_n - 2d)+ \ldots + (a - 2d) + (a - d) + a$$
+
+  Adding these two we get
+
+  $$2S_n = (a + t_n) + (a + t_n) + (a + t_n) + \ldots + (a + t_n) + (a + t_n) +
+  (a + t_n)$$
+
+  $$= (a + t_n) + (a + t_n) + \ldots \text{to}~n~\text{terms}$$
+  $$= n(a + t_n)$$
+  $$\therefore S_n = \frac{n}{2}(a + t_n)$$
+  $$= \frac{n}{2}[a + a + (n - 1)d]$$
+  $$\therefore S_n = \frac{n}{2}[2a + (n - 1)d]$$
+\end{frame}
+
+\begin{frame}{Properties of an A.P.}
+  If the same quantity is added to or subtracted from all the terms of an A.P.,
+  the resulting progression is also an arithmetic progression.
+
+  \textbf{Proof:}\\
+  \begin{tabular}{lll}
+    Given A. P. & Sequence after adding $k$ to each &
+    Sequence after subtracting $k$ from each \\
+    &term of given A.P.&term of given A.P.\\
+    $t_1 = a$ & $t_1 = a + k$ & $t_1 = a - k$\\
+    $t_2 = a + d$ & $t_1 = a + d + k$ & $t_1 = a + d - k$\\
+    $t_3 = a + 3d$ & $t_1 = a + 2d + k$ & $t_1 = a + 2d - k$\\
+    \ldots&\ldots & \ldots\\
+    $t_n = a + (n - 1)d$ & $t_n = a + (n - d) - k$ & $t_n = a + (n - 1)d - k$
+  \end{tabular}
+  
+  Clearly, each term changes by $k$ but the common difference remains same
+  making resulting series arithmetic progression as well.
+\end{frame}
+\begin{frame}{Properties of an A.P.}
+  If the corresponsing terms of two arithmetic progressions be added or
+  subtracted, the resulting progression is also an arithmetic progression.
+
+  \textbf{Proof:}\\
+  \begin{tabular}{lll}
+    Terms of first A. P.&Terms of second A.P.&Terms of A.P. after addition\\
+    $a_1$&$a_2$&$a_1 + a_2$\\
+    $a_1 + d_1$&$a_2 + d_2$&$a_1 + a_2 + d_1 + d_2$\\
+    $a_1 + 2d_1$&$a_2 + 2d_2$&$a_1 + a_2 + 2d_1 + 2d_2$\\
+    \ldots & \ldots & \ldots
+  \end{tabular}
+
+    Clearly, addition results in a new A.P. with first terms as sum of first
+    terms and common difference as sum of common differences.
+\end{frame}
+\begin{frame}{Properties of an A.P.}
+  If all the terms of an A.P. are multiplies or divided by some constant then
+  the resulting progression is also an A. P.
+
+  \textbf{Proof:}\\
+  \begin{tabular}{lll}
+    Original A.P.&A.P. after multuplication& A.P. after division\\
+    $a$& $ak$ & $\frac{a}{k}$\\
+    $a + d$ & $(a + d)k$ & $\frac{a + d}{k}$\\
+    $a + 2d$ & $(a + 2d)k$ & $\frac{a + 2d}{k}$\\
+    \ldots & \ldots & \ldots
+  \end{tabular}
+
+  Clearly, in case of multiplication new first term is $ak$ and common
+  difference is $dk$ while in case of division new first term is $\frac{a}{k}$
+  and common difference is $\frac{d}{k}$
+\end{frame}
+\end{document}

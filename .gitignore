@@ -1,0 +1,8 @@
+*
+!LICENSE
+!*.tex
+!.gitignore
+!*.pdf
+!arithmetic-progression/
+!arithmetic-progression/*.tex
+!arithmetic-progression/*.pdf
