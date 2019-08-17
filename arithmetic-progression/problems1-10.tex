@@ -1,0 +1,137 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Problems and Solutions on A.P.}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+
+\begin{frame}{Problem 1}
+  \textbf{1.} If $n$th term of a sequence is $2n^2 + 1,$ find the sequence. Is
+  this seuquence in A.P.?
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} Given $t_n = 2n^2 + 1$\\
+  Putting $n = 1$, we get $t_1 = 2.1^2 + 1 = 3$\\
+  Putting $n = 2$, we get $t_2 = 2.2^2 + 1 = 9$\\
+  Putting $n = 3$, we get $t_3 = 2.3^2 + 1 = 19$\\
+  Putting $n = 4$, we get $t_4 = 2.4^2 + 1 = 33$\\
+  \ldots
+
+  Hence, given sequence is $3, 9, 19, 33, \ldots$
+
+  $t_{n - 1} = 2.(n - 1)^2 + 1$
+
+  $t_n - t_{n - 1} = 2n^2 + 1 - 2.(n - 1)^2 + 1$
+
+  $= 2n^2 + 1 - [2(n^2 - 2n + 1) + 1)]$
+
+  $= 4n - 2$
+
+  The difference is not independent of $n$ i.e. it is not a constant. Thus
+  given seuqence is not in A.P.
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} Find the first five terms of the sequence for which $t_1 = 1, t_2
+  = 2$ and $t_{n + 2} = t_n + t_{n + 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} Putting $n = 1$, we get $t_3 = t_1 + t_2 = 1 + 2 = 3$\\
+  Putting $n = 2$, we get $t_4 = t_2 + t_3 = 2 + 3 = 5$\\
+  Putting $n = 3$, we get $t_5 = t_3 + t_4 = 3 + 5 = 8$\\
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} Write the sequence whose $n$th term is $3n + 5$
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} Putting $n = 1$, we get $t_1 = 3.1 + 5 = 8$\\
+  Putting $n = 2$, we get $t_2 = 3.2 + 5 = 11$\\
+  Putting $n = 3$, we get $t_3 = 3.3 + 5 = 14$
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} Write the sequence whose $n$th term is $2n^2 + 3$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution:} Putting $n = 1$, we get $t_1 = 2.1^2 + 3 = 5$\\
+  Putting $n = 2$, we get $t_2 = 2.2^2 + 3 = 11$\\
+  Putting $n = 3$, we get $t_3 = 2.3^2 + 3 =21$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} Write the sequence whose $n$th term is $\frac{3n}{2n + 4}$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} Putting $n = 1$, we get $t_1 = \frac{3.1}{2.1 + 4} = \frac{3}{6} = \frac{1}{2}$\\
+  Putting $n=2$, we get $t_2 = \frac{3.2}{2.2 + 4} = \frac{6}{8} = \frac{3}{4}$\\
+  Putting $n=3$, we get $t_3 = \frac{3.3}{2.3 + 4} = \frac{9}{10}$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} Write the first three terms of sequence defined by $t_1 = 2, t_{n + 1} = \frac{2t_n + 1}{t_n + 3}$
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:} Putting $n=1$, we get $t_{1 + 1} = \frac{2t_1 + 1}{t_1 + 3} = \frac{2.2 + 1}{2 + 3} = 1$\\
+  Putting $n=2$, we get $t_{2 + 1} = \frac{2.1 + 1}{1 + 3} = \frac{3}{4}$
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} If $n$th term of a sequence is $4n^2 + 1$, find the sequence. Is this sequence an A.P.?
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{Solution:} Putting $n = 1$, we get $t_1 = 4.1^2 + 1 = 5$\\
+  Putting $n = 2$, we get $t_2 = 4.2^2 + 1 = 17$\\
+  Putting $n = 3$, we get $t_3 = 4.3^2 + 1 = 37$\\
+
+  $t_n - t_{n - 1} = 4n^2 + 1 - 4(n - 1)^2 - 1 = 8n + 4$, which is not
+  independent of $n$ i.e. it is not a constant. Therefore, the sequence is not
+  an A.P.
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} If $n$th term of a sequence is $2an + b$, where $a, b$ are
+  constants, is this sequence an A.P.?
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} $t_n - t_{n - 1} = 2an + b - 2a{n - 1} - b = 2a$ which is
+  independent of $n$ i.e. a constant. Therefore, the sequence is an A.P.
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} Find the 5th term of the sequence whose first three terms are $3,
+  3, 6$ and each term after the second is the sum of two preceding terms.
+\end{frame}
+\begin{frame}{Solution of Problem 9}
+  \textbf{Solution:} Since each term after the second is the sum of two preceding terms $t_n =
+  t_{n - 1} + t_{n - 2}$\\
+  Putting $n=4$, we get $t_4 = t_3 + t_2 = 6 + 3 = 9$\\
+  Putting $n=5$, we get $t_5 = t_4 + t_3 = 9 + 6 = 15$
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} Consider the sequence defined by $t_n = an^2 + bn + c$. If $t_1
+  = 1, t_2 = 5$ and $t_3 = 11$ then find the value of $t_{10}$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:} $t_1 = 1 \Rightarrow a + b + c = 1$\\
+  $t_2 = 5 \Rightarrow 4a + 2b + c = 5$\\
+  $t_3 = 11 \Rightarrow 9a + 3b + c = 11$\\
+  Solving the three equations we get $a = 1, b = 1,c = -1$\\
+  $t_{10} = 100 + 10 - 1 = 109$
+\end{frame}
+\end{document}
