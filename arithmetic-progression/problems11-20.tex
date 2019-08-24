@@ -1,0 +1,150 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Problems 11 to 20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+
+\begin{frame}{Problem 11}
+  \textbf{11.} Show that the seuquence $9, 12, 15, 18, \ldots$ is an A.P. Find
+  its $16^{th}$ term and the general term.
+\end{frame}
+\begin{frame}{Solution of problem 11}
+  \textbf{Solution:} Since $12 - 9 = 15 - 12 = 18 - 15 = 3$, which is a constant, therefore given
+  sequence is an A.P. having common difference as $3$ and first term as $9$.
+
+  $t_{16} = a + (16 - 1)d = 9 + 15.3 = 54$
+
+  The general term or $n^{th}$ term is given by $t_n = a + (n - 1)d = 9 + (n -
+  1)3$\\
+  $t_n = 3n + 6$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} Show that the sequence $\log a, \log (ab), \log(ab^2),
+  \log (ab^3), \ldots$ is an A.P. Find its $n^{th}$ term.
+\end{frame}
+\begin{frame}{Solution of problem 12}
+  \textbf{Solution:} We have,
+
+  $\log(ab) - \log a = \log \left(\frac{ab}{a}\right) = \log b$
+
+  $\log(ab^2) - \log (ab) = \log \left(\frac{ab^2}{ab}\right) = \log b$
+
+  $\log(ab^3) - \log (ab^2) = \log \left(\frac{ab^3}{ab^2}\right) = \log b$
+
+  Since the difference of a term and the preceding term is alwyas same,
+  therefore the given sequence is an A.P. Now,
+
+  $t_n = a + (n - 1)d = \log a + (n - 1)\log b = \log(ab^{n - 1})$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} Find the sum to $n$ terms of the sequence $\langle t_n \rangle$,
+  where $t_n = 5 -6n, n\in N$
+\end{frame}
+\begin{frame}{Solution of problem 13}
+  \textbf{Solution:} $t_{n + 1} - t_n = 5 - 6(n + 1) - 5 + 6n = -6 \forall n
+  \in N$ which is constant, therefore the given sequence is an A.P.\\
+  Putting $n = 1,$ we get $t_1 = 5 - 6.1 = -1$, so the sum $S_n$ to $n$ term is
+  given by\\
+  $S_n = \frac{n}{2}[t_1 + t_n] = \frac{n}{2}[-1 + 5 - 6n] = n(2 - 3n)$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} How many terms are there in the A.P. $3, 7, 11, \ldots, 407?$
+\end{frame}
+\begin{frame}{Solution of problem 14}
+  \textbf{Solution:} From first three terms we have $a = 3, d = 7 - 3 = 11 - 7
+  = 4$\\
+  Formula for general term is $t_n = a + (n - 1)d\Rightarrow 407 = 3 + (n - 1)4
+  \Rightarrow n = 102$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} If $a, b, c, d, e$ are in A.P. find the value of $a - 4b + 6c -
+  4d + e.$
+\end{frame}
+\begin{frame}{Solution of problem 15}
+  \textbf{Solution:} Let $p$ be the first term and $q$ be the common
+  difference. Then we have,
+  $p = a, p + q = b, p + 2q = c, p + 3q = d, p + 4q = e$\\
+  Thus, we see that $a + e = 2c, b + d = 2c$\\
+  Now, $a - 4b + 6c - 4d + e = (a + e) - 4(b + d) + 6c = 2c - 8c + 6c = 0$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} In a certain A.P. $5$ times the $5^{th}$ term is equal to $8$
+  times the $8^{th}$ term, then prove that $13^{th}$ term is zero.
+\end{frame}
+\begin{frame}{Solution of problem 16}
+  \textbf{Solution:} Given $5.t_5 = 8.t_8$\\
+  $5(a + 4d) = 8(a + 7d),$ where $a$ is the first term and $d$ is the common
+  difference.\\
+  $\Rightarrow a + 12d = 0 \Rightarrow t_{13} = 0$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} Find the term of the series $25, 22\frac{3}{4}, 20\frac{1}{2},
+  18\frac{1}{4}, \ldots$ which is numerically smallest positive number.
+\end{frame}
+\begin{frame}{Solution of problem 17}
+  \textbf{Solution:} The given series is an A.P. with $a = 25, d = -9/4$\\
+  $t_n = 25 + (n - 1)\frac{-9}{4} = \left(25 + \frac{9}{4}\right) -
+  \frac{9}{4}n$\\
+  $\Rightarrow t_n = \frac{109}{4} - \frac{9}{4}n$\\
+  Now $t_n$ will be negative if $\frac{109}{4} - \frac{9}{4}n < 0$ or $n > 12\frac{1}{9}$\\
+  Hence, $t_{12}$ will be smallest positive number. $t_{12} = \frac{1}{4}$
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} A person was appointed in the pay scale of Rs. $700 - 40 -
+  1500.$ Find in how many years he will reach the maximum of the scale.
+\end{frame}
+\begin{frame}{Solution of problem 18}
+  \textbf{Solution:} Given, $t_n = 1500, a = 700, d = 40$\\
+  $\because t_n = a + (n - 1)d$\\
+  $\therefore 1500 = 700 + (n - 1)40 \Rightarrow n = 21$\\
+  Hence, he will reach the maximum scale in $20$ years because his pay in $20$
+  years will be $a + 20d = 21^{st}~\text{term}~1500$
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.} Find the A.P. whose $7^{th}$ and $13^{th}$ terms are respectively $34$ and $64.$
+\end{frame}
+\begin{frame}{Solution of problem 19}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the c.d.\\
+  $t_7 = a + 6d = 34$\\
+  $t_{13} = a + 12d = 64$\\
+  Subtracting we get, $6d =30 \Rightarrow d = 5$\\
+  Substituting for $t_7$ we get, $a + 30 = 34 \Rightarrow a = 4$\\
+  Thus, our A.P.is $4, 9, 14, 19, \ldots$
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} Is $55$ a term of the sequence $1, 3, 5, 7, \ldots$? If yes,
+  find which term it is.
+\end{frame}
+\begin{frame}{Solution of problem 20}
+  \textbf{Solution:} Clearly, $a = 1$ and $d = 3 - 1 = 5 - 3 = 7 - 5 = 2$\\
+  Let $55$ be the $n^{th}$ term of the series. Then we have $55 = 1 + (n - 1)2$\\
+  $\Rightarrow 55 = 1 + 2n - 2 = 2n - 1$\\
+  $\Rightarrow 56 = 2n \Rightarrow n = 28$\\
+  Since $n$ is an integer $55$ is a member of A.P. and it is $28^{th}$ term of
+  the A.P.
+\end{frame}
+\end{document}
