@@ -1,0 +1,165 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Problems 21 to 30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+
+\begin{frame}{Problem 21}
+  \textbf{21.} Find the first negative term of the sequence $2000, 1995, 1990,
+  \ldots$
+\end{frame}
+\begin{frame}{Solution of problem 21}
+  \textbf{Solution:} Clearly, $a = 2000, d = 2000 - 1995 = 1995 -1900 = 5$\\
+  Let $t_n$ be the first negative term, then we have\\
+  $a + (n - 1)d < 0 \Rightarrow 2000 + (n - 1)5 < 0 \Rightarrow -5n + 2005 <
+  0$\\
+  $\Rightarrow n > 401 \therefore n = 402$ least value for which $n > 401$\\
+  Thus, $402^{nd}$ term will be first negative term.\\
+  $t_{402} = 2000 + (402 - 1)5 = -5$
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} How many terms are identical in two arithmetic progressions $2,
+  4, 6, 8, \ldots$ up to $100$ terms and $3, 6, 9, \ldots$ up to $80$ terms.
+\end{frame}
+\begin{frame}{Solution of problem 22}
+  \textbf{Solution:} Let $r$ terms be identical. Now the sequence of identical terms is $6, 12,
+  18, \ldots$\\
+  $t_r = a + (r - 1)d = 6 + (r - 1)6 = 6r$\\
+  $100^{th}$ term of the sequence $2, 4, 6, \ldots = 2 + (100 - 1)2 = 200$\\
+  $80^{th}$ term of the sequence $3, 6, 9, \ldots = 3 + (80 - 1)3 = 240$\\
+  Thus, $r^{th}$ term of the sequence of identical terms cannot be greater than
+  $200$\\
+  $6r \leq 200 \Rightarrow r \leq 33\frac{1}{3} \Rightarrow r = 33$\\
+  Hence, $33$ terms are identical.
+\end{frame}
+\begin{frame}{Problem 23}
+  \textbf{23.} Find the number of all positive integers of $3$ digits which are
+  divisible by $5.$
+\end{frame}
+\begin{frame}{Solution of problem 23}
+  \textbf{Solution.} Smallest $3$ digit number divisible by $5 $is $100$ and
+  largest is $995.$\\
+  Clearly, we have $a = 100, d = 5, t_n = 995$\\
+  $t_n = 100 + (n - 1)5 \Rightarrow 995 = 95 + 5n \Rightarrow 900 = 5n
+  \Rightarrow n = 180$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} Is $105$ a term of the arithmetic progression $4, 9, 14, \ldots ?$
+\end{frame}
+\begin{frame}{Solution of problem 24}
+  \textbf{Solution:} $a = 4, d = 9 - 4 = 14 - 9 = 5$\\
+  Let $105$ be $n^{th}$ term of the arithmetic progression.\\
+  $t_n = a + (n - 1)d \Rightarrow 105 = 4 + (n - 1)5 \Rightarrow 106 = 5n$\\
+  Since $n$ is not an integer $105$ is not a member of the given arithmetic progression.
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} Find the first negative term of the sequence $999, 995, 991, \ldots$
+\end{frame}
+\begin{frame}{Solution of problem 25}
+  \textbf{Solution.} $a = 999, d = 995 - 999 = 991 - 995 = -4$\\
+  Let $n^{th}$ term is first negative number.\\
+  $t_n = a + (n - 1)d = 999 + (n - 1)(-4) = 1003 - 4n < 0 \Rightarrow n >
+  \frac{1003}{4}$\\
+  Least integral value of $n$ is $251.$\\
+  $\therefore t_n = 999 + (251 - 1)(-4) = -1$
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} Each of the series $3 + 5 + 7 + \ldots$ and $4 + 7 + 10 +
+  \ldots$ is continued to $100$ term. Find how many terms are identical?
+\end{frame}
+\begin{frame}{Solution of problem 26}
+  \textbf{Solution:} $a = 7$ and $d = 6$\\
+  Last term of first series $t_{100} = 3 + (100 - 1)2 = 201$\\
+  Last term of second series $t_{100} = 4 + (100 - 1)3 = 301$\\
+  Clearly, last term of series of common terms $t_n < 201$\\
+  $7 + (n - 1)6 < 201 \Rightarrow 6n < 200 \Rightarrow n < 33\frac{1}{3}$\\
+  Least integral value of $n = 33$
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} If $m$ tims the $m^{th}$ term of an A.P. is equal to $n$ times
+  the $n^{th}$ term, find its $(m + n)^{th}$ term.
+\end{frame}
+\begin{frame}{Solution of problem 27}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of the A.P.\\
+  Given $nt_n = mt_m$\\
+  $\therefore n[a + (n - 1)d] = m[a + (m - 1)]d$\\
+  $(m - n)a = d[n(n - 1) - m(m - 1)]$\\
+  $(m - n)a = [n^2 - n - m^2 + m]d$\\
+  $(m - n)a = -(m - n)(m + n - 1)d$\\
+  $a = -(m + n - 1)d$\\
+  Now, $t_{m + n} = a + (m + n - 1)0 = a - a = 0$
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} If $a, b, c$ be the $p^{th}, q^{th}$ and $r^{th}$ terms respectively of an
+  A.P., prove that $a(q - r) + b(r - p) + c(p - q) = 0$
+\end{frame}
+\begin{frame}{Solution of problem 28}
+  \textbf{Solution:} Let $x$ be the first term and $d$ be the common difference
+  of A.P.\\
+  $t_p = a = x + (p - 1)d$\\
+  $t_q = b = x + (q - 1)d$\\
+  $t_r = c = x + (r - 1)d$\\
+  $t_p - t_r = a - c = (p - r)d$\\
+  $t_q - t_p = b - a = (q - p)d$\\
+  $t_r - t_q = c - b = (r - q)d$\\
+  Now, $a(q - r) + b(r - p) + c(p - q) = q(a - c) + r(b - a) + c(p - q)$\\
+  $= q(p - r)d + r(q - p)d + p(r - q)d$\\
+  $= 0$
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} Find the number of integers between $100$ and $1000$ that are
+  divisible by $7$ and not divisible by $7.$
+\end{frame}
+\begin{frame}{Solution of problem 29}
+  \textbf{Solution:} First number between $100$ and $1000$ divisible by $7 =
+  105$ and last number $= 994$\\
+  Hencer $a = 105, d = 7, t_n = 994$\\
+  $t_n = 994 = 105 + (n - 1)5$\\
+  $896 = 7n \therefore n = 128$\\
+  Numbers not divisible by $7 = $ Total number of numbers between $100$ and
+  $1000$ - number of numbers between $100$ and $1000$ divisible by $7$\\
+  $= 899 - 128 = 771$
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} If $a, b, c$ be the $p^{th}, q^{th}$ and $r^{th}$ terms respectively of an
+  A.P., prove that $(a - b)r + (b - c)p + (c - a)q = 0$
+\end{frame}
+\begin{frame}{Splution of problem 30}
+  \textbf{Solution:} Let $x$ be the first term and $d$ be the common difference
+  of the A.P.\\
+  $t_p = a = x + (p - 1)d$\\
+  $t_q = b = x + (q - 1)d$\\
+  $t_r = c = x + (r - 1)d$\\
+  $t_p - t_q = a - b = (p - q)d$\\
+  $t_q - t_r = b - c = (q - r)d$\\
+  $t_r - t_p = c - a = (r - p)d$\\
+
+  Now, $(a - b)r + (b - c)p + (c - a)q$\\
+  $= d[(p - q)r + (q - r)p + (r - p)q]$\\
+  $= 0$
+\end{frame}
+\end{document}
