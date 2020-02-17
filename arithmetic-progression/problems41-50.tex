@@ -1,0 +1,162 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Problems 41 to 50}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 41}
+  \textbf{41.} If $(b + c - a)/a, (c + a - b)/b, (a + b - c)/c$ are in
+  A.P. then prove that $1/a, 1/b, 1/c$ are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 41}
+  \textbf{Solution:} $\frac{b + c - a}{a}, \frac{c + a - b}{b}, \frac{a + b -
+    c}{c}$ are in A.P.\\
+  Adding $2$ to each term\\
+  $\frac{b + c - a}{a} + 2, \frac{c + a - b}{b} + 2, \frac{a + b - c}{c} + 2$
+  are in A.P.\\
+  $\frac{a + b + c}{a}, \frac{a + b + c}{b}, \frac{a + b + c}{c}$ are in A.P.\\
+  Dividing each term by $a + b + c$\\
+  $\frac{1}{a}, \frac{1}{b}, \frac{1}{c}$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 42}
+  \textbf{42.} If $a, b, c \in R+$ form an A.P., then prove that $a + 1/bc, b +
+  1/ca, c + 1/ab$ are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 42}
+  \textbf{Solution:} $a, b, c$ are in A.P.\\
+  Dividing each term by $abc$\\
+  $1/bc, 1/ca, 1/ab$ are in A.P.\\
+  Adding the two A.Ps.\\
+  $a + 1/bc, b + 1/ca, c + 1/ab$ are also in A.P.
+\end{frame}
+\begin{frame}{Problem 43}
+  \textbf{43.} If $a, b, c$ are in A. P., then prove that $a^2(b + c), b^2(c +
+  a), c^2(a + b)$ are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 43}
+  \textbf{Solution:} $a, b, c$ are in A.P.\\
+  $\Rightarrow b - a = c - b$\\
+  $\Rightarrow (b - a)(ab + bc + ca) = (c - b)(ab + bc + ca)$\\
+  $\Rightarrow b^2(c + a) - a^2(b + c) = c^2(a + b) - b^2(c + a)$\\
+  $a^2(b + c), b^2(c + a), c^2(a + b)$ are also in A.P.
+\end{frame}
+\begin{frame}{Problem 44}
+  \textbf{44.} If $a, b, c$ are in A.P., then prove that $\frac{1}{\sqrt{b} +
+    \sqrt{c}}, \frac{1}{\sqrt{c} + \sqrt{a}}, \frac{1}{\sqrt{a} + \sqrt{b}}$
+  are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 44}
+  \textbf{Solution:} $a, b, c$ are in A.P.\\
+  $\Rightarrow b - a = c - b$\\
+  $\Rightarrow \frac{\sqrt{b} - \sqrt{a}}{\sqrt{b} + \sqrt{c}} = \frac{\sqrt{c}
+    - \sqrt{b}}{\sqrt{a} + \sqrt{b}}$\\
+  $\Rightarrow \frac{\sqrt{b} - \sqrt{a}}{(\sqrt{c} + \sqrt{a})(\sqrt{b} +
+    \sqrt{c})} = \frac{\sqrt{c} - \sqrt{b}}{(\sqrt{a} + \sqrt{b})(\sqrt{c} +
+    \sqrt{a})}$\\
+  $\Rightarrow \frac{1}{\sqrt{c} + \sqrt{a}} - \frac{1}{\sqrt{b} + \sqrt{c}} =
+  \frac{1}{\sqrt{a} + \sqrt{b}} - \frac{1}{\sqrt{c} + \sqrt{a}}$\\
+  $\frac{1}{\sqrt{b} + \sqrt{c}}, \frac{1}{\sqrt{c} + \sqrt{a}},
+  \frac{1}{\sqrt{a} + \sqrt{b}}$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 45}
+  \textbf{45.} If $a, b, c$ are in A.P., then prove that $a\left(\frac{1}{b} +
+  \frac{1}{c}\right), b\left(\frac{1}{c} + \frac{1}{a}\right),
+  c\left(\frac{1}{a} + \frac{1}{b}\right)$ are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 45}
+  \textbf{Solution:} $a, b, c$ are in A.P.\\
+  Dividing each term by $abc$\\
+  $\frac{1}{bc}, \frac{1}{ca}, \frac{1}{ab}$ are in A.P.\\
+  Multiplying each term by $ab +bc + ca$\\
+  $\frac{ab + bc + ca}{bc}, \frac{ab + bc + ca}{ca}, \frac{ab + bc + ca}{ab}$
+  are in A.P.\\
+  Subtracting $1$ from each term\\
+  $\frac{ab + ca}{bc}, \frac{ab + bc}{ca}, \frac{bc + ca}{ab}$ are in A.P.\\
+  $a\left(\frac{1}{b} + \frac{1}{c}\right), b\left(\frac{1}{c} +
+  \frac{1}{a}\right), c\left(\frac{1}{a} + \frac{1}{b}\right)$ are also in
+  A.P.
+\end{frame}
+\begin{frame}{Problem 46}
+  \textbf{46.} If $(b - c)^2, (c - a)^2, (a - b)^2$ are in A.P. then prove that
+  $\frac{1}{b - c}, \frac{1}{c - a}, \frac{1}{a - b}$ are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 46}
+  \textbf{Solution:} $(b - c)^2, (c - a)^2, (a - b)^2$ are in A.P.\\
+  Adding $ab + bc + ca - a^2 - b^2 - c^2$ to each term\\
+  $ab + ca - bc - a^2, ab + bc - ca - b^2, bc + ca - ab - c^2$ are in A.P.\\
+  $(c - a)(a - b), (a - b)(b - c), (c - a)(b - c)$ are in A.P.\\
+  Dividing each term by $(a - b)(b - c)(c - a)$\\
+  $\frac{1}{b - c}, \frac{1}{c - a}, \frac{1}{a - b}$ are also in A.P.
+\end{frame}
+\begin{frame}{Problem 47}
+  \textbf{47.} If $a, b, c$ are in A.P. then prove that $b + c, c + a, a + b$
+  are also in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 47}
+  \textbf{Solution:} $a, b, c$ are in A.P.\\
+  Subtracting $a + b + c$ from each term\\
+  $a - (a + b + c), b - (a + b + c), c - (a + b + c)$ are in A.P.\\
+  $-(b + c), -(c + a), -(a + b)$ are in A.P.\\
+  $b + c, c + a, a + b$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 48}
+  \textbf{48.} If $a^2, b^2, c^2$ are in A.P. then prove that $\frac{1}{b+c},
+  \frac{1}{c+a}, \frac{1}{a + b}$ are in A.P.
+\end{frame}
+\begin{frame}{Solution of problem 48}
+  \textbf{Solution:} $a^2, b^2, c^2$ are in A.P.\\
+  $\Rightarrow b^2 - a^2 = c^2 - b^2$\\
+  $\Rightarrow (b + a)(b - a) = (c + b)(c - b)$\\
+  $\Rightarrow \frac{b - a}{b + c} = \frac{c - b}{a + b}$\\
+  $\Rightarrow \frac{b + c - c - a}{(c + a)(b + c)} = \frac{c + a - a - b}{(a +
+    b)(c + a)}$\\
+  $\Rightarrow \frac{1}{c + a} - \frac{1}{b + c} = \frac{1}{a + b} - \frac{1}{c
+    + a}$\\
+  $\frac{1}{b + c}, \frac{1}{c + a}, \frac{1}{a + b}$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 49}
+  \textbf{49.} If $a, b, c$ are in A.P., show that $2(a - b) = a - c = 2(b - c)$
+\end{frame}
+\begin{frame}
+  \textbf{Solution:} Let $d$ be the common difference, then, $b = a + d, c = a
+  + 2d$\\
+  $2(a - b) = 2(a - a - d)-2d$\\
+  $a - c = a - a - 2d = -2d$\\
+  $2(b - c) = 2(a + d - a - 2d) = -2d$\\
+  Hence, $2(a - b) = a - c = 2(b - c)$
+\end{frame}
+\begin{frame}{Problem 50}
+  \textbf{50.} If $a, b , c$ are in A.P., then prove that $(a - c)^2 = 4(b^2 - ac)$
+\end{frame}
+\begin{frame}{Solution of problem 50}
+  \textbf{Solution:} Let $d$ be the common difference, then $b = a + d, c = a +
+  2d$\\
+  $(a - c)^2 = (a - a - 2d)^2 = 4d^2$\\
+  $4(b^2 - ac) = 4[(a + d)^2 - a(a + 2d)] = 4(a^2 + d^2 + 2ad - a^2 - 2ad) =
+  4d^2$\\
+  Hence, $(a - c)^2 = 4(b^2 - ac)$
+\end{frame}
+\end{document}

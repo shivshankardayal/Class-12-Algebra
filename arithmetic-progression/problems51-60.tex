@@ -1,0 +1,189 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage{siunitx}
+\usepackage{textcomp}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic Progression\\Problems 51 to 60}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 51}
+  \textbf{51.} In an A.P. if $S_n = t_1 + t_2 + \ldots + t_n$ ($n$ odd), $S_2
+  = t_2 + t_4 + \ldots + t_{n - 1},$ then find the value of $S_1/S_2$ in terms
+  of $n.$
+\end{frame}
+\begin{frame}
+  \textbf{Solution:} $S_1$ is an A.P. of $n$ terms but $S_2$ is an A.P. of
+  $\frac{n - 1}{2}$ terms with a common difference of $2d$\\
+  $$S_1 = \frac{n}{2}[t_1 + t_n]$$\\
+  $$S_2 = \frac{n - 1}{2.2}[t_2 + t_{n - 1}] = \frac{n - 1}{4}[t_1 + t_n]$$\\
+  $$\therefore \frac{S_1}{S_2} = \frac{2n}{n - 1}$$
+\end{frame}
+\begin{frame}{Problem 52}
+  \textbf{52.} Find the degree of the equation $(1 + x)(1 + x^6)(1 +
+  x^{11})\ldots (1+ x^{101})$
+\end{frame}
+\begin{frame}{Solution of problem 52}
+  \textbf{Solution:} The degree of the equation is $1 + 6 + 11 + \ldots +
+  101$\\
+  The above progression is an A.P. with first term being $1$ and common
+  difference being $5$\\
+  $$101 = 1 + (n - 1)5 = 5n - 4 \Rightarrow 5n = 105\Rightarrow n = 21$$\\
+  $$S = \frac{n}{2}[2a + (n - 1)d] = \frac{21}{2}[2.1 + (21 - 1)5] = 21.51 =
+  1071$$
+\end{frame}
+\begin{frame}{Problem 53}
+  \textbf{53.} Prove that a sequence is an A.P. if the sum of its terms is of
+  the form $An^2 + Bn,$ where $A, B$ are constants.
+\end{frame}
+\begin{frame}{Solution of problem 53}
+  \textbf{Solution:} Let sum $S_n$ denotes sum for $n$ terms of a sequence $t_1
+  + t_2 + \ldots + t_n$\\
+  $$S_n = An^2 + Bn$$\\
+  $$S_{n - 1} = A(n - 1)^2 + B(n - 1)$$\\
+  $$t_n = An^2 + Bn - [A(n - 1)^2 + B(n - 1)]$$\\
+  $$t_n = 2An + (B - A)$$\\
+  $$t_n - t_{n - 1} = 2An + (B - A) - 2A(n - 1) - (B - A)$$\\
+  $$d = 2A$$\\
+  Since commond difference is a constant the given series is an A.P.
+\end{frame}
+\begin{frame}{Problem 54}
+  \textbf{54.} If the sequence $a_1, a_2, \ldots, a_n$ form an A.P., then prove
+  that $a_1^2 - a_2^2 + a_3^2 - a_4^2 + \ldots + a_{2n - 1}^2 - a_{2n}^2 =
+  \frac{n}{2n - 1}(a_1^2 - a_{2n}^2)$
+\end{frame}
+\begin{frame}{Solution of problem 54}
+  \textbf{Solution:} $$a_1^2 - a_2^2 + a_3^2 - a_4^2 + \ldots + a_{2n - 1}^2 -
+  a_{2n}^2 = (a_1 + a_2)(a_1 - a_2) + (a_3 + a_4)(a_3 - a_4) + \ldots + (a_{2n
+    - 1} + a_{2n})(a_{2n - 1} - a_{2n})$$
+  $$= -d(a_1 + a_2 + a_3 + a_4 \ldots + a_{2n - 1} + a_{2n})$$
+  $$= \frac{-d.2n}{2}[a_1 + a_{2n}]$$
+  $$= -nd\frac{(a_1 - a_{2n})^2}{a_1 - a_{2n}}$$
+  $$ = -nd\frac{(a_1 - a_{2n})^2}{-(2n - 1)d}$$
+  $$= \frac{n}{2n - 1}(a_1 - a_{2n})^2$$
+\end{frame}
+\begin{frame}{Problem 55}
+  \textbf{55.} Find the sum of first $24$ terms of the A.P. $a_1, a_2, a_3,
+  \ldots, a_{24},$ if it is known that $a_1 + a_5 + a_{10} + a_{15} + a_{20} +
+  a_{24} = 225$
+\end{frame}
+\begin{frame}{Solution of problem 55}
+  \textbf{Solution:} We know that in an A.P. the sum of term equidistant from
+  the beginning and end is always same and is equal to the sum of first and
+  last term, i.e. $$a_1 + a_n = a_2 + a_{n - 1} = a_3 + a_{n - 2} = \ldots = 2a
+  + (n - 1)d$$\\
+  So if an A.P. consists of $24$ terms, then\\
+  $$a_1 + a_{24} = a_5 + a_{20} = a_{10} + a_{15}$$
+  $$a_1 + a_5 + a_{10} + a_{15} + a_{20} + a_{24} = 225$$
+  $$3(a_1 + a_{24}) = 225$$
+  $$a_1 + a_{24} = 75$$
+  $$\therefore S_{24} = \frac{n}{2}[a_1 + a_{24}] = 12.75 = 900$$
+\end{frame}
+\begin{frame}{Problem 56}
+  \textbf{56.} If the arithmetic progression whose common difference is
+  non-zero, the sum of first $3n$ terms is equal to next $n$ terms. Then, find
+  the ratio of sum of first $2n$ terms to the sum of next $2n$ terms.
+\end{frame}
+\begin{frame}{Solution of problem 56}
+  \textbf{Solution:} Let $S_{3n}$ denote the sum of first $3n$ terms. Let $a$ be first term and
+  $d$ be the common difference. Then,\\
+  $$S_{3n} = \frac{3n}{2}[2a + (3n - 1)d]$$
+  $$t_{3n + 1} = a + 3nd$$ and $$t_{4n} = a + (4n - 1)d$$
+  Let $S_n^{\prime}$ denote the sum of next $n$ terms. Then,\\
+  $$S_n^{\prime} = \frac{n}{2}[t_{3n+1} + t_{4n}]$$
+  $$S_n^{\prime} = \frac{n}{2}[2a + (7n - 1)d]$$
+  Given that $S_{3n} = S_n^{\prime}$\\
+  $$\frac{3n}{2}[2a + (3n - 1)d] = \frac{n}{2}[2a + (7n - 1)d]$$
+  $$6a + 3(3n - 1)d = 2a + (7n - 1)d$$
+  $$4a = (-2n + 2)d\Rightarrow 2a = (1 - n)d$$
+\end{frame}
+\begin{frame}
+  Let $S_{2n}$ be sum of first $2n$ terms and $S_{2n}^{\prime}$ be sum of next
+  $2n$ terms. Then,\\
+  $$S_{2n} = n[2a + (2n - 1)d]$$
+  $$S_{2n} = n[(1 - n)d + (2n - 1)d] = n^2d$$
+  $$S_{n2}^{\prime} = \frac{2n}{2}[t_{2n + 1} + t_{4n}]$$
+  $$S_{2n}^{\prime} = n[2a + (6n - 1)d] = n[(1 - n)d + (6n - 1)d] = 5n^2d$$
+  $$\therefore \frac{S_{2n}}{S_{2n}^{\prime}} = \frac{1}{5}$$
+\end{frame}
+\begin{frame}{Problem 57}
+  \textbf{57.} If the sum of $n$ terms of a series be $5n^2 + 3n,$ find its
+  $n$th term. Are the terms of this series in A.P.?
+\end{frame}
+\begin{frame}{Solution of problem 57}
+  \textbf{Solution:} $$t_n = S_n - S_{n - 1}$$
+  $$t_n = 5n^2 + 3n - 5(n - 1)^2 - 3(n - 1) = 10n - 2$$
+  Let $d$ be the common difference.\\
+  $$d = t_n - t_{n - 1}$$
+  $$d = 10n - 2 - 10(n - 1) + 2$$
+  $$d = 10$$
+  Since $d$ is constant therefore given series is in A.P.
+\end{frame}
+\begin{frame}{Problem 58}
+  \textbf{58.} Find the sum of the series $(a + b)^2 + (a^2 + b^2) + (a - b)^2 + \ldots$ to
+  $n$ terms
+\end{frame}
+\begin{frame}{Solution of problem 58}
+  \textbf{Solution:} $$t_1 = (a + b)^2$$
+  Let $d$ be the common difference, then
+  $$d = t_2 - t_1 = a^2 + b^2 - (a + b)^2 = -2ab$$
+  $$S_n = \frac{n}{2}[2(a + b)^2 + (n - 1)(-2ab)]$$
+  $$S_n = n(a^2 + b^2) + nab(3 - n)$$
+\end{frame}
+\begin{frame}{Problem 59}
+  \textbf{59.} Find $1 - 3 + 5 - 7 + 9 - 11 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of problem 59}
+  \textbf{Solution: Case I} When $n$ is even
+  $$1 - 3 + 5 - 7 + 9 - 11 + \ldots~\text{to}~n~\text{terms}$$
+  $$= -2 - 2 - 2 + \ldots~\text{to} \frac{n}{2}~\text{terms}$$
+  $$= -n$$
+  \textbf{Case II} When $n$ is odd, let $n = 2m + 1$ where $m \in N$
+  $$1 - 3 + 5 - 7 + 9 - 11 + \ldots~\text{to}~n~\text{terms}$$
+  $$=1 - 3 + 5 - 7 + 9 - 11 + \ldots~\text{to}~(2m + 1)~\text{terms}$$
+  $$=[1 + 5 + 9 + \ldots~\text{to}~(m + 1)~\text{terms}] - [3 + 7 + 11 +
+    \ldots~\text{to}~m~\text{terms}]$$
+  $$= \frac{m + 1}{2}[2.1 + 4m] - \frac{m}{2}[2.3 + (m - 1)4]$$
+  $$= 2m + 1 = n$$
+\end{frame}
+\begin{frame}{Problem 60}
+  \textbf{60.} The interior angles of a polygon are in A.P. The smallest angle
+  is $120$\textdegree and the commnon difference is $5$\textdegree. Find the
+  number of sides of the polygon.
+\end{frame}
+\begin{frame}{Solution of problem 60}
+  \textbf{Solution:} Let $n$ be the number of sides of polygon. From geometry,
+  sum of interior angles of a polygon of $n$ sides $= (n - 2).180$\textdegree\\
+  Given, $a = 120$\textdegree, $d = 5$\textdegree, $n = n$\\
+  Sum of interior sides of a polygon,
+  $$\frac{n}{2}[2.120 + (n - 1)5] = (n - 2).180$$
+  $$5n^2 - 125n + 720 = 0$$
+  $$n = 9, 16$$
+  But if $n = 16,$ greatest angle of polygon $= 120 + 15.5 = 195$\textdegree
+  which is not possible as all interior angles of a polygon are less that
+  $180$\textdegree.\\
+  Hence, $n = 9$
+\end{frame}
+\end{document}
