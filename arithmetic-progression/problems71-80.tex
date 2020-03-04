@@ -1,0 +1,142 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage{siunitx}
+\usepackage{textcomp}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic Progression\\Problems 71 to 75}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 71}
+  \textbf{71.} If the sum of $m$ terms of an A.P.is $n$ and the sum of its $n$
+  terms is $m$, show that sum of $(m + n)$ terms is $-(m + n)$
+\end{frame}
+\begin{frame}{Solution of problem 71}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference
+  of the A.P.\\
+  Given, $S_m = n$ and $S_n = m$\\
+  $$\therefore \frac{m}{2}[2a + (m - 1)d] = n\Rightarrow 2a + (m - 1)d = \frac{2n}{m}$$
+  and, $$\frac{n}{2}[2a +(n - 1)d] = m \Rightarrow 2a + (n - 1)d = \frac{2m}{n}$$
+  Subtracting, we get $$(m - n)d = \frac{2(n^2 - m^2)}{mn} \Rightarrow d =
+  -\frac{2(m + n)}{mn}$$
+  Substituting $d$ in $S_m$, we get $$\frac{m}{2}[2a + (m - 1)d] = n$$
+  $$2a = \frac{2n}{m} + (m - 1)\frac{2(m + n)}{mn}$$
+  $$2a = \frac{2n^2 + 2m^2 + 2mn -2m -2n}{mn}$$
+  Thus,
+  $$S_{m + n} = \frac{m + n}{2}[2a + (m + n - 1)d]$$
+  Substituting for $2a$ and $d$, we get
+\end{frame}
+\begin{frame}
+  $$S_{m + n} = \frac{m + n}{2}\left[\frac{2n^2 + 2m^2 + 2mn -2m -2n}{mn} - (m + n -
+    1)\frac{2(m + n)}{mn}\right]$$
+  $$S_{m + n} = \frac{m + n}{2}\left[\frac{2n^2 + 2m^2 + 2mn -2m -2n -2m^2 -2mn -2mn
+      -2n^2 + 2m + 2n}{mn}\right]$$
+  $$S_{m + n} = -(m + n)$$
+\end{frame}
+\begin{frame}{Problem 72}
+  \textbf{72.} If $S$ be the sum of $2n + 1$ terms of an A.P., and $S_1$ that
+  of alternate terms beginning with the first, then show that $\frac{S}{S_1} =
+  \frac{2n + 1}{n + 1}$
+\end{frame}
+\begin{frame}{Solution of problem 72}
+  \textbf{Solution.} Let $a$ be the first term and $d$ be the common
+  difference.\\
+  $$S = \frac{2n + 1}{2}[2a + 2nd]$$
+  $$S_1 = \frac{n + 1}{2}[2a + (n + 1 - 1)2d]$$
+  $$\therefore \frac{S}{S_1} = \frac{2n + 1}{n + 1}$$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} If $a, b, c$ be the $1$st, $3$rd, $n$th terms respectively of an
+  A.P., prove that the sum of $n$ terms is $\frac{c + a}{2} + \frac{c^2 - a^2}{b
+  - a}$.
+\end{frame}
+\begin{frame}
+  \textbf{Solution:} Let $d$ be the common difference, then we have
+  $$t_1 = a, b = a + 2d, c = a + (n - 1)d$$
+  Thus, $$d = \frac{b - a}{2}~\text{and~} (n - 1)d = c - a \Rightarrow n = \frac{2(c -
+    a)}{b - a} + 1$$
+  $$S_n = \frac{n}{2}[2a + (n - 1)d]$$
+  $$= \left(\frac{2(c - a)}{(b - a)} + 1\right)[2a + c - a]$$
+  $$= \frac{c + a}{2} + \frac{c^2 - a^2}{b - a}$$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} If the $p$th term of an A.P. is $x$ and $q$th term is $y$. Show
+  that the sum of $(p + q)$ terms is $\frac{p + q}{2}\left(x + y + \frac{x -
+      y}{p - q}\right)$
+\end{frame}
+\begin{frame}{Solution of problem 73}
+  \textbf{Solution:}Let $a$ be the first term and $d$ be the common difference.
+  $$t_p = a + (p - 1)d = x$$
+  $$t_q = a + (q - 1)d = y$$
+  Subtracting, we get
+  $$(p - q)d = x - y\Rightarrow d = \frac{x - y}{p - 1}$$
+  Substituting value of $d$ in $t_p$, we get $$a + (p - 1)\frac{x - y}{p -q} =
+  x$$
+  $$ a = x - (p - 1)\frac{x - y}{p - q}$$
+
+  $$S_{p + q} = \frac{p+q}{2}[2a + (p + q - 1)d]$$
+  $$=\frac{p + q}{2}\left[2x - 2(p - 1)\frac{x - y}{p - q} + (p + q - 1)\frac{x
+      - y}{p -q}\right]$$
+  $$= \frac{p + q}{2}\left[2x + \frac{x- y}{p -q}(-2p + 2 + p + q - 1)\right]$$
+  $$= \frac{p + q}{2}\left[2x + \frac{x - y}{p - q}(q - p + 1)\right]$$
+  $$= \frac{p + q}{2}\left[2x - x + y + \frac{x - y}{p -q}\right]$$
+  $$= \frac{p  + q}{2}\left[x + y + \frac{x - y}{p - q}\right]$$
+\end{frame}
+\begin{frame}{Problem 74}
+  \textbf{74.} The sum of $n$ terms of two series in A.P. are in ratio $(3n +
+  8):(7n + 15)$. Find the ratio of their $12$th terms.
+\end{frame}
+\begin{frame}{Solution of problem 74}
+  \textbf{Solution:} Let $a_1, a_2$ and $d_1, d_2$ be first terms and common
+  differences of the two A.P. respectively.\\
+  Then, we have
+  $$\frac{\frac{n}{2}[2a_1 + (n - 1)d_1]}{\frac{n}{2}[2a_2 + (n - 1)d_2]} =
+  \frac{3n + 8}{7n + 15}$$
+  $$\frac{2a_1 + (n - 1)d_1}{2a_2 + (n - 1)d_2} = \frac{3n + 8}{7n + 15}$$
+  Substituting $n = 23$ in the above equation, we get
+  $$\frac{2a_1 + 22d_1}{2a_2 + 22d_2} = \frac{77}{176}$$
+  $$\frac{a_1 + 11d_1}{a_2 + 11d_2} = \frac{7}{16}$$
+  Thus, the ratio of $12$th terms is $\frac{7}{16}$
+\end{frame}
+\begin{frame}{Problem 75}
+  \textbf{75.} If the ratio of the sum of $m$ terms and $n$ terms of an A.P. is
+  $m^2:n^2,$ prove that the ratio of its $m$th and $n$th term wil be $(2m -
+  1):(2n -1)$
+\end{frame}
+\begin{frame}{Solution of problem 75}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference
+  of the A.P. Given,
+  $$\frac{\frac{m}{2}[2a + (m - 1)d]}{\frac{n}{2}[2a + (n - 1)d]} =
+  \frac{m^2}{n^2}$$
+  $$\frac{2a + (m - 1)d}{2a + (n - 1)d} = \frac{m}{n}$$
+  Ratio of $m$th and $n$th terms is
+  $$\frac{a + (m - 1)d}{a + (n - 1)d} = \frac{2a + (2m - 1 -1)d}{2a + (2n - 1 -
+    1)d}$$
+  Substituting $m = 2m -1$ and $n = 2n - 1$ in the equation for ratio of sums,
+  we get
+  $$\frac{2a + (2m - 1 - 1)d}{2a + (2n - 1 - 1)d} = \frac{2m - 1}{2n - 1}$$
+  Thus, ratio of $m$th and $n$th term is $(2m - 1): (2n - 1)$
+\end{frame}
+\end{document}
