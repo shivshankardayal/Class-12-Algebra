@@ -1,4 +1,4 @@
-\documentclass[aspectratio=1610,8pt]{beamer}
+\documentclass[aspectratio=169,8pt]{beamer}
 
 % Standard packages
 
@@ -28,5 +28,102 @@
 \begin{document}
 \begin{frame}
        \titlepage
+\end{frame}
+\begin{frame}{Geometric Progression}
+  \textbf{Definition:} A succession of numbers is said to be in G.P. if the
+  ratio of any term and the preceding term is constant throughout. The constant
+  term is known as \textit{common ratio} of the G.P.\\
+  \textbf{$n$th term of a G.P.:} Let $a$ be the first term and $r$ be the
+  common ratio of the G.P.\\
+  \vspace{.5cm}
+  Now, first term of G.P., $t_1 = a$\\
+  second term of G.P., $t_2 = ar$\\
+  third term of G.P., $t_3 = ar^2$\\
+  \ldots
+  $n$th term of G.P., $t_n = ar^{n - 1}$
+\end{frame}
+\begin{frame}{Properties of G.P.}
+  \begin{enumerate}
+    \item If each term of a G.P. is multiplied with a non-zero number then the
+      sequence thus obtained is also in G.P.\\
+      \vspace{.3cm}
+      Let $a, ar, ar^2, ar^3, \ldots$ be a sequence in G.P. where $a$ is the
+      first term and $r$ is the common ratio.\\
+      \vspace{.3cm}
+      Upon multiplying the terms of this sequence with a non-zero number, say
+      $k$, it becomes $ak, ark, ar^2k, ar^3k, \ldots$\\
+      \vspace{.3cm}
+      Thus, we see that the resulting sequence is still G.P. with first term
+      as $ak$ and common ratio $r$\\
+    \item If each term of a G.P. is divided with a non-zero number then the
+      sequence thus obtained is also in G.P.\\
+      \vspace{.3cm}
+      Following as above we will have our sequence as $\frac{a}{k},
+      \frac{ar}{k}, \frac{ar^2}{k}, \frac{ar^3}{k},\dots$\\
+      \vspace{.3cm}
+      We see that this sequence is also in G.P.
+    \item The reciprocals  of the terms of of a G.P. are also in G.P.\\
+      \vspace{.3cm}
+      The reciprocals of the terms of a G.P. $a, ar, ar^2, ar^3, \ldots$ is
+      $\frac{1}{a}, \frac{1}{ar}, \frac{1}{ar^2}, \frac{1}{ar^3},\ldots$ which
+      we see is a G.P. with first term as $\frac{1}{a}$ and common ratio
+      $\frac{1}{r}$
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Sum of first $n$ terms of a G.P.}
+  Let $a$ be the first term and $r$ be the common ratio of a G.P. and $S_n$ be
+  the sum of first $n$ terms.\\
+  \vspace{0.3cm}
+  \textbf{Case I:} When $r \ne 1$\\
+  $$S_n = a + ar + ar^2 + ar^2 + \ldots + ar^{n - 1}$$
+  $$rS_n = ar + ar^2 + ar^3 + \ldots + ar^{n - 1} + ar^n$$
+  Upon subtratcion,
+  $$(1 - r)S_n = a - ar^n$$
+  $$S_n = \frac{a(1 - r^n)}{1 - r} = \frac{a(r^n - 1)}{r - 1}$$
+  \textbf{Case II:} When $r = 1$\\
+  $$S_n = a + a + a + \ldots~\text{up to}~n~\text{terms} = na$$
+\end{frame}
+\begin{frame}{Sum of a G.P. when $|r| < 1$}
+  Let $a$ be the first term, $r$ be the common ratio and $S_n$ be the sum of
+  $n$ terms of the G.P. in question.\\
+  \vspace{.3cm}
+  Now, we have already found that $S_n = \frac{a(1 - r^n)}{1 - r}$. However,
+  when $n = \infty, r^n = 0$ if $|r| < 1$\\
+  \vspace{.3cm}
+  $$\therefore S_{\infty} = \frac{a}{1 - r}$$
+\end{frame}
+\begin{frame}{Recurring Decimal}
+  Recurring decimal is a very good example of an infinite G.P. and its value
+  can be obtained from the formula for sum to infinity of a G.P. For example,
+  let us find the value of $.\dot{3}$
+
+  Now, $$.\dot{3} = .33333 \ldots~\text{to infinity}$$
+  $$= .3 + .03 + .003 + .0003 + \ldots~\text{to infinity}$$
+  $$= \frac{3}{10} + \frac{3}{100} + \frac{3}{1000} + \ldots~\text{to infinity}$$
+  $$= \frac{3}{10}\left[1 + \frac{1}{10} + \frac{1}{100} + \ldots~\text{to
+      infinity}\right]$$
+  $$= \frac{3}{10}.\frac{1}{1 - \frac{1}{10}}$$
+  $$= \frac{3}{10}.\frac{10}{9}$$
+  $$= \frac{1}{3}$$
+\end{frame}
+\begin{frame}{Arithmetico Geometric Series}
+  If the terms of an A.P. is multiplied by the corresponding terms of a G.P.,
+  then the new series obtained is called an Arithmetico Geometric series.
+
+  \textbf{Example: } If the terms of the arithmetic series $2 + 5 + 8 + 11 +
+  \ldots$ is myltiplied by the corresponsing terms of the geometric series
+  $x + x^2 + x^3 + x^4 + \ldots,$ then the following arithmetic geometric
+  series is obtained.
+  $$2x + 5x^2 + 8x^3 + 11x^4 + \ldots$$
+
+  \textbf{Sum of an Arithmetico Geometric Series}\\
+  Let $S$ be the sum of the arithmetic geometric series. Then each terms of the
+  series is multiplied by $r$(the common ratio of G.P.) and are written
+  shifting each term one step rightward and then we can subtract $rS$ from $S$
+  to get $(1 - r)S$. Then the sum can be obtained.
+
+  \textbf{Example:}$$S = 2x + 5x^2 + 8x^3 + 11x^4 + \ldots$$
+  $$xS = ~~~~2x^2 + 5x^3 + 8x^4 + \ldots$$
+  $$(1 - x)S = 2x + 3x^2 + 3x^3 + 3x^4 + \ldots$$
 \end{frame}
 \end{document}
