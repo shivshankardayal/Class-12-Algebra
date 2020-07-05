@@ -1,0 +1,184 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} If the $(p + q)$th term of a G.P. is $a$ and the $(p - q)$th
+  term is $b$, show that its $p$th term is $\sqrt{ab}$.
+\end{frame}
+\begin{frame}{Solution of problem 11}
+  \textbf{Solution:} Let $x$ be the first term and $y$ be the common
+  ratio. Then we have,
+
+  $$t_{p + q} = xy^{p + q - 1} = a~\text{and}~t_{p - q} = xy^{p - q -1} = b$$
+
+  Multiplying both we get $$x^2y^{2p - 2} = ab$$
+  
+  $$(xy^{p - 1})^2 = ab$$
+  $$ xy^{p - 1} = \sqrt{ab}$$
+  $$\Rightarrow t_p = \sqrt{ab}$$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} If the $p$th, $q$th and $r$th terms of a G.P. be $x, y$ and $z$
+  respectively, prove that $x^{q - r}.y^{r - p}.z^{p - q} = 1$
+\end{frame}
+\begin{frame}{Solution of problem 12}
+  \textbf{Solution:} Let $a$ be the first term and $b$ be the common ratio of
+  the G.P. Then we have,
+  $$t_p = x = ab^{p - 1}$$
+  $$t_q = y = ab^{q - 1}$$
+  $$t_r = z = ab^{r - 1}$$
+  $$\therefore x^{q - r}.y^{r - p}.z^{p - q} = a^(q - r + r - p + p - q)y^{(p -
+    1)(q - r) + (q - 1)(r - p) + (r - 1)(p - q)}$$
+  $$= a^0y^{pq - pr - q + r + qr - pq -r + p + pr - qr -p + q} = y^0 = 1$$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} The first term of a G.P. is 1. The sum of third and fifth terms
+  is 90. Find the common ratio of G.P.
+\end{frame}
+\begin{frame}{Solution of problem 13}
+  \textbf{Solution:} Let $r$ be the common ratio. Since first term is 1 we
+  have,
+  $$t_3 = r^2~\text{and}~t_5 = r^4$$
+  Given that $$t_3 + t_5 = 90$$
+  $$\Rightarrow r^4 + r^2 = 90$$
+  $$r^4 + r^2 - 90 = 0$$
+  $$r^4 + 10r^2 - 9r^2 -90 = 0$$
+  $$(r^2 + 10)(r^2 - 9) = 0$$
+  $$\Rightarrow r = \pm 3$$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} Fifth term of a G.P. is 2. Find the product of its first nine
+  terms.
+\end{frame}
+\begin{frame}{Solution of problem 14}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P. Given, $t_5 = ar^4 = 2$. Also,
+  $$t_1.t_2.t_3\ldots .t_9 = a^9r^{1 + 2 + 3 + \ldots + 8}$$
+  $$= a^9r^{36} = (ar^4)^9 = 2^9 = 512$$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} The fourth, seventh and last term of a G.P. are 10, 80 and 2560
+  respectively. Find the first term and number of terms in the G.P.
+\end{frame}
+\begin{frame}{Solution of problem 15}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio. Let
+  there be $n$ terms in G.P.
+  
+  We have, $$t_4 = ar^3 = 10, t_7 = ar^6 = 80, ar^{n - 1} = 2560$$
+  So we can have following:
+  $$\frac{t_7}{t_4} = \frac{ar^6}{ar^3} = \frac{80}{10}$$
+  $$r^3 = 8\Rightarrow r = 2$$
+  Substituting the value of $r$ in $t_4$, we get
+  $$a.2^3 = 10\Rightarrow a = \frac{10}{8} = \frac{5}{4}$$
+  Substituting the values of $a$ and $r$ for last term, we get
+  $$\frac{5}{4}2^{n - 1} = 2560$$
+  $$2^{n - 1} = 2048 = 2^{n - 1} = 2^{11}$$
+  $$\Rightarrow n = 12$$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} Three numbers are in G.P. If we double the middle term they form
+  an A.P. Find the common ratio of the G.P.
+\end{frame}
+\begin{frame}{Solution of problem 16}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio. Let
+  $a, ar, ar^2$ be the terms of the G.P. If we double the middle term then $a,
+  2ar, ar^2$ are in A.P.
+
+  Thus, we can write $$4ar = a + ar^2$$
+  $$r^2 - 4r + 1 = 0$$
+  $$r = \frac{4 \pm \sqrt{4^2 - 4.1.1}}{2} = 2\pm \sqrt{3}$$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} If $p, q$ and $r$ are in A.P. show that $p$th, $q$th and $r$th
+  term of a G.P. are in G.P.
+\end{frame}
+\begin{frame}{Solution of problem 17}
+  \textbf{Solution:} Let $p, q, r$ be in A.P. i.e. $q - p = r - q$
+
+  Let $a$ be the first term and $b$ be the common ratio of G.P. Thus, we have
+  $$t_p = ab^{p - 1}, t_q = ab^{q - 1}, t_r = ab^{r - 1}$$
+  $$\frac{t_q}{t_p} = b^{q - p}$$
+  $$\frac{t_r}{t_q} = b^{r - q}$$
+  $$\because q - p = r - q, \therefore \frac{t_q}{t_p} = \frac{t_r}{t_q}$$
+  Thus, $p$th, $q$th and $r$th terms of a G.P. are in G.P.
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} If $a, b, c$ and $d$ are in G.P., show that $(ab + bc + cd)^2 =
+  (a^2 + b^2 + c^2)(b^2 + c^2 + d^2)$
+\end{frame}
+\begin{frame}{Solution of problem 18}
+  \textbf{Solution:} Let $r$ be the common ratio then $b = ar, c = ar^2, d =
+  ar^3$
+
+  $$L.H.S. = (a^2r + a^2r^3 + a^2r^5)^2 = a^4r^2(1 + r^2 + r^4)^2$$
+  $$R.H.S. = (a^2 + a^2r^2 + a^2r^4)(a^2r^2 + a^2r^4 + a^2r^6)$$
+  $$= a^2(1 + r^2 + r^4)a^2r^2(1 + r^2 + r^4)$$
+  $$= a^4r^2(1 + r^2 + r^4)^2$$
+  Thus, L.H.S. = R.H.S.
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.}Three non-zero numbers $a, b$ and $c$ are in A.P. Increasing $a$
+  by 1 or increading $c$ by 2,the numbers are in G.P. Then find $b$
+\end{frame}
+\begin{frame}{Solution of problem 19}
+  \textbf{Solution:} Because $a, b, c$ are in A.P. $\therefore 2b = a + c$
+
+  Also, by increasing $a$ by 1 or by increasing $c$ by 2 the numbers are in
+  G.P. so we can write $$b^2 = (a + 1)c, b^2 = a(c + 2)$$
+
+  Thus, $$(a + 1)c = a(c + 2)$$
+  $$\Rightarrow c = 2a$$
+  $$\therefore b^2 = (a + 1)2a$$
+  Also, from the A.P. relationship
+  $$2b = a + 2a = 3a \Rightarrow b = \frac{3a}{2}$$
+  Substituting this back
+  $$\frac{9a^2}{4} = 2a^2 + 2a$$
+  $$\Rightarrow a = 8$$
+  $$\Rightarrow c = 16$$
+  $$b = \frac{a + c}{2} = 12$$
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} Three numbers are in G.P. whose sum is 70. If the extremes be
+  each multiplied by 4 and the mean by 5, they will be in A.P. Find the numbers.
+\end{frame}
+\begin{frame}{Solution of problem 20}
+  \textbf{Solution:} Let the numbers be $a, ar$ and $ar^2$. Then,
+
+  $$a(1 + r + r^2) = 70$$
+
+  Given that $4a, 5ar, 4ar^2$ are in A.P. Therefore,
+  $$10ar = 4a + 4ar^2$$
+  $$\Rightarrow 2r^2 - 5r + 2 = 0$$
+  $$\Rightarrow r = 2, \frac{1}{2}$$
+
+  Putting values of $r$ in the first equation we obtain $a$ to be 10 or 40 with
+  $r$ as 2 and $\frac{1}{2}$ respectively. Thus, the numbers are either 10, 20,
+  40 or 40, 20, 10.
+\end{frame}
+\end{document}
