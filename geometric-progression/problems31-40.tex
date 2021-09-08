@@ -1,0 +1,187 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} If the continued product of three numbers in a G.P. is $216$ and
+  the sum of their products in paird is $156,$ find the numbers.
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} Let the terms be $\frac{a}{r}, a$ and $ar,$ where $a$ be
+  the first term and $r$ be the common ratio of the G.P.
+
+  Given product is $216,$ implies $\frac{a}{r}.a.ar = a^3 = 216 \Rightarrow a =n6$
+
+  Sum of the products in pairs is $156.$ Hence,
+
+  $$\frac{a}{r}.a + a.ar + \frac{a}{r}ar = 156$$
+  $$\Rightarrow a^2\left(\frac{1}{r}\ + r + 1\right) = 156$$
+  $$\Rightarrow 36\left(\frac{1 + r^2 + r}{r}\right) = 156$$
+  $$\Rightarrow 3(1 + r + r^2) = 13r$$
+  $$\Rightarrow 3r^2 - 10r + 3 = 0$$
+  $$\Rightarrow r = \frac{1}{3}, 3$$
+
+  Thus, required numbers are $18, 6, 2$ or $2, 6, 18.$
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} If $a, b, c, d$ are in G.P., show that $(a + b)^2, (b + c)^2, (c
+  + d)^2$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$(a + b)^2 = a^2(1 + r)^2$$
+  $$(b + c)^2 = a^2r^2(1 + r)^2$$
+  $$(c + d)^2 = a^2r^4(a + r)^2$$
+
+  It is clear that $(a + b)^2, (b + c)^2, (c + d)^2$ are in G.P. with a common
+  ratio of $r^2.$
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} If $a, b, c, d$ are in G.P., show that $(a - b)^2, (b - c)^2, (c
+  - d)^2$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 33}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$(a - b)^2 = a^2(1 - r)^2$$
+  $$(b - c)^2 = a^2r^2(1 - r)^2$$
+  $$(c - d)^2 = a^2r^4(1 - r)^2$$
+
+  It is clear that $(a - b)^2, (b - c)^2, (c - d)^2$ are in G.P. with a common
+  ratio of $r^2.$
+\end{frame}
+\begin{frame}{Problem 34}
+  \textbf{34.} If $a, b, c, d$ are in G.P., show that $a^2 + b^2 + c^2, ab + bc
+  + cd, b^2 + c^2 + d^2$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$a^2 + b^2 + c^2 = a^2(1 + r^r + r^4)$$
+  $$ab + bc + cd = a^2r(1 + r^2 + r^4)$$
+  $$b^2 + c^2 + d^2 = a^2r^2(1 + r^2 + r^4)$$
+
+  It is clear that $a^2 + b^2 + c^2, ab + bc + cd, b^2 + c^2 + d^2$ are in
+  G.P. with a comon ratio of $r.$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} If $a, b, c, d$ are in G.P., show that $\frac{1}{(a + b)^2}, \frac{1}{(b + c)^2}, \frac{1}{(c + d)^2}$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$\frac{1}{(a + b)^2} = \frac{1}{a^2(1 + r)^2}$$
+  $$\frac{1}{(b + c)^2} = \frac{1}{a^2r^2(1 + r)^2}$$
+  $$\frac{1}{(c + d)^2} = \frac{1}{a^2r^4(1 + r)^2}$$
+
+  It is clear that $\frac{1}{(a + b)^2}, \frac{1}{(b + c)^2}, \frac{1}{(c +
+    d)^2}$ are in G.P. with a common ratio of $\frac{1}{r^2}.$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} If $a, b, c, d$ are in G.P., show that $a(b - c)^3 = d(a - b)^3$
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$a(b - c)^3 = a(ar - ar^2)^3 = a^4r^3(1 - r)^3$$
+  $$d(a - b)^3 = ar^3(a - ar)^3 = a^4r^3(1 - r)^3$$
+
+  Hence, we have proven the desired equality.
+\end{frame}
+\begin{frame}{Problem 37}
+  \textbf{37.} If $a, b, c, d$ are in G.P., show that $(a + b + c + d)^2 = (a +
+  b)^2 + (c + d)^2 + 2(b + c)^2$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2, d = ar^3$$
+  $$L.H.S. = (a + b + c + d)^2 = (a + ar + ar^2 + ar^3)^2$$
+  $$= a^2(1 + 2r + 3r^2 + 4r^3 + 3r^4 + 2r^5 + r^6)$$
+  $$R.H.S. = (a + b)^2 + (b + c)^2 + 2(b + c)^2$$
+  $$= a^2(1 + r^2 + 2r) + a^2(r^4 + 2r^5 + r^6) + a^2(2r^2 + 2r^4 + 4r^3)$$
+  $$= a^2(1 + 2r + 3r^3 + 4r^3 + 3r^4 + 2r^5 + r^6)$$
+
+  It is evident that L.H.S = R.H.S.
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} If $a, b, c$ are in G.P., show that $a^2b^2c^2\left(\frac{1}{a^3}
+  + \frac{1}{b^3} + \frac{1}{c^3}\right) = a^3 + b^3 + c^3$
+\end{frame}
+\begin{frame}{Solution of Problem 38}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2$$
+  $$L.H.S. = a^2b^2c^2\left(\frac{1}{a^3} + \frac{1}{b^3} + \frac{1}{c^3}\right)$$
+  $$= \frac{b^2c^2}{a} + \frac{a^2c^2}{b} + \frac{a^2b^2}{c}$$
+  $$= a^3r^6 + a^3r^3+ a^3 = c^3 + b^3 = a^3$$
+\end{frame}
+\begin{frame}{Problem 39}
+  \textbf{39.} If $a, b, c$ are in G.P., show that $(a^2 - b^2)(b^2 + c^2) =
+  (b^2 - c^2)(a^2 + b^2)$
+\end{frame}
+\begin{frame}{Solution of Problem 39}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2$$
+  $$L.H.S. = (a^2 - b^2)(b^2 + c^2) = a^2(1 - r^2)a^2r^2(1 + r^2)$$
+  $$= a^2r^2(1 - r^2)a^2(1 + r^2) = (a^2r^2 - a^2r^4)(a^2 + a^2r^2)$$
+  $$= (b^2 - c^2)(a^2 + b^2)$$
+\end{frame}
+\begin{frame}{Problem 40}
+  \textbf{40.} If $a, b, c$ are in G.P., show that $\log a, \log b, \log c$ are
+  in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 40}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of
+  the G.P., then we have
+
+  $$b = ar, c = ar^2$$
+
+  $$\log a = \log a$$
+  $$\log b = \log ar = \log a + \log r$$
+  $$\log c = \log ar^2 = \log a + 2\log r$$
+
+  Clearly, $\log a, \log b, \log c$ are in A.P. with a common difference of
+  $\log r.$
+\end{frame}
+\end{document}
