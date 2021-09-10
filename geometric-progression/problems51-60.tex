@@ -1,0 +1,127 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 51-60}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+       \titlepage
+\end{frame}
+\begin{frame}{Problem 51}
+  \textbf{51.} Find $1 - \frac{1}{2} + \frac{1}{4} - \frac{1}{8}$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 51}
+  \textbf{Solution:} This is a G.P. with $a = 1, r = -\frac{1}{2}, n = n$
+
+  $$S = \frac{1\left(1 - \frac{1}{(-2)^n}\right)}{1 + \frac{1}{2}}$$
+  $$= \frac{2}{3}[1 - (-1)^n/2^n]$$
+\end{frame}
+\begin{frame}{Problem 52}
+  \textbf{52.} If you had a choice of a salary of a salary of $\$ 1000$ a day for a month of $31$days or $\$ 1$ for the first day,
+  doubling every day which choice would you make?
+\end{frame}
+\begin{frame}{Solution of Problem 52}
+  \textbf{Solution:} In the first case total salary $= 1000 + 1000 + \ldots$ to $31$ terms $= \$ 31000$
+
+  In the second case total salary $= 1 + 2 + 4 + \ldots$ to $n$ terms $= \frac{(2^{31} - 1)}{2 - 1} =\$ 2^{31} - 1$
+
+  $\because 2^5 = 32\Rightarrow 2^{10} = 1024\Rightarrow 2^{20} = 1048576$
+
+  CLearly, $2^{31} - 1 > 31000,$ therefore, second choice should be made.
+\end{frame}
+\begin{frame}{Problem 53}
+  \textbf{53.} How many terms of the series $1 + 3 + 3^2 + 3^3 + \ldots$ must be taken to make $3280$?
+\end{frame}
+\begin{frame}{Solution of Problem 53}
+  \textbf{Solution:} Let the sum of $n$ terms of the given series be $3280$
+
+  $$S_n = \frac{a(r^n - 1)}{r - 1}\therefore 3280 = \frac{1(3^n - 1)}{3 - 1}$$
+  $$\Rightarrow 3^n - 1 = 6560 \Rightarrow 3^n = 6561 \Rightarrow n = 8$$
+\end{frame}
+\begin{frame}{Problem 54}
+  \textbf{54.} Find the least value of $n$ for which $1 + 3 + 3^2 + \ldots + 3^{n - 1} > 1000$
+\end{frame}
+\begin{frame}{Solution of Problem 54}
+  \textbf{Solution:} Given, $1 + 3 + 3^2 + \ldots + 3^{n - 1} > 1000$
+  $$1.\left(\frac{3^n - 1}{3 - 1}\right) > 1000 \Rightarrow 3^n > 2001$$
+
+  Now we know that $3^6 = 729, 3^7 = 2187$ so the least value of $n$ would be $7.$
+\end{frame}
+\begin{frame}{Problem 55}
+  \textbf{55.} Find $1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8}$ to $\infty$
+\end{frame}
+\begin{frame}{Solution of Problem 55}
+  \textbf{Solution:} This is a G.P. with $a = 1, r = \frac{1}{2}, |r| < 1$
+
+  $$\therefore S_{\infty} = \frac{a}{1 - r} = \frac{1}{1 - \frac{1}{2}} = 2$$
+\end{frame}
+\begin{frame}{Problem 56}
+  \textbf{56.} A person starts collecting \$ 1 first day, \$ 3 second day, \$ 9 third day and so on. What will be his collection in
+  $20$ days.
+\end{frame}
+\begin{frame}{Solution of Problem 56}
+  \textbf{Solution:} This is a G.P. with $a = 1, r = 3$
+
+  $S_{20} = \frac{1(3^{20} - 1)}{3 - 1} = \frac{3^{20} - 1}{2} = 1743392200$
+\end{frame}
+\begin{frame}{Problem 57}
+  \textbf{57.} Find the sum of $\left(x^2 + \frac{1}{x^2} + 2\right) + \left(x^4 + \frac{1}{x^4} + 5\right) + \left(x^6 +
+  \frac{1}{x^6} + 8\right) + \ldots$ to $n$ terms
+\end{frame}
+\begin{frame}{Solution of Problem 57}
+  \textbf{Solution:} Given series can be rewritten as
+  $$(x^2 + x^4 + x^6 + \ldots) + \left(\frac{1}{x^2} + \frac{1}{x^4} + \frac{1}{x^6} + \ldots\right) + (2 + 5 + 8 + \ldots)$$
+  $$= \frac{x^2(x^{2n} - 1)}{x^2 - 1} + \frac{1}{x^2}\frac{1 - \frac{1}{x^{2n}}}{1 - \frac{1}{x^2}} + \frac{n}{2}[4 + (n - 1)3]$$
+  $$= \frac{x^{2n - 1} - 1}{x^2 - 1}\left(x^2 + \frac{1}{x^{2n}}\right) + \frac{n(3n + 1)}{2}$$
+\end{frame}
+\begin{frame}{Problem 58}
+  \textbf{58.} How many terms of the series $1 + 2 + 2^2 + \ldots$ must be taken to make $511?$
+\end{frame}
+\begin{frame}{Solution of Problem 58}
+  \textbf{Solution:} Let we need $n$ terms to make sum $511$
+
+  $$S_n = \frac{1.(2^n - 1)}{2 - 1} = 511\Rightarrow 2^n = 512\Rightarrow n = 9$$
+\end{frame}
+\begin{frame}{Problem 59}
+  \textbf{59.} Find the least value of $n$ such that $1 + 2 + 2^2 + \ldots + 2^{n - 1} \geq 300$
+\end{frame}
+\begin{frame}{Solution of Problem 59}
+  \textbf{Solution.} Given, $1 + 2 + 2^2 + \ldots + 2^{n - 1} \geq 300$
+
+  $$\frac{1.(2^n - 1)}{2 - 1}\geq 300$$
+  $$2^n \geq 301$$
+
+  We know that $2^8 = 256, 2^9 = 512$ this least value of $n$ will be $9.$
+\end{frame}
+\begin{frame}{Problem 60}
+  \textbf{60.} Determine the no. of terms of a G.P. if $a_1 = 3, a_n = 96$ and $S_n = 189$
+\end{frame}
+\begin{frame}{Solution of Problem 60}
+  \textbf{Solution:} Let $r$ be the common ratio of G.P., then
+  $$a_n = a_1r^{n - 1} = 3r^{n - 1} = 96 \Rightarrow r^{n - 1} = 32$$
+
+  $$S_n = a_1\frac{r^n - 1}{r - 1} = 189$$
+  $$3\frac{r^{n - 1}.r - 1}{r - 1} = 189$$
+  $$\frac{32r - 1}{r - 1} = 63 \Rightarrow r = 2 \Rightarrow n = 6$$
+\end{frame}
+\end{document}
