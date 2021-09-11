@@ -27,6 +27,120 @@
 \begin{frame}
        \titlepage
 \end{frame}
+\begin{frame}{Important Result}
+  \begin{itemize}
+  \item $a^n - b^n$ is divisible by $a - b$ for any $n \in N$
+
+    \textbf{Proof:} $$\frac{a^n - b^n}{a - b} = \frac{a^n\left(1 - \frac{b^n}{a^n}\right)}{a\left(1 - \frac{b}{a}\right)}$$
+
+    $$= a^{n - 1}\left(1 + \frac{b}{a} + \frac{b^2}{a^2} + \frac{b^3}{a^3} + \ldots + \frac{b^{n - 1}}{a^{n - 1}}\right)$$
+    $$= a^{n - 1} + ba^{n - 2} + b^2a^{n - 3} + \ldots + b^{n - 1}$$
+  \item $a^n + b^n$ is divisible by $a + b$ where $n$ is any odd positive natural number.
+
+    \textbf{Proof:} $$\frac{a^n + b^n}{a + b} = \frac{a^n\left(1 - \left(-\frac{b}{a}\right)^n\right)}{1 - \left(-\frac{b}{a}\right)}$$
+    $$= a^{n - 1}\left(1 - \frac{b}{a} + \frac{b^2}{a^2} - \frac{b^3}{a^3} + \ldots + (-1)^n\frac{b^{n - 1}}{a^{n - 1}}\right)$$
+    $$= a^{n - 1} - ba^{n - 2} + b^2a^{n - 3} - b^3a^{n - 4} + \ldots + (-1)^nb^{n - 1}$$
+  \end{itemize}
+\end{frame}
 \begin{frame}{Problem 61}
+  \textbf{61.} Express $0.4\dot{2}\dot{3}$ as a rational number.
+\end{frame}
+\begin{frame}{Solution of Problem 61}
+  \textbf{Solution:} $$0.4\dot{2}\dot{3} = 0.423232323 \ldots~\text{to}~\infty$$
+  $$= .4 + .023 + .00023 + \ldots~\text{to}~\infty$$
+  $$= \frac{4}{10}+ \frac{23}{1000} + \frac{23}{100000} \ldots~\text{to}~\infty$$
+  $$= \frac{4}{10} + \frac{23}{1000}\left[1 + \frac{1}{100} + \frac{1}{10000}+ \ldots~\text{to}~\infty\right]$$
+  $$= \frac{4}{10} + \frac{23}{1000}\frac{1}{1 - \frac{1}{100}}$$
+  $$= \frac{419}{990}$$
+\end{frame}
+\begin{frame}{Problem 62}
+  \textbf{62.} Find $\frac{1}{5} + \frac{1}{7} + \frac{1}{5^2} + \frac{1}{7^2}$ to $\infty$
+\end{frame}
+\begin{frame}{Solution of Problem 62}
+  \textbf{Solution:} Required sum $= \left(\frac{1}{5} + \frac{1}{5^2} + \frac{1}{5^3}\right)$ to $\infty + \left(\frac{1}{7} +
+  \frac{1}{7^2} + \frac{1}{7^3} + \right)$ to $\infty$
+  $$= \frac{\frac{1}{5}}{1 - \frac{1}{5}} + \frac{\frac{1}{7}}{1 - \frac{1}{7}}$$
+  $$= \frac{1}{4} + \frac{1}{6} = \frac{5}{12}$$
+\end{frame}
+\begin{frame}{Problem 63}
+  \textbf{63.} Prove that the sum of $n$ terms of the series $11 + 103 + 1005+ \ldots$ is $\frac{10}{9}(10^n - 1) + n^2$
+\end{frame}
+\begin{frame}{Solution of Problem 63}
+  \textbf{Solution:} The series can be rewritten as
+  $$(10 + 1) + (100 + 3) + (1000 + 5) + \ldots$$
+  $$= (10 + 100 + 1000 + \ldots) + (1 + 3 + 5 + \ldots)$$
+  $$= \frac{10(10^n - 1)}{10 - 9} + \frac{n}{2}[2.1 + (n - 1)2]$$
+  $$=\frac{10}{9}(10^n - 1) + n^2$$
+\end{frame}
+\begin{frame}{Problem 64}
+  \textbf{64.} Find the sum to $n$ terms of the series $\left(x + \frac{1}{x}\right)^2 + \left(x^2 + \frac{1}{x^2}\right)^2 +
+  \left(x^3 + \frac{1}{x^3}\right)^2 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 64}
+  \textbf{Solution:} Given series on expansion gives
+  $$\left(x^2 + \frac{1}{x^2} + 2\right) + \left(x^4 + \frac{1}{x^4} + 2\right) + \left(x^6 + \frac{1}{x^6} + 2\right) + \ldots$$
+  Rewriting the above series
+  $$(x^2 + x^4 + x^6 + \ldots) + \left(\frac{1}{x^2} + \frac{1}{x^4} + \frac{1}{x^6} + \ldots\right) + (2 + 2 + 2 + \ldots)$$
+  $$= \frac{x^2(x^{2n} - 1)}{x^2 - 1} + \frac{1}{x^2}\frac{1 - \frac{1}{x^{2n}}}{1 - \frac{1}{x^2}} + 2n$$
+\end{frame}
+\begin{frame}{Problem 65}
+  \textbf{65.} If $S$ be the sum, $P$ be the product and $R$ the sum of reciprocals of $n$ terms in G.P., prove that $P^2 =
+  \left(\frac{S}{R}\right)^n$
+\end{frame}
+\begin{frame}{Solution of Problem 65}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of G.P.
+
+  Given, $S = a + ar + ar^2 + \ldots + ar^{n - 1} = \frac{a(1 - r^n)}{1 - r}$
+
+  Also, $P = a.ar.ar^2.\ldots .ar^{n - 1} = a^nr^{1 + 2 + \ldots + {n - 1}} = a^nr^{\frac{n(n - 1)}{2}}$
+
+  Also, $R = \frac{1}{a} + \frac{1}{ar} + \frac{1}{ar^2} + \ldots + \frac{1}{ar^{n - 1}}$
+
+  $= \frac{1}{a}\frac{1 - \frac{1}{r^n}}{1 - \frac{1}{r}} = \frac{1}{a}\frac{r^n - 1}{r^n}\frac{r}{r - 1}$
+
+  $= \frac{1 - r^n}{1 - r}\frac{1}{ar^{n - 1}}$
+
+  $$\frac{S}{R} = a^2r^{n - 1}$$
+  $$\left(\frac{S}{R}\right)^n = a^{2n}r^{n(n - 1)} = (a^nr^{\frac{n(n - 1)}{2}})^2 = P^2$$
+\end{frame}
+\begin{frame}{Problem 66}
+  \textbf{66.} Find $1 + \frac{x}{1 + x} + \frac{x^2}{(1 + x)^2} + \ldots$ to $\infty$ if $x > 0$
+\end{frame}
+\begin{frame}{Solution of Problem 66}
+  \textbf{Solution:} Here terms of a given series are in G.P. where $a = 1, r = \frac{x}{1 + x}$ Also, $|r| < 1$
+
+  $$S_\infty = \frac{a}{1 - r} = \frac{1}{1 - \frac{x}{1 + x}} = 1 + x$$
+\end{frame}
+\begin{frame}{Problem 67}
+  \textbf{67.} Prove that in an infinite G.P. whose common ratio is $r$ is numerically less than one, the ratio of any term to the
+  sum of all the succeediing terms is $\frac{1 - r}{r}$.
+\end{frame}
+\begin{frame}{Solution of Problem 67}
+  \textbf{Solution:} The sum of all terms $= S_\infty$ If we consider $t_n$ in the ratio then sum of rest of terms will be
+  $S_\infty - S_n,$ thus, required ratio is
+
+  $$\frac{t_n}{S_\infty - S_n} = \frac{ar^{n - 1}}{\frac{a}{1 - r} - \frac{a(1 - r^n)}{1 - r}}$$
+  $$= \frac{ar^{n - 1}}{\frac{a}{1 - r}(1 - 1 + r^{n})} = \frac{1- r}{r}$$
+\end{frame}
+\begin{frame}{Problem 68}
+  \textbf{68.} If $S_1, S_2, S_3, \ldots, S_p$ are the sum of infinite geometric series whose first terms are $1, 2, 3, \ldots, p$
+  and whose common ratios are $\frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots, \frac{1}{p + 1}$ respectively, prove that $S_1 + S_2
+  + S_3 + \ldots + S_p = p(p + 3)/2$
+\end{frame}
+\begin{frame}{Solution of Problem 68}
+  \textbf{Solution:} Let us find out sums one by one.
+
+  $$S_1 = \frac{1}{1 - \frac{1}{2}} = 2$$
+  $$S_2 = \frac{2}{1 - \frac{1}{3}} = 3$$
+  $$S_3 = \frac{3}{1 - \frac{1}{4}} = 4$$
+  $$\ldots$$
+  $$S_p = \frac{p}{1 - \frac{1}{p + 1}} = p + 1$$
+
+  $$\text{L.H.S.}~= S_1 + S_2 + S_3 + \ldots + S_p$$
+  $$= 2 + 3 + 4 + \ldots + p + 1 = \frac{p}{2}[2.2 + (p - 1)] = \frac{p(p + 1)}{3}$$
+\end{frame}
+\begin{frame}{Problem 69}
+  \textbf{69.} If $x = 1 + a + a^2 + a^3 + \ldots~\text{to}~\infty$ and $y = 1 + b + b^2 + b^3 + \ldots~\text{to}~\infty,$ show
+  that
 \end{frame}
 \end{document}
