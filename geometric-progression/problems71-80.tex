@@ -1,0 +1,110 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 71-80}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 71}
+  \textbf{71.} After striking the floor a certain ball rebound to $\frac{4}{5}$th of the height from which it has fallen. Find the
+  total distance it travels before coming to rest if it is gently dropped from a height of $120$ meters.
+\end{frame}
+\begin{frame}{Solution of Problem 71}
+  \textbf{Solution:} Distance covered before first bounce $= 120$ meters.
+
+  After striking the floor the ball will go up for $120\frac{4}{5}$ meters and then fall the same distance so distance covered $=
+  2.120.\frac{4}{5}$ meteres.
+
+  For the next bounce distance covered would be $2.120.\frac{4^2}{5^2}$ meters.
+
+  This will keep happening till ball comes to rest.
+
+  Thus, total distance covered would be $= 120 + 240.\frac{4}{5} + 240.\frac{4^2}{5^2} + \ldots~\text{to}~\infty$
+
+  $$= 120 + 240.\frac{4}{5}\left[1 + \frac{4}{5} + \frac{4^2}{5^2} + \ldots~\text{to}~\infty\right]$$
+
+  $$= 120 + 240.\frac{4}{5}.5 = 1080$$ meters.
+\end{frame}
+\begin{frame}{Problem 72}
+  \textbf{72.} If $a$ be the first term and $b$ be the $n$th term and $p$ be the product of $n$ terms of a G.P., show that $p^2 =
+  (ab)^n$
+\end{frame}
+\begin{frame}{Solution of Problem 72}
+  \textbf{Solution:} Let $r$ be the common ratio. $b = ar^{n - 1} \Rightarrow ab = a^2r^{n - 1}\Rightarrow (ab)^n = a^{2n}r^{n(n - 1)}$
+
+  $$p = a.ar.ar^2.\ldots.ar^{n - 1} = a^nr^{\frac{n(n - 1)}{2}} \Rightarrow p^2 = a^{2n}r^{n(n - 1)}$$
+
+  Thus, $p^2 = (ab)^n$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} Show that the ratio of sum of $n$ terms of two G.P.'s having the same common ratio is equal to the ratio of their
+  $n$th terms.
+\end{frame}
+\begin{frame}{Solution of Problem 73}
+  \textbf{Solution:} Let $a$ and $b$ be first terms and $r$ be the common ratio of two G.P.
+
+  Ratio of sums $= \frac{\frac{a(r^n - 1)}{r - 1}}{\frac{b(r^n - 1)}{r - 1}} = \frac{a/b}{}$
+
+  Ratio of $n$th terms $= \frac{ar^{n - 1}}{br^{n - 1}} = \frac{a}{b}$
+
+  Hence, proved.
+\end{frame}
+\begin{frame}{Problem 74}
+  \textbf{74.} If $S_1, S_2, S_3$ be the sum of $m, 2n, 3n$ terms respectively of a G.P. show that $(S_2 - S_1)^2 = S_1(S_3 - S_2)$
+\end{frame}
+\begin{frame}{Solution of Problem 75}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P. Then,
+
+  $$S_1 = \frac{a(r^n - 1)}{r - 1}, S_2 = \frac{a(r^{2n} - 1)}{r - 1}, S_3 = \frac{a(r^{3n} - 1)}{r - 1}$$
+  $$S_2 - S_1 = \frac{ar^n(r^n - 1)}{r - 1}$$
+  $$S_3 - S_2 = \frac{ar^{2n}(r^n - 1)}{r - 1}$$
+  $$(S_2 - S_1)^2 = \frac{a^2r^{2n}(r^n - 1)^2}{(r - 1)^2}$$
+  $$S_1(S_3 - S_2) = \frac{a(r^n - 1)}{r - 1}\left(\frac{a(r^{3n} - 1)}{r - 1}- \frac{a(r^{2n} - 1)}{r - 1}\right)$$
+  $$= \frac{a(r^n - 1)}{(r - 1)^2}[a(r^{3n} - r^{2n})] = \frac{a^2r^{2n}(r^n - 1)^2}{(r - 1)^2}$$
+
+  Hence, proved.
+\end{frame}
+\begin{frame}{Problem 75}
+  \textbf{75.} If $S_n$ denotes the sum of $n$ terms of a G.P.,whose first term is $a$ and common ratio is $r,$ find $S_1 + S_2 +
+  \ldots + S_{2n - 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 76}
+  \textbf{Solution:} $$S_1 = a = \frac{a(r - 1)}{r - 1}$$
+  $$S_2 = a + ar = \frac{a(r^2 - 1)}{r - 1}$$
+  $$\ldots$$
+  $$S_{2n - 1} = a + ar + \ldots+ ar^{2n- 2} = \frac{a(r^{2n- 1} - 1)}{r - 1}$$
+  $$S_1 + S_2 + \ldots + S_{2n - 1} = \frac{a}{1- r}\left[(r - 1) + (r^2 - 1) + \ldots + (r^{2n - 1} - 1)\right]$$
+  $$ = \frac{a}{r - 1}\left[\frac{r(r^{2n - 1 - 1})}{r - 1} - 2n + 1\right]$$
+\end{frame}
+\begin{frame}{Problem 77}
+  \textbf{77.} The sum of $n$ terms of a series is $a.2^n - b,$ find its $n$th term. Are the terms of this series in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 77}
+  \textbf{Solution:} Given $S_n = a.2^n - b \Rightarrow S_{n - 1} = a.2^{n - 1} - b\Rightarrow t_n= a2^{n - 1}$ Since the ratio of
+  terms will be $2$ as evident from $t_n$ the series is in G. P.
+\end{frame}
+\begin{frame}{Problem 78}
+  \textbf{78.} 
+\end{document}

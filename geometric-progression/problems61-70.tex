@@ -141,6 +141,23 @@
 \end{frame}
 \begin{frame}{Problem 69}
   \textbf{69.} If $x = 1 + a + a^2 + a^3 + \ldots~\text{to}~\infty$ and $y = 1 + b + b^2 + b^3 + \ldots~\text{to}~\infty,$ show
-  that
+  that $1 + ab + a^2b^2 + a^3b^3 + \ldots~\text{to}~\infty = \frac{xy}{x + y - 1},$ where $0<a< 1$ and $0<b<1$
+\end{frame}
+\begin{frame}{Solution of Problem 69}
+  \textbf{Solution:} $$x = \frac{1}{1 - a}, y = \frac{1}{1 - b}$$
+  $$\Rightarrow a = \frac{x - 1}{x}, b = \frac{y - 1}{y}$$
+
+  $$1 + ab + a^2b^2+ a^3b^3 + \ldots~\text{to}~\infty = \frac{1}{1 - ab}$$
+  $$= \frac{1}{1 - \frac{x - 1}{x}\frac{y - 1}{y}} = \frac{xy}{x + y - 1}$$
+\end{frame}
+\begin{frame}{Problem 70}
+  \textbf{70.} Find the sum to infinity for the series $1 + (1 + a)r + (1 + a + a^2)r^2 + \ldots,$ where $0<a<1$ and $0<r<1$
+\end{frame}
+\begin{frame}
+  \textbf{Solution:} $$1 + (1 + a)r + (1 + a + a^2)r^2 + \ldots~\text{to}~\infty$$
+  $$= \frac{1- a}{1 - a} + \frac{1 - a^2}{1 - a}r + \frac{1 - a^3}{1 - a} + \ldots~\text{to}~\infty$$
+  $$= \frac{1}{1 - a}[1 + r + r^2 + \ldots~\text{to}~\infty - a(1 + ar + a^2r^2 + \ldots~\text{to}~\infty)]$$
+  $$= \frac{1}{1 - a}\left[\frac{1}{1 - r} - a\left(\frac{1}{1 - ar}\right)\right]$$
+  $$= \frac{1}{(1 - r)(1 - ar)}$$
 \end{frame}
 \end{document}
