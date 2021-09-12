@@ -74,7 +74,7 @@
 \begin{frame}{Problem 74}
   \textbf{74.} If $S_1, S_2, S_3$ be the sum of $m, 2n, 3n$ terms respectively of a G.P. show that $(S_2 - S_1)^2 = S_1(S_3 - S_2)$
 \end{frame}
-\begin{frame}{Solution of Problem 75}
+\begin{frame}{Solution of Problem 74}
   \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P. Then,
 
   $$S_1 = \frac{a(r^n - 1)}{r - 1}, S_2 = \frac{a(r^{2n} - 1)}{r - 1}, S_3 = \frac{a(r^{3n} - 1)}{r - 1}$$
@@ -87,10 +87,9 @@
   Hence, proved.
 \end{frame}
 \begin{frame}{Problem 75}
-  \textbf{75.} If $S_n$ denotes the sum of $n$ terms of a G.P.,whose first term is $a$ and common ratio is $r,$ find $S_1 + S_2 +
-  \ldots + S_{2n - 1}$
+  \textbf{75.} If $S_n$ denotes the sum of $n$ terms of a G.P.,whose first term is $a$ and common ratio is $r,$ find $S_1 + S_2 +  \ldots + S_{2n - 1}$
 \end{frame}
-\begin{frame}{Solution of Problem 76}
+\begin{frame}{Solution of Problem 75}
   \textbf{Solution:} $$S_1 = a = \frac{a(r - 1)}{r - 1}$$
   $$S_2 = a + ar = \frac{a(r^2 - 1)}{r - 1}$$
   $$\ldots$$
@@ -98,13 +97,57 @@
   $$S_1 + S_2 + \ldots + S_{2n - 1} = \frac{a}{1- r}\left[(r - 1) + (r^2 - 1) + \ldots + (r^{2n - 1} - 1)\right]$$
   $$ = \frac{a}{r - 1}\left[\frac{r(r^{2n - 1 - 1})}{r - 1} - 2n + 1\right]$$
 \end{frame}
-\begin{frame}{Problem 77}
+\begin{frame}{Problem 76}
   \textbf{77.} The sum of $n$ terms of a series is $a.2^n - b,$ find its $n$th term. Are the terms of this series in G.P.
 \end{frame}
-\begin{frame}{Solution of Problem 77}
+\begin{frame}{Solution of Problem 76}
   \textbf{Solution:} Given $S_n = a.2^n - b \Rightarrow S_{n - 1} = a.2^{n - 1} - b\Rightarrow t_n= a2^{n - 1}$ Since the ratio of
   terms will be $2$ as evident from $t_n$ the series is in G. P.
 \end{frame}
+\begin{frame}{Problem 77}
+  \textbf{77.} Find the $n$th term and the sum of $n$ terms of the series $1 + (1 + 2) + (1 + 2 + 2^2) + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 77}
+  \textbf{Solution:} $t_n = 1 + 2 + 2^2 + \ldots + 2^{n - 1} = 2^n - 1$
+
+  Thus, we can rewrite series as $S_n = (2 - 1) + (2^2 - 1) + (2^3 - 1) + \ldots + (2^n - 1)$
+
+  $$= 2(1 + 2 + 2^2 + \ldots + 2^{n - 1}) - 1 - 1 \ldots~\text{to}~n~\text{terms}$$
+  $$= 2.\frac{2^n - 1}{2 - 1} - n = 2^{n + 1} - 2 - n$$
+\end{frame}
 \begin{frame}{Problem 78}
-  \textbf{78.} 
+  \textbf{78.} Find $\frac{1}{1 + x^2}\left[1 + \frac{2x}{1 + x^2} + \left(\frac{2x}{1 + x^2}\right)^2 +
+    \ldots~\text{to}~\infty\right]$ where $x\geq 0$
+\end{frame}
+\begin{frame}{Solution to Problem 78}
+  \textbf{Solution:} Let $S = \frac{1}{1 + x^2}\left[1 + \frac{2x}{1 + x^2} + \left(\frac{2x}{1 + x^2}\right)^2 +
+    \ldots~\text{to}~\infty\right]$
+
+  $$S= \frac{1}{1 + x^2}.\frac{1}{1 - \frac{2x}{1 + x^2}} = \frac{1}{(1 - x)^2}$$
+\end{frame}
+\begin{frame}{Problem 79}
+  \textbf{79.} The sum of an infinite G.P. whose common ratio is numerically less than $1$ is $32$ and the sum of their first two
+  terms is $24.$ Find the terms of the G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 79}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P.
+
+  $$S_\infty = \frac{a}{1 - r} = 32 \& a + ar = 24$$
+  $$32 - 32r + 32r - 32r^2 = 24 \Rightarrow 4 - 4r^2 = 3 \Rightarrow 4r^2 = 1\Rightarrow r = \pm\frac{1}{2} \Rightarrow a = 16,
+  48$$
+  Thus, terms can be found now.
+\end{frame}
+\begin{frame}{Problem 80}
+  \textbf{80.} The sum of infinite number of terms of a decreasing G.P. is $4$ and the sum of the squares of its terms to infinity
+  is $\frac{16}{3},$ find the G.P.
+\end{frame}
+\begin{frame}{Solution to Problem 80}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P.
+
+  Let $P = a + ar + ar^2 + \ldots = \frac{a}{1 - r} = 4$
+
+  Let $Q = a^2 + a^2r^2 + a^2r^4 + \ldots = \frac{a^2}{1 - r^2} = \frac{16}{3}$
+
+  Solving these, we get $a = 2, r= \frac{2}{1}$ so the G.P. is $2, 1, \frac{1}{2}, \frac{1}{4}, \ldots$
+\end{frame}
 \end{document}
