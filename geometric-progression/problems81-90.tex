@@ -1,0 +1,141 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 81-90}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 81}
+  \textbf{81.} If $p(x) = (1 + x^2 + x^4 + \ldots + x^{2n - 2})/(1 + x + x^2 + \ldots + x^{n - 1})$ is a polynomial in $x$, then
+  find the possible values of $n.$
+\end{frame}
+\begin{frame}{Solution of Problem 81}
+  \textbf{Solution:} $$p(x) = \frac{1 - x^{2n}}{1 - x^2}\frac{1 - x}{1 - x^n} = \frac{(1 + x^n)}{1 + x}$$
+
+  Since $p(x)$ is a polynomial, thus, $x + 1 = 0$ must be a root of $1 + x^n$ i.e. $1 + (-1)^n = 0.$ Hence, $n$ is odd.
+\end{frame}
+\begin{frame}{Problem 82}
+  \textbf{82.} If each term in a G.P. is twice the terms following it, then find the common ratio of the G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 82}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P. Thus,
+
+  $$a_n = 2[a_{n + 1} + a_{n + 2} + \ldots ]\forall n\in N$$
+  $$ar^{n - 1} = 2[ar^n + ar^{n + 1} + \ldots] = \frac{2ar^n}{1 - r}$$
+  $$1 = \frac{2r}{1 - r}\Rightarrow r = \frac{1}{3}$$
+\end{frame}
+\begin{frame}{Problem 83}
+  \textbf{83.} If $x = a + \frac{a}{r} + \frac{a}{r^2} + \ldots \infty, y = b - \frac{b}{r} + \frac{b}{r^2} - \ldots \infty$ and $z
+  = c + \frac{c}{r^2} + \frac{c}{r^4} + \ldots \infty,$ then prove that $\frac{xy}{z} = \frac{ab}{c}$
+\end{frame}
+\begin{frame}{Solution of Problem 84}
+  \textbf{Solution:} $x = \frac{a}{1 - \frac{1}{r}} = \frac{ar}{r - 1}$
+  $$y = \frac{b}{1 - \left(-\frac{1}{r}\right)} = \frac{br}{1 + r}$$
+  $$z = \frac{c}{1 - \frac{1}{r^2}} = \frac{cr^2}{r^2 - 1}$$
+  $$xy = \frac{abr^2}{r^2 - 1}$$
+  $$\frac{xy}{z} = \frac{\frac{abr^2}{r^2 - 1}}{\frac{cr^2}{r^2 - 1}} = \frac{ab}{c}$$
+\end{frame}
+\begin{frame}{Problem 84}
+  \textbf{84.} A G.P. consists of an even number of terms. If the sum of all terms is $5$ times the sum of the terms occupying odd
+  places, then find the common ratio.
+\end{frame}
+\begin{frame}{Solution of Problem 84}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P.
+
+  Sum of all terms $S = \frac{a(r^n - 1)}{r - }$
+
+  Sum of all odd terms $S_{odd} = \frac{a(r^{2.\frac{n}{2}} - 1)}{r^2 - 1} = \frac{a(r^n - 1)}{r^2 - 1}$
+
+  Given $S = 5S_{odd}\Rightarrow \frac{a(r^n - 1)}{r - 1} = \frac{5a(r^n - 1)}{r^2 - 1}$
+
+  $\Rightarrow \frac{1}{r - 1} = \frac{5}{r^2 - 1}\Rightarrow r^2 - 5r + 4 = 0\Rightarrow r = 1, 4$
+
+  But $r$ cannot be $1$ so $r = 4$
+\end{frame}
+\begin{frame}{Problem 85}
+  \textbf{85.} If sum of $n$ terms of a G.P. is $3 - \frac{3^{n + 1}}{4^{2n}},$ then find the common ratio.
+\end{frame}
+\begin{frame}{Solution of Problem 85}
+  \textbf{Solution:} Let $S_n =  3 - \frac{3^{n + 1}}{4^{2n}}$ be sum of $n$ terms. Then,
+
+  $$S_{n - 1} = 3 - \frac{3^n}{4^{2(n - 1)}}$$
+  $$t_n = S_n - S_{n - 1} = \frac{3^n}{4^{2{n - 2}}} - \frac{3^{n + 1}}{4^{2n}} = \frac{16.3^n - 3^{n + 1}}{4^{2n}} =
+  \frac{13.3^{n}}{4^{2n}}$$
+  $$t_{n - 1} = \frac{13.3^{n - 1}}{4^{2(n - 1)}}$$
+  $$r = \frac{t_n}{t_{n - 1}} = \frac{3}{16}$$
+\end{frame}
+\begin{frame}{Problem 86}
+  \textbf{86.} In an infinite G.P> whose terms are all positive, the common ratio being less than unity, prove that any term $>, =,
+  <$ the sum of all the succeeding terms according as the common ratio $<, =, \frac{1}{2}$
+\end{frame}
+\begin{frame}{Solution of Problem 87}
+  \textbf{Solution:} Let $s$ be the first term and $r$ be the common ratio of the G.P. Then, $t_n = ar^{n - 1}$
+
+  Sum of succeeding terms $S_\infty - S_n = \frac{a}{1 - r} - \frac{a(1 - r^nn)}{1 - r} = \frac{ar^n}{1 - r}$
+
+  Equating, we get $ar^{n - 1} = \frac{ar^n}{1 - r}\Rightarrow 1 = \frac{r}{1 - r}\Rightarrow r = \frac{1}{2}$
+
+  Similarly we can prove for conditions of greater than and less than.
+\end{frame}
+\begin{frame}{Problem 87}
+  \textbf{87.} Prove that $(666\ldots n~\text{digits})^2 + 888\ldots n~\text{digits} = 444\ldots 2n~\text{digits}$
+\end{frame}
+\begin{frame}{Solution of Problem 87}
+  \textbf{Solution:} $$\frac{36}{81}(999\ldots n~\text{digits}^2 + \frac{8}{9}999\ldots n~\text{digits}) = \frac{4}{9}999\ldots
+  2n~\text{digits}$$
+  $$\frac{36}{81}(10^{2n} - 2.10^n + 1) + \frac{8}{9}(10^n - 1) = \frac{4}{9}(10^{2n} - 1)$$
+  $$\frac{4}{9}(10^{2n} - 2.10^n + 1) + \frac{4}{9}(2.10^n - 2)= \frac{4}{9}(10^{2n} - 1)$$
+\end{frame}
+\begin{frame}{Problem 88}
+  \textbf{88.} Find the sum $(x + y) + (x^2 + xy + y^2) + (x^3 + x^2y + xy^2 + y^3) + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 88}
+  \textbf{Solution:} Multiplying and dividing by $x - y,$ we get
+
+  $$\frac{1}{x - y}[(x^2 - y^2) + (x^3 - y^3) + (x^4 - y^4) + \ldots$$
+
+  Now it is trivial to isolate two G.P. and find the difference of their sums.
+\end{frame}
+\begin{frame}{Problem 89}
+  \textbf{89.} Find the sum of the series $\frac{4}{3} + \frac{10}{9} + \frac{29}{27} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 89}
+  \textbf{Solution:} Given series can be rewritten as $\frac{3 + 1}{3} + \frac{9 + 1}{9} + \frac{27 + 1}{27} + \ldots$
+  $$= 1 + \frac{1}{3} + 1 + \frac{1}{9} + 1 + \frac{1}{9}$$
+  $$= 1 + \frac{1}{3}.\frac{1}{1 - \frac{1}{3}} = 3$$
+\end{frame}
+\begin{frame}{Problem 90}
+  \textbf{90.} In a geometric series consisting of positive terms, each term equals the sum of next two terms. Find the common ratio.
+\end{frame}
+\begin{frame}{Solution of Problem 90}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio.
+  Then, $a = ar + ar^2 \Rightarrow r^2 + r - 1 = 0 \Rightarrow r = \frac{-1\pm\sqrt{5}}{2}$
+
+  However, $r$ cannot be negative, thus, $r = \frac{\sqrt{5} - 1}{2}$
+\end{frame}
+\end{document}
