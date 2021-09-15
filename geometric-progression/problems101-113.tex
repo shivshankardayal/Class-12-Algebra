@@ -1,0 +1,192 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Geometric Progression\\Problems 101-110}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 101}
+  \textbf{101.} If $x = \sum_{n=0}^\infty a^n, y = \sum_{n=0}^\infty b^n, z = \sum_{n=0}^\infty c^n$ where $a, b, c$ are in A.P.,
+  such that $|a| < 1, |b|< 1, |c| < 1,$ then show that $\frac{1}{x}, \frac{1}{y}, \frac{1}{z}$ are in A.P. as well.
+\end{frame}
+\begin{frame}{Solution of Problem 101}
+  \textbf{Solution.} $$x = \frac{1}{1 - a}, y = \frac{1}{1 - b}, z = \frac{1}{1 - c}$$
+  $$\therefore \frac{1}{x} = 1 -a, \frac{1}{y} = 1 - b, \frac{1}{z} = 1 - c$$ which are in A.P. because $a, b, c$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 102}
+  \textbf{102.} Given that $0 < x< \frac{\pi}{4}, \frac{\pi}{4} < y <\frac{\pi}{2}$ and $\sum_{k=0}^\infty(-1)^k\tan^{2k}x = p,
+  \sum_{k=0}^\infty(-1)^k\cot^{2k}y = q$ then prove that $\sum_{k = 0}^\infty \tan^{2k}x\cot^{2k}y$ is $\frac{1}{\frac{1}{p} +
+    \frac{1}{q} - \frac{1}{pq}}$
+\end{frame}
+\begin{frame}{Solution of Problem 102}
+  \textbf{Solution:} For $p, a= 1, r= -\tan^2x$
+  $$\therefore p = \frac{1}{1 +\tan^2x} = \cos^2x$$
+  For $q, a = 1, r = -\cot^2y$
+  $$\therefore q = \frac{1}{1 + \cot^2y} = \sin^2y$$
+  $$\therefore S = \frac{1}{1 -\tan^2x\cot^2y} = \frac{1}{1 - \frac{1 - \cos^2x}{\cos^2x}\frac{1 - \sin^y}{\cos^2y}}$$
+  $$= \frac{pq}{p + q - 1} = \frac{1}{\frac{1}{p} + \frac{1}{q} - \frac{1}{pq}}$$
+\end{frame}
+\begin{frame}{Problem 103}
+  \textbf{103.} An equilateral triangle is drawn by joining the mid-points of a given equilateral triangle. A third equilateral
+  triangle is drawn inside the second in the same manner and the process is continued indefinitely. If the side of first
+  equilateral triangle is $3^{1/4}$ inch, then find the sum of areas of all these triangles.
+\end{frame}
+\begin{frame}{Solution of Problem 103}
+  \textbf{Solution:} Let side of outermost equilateral triangle is $a$, then its area is $\frac{\sqrt{3}}{4}a^2$. The sides of
+  subsequent internal triangles will be $\frac{a}{2}, \frac{a}{4}, \frac{a}{8}, ...$
+
+  Therefore, total area is $\frac{\sqrt{3}}{4}a^2\left(\frac{1}{4} + \frac{1}{16} + \frac{1}{64} + ... \right)$
+  $$=\frac{\sqrt{3}}{4}a^2.\frac{1}{4}\frac{1}{1 - \frac{1}{4}} = 1$$
+\end{frame}
+\begin{frame}{Problem 104}
+  \textbf{104.} If $S = exp(1 + |\cos x| + \cos^2x + |\cos^3x| + \cos^4x \ldots~\text{to}~\infty)\log_c 4$ satisfies the roots of
+  the equation $t^2 - 20t + 64 = 0$ for $0 < x< \pi$ then find the values of $x.$
+\end{frame}
+\begin{frame}{Solution of Probolem 104}
+  \textbf{Solution:} $\cos^2x = |\cos^2x|$
+
+  Sum of infinite series is $S = \frac{1}{1 - |\cos x|}$ where $|\cos x| < 1$
+
+  $E = e^{Slog_e4} = 4^S$
+
+  $E$ satisfie the equation $t^2 - 20t + 64 = 0 \therefore t = 16, 6$
+
+  $\Rightarrow S = 1, 2 \Rightarrow |\cos x| = 0, \pm\frac{1}{2}$
+
+  $x = \frac{\pi}{2}, \frac{\pi}{3}, \frac{2\pi}{3}$
+\end{frame}
+\begin{frame}{Problem 105}
+  \textbf{105.} If $S\subset (-\pi, \pi),$ denote the set of values of $x$ satisfying the equation $8^{1 + |\cos x| + \cos^2x +
+    |\cos^3x| + \ldots~\text{to}~\infty} = 4^3$ then find the value of $S.$
+\end{frame}
+\begin{frame}{Solution of Problem 105}
+  \textbf{Solution:} The given equation may be written as
+  $$8^{1 + |\cos x| + |\cos^2x| + |\cos^3x| + \ldots~\text{to}~\infty} = 4^3 = 8^2$$
+  $$1 + |\cos x| + |\cos^2x| + |\cos^3x| + \ldots~\text{to}~\infty = 2$$
+
+  To sum the G.P., we must observer that for $-\pi < x < \pi,$ we have $|\cos x| < 1$
+
+  $$\therefore \frac{1}{1 - |\cos x|} = 2 \Rightarrow \cos x = \pm1/2$$
+\end{frame}
+\begin{frame}{Problem 106}
+  \textbf{106.} If $0 < x <\frac{\pi}{2}$ and $2^{\sin^2x + \sin^4x + \ldots~\text{to}~\infty}$ satisfies the roots of the equation
+  $x^2 - 9x + 8 = 0,$ then find the value of $\cos x/(\cos x + \sin x)$
+\end{frame}
+\begin{frame}{Solution of Problem 106}
+  \textbf{Solution:} $$S_\infty = \frac{\sin^x}{1 - \sin^x} = \tan^2x$$
+  $$L.H.S. = 2^{\tan^2x}$$
+
+  The roots of the equattion $x^2 - 9x + 8 = 0$ are $1$ and $8$
+
+  $$2^{\tan^2x} = 1 = 2^0, 2^{\tan^2x} = 8 = 2^3$$
+  $$\therefore \tan^2x = 0, \tan^2x = 3$$
+  $$\therefore x = \frac{\pi}{3}~\text{is the only value of}~x~\text{satisfying the condition}~0<x<\frac{\pi}{2}$$
+  $$\frac{\cos x}{\cos x + \sin x} = \frac{1}{1 + \tan x} = \frac{1}{1 + \sqrt{3}}$$
+\end{frame}
+\begin{frame}{Problem 107}
+  \textbf{107.} If $S_\lambda = \sum_{r=0}^\infty \frac{1}{\lambda^r},$ then find $\sum_{\lambda = 1}^n(\lambda - 1)S_\lambda$
+\end{frame}
+\begin{frame}{Solution of Problem 107}
+  \textbf{Solution:} $$S_\lambda = \frac{\lambda}{\lambda - 1}$$
+  $$\sum_{\lambda = 1}^n(\lambda - 1)S_\lambda = \sum_{\lambda = 1}^n\lambda = \frac{n(n + 1)}{2}$$
+\end{frame}
+\begin{frame}{Problem 108}
+  \textbf{108.} If $a, b, c$ are in A.P. then prove that $2^{ax + 1}, 2^{bx + 1}, 2^{cx + 1}$ are in G.P. $\forall x\neq 0$
+\end{frame}
+\begin{frame}{Solution of Problem 108}
+  \textbf{Solution:} $$\frac{2^{bx + 1}}{2^{ax + 1}} = \frac{2^{cx + 1}}{2^{bx + 1}}$$
+  $$(b - a)x = (c - b)x \Rightarrow b -a = c - b~\forall x \neq 0$$
+
+  Above is true as $a, b, c$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 109}
+  \textbf{109.} If $\frac{a + be^x}{a - be^x} = \frac{b + ce^x}{b - ce^x} = \frac{c + de^x}{c - de^x}$ then prove that $a, b, c, d$
+  are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 109}
+  \textbf{Solution:} Writing $a + be^x = 2a - (a - be^x),$ we have
+  $$\frac{2a}{a - be^x} - 1 = \frac{2b}{b - ce^x} - 1 = \frac{2c}{c - de^x} - 1$$
+  $$\Rightarrow \frac{a - be^x}{a} = \frac{b - ce^x}{b} = \frac{c - de^x}{c}$$
+  $$1 - \frac{b}{a}e^x = 1 - \frac{c}{b}e^x = 1 - \frac{d}{c}e^x$$
+  $$\frac{b}{a} = \frac{c}{b} = \frac{d}{c}$$
+
+  Thus, $a, b, c, d$ are in G.P.
+\end{frame}
+\begin{frame}{Problem 110}
+  \textbf{110.} If $x, y, z$ arein G.P. and $\tan^{-1}x, \tan^{-1}y, \tan^{-1}z$ are in A.P. then prove that $x = y = z$ but their
+  common values are not necessarily zero.
+\end{frame}
+\begin{frame}{Solution of Problem 110}
+  \textbf{Solution:} Since $x, y, z$ are in G.P. $y^2 = xz$ and $2\tan^{-1}y = \tan^{-1}x + \tan^{-1}z$
+  $$\frac{2y}{1 - y^2} = \frac{x + z}{1 - xz}\Rightarrow 2y = x + z$$
+  $$4y^2 = (x + z)^2 \Rightarrow (x - z)^2 = 0 \Rightarrow x = z$$
+  $$\therefore x = y = z$$
+\end{frame}
+\begin{frame}{Problem 111}
+  \textbf{111.} If $a, b, c$ are three unequal numbers such that $a, b, c$ are in A.P. and $b - a, c - b, a$ are in G.P. then prove
+  that $a:b:c = 1:2:3$
+\end{frame}
+\begin{frame}{Solution of Problem 111}
+  \textbf{Solution:} $$b - a = c - b, (c - b)^2 = a(b - a)$$
+  $$\Rightarrow (b - a)^2 = a(b - a)\Rightarrow b = 2a$$
+  $$c = 2b - a = 3a$$
+  $$\therefore a:b:c = 1:2:3$$
+\end{frame}
+\begin{frame}{Problem 112}
+  \textbf{112.} The sides $a,b,c$ of a triangle are in G.P. sych that $\log a - \log 2b, \log 2b - \log 3c, \log 3c - a$ are in
+  A.P., then prove that $\triangle ABC$ is an obtuse angled triangle.
+\end{frame}
+\begin{frame}{Solution of Problem 112}
+  \textbf{Solution:} $\log \frac{a}{2b}, \log \frac{2b}{3c}, \log\frac{3c}{a}$ are in A.P.
+
+  $$\therefore 2\log \frac{2b}{3c} = \log\left(\frac{a}{2b}.\frac{3c}{a}\right)$$
+  $$\Rightarrow \left(\frac{2b}{3c}\right)^2 = \frac{3c}{2b}\Rightarrow 8b^3 = 27c^3 \therefore 2b = 3c$$
+  Also, $a, b, c$ are in G.P. i.e. $b^2 = ac$
+  $$\frac{9c^2}{4} = ac \therefore a = \frac{9}{4}c$$
+
+  Thus, sides are $\frac{9}{4}c, \frac{6}{4}c, c.$ Clearly, $a$ is greatest side so corresponding angle will be largest.
+
+  $$\cos A = \frac{b^2 + c^2 - a^2}{2bc} = -\frac{29}{48} < 0$$
+
+  Therefore $\angle A$ is obtuse so the triangle is obtuse angled triangle.
+\end{frame}
+\begin{frame}{Problem 113}
+  \textbf{113.} If the roots of the equation $ax^3 + bx^2 + cx + d = 0$ be in G.P. then prove that $c^3a = b^3d$
+\end{frame}
+\begin{frame}{Solution of Problem 113}
+  \textbf{Solution:} Given, three roots are in G.P. so we take them as $\frac{p}{r}, p, pr$
+
+  Product of roots is $p^3 = -\frac{d}{a} \Rightarrow ap^3 + d = 0$
+
+  Also, $p$ is a root of the equation, therefore, $ap^3 + bp^2 + cp + d = 0$
+
+  $\Rightarrow bp^2 + cp = 0 \Rightarrow bp = -c \Rightarrow b^3p^3 + c^3 = 0$
+
+  $\Rightarrow b^3\left(-\frac{d}{a}\right) + c^2 \Rightarrow b^3d = c^3a$
+\end{frame}
+\end{document}
