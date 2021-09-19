@@ -1,0 +1,224 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Harmonic Progression\\Theory and Problems 1-10}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Harmonic Progresion}
+  Unequal numbers $a_1, a_2, a_3, \ldots$ are said to be in H.P., if
+  $\frac{1}{a_1}, \frac{1}{a_2}, \frac{1}{a_3}, \ldots$ are in A.P. Thus, you
+  can observe that no term in an H.P. can be $0$ because that will make
+  reciprocal infinite.
+
+  $n\text{th term of an H.P.} = \frac{1}{\text{corresponding term in
+      corresponsing A.P}}$
+
+  If $a$ is the first term and $b$ is the $n$th term then c.d. $d =
+  \frac{\frac{1}{b} - \frac{1}{a}}{n - 1}$
+
+  There are no special properties of an H.P. but when we solve problems related
+  to H.P. we treat its reciprocals as an A.P.
+\end{frame}
+\begin{frame}{Problem 1}
+  \textbf{1}. Find the $100$th term of the sequence $1, \frac{1}{3},
+  \frac{1}{5}, \frac{1}{7}, \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} Clearly, we have corresponding A.P. as $1, 3, 5, 7,
+  \ldots$
+
+  Thus, first term $a = 1$ and common difference $d = 2$
+
+  $$t_{100} = a + (100 - 1)d = 199$$
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} If $p$th term of an H.P. is $qr,$ and $q$th term is $rp,$ prove
+  that $r$th term is $pq.$
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference
+  of corresponding A.P. The $p$th and $q$th term of the A.P. will be
+  $\frac{1}{qr}$ and $\frac{1}{qr}$ respectively.
+
+  For A.P. $n$th term $= a + (n - 1)d$
+
+  $$\frac{1}{qr} = a + (p - 1)d$$
+
+  $$\frac{1}{pr} = a + (q - 1)d$$
+
+  Subtracting $\frac{q - p}{pqr} = (q - p)d~\therefore d = \frac{1}{pqr}$
+
+  $$\Rightarrow \frac{1}{qr} = a + (p - 1)d\Rightarrow a = \frac{1}{pqr}$$
+
+  Now it is trivial to find $r$th term.
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} If the $p$th, $q$th and $r$th terms of an H.P. be respectively
+  $a, b$ and $c,$ then prove that $(q - r)bc + (r - p)ca + (p - q)ab = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} $\frac{1}{a}, \frac{1}{b}, \frac{1}{c}$ are in A.P. and
+  are $p$th, $q$th and $r$th term respectively. Let $x$ be the first term and
+  $d$ be the common difference of this A.P.
+
+  $$\frac{1}{a} = x +(p - 1)d$$
+
+  Multiplying with $abc,$ we get
+
+  $$bc = abc[x + (p - 1)]d$$
+  $$(q - r)bc = (q-r)abc[x + (p - 1)d]$$
+  Similarly for $q$th term, we have
+  $$(r - p)ca = (r - p)abc[x + (q - 1)d]$$
+  and for $r$th term
+  $$(p - q)ab = (p - q)abc[x + (r - 1)d]$$
+
+  Now we can add all the terms and prove the result.
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} If $a, b, c$ are in H.P., prove that $\frac{a - b}{b - c} =
+  \frac{a}{c}$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution: } Since $a, b, c$ are in H.P
+
+  $$\frac{2}{b} = \frac{1}{a} + \frac{1}{c}$$
+  $$b = \frac{2ca}{c + a}$$
+  Substituting in $\frac{a - b}{b - c}$
+  $$\frac{a - \frac{2ca}{c + a}}{\frac{2ca}{c + a} - c} \Rightarrow \frac{a^2 -
+      ac}{ac - c^2} = \frac{a}{c}$$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} If $a, b, c, d$ are in H.P., then, prove that $ab + bc + cd =
+  3ad$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} Since $a, b, c, d$ are in H.P., therefore $\frac{1}{a},
+  \frac{1}{b}, \frac{1}{c}, \frac{1}{d}$ are in A.P.
+
+  Let $x$ the common difference.
+
+  $$\frac{1}{b} - \frac{1}{a} = x\Rightarrow ab = \frac{1}{x}(a - b)$$
+  Similarly,
+  $$bc = \frac{1}{x}(b - c)$$
+  $$cd  = \frac{1}{x}(c - d)$$
+  Adding, we get
+  $$ab + bc + cd = \frac{1}{x}(a - d) = \frac{1}{\frac{\frac{1}{d} -
+      \frac{1}{a}}{4 - 1}}(a - d) = 3ad$$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} If $x_1, x_2, x_3, \ldots, x_n$ are in H.P., prove that $x_1x_2 +
+  x_2x_3 + x_3x_4 + \ldots + x_{n - 1}x_n = (n - 1)x_1x_n$
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:} Let $d$ be the common difference of corresponding
+  A.P. Following like previous probelm
+  $$\frac{1}{x_2} - \frac{1}{x_1} = d \Rightarrow x_1x_2 = \frac{1}{d}(x_1 -
+  x_2)$$
+  $$\frac{1}{x_3} - \frac{1}{x_2} = d \Rightarrow x_2x_3 = \frac{1}{d}(x_2 -
+  x_3)$$
+  $$\ldots$$
+  $$\frac{1}{x_n} - \frac{1}{x_{n + 1}} = d \Rightarrow x_{n - 1}x_n =
+  \frac{1}{d}(x_{n - 1} - x_n)$$
+  Adding all these, we get
+  $$x_1x_2 + x_2x_3 + \ldots x_{n - 1}x_n = \frac{1}{d}(x_1 - x_n)$$
+  Also,
+  $$\frac{1}{x_n} - \frac{1}{x_1} = (n - 1)d$$
+  Sunstituting the value of $d$ we can obtain desired result.
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} If $a, b, c$ are in H.P., show that $\frac{a}{b + c}, \frac{b}{c
+    + a}, \frac{c}{a + b}$ are in H.P.
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{Solution:} Given $a, b, c$ are in H.P. which implies $\frac{1}{a},
+  \frac{1}{b}, \frac{1}{c}$ are in A.P.
+
+  $$\Rightarrow \frac{a + b + c}{a}, \frac{a + b + c}{b}, \frac{a + b + c}{c}
+  \text{are in A.P.}$$
+
+  $$1 + \frac{b + c}{a}, 1 + \frac{c + a}{b}, 1 + \frac{a + b}{c} \text{are in
+    A.P.}$$
+
+  $$\frac{b + c}{a}, \frac{c + a}{b}, \frac{a + b}{c} \text{are in A.P.}$$
+
+  $$\frac{a}{b + c}, \frac{b}{c + a}, \frac{c}{a + b} \text{are in H.P.}$$
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} If $a^2, b^2, c^2$ are in A.P. show that $b + c, c + a, a + b$
+  are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} $$a^2, b^2, c^2~\text{are in A.P.}$$
+  $$\Rightarrow b^2 - a^2 = c^2 - b^2$$
+  $$\Rightarrow \frac{b - a}{(c + a)(b + c)} = \frac{c - b}{(a + b)(c + a)}$$
+  $$\Rightarrow \frac{b + c - c - a}{(c + a)(b + c)} = \frac{c + a - a -b}{(a +
+    b)(c + a)}$$
+  $$\Rightarrow \frac{1}{c + a} - \frac{1}{b + c} = \frac{1}{a + b} -
+  \frac{1}{c + a}$$
+  $$\Rightarrow \frac{1}{b + c}, \frac{1}{c + a}, \frac{1}{a + b}~\text{are in
+    H.P.}$$
+  $$\Rightarrow b + c, c + a, a + b~\text{are in H.P.}$$
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} Find the sequence whose $n$th term is $\frac{1}{3n - 2}.$ Is tihs
+  sequence an H.P.?
+\end{frame}
+\begin{frame}{Solution of Problem 9}
+  \textbf{Solution:} $t_1 = 1, t_2 = \frac{1}{4}, t_3 = \frac{1}{7}$
+
+  $n$th term of correspoding A.P. $t_n = 3n - 2$ and $n - 1$th term of
+  corresponding A.P. $t_{n - 1} = 3n - 5$ Thus, common difference $d = t_{n -
+    1} - t_n = 3$ which is a constant and thus, we can say that corresponding
+  reciprocals will form an H.P.
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} If $m$th term of an H.P. be $n$ and $n$th term be $m,$ prove
+  that $(m + n)$th term $= \frac{mn}{m + n}$ and $(mn)$th term $= 1$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:} Reciprocals in A.P. would be $t_m = \frac{1}{n}$ and $t_n
+  = \frac{1}{m}.$ Let $a$ be the first term and $d$ be the common difference.
+
+  $$t_m = a + (m - 1)d = \frac{1}{n}$$
+  and $$t_n = a + (n - 1)d = \frac{1}{m}$$
+  Subtracting $$(m - n)d = \frac{m - n}{mn}\Rightarrow d = \frac{1}{mn}$$
+
+  Substituting $d$ in $t_m,$ we have
+
+  $$a= \frac{1}{n} - \frac{m - 1}{mn} = \frac{1}{mn}$$
+
+  Now, $$t_{m + n} = \frac{1}{mn} + (m + n - 1)\frac{1}{mn} = \frac{m +
+    n}{mn}$$
+
+  Reciprocal is desired $\frac{mn}{m + n}$
+
+  Similarly, $$t_{mn} = a + (mn - 1)d = \frac{1}{mn} + (mn - 1)\frac{1}{mn} =
+  1$$
+\end{frame}
+\end{document}

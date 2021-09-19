@@ -1,0 +1,159 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic, Geometric and Harmonic Means\\Problems 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} If $a, b, c$ are in G.P. and $x, y$ be the A.M. between $a, b$
+  and $b, c$ respectively, show that $\frac{a}{x} + \frac{b}{y} = 2,
+  \frac{1}{x} + \frac{1}{y} = \frac{2}{b}$
+\end{frame}
+\begin{frame}{Solution of Problem 11}
+  \textbf{Solution:} Given $a, b, c$ are in G.P., if we let $r$ to be the
+  common ratio then $b = ar, c= ar^2$. Also, given $x = \frac{a + b}{2}, y =
+  \frac{b + c}{2}$
+
+  $$\frac{a}{x} + \frac{b}{y} = \frac{2a}{a + b} + \frac{2c}{b + c} =
+  \frac{2a}{a(1 + r)} + \frac{2ar^2}{a(1 + r)} = 2$$
+
+  $$\frac{1}{x} + \frac{1}{y} = \frac{2}{a + b} + \frac{2}{b + c} =
+  \frac{2}{a(1 + r)}\left(1 + \frac{1}{r}\right) = \frac{2}{b}$$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} If $A$ be the A.M. and $H$ be the H.M. between two numbers, $a$
+  and $b,$ prove that $\frac{a - A}{a - H}\frac{b - A}{b - H} = \frac{A}{H}$
+\end{frame}
+\begin{frame}{Solution of Problem 12}
+  \textbf{Solution:} We know that, $A = \frac{a + b}{2}, H = \frac{2ab}{a + b}$
+
+  $$\frac{a - A}{a - H}.\frac{b - A}{b - H} = \frac{(a - b)(b - a)(a +
+    b)^2}{4(a^2 + ab - 2ab)(ab + b^2 - 2ab)} = \frac{(a + b)^2}{4ab} =
+  \frac{A}{H}$$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} If $A_1, A_2$ be the A.M., $G_1, G_2$ be the G.M. and $H_1, H_2$
+  be the H.M. between any two numbers, show that $\frac{G_1G_2}{H_1H_2} =
+  \frac{A_1 + A_2}{H_1 + H_2}$
+\end{frame}
+\begin{frame}{Solution of Problem 13}
+  \textbf{Solution:} Let the two numbers be $a$ and $b$
+  $$\therefore A_1 + A_2 = a + b, G_1G_2 = ab$$
+  $$\frac{1}{H_1} + \frac{1}{H_2} = \frac{1}{a} + \frac{1}{b} = \frac{a + b}{ab}$$
+
+  Thus, $\frac{G_1G_2}{H_1H_2} = \frac{A_1 + A_2}{H_1 + H_2}$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} The arithmetic mean of two numbers exceed their geometric mean
+  by $\frac{3}{2}$ and the geometric mean exceeds their harmonic mean by
+  $\frac{6}{5},$ find the numbers.
+\end{frame}
+\begin{frame}{Solution of Problem 14}
+  \textbf{Solution:} Let the two numbers be $a$ and $b$ and $A, G, H$ be the
+  respective A.M., G.M., H.M. between them.
+
+  $$A = G + \frac{3}{2}, G = H + \frac{6}{5}$$
+  $$AH = G^2 \Rightarrow \left(G + \frac{3}{2}\right)\left(G - \frac{6}{5}\right) = G^2\Rightarrow G
+  = 6$$
+
+  $$\Rightarrow a + b = 15, ab = 36$$
+  So the numbers are $12$ and $3.$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} If $a, b, c, d$ be four distinct numbers in H.P., show that $a +
+  d > b + c$ and $ad > bc$
+\end{frame}
+\begin{frame}{Solution of Problem 15}
+  \textbf{Solution:} Since $a, b, c, d$ are in H.P. thus, $b$ is H.M. of $a$
+  and $c$ and $c$ is H.M. of $b$ and $d.$
+
+  Since A.M. > H.M. $\therefore \frac{a + c}{2} > b$ or $a + c > 2b$
+
+  Similarly $b + d < 2c.$ Adding these two $a + b + c + d > 2(b + c)
+  \Rightarrow a + d > b + c$
+
+  Also, since G.M. > H.M. $\sqrt{ac} > b$ and $\sqrt{bd} > c$ multiplying these
+  two $ad > bc$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} If three positibve unequal numbers $a, b, c$ be in H.P., prove
+  that $a^n + c^n > 2b^n,$ where $n$ is a positive integer.
+\end{frame}
+\begin{frame}{Solution of Problem 16}
+  \textbf{Solution:} Since $a, b, c$ are in H.P. $b$ is H.M. of $a$ and $d$
+  \linebreak\linebreak
+  Since G.M. > H.M. $\therefore \sqrt{ac} > b$
+  \linebreak\linebreak
+  Now, A.M. of $a^n$ and $c^n = \frac{a^n + c^n}{2}$ and G.M. $= (\sqrt{ac})^n$
+  \linebreak\linebreak
+  But A.M. > G.M. $\therefore \frac{a^n + b^n}{2} > (\sqrt{ac})^n > b^n$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} $x + y + z = 15,~\text{if}~a, x, y , z, b$ are in A.P., and
+  $\frac{1}{x} + \frac{1}{y} + \frac{1}{z} = \frac{5}{3}$ if $a, x, y, z, b$
+  are in H.P., find $a$ and $b.$
+\end{frame}
+\begin{frame}{Solution of Problem 17}
+  \textbf{Solution:} $a + b = x + y + z = \frac{a + b}{2}.3 \Rightarrow a + b =
+  10$ when they are in A.P.
+  \linebreak\linebreak
+  When they are in H.P. $\frac{1}{x} + \frac{1}{y} + \frac{1}{z} =
+  \frac{\left(\frac{1}{a} + \frac{1}{b}\right)}{2} \Rightarrow ab = 9$
+  \linebreak\linebreak
+  Thus, numbers are $a = 9, b = 1$
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} If $x > 0,$ prove that $x + \frac{1}{x} \geq 2$
+\end{frame}
+\begin{frame}{Solution of Problem 18}
+  \textbf{Solution:} We know that A.M. $\geq$ G.M
+
+  $$\therefore \frac{x + \frac{1}{x}}{2} \geq \sqrt{x.\frac{1}{x}} \Rightarrow x
+  + \frac{1}{x} \geq 2$$
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.} Insert $8$ A.M. between $5$ and $32.$
+\end{frame}
+\begin{frame}{Solution of Problem 19}
+  \textbf{Solution:} Let $x_1, x_2, \ldots, x_8$ are $8$ arithmetic means
+  between $5$ and $32.$ Let $d$ be the common difference. Then,
+  $$32 = 5 + 9d \Rightarrow d = 3$$
+  Thus, the means are $8, 11, 14, 17, 20, 23, 26, 29$
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} Insert $7$ A.M. between $2$ and $34.$
+\end{frame}
+\begin{frame}{Solution of Problem 20}
+  \textbf{Solution:} Let $x_1, x_2, \ldots, x_7$ are $7$ arithmetic means
+  between $2$ and $34.$ Let $d$ be the common difference. Then,
+  $$34 = 2 + 8d \Rightarrow d = 4$$
+
+  Thus, means are $6, 10, 14, 18, 22, 26, 30$
+\end{frame}
+\end{document}

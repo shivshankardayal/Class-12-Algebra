@@ -1,0 +1,177 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Harmonic Progression\\Problems 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} The sum of three rational numbers in H.P. is $37$ and the sum of
+  their reciprocals is $\frac{1}{4},$ find the numbers.
+\end{frame}
+\begin{frame}{Solution of Problem 11}
+  \textbf{Solution:} Let the three numbers be $\frac{1}{a - d}, \frac{1}{a},
+  \frac{1}{a + d}$
+
+  $$\text{Thus sum of reciprocals}~ = 3a = \frac{1}{4}\Rightarrow a =
+  \frac{1}{12}$$
+
+  $$\text{Sum of three terms}~ = \frac{a(a + d) + (a - d)(a + d) + a(a -
+    d)}{a(a^2 - d^2)} = 37$$
+
+  $$\Rightarrow \frac{3a^2 - d^2}{a(a^2 - d^2)} = 37$$
+
+  Now we can substitute for $a$ and find $d,$ and thus we will have the
+  required numbers.
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} If $a, b, c$ are in H.P., prove that $\frac{1}{b - a} +
+  \frac{1}{b - c} = \frac{1}{a} + \frac{1}{c}$
+\end{frame}
+\begin{frame}{Solution of Problem 12}
+  \textbf{Solution:} Since $a, b, c$ are in H.P.
+  $$\therefore \frac{2}{b} = \frac{1}{a} + \frac{1}{c} \Rightarrow b =
+  \frac{2ac}{a + c}$$
+  Substituting this in given equation
+  $$\frac{1}{b - c} + \frac{1}{b - a} = \frac{1}{\frac{2ac}{a + c} - a} +
+  \frac{1}{\frac{2ac}{c + a} - c}$$
+  $$= \frac{ac}{a(c - a)} + \frac{a + c}{c(a - c)} = \frac{a + c}{a(c - a)} -
+  \frac{a + c}{c(c - a)}$$
+  $$= \frac{ac + c^2 - a^2 - ac}{ac(c - a)} = \frac{a + c}{ac} = \frac{1}{c} +
+  \frac{1}{a}$$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} If $a, b, c$ are in H.P., prove that $\frac{b + a}{b - a} +
+  \frac{b + c}{b - c} = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 13}
+  \textbf{Solution:} We know that $b = \frac{2ac}{a + c},$ substituting for $b$
+
+  $$\frac{b + a}{b - a} + \frac{b + c}{b - c} = \frac{3ac + a^2}{a(c - a)} +
+  \frac{3ac + c^2}{c(a + c)} = \frac{3c + a}{c - a} - \frac{3a + c}{c - a} =
+  \frac{2c - 2a}{c - a} = 2$$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} If $x_1, x_2, x_3, x_4, x_5$ are in H.P., prove that $x_1x_2 +
+  x_2x_3 + x_3x_4 + x_4x_5 = 4x_1x_5$
+\end{frame}
+\begin{frame}{Solution of Problem 14}
+  \textbf{Solution:} Since $x_1, x_2, x_3, x_4, x_5$ are in
+  H.P. $\frac{1}{x_1}, \frac{1}{x_2}, \frac{1}{x_3}, \frac{1}{x_4},
+  \frac{1}{x_5}$ are in A.P. Let $d$ be the common difference.
+  $$\frac{1}{x_2} - \frac{1}{x_1} = d \Rightarrow x_1x_2 = \frac{x_1 -
+    x_2}{d}$$
+  $$\frac{1}{x_3} - \frac{1}{x_2} = d \Rightarrow x_2x_3 = \frac{x_2 -
+    x_3}{d}$$
+  $$\frac{1}{x_4} - \frac{1}{x_3} = d \Rightarrow x_3x_4 = \frac{x_3 -
+    x_4}{d}$$
+  $$\frac{1}{x_5} - \frac{1}{x_4} = d \Rightarrow x_4x_5 = \frac{x_4 -
+    x_5}{d}$$
+  Adding all these
+  $$x_1x_2 + x_2x_3 + x_3x_4 + x_4x_5 = \frac{x_1 - x_5}{d} = \frac{x_1 -
+    x_5}{\frac{\frac{1}{x_5} - \frac{1}{x_1}}{4}} = 4x_1x_5$$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} If $x_1, x_2, x_3, x_4$ are in H.P., prove that $(x_1 - x_3)(x_2
+  - x_4) = 4(x_1 - x_2)(x_3 - x_4)$
+\end{frame}
+\begin{frame}{Solution of Problem 15}
+  \textbf{Solution:} Let $d$ be the common difference.
+  $$\frac{1}{x_3} - \frac{1}{x_1} = 2d \Rightarrow x_1 - x_3 = 2dx_1x_3$$
+  $$\frac{1}{x_4} - \frac{1}{x_2} = 2d \Rightarrow x_2 - x_4 = 2dx_2x_4$$
+  $$\frac{1}{x_2} - \frac{1}{x_2} = d \Rightarrow x_1 - x_2 = dx_1x_2$$
+  $$\frac{1}{x_4} - \frac{1}{x_3} = d \Rightarrow x_3 - x_4 = dx_3x_4$$
+  Clearly,
+  $$(x_1 - x_3)(x_2 - x_4) = 4(x_1 - x_2)(x_3 - x_4)$$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} If $b + c, c + a, a + b$ are in H.P., prove that $\frac{a}{b +
+    c}, \frac{b}{c + a}, \frac{c}{a + b}$ are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 16}
+  \textbf{Solution:} Since $b + c, c + a, a + b$ are in H.P.
+  $$\Rightarrow \frac{1}{b + c}, \frac{1}{c + a}, \frac{1}{a + b}~\text{are in
+    A.P.}$$
+  $$\Rightarrow \frac{a + b + c}{b + c}, \frac{a + b + c}{c + a}, \frac{a + b +
+    c}{a + b}~\text{are in A.P.}$$
+  $$\Rightarrow 1 + \frac{a}{b + c}, 1 + \frac{b}{c + a}, 1+ \frac{c}{a +
+    b}~\text{are in A.P.}$$
+  $$\Rightarrow \frac{a}{b + c}, \frac{b}{c + a}, \frac{c}{a + b}~\text{are in
+    A.P.}$$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} If $b + c, c + a, a + b$ are in H.P., prove that $a^2, b^2, c^2$
+  are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 17}
+  \textbf{Solution:} Given, $b + c, c + a, a + b$ are in H.P.
+  $$\Rightarrow \frac{1}{c + a} - \frac{1}{b + c} = \frac{1}{a + b} -
+  \frac{1}{c + a}$$
+  $$\Rightarrow \frac{b + c - c - a}{(c + a)(b + c)} = \frac{c + a - a - b}{(a
+    + b)(c + a)}$$
+  $$\Rightarrow \frac{b - a}{b + c} = \frac{c - b}{a + b}$$
+  $$\Rightarrow (b + a)(b - a) = (c + b)(c - b)$$
+  $$\Rightarrow b^2 - a^2 = c^2 - b^2$$
+  $$\Rightarrow a^2, b^2, c^2~\text{are in A.P.}$$
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} If $a, b, c$ are in A.P., prove that $\frac{bc}{ab + ac},
+  \frac{ca}{bc + ab}, \frac{ab}{ca + cb}$ are in H.P.
+\end{frame}
+\begin{frame}{Solution of Problem 18}
+  \textbf{Solution:} Given $a, b, c$ are in A.P.
+  Multiplying with $ab + bc + ca$
+  $$a(ab + bc + ca), b(ab + bc + ca), c(ab + bc + ca)~\text{are in A.P.}$$
+  Dividing by $abc$
+  $$\frac{ab + bc + ca}{bc}, \frac{ab + bc + ca}{ac}, \frac{ab + bc +
+    ca}{ab}~\text{are in A.P.}$$
+  $$\frac{ab + ca}{bc},\frac{bc + ab}{ca}, \frac{ca + cb}{ab}~\text{are in
+    A.P.}$$
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.} If $a, b, c$ are in H.P., prove that $\frac{a}{b + c - a},
+  \frac{b}{c + a - b}, \frac{c}{a + b - c}$ are in H.P.
+\end{frame}
+\begin{frame}{Solution of Problem 19}
+  \textbf{Solution:} Given, $a, b, c$ are in H.P.
+  $$\Rightarrow \frac{1}{a}, \frac{1}{b}, \frac{1}{c}~\text{are in A.P.}$$
+  Multiplying with $a + b + c$
+  $$\Rightarrow \frac{a + b + c}{a}, \frac{a + b + c}{b}, \frac{a + b +
+    c}{c}~\text{are in A.P.}$$
+  Subtracting $2$ from each term
+  $$\frac{b + c - a}{a}, \frac{a + c - b}{b}, \frac{a + b - c}{c}~\text{are in
+    A.P.}$$
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} If $a, b, c$ are in H.P., prove that $\frac{a}{b + c},
+  \frac{b}{c + a}, \frac{c}{a + b}$ are in H.P.
+\end{frame}
+\begin{frame}{Solution of Problem 20}
+  \textbf{Solution:}
+\end{frame}
+\end{document}

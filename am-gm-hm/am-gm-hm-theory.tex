@@ -1,0 +1,255 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic, Geometric and Harmonic Means\\Theory and Problems 1-10}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Arithmetic Mean}
+  Let $a$ and $b$ be the two given quantities and $A$ be the A.M. between
+  them. Then, $a, A, b$ will be in A.P.
+
+  $$\therefore A - a = b - A \Rightarrow A = \frac{a + b}{2}$$
+
+  Let $A_1, A_2, \ldots,A_n$ be the $n$ A.M. between $a$ and $b.$ Then, $a, A_1,
+  A_2, \ldots, A_n, b$ will be in A.P.
+
+  Now $b = a + (n + 2 - 1)d \Rightarrow d = \frac{b - 1}{n + 1}$
+
+  $$A_1 = a + d = \frac{an + b}{n + 1}$$
+  $$A_2 = a + 2d = \frac{a(n - 1) + 2b}{n + 1}$$
+  $$\ldots$$
+  $$A_n = a + nd = \frac{a + nb}{n + 1}$$
+\end{frame}
+\begin{frame}{Geometric Mean}
+Let $a$ and $b$ be two positive numbers and $G$ be the G.M. between them. Then,
+$a, G, b$ will be in G.P.
+
+$$\therefore \frac{G}{a} = \frac{b}{G}\Rightarrow G = \sqrt{ab}$$
+
+Let $G_1, G_2, \ldots, G_n$ be the $n$ G.M. between two given quantities $a$
+and $b.$ Then, $a, G_1, G_2, \ldots, G_n, b$ will be in G.P. Clearly, $b$ is
+$(n + 2)$th term of the G.P.
+
+$$b = ar^{n + 1}$$ where $r$ is the common ratio of the G.P.
+
+$$G_1 = ar = a\left(\frac{b}{a}\right)^{\frac{1}{n + 1}}$$
+$$G_2 = ar^2 = a\left(\frac{b}{a}\right)^{\frac{2}{n + 1}}$$
+$$\ldots$$
+$$G_n = ar^n = a\left(\frac{b}{a}\right)^{\frac{n}{n + 1}}$$
+\end{frame}
+\begin{frame}{Harmonic Mean}
+Let $a$ and $b$ be two given numbers and $H$ be the H.M. between them. Then,
+$a, H, b$ will be in H.P. This implies that $\frac{1}{a}, \frac{1}{H},
+\frac{1}{b}$ will be in H.P.
+
+$$\frac{1}{B} - \frac{1}{a} = \frac{1}{b} - \frac{1}{H} \therefore H =
+\frac{2ab}{a + b}$$
+
+Let $H_1, H_2, \ldots, H_n$ be the H.M. between two given quantities $a$ and
+$b.$ Also, let $d$ be the common difference of the corresponding A.P. Then,
+$\frac{1}{a}, \frac{1}{H_1}, \frac{1}{H_2}, \ldots, \frac{1}{H_n}, \frac{1}{b}$
+will be in A.P.
+
+$$t_{n + 1} = \frac{1}{b} = \frac{1}{a} + (n + 1)d \Rightarrow d = \frac{a -
+  b}{ab(n + 1)}$$
+$$\frac{1}{H_1} = \frac{1}{a} + d = \frac{a + bn}{ab(n + 1)}$$
+$$\frac{1}{H_2} = \frac{1}{a} + 2d = \frac{2a + b(n - 1)}{ab(n + 1)}$$
+$$\ldots$$
+$$\frac{1}{H_n} = \frac{na + b}{ab(n + 1)}$$
+\end{frame}
+\begin{frame}{Relation Between A.M., G.M. and H.M.}
+  Let $a$ and $b$ be two real, positive and unequal quantities and $A, G$ and
+  $H$ be the single A.M., G.M. and H.M. respectively.
+
+  Then $A = \frac{a + b}{2}, G = \sqrt{ab}, H = \frac{2ab}{a + b}$
+
+  Now, $AH = ab = G^2~\therefore \frac{G}{A} = \frac{H}{G}$
+
+  Hence, $A, G$ and $H$ are in G.P.
+
+  Also, $A - G = \frac{a + b}{2} - \sqrt{ab} = \frac{(\sqrt{a} -
+    \sqrt{b})^2}{2} > 0[\because a\neq b, a, b, > 0]$
+
+  Thus, $A - G > 0 \Rightarrow A > G$
+
+  Since $\frac{H}{G} = \frac{G}{A} \Rightarrow \frac{H}{G} < 1$
+
+  Thus, $A > G > H$
+
+  If $a = b,$ it can be proven that $A = G = H$
+\end{frame}
+\begin{frame}{Problem 1}
+  \textbf{1.} If $n$ arithmetic means are inserted between $20$ and $80$ such
+  that first mean : last mean $= 1 : 3,$ find $n.$
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} Let the $n$ means be $x_1, x_2, \ldots, x_n$
+
+  Then $20, x_1, x_2,\ldots, x_n, 80$ are in A.P.
+  $$80 = 20 + (n + 1)d$$
+  $$d = \frac{60}{n + 1}$$
+  $$x_1 = 20 + d = \frac{20n + 80}{n + 1}$$
+  $$x_n = 20 + nd = \frac{20 + 80n}{n + 1}$$
+  $$\text{Given,~}x_1:x_n = 1:3 \Rightarrow \frac{20n + 80}{80n + 20} =
+  \frac{1}{n} \Rightarrow n = 11$$
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} Prove that the sum of $n$ arthmetic means between two given
+  numbers is $n$ times the single arithmetic between them.
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} Single A.M. $= \frac{a + b}{2}$
+
+  Let the $n$ arithmetic means are $x_1, x_2, \ldots, x_n,$ then $a, x_1, x_2,
+  \ldots, x_n, b$ will be in A.P.
+
+  $\therefore x_1 = a + d$ and $x_n = a + d,$ where $d$ is the common
+  difference.
+
+  $$x_1 + x_2 + \ldots + x_n = \frac{n}{2}(a + b)[\because \text{sum
+      of}~n~\text{terms}~= \frac{n}{2}(\text{first term + last term})]$$
+  Thus, we have proven the desired condition.
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} Between two numbers whose sum is $\frac{13}{6},$ an even number
+  of arithmetic means are inserted. If the sum of means exceeds their number by
+  unity, find the number of means.
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} Let $2n$ be the number of means between two number $a$ and
+  $b$
+  $$\text{Sum of the}~2n~\text{~means} = \frac{a + b}{2}.2n = (a + b)n$$
+  Given, $$(a + b)n = 2n + 1 \Rightarrow \frac{13}{6} = 2n + 1 \Rightarrow 2n
+  = 12$$
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} For what value of $n, \frac{a^{n + 1} + b^{n + 1}}{a^n + b^n},
+  a\neq b$ is the A.M. of $a$ and $b.$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution:} A.M. between $a$ and $b = \frac{a + b}{2}$
+
+  Given, $$\frac{a^{n + 1} + b^{n + 1}}{a^n + b^n} = \frac{a + b}{2}$$
+
+  $$\Rightarrow (a - b)(a^n - b^2) = 0$$
+
+  $$\because~a\neq b~\therefore a^n = b^n~\Rightarrow n = 0$$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} Insert $4$ G.M. between $5$ and $160.$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} Let $x_1, x_2, x_3, x_4$ be the four G.M. between $5$ and
+  $160.$
+
+  $$\text{Thus,}~ 5, x_1, x_2, x_3, x_4, 160~\text{will be in G.P.}$$
+  $$160 = 5r^5 \Rightarrow r = 2$$
+
+  Thus, means are $10, 20, 40, 80.$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} Show that the product of $n$ geometric means inserted between two
+  positive quantities is equal to the $n$th power of the single geometric mean
+  between them.
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:} Let $x_1, x_2, \ldots, x_n$ be $n$ G.M. between two
+  numbers $a$ and $b.$
+
+  $$x_1 = a\left(\frac{b}{a}\right)^{\frac{1}{n + 1}},~x_2 =
+  a.\left(\frac{b}{a}\right)^{\frac{2}{n + 1}}, \ldots, x_n =
+  a\left(\frac{b}{a}\right)^{\frac{n}{n + 1}}$$
+  Thus,
+  $$x_1x_2\ldots x_n = a^n\left(\frac{b}{a}\right)^{\frac{1 + 2 + \ldots + n}{n
+      + 1}} = a^n\left(\frac{b}{a}\right)^{\frac{n}{2}} = (\sqrt{ab})^n$$
+
+  Thus, we have proven the desired result as single G.M. is $\sqrt{ab}$
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} Insert $6$ harmonic means between $3$ and $\frac{6}{23}.$
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{Solution:} Let $x_1, x_2, \ldots, x_6$ be the six H.M. between $3$
+  and $\frac{6}{23}$
+
+  Thus, $\frac{1}{3}, \frac{1}{x_1}, \frac{1}{x_2}, \ldots, \frac{1}{x_6},
+  \frac{23}{6}$ are in A.P.
+
+  Let $d$ be the common denominator.
+
+  $$\Rightarrow \frac{23}{6} = \frac{1}{3} + 7d \Rightarrow d = \frac{1}{2}$$
+
+  Now the means can be easily computed.
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} If the A.M. and G.M. between two numbers be $5$ and $3$
+  respectively, find the numbers.
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} Let $a$ and $b$ be the two numbers. Thus, $\frac{a + b}{2}
+  = 5 \Rightarrow a + b = 10$
+
+  Since $3$ is the G.M. so $a, 3, b$ are in G.P. Let $r$ be the common ratio
+  then $ar = 3$ and $b = ar^2$
+
+  Given, $$a + ar^2 = 10, ar = 3 \Rightarrow \frac{1 + r^2}{r} = \frac{10}{3}$$
+
+  Solving we get $r = 3, \frac{1}{3}$ which gives us two numbers as $9, 1$ and
+  $1, 9$
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} If the A.M. between two numbers be twice their G.M., show that
+  the ratio of numbers is $2 + \sqrt{3}: 2 - \sqrt{3}.$
+\end{frame}
+\begin{frame}{Solution of Problem 9}
+  \textbf{Solution:} Let $A$ be the A.M and $G$ be the G.M. between two numbers
+  $a$ and $b,$ then $A = \frac{a + b}{2}$ and $G = \sqrt{ab}$
+
+  $$\text{Given,}~ \frac{a + b}{2} = 2\sqrt{ab} \Rightarrow \frac{a +
+    b}{\sqrt{ab}} = \frac{2}{1}$$
+
+  By component and dividendo, we get
+  $$\frac{a + b + 2\sqrt{ab}}{a + b - 2\sqrt{ab}} = \frac{3}{2} \Rightarrow
+  \frac{\sqrt{a} + \sqrt{b}}{\sqrt{a} - \sqrt{b}} = \frac{\sqrt{3}}{1}$$
+  Again by componendo and dividendo, we get
+  $$\frac{\sqrt{a}}{\sqrt{b}} = \frac{\sqrt{3} + 1}{\sqrt{3} - 1}$$
+  $$\frac{a}{b} = \frac{2 + \sqrt{3}}{2 - \sqrt{3}}$$
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} If $a$ be one A.M. and $g_1$ and $g_1$ be two G.M. between $b$
+  and $c,$ prove that $g_1^3 + g_2^3 = 2abc$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:} Clearly, $a = \frac{b + c}{2}.$ Let $r$ be the common
+  ratio then $g_1 = br$ and $g_2 = br^2$
+
+  $$g_1^3 + g_2^3 = (br)^3 + (br^2)^3 = b^3r^3(1 + r^3) = b^3\frac{c}{b}\left(1
+  + \frac{c}{b}\right) = bc(b + c) = 2abc$$
+\end{frame}
+\end{document}
