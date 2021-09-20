@@ -1,0 +1,178 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic, Geometric and Harmonic Means\\Problems 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} If $A$ be the A.M. and $G$ be the G.M. between two numbers, show
+  that the numbers are $A + \sqrt{A^2 - G^2}$ and $A - \sqrt{A^2 - G^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} $$A = \frac{a + b}{2}, G = \sqrt{ab}$$
+  $$A + \sqrt{A^2 - G^2} = \frac{a + b}{2} + \sqrt{\frac{(a + b)^2}{4} - ab}$$
+  $$= \frac{a + b}{2} + \sqrt{\frac{a^2 + b^2 - 2ab}{4}}$$
+  $$= \frac{a + b}{2} + \frac{a - b}{2} = a$$
+  Similarly
+  $$A - \sqrt{A^2 - G^2} = \frac{a + b}{2} - \frac{a - b}{2} = b$$
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} if the ratio of A.M and G.M. of two numbers $a$ and $b$ is
+  $m:n,$ prove that $a:b = m+\sqrt{m^2 - n^2}: m - \sqrt{m^2 - n^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} Given, A.M. : G.M. $= m: n$
+  $$\Rightarrow \frac{a + b}{2\sqrt{ab}} = \frac{m}{n} \Rightarrow \frac{(a +
+    b)^2}{4ab} = \frac{m^2}{n^2}$$
+  $$m + \sqrt{m^2 - n^2} = \frac{(a + b)n}{2\sqrt{ab}} + \sqrt{\frac{(a +
+      b)^2n^2}{4ab} - n^2}$$
+  $$= \frac{(a + b)n}{2\sqrt{ab}} + \frac{(a - b)n}{2\sqrt{ab}} =
+  \frac{an}{\sqrt{ab}}$$
+  Similarly,
+  $$m - \sqrt{m^2 - n^2} = \frac{bn}{\sqrt{ab}}$$
+  Thus, $m+\sqrt{m^2 - n^2}: m - \sqrt{m^2 - n^2} = a:b$
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} If one G.M. $G$ and two A.M $p$ and $q$ are inserted between two
+  numbers, show that $G^2 = (2p - q)(2q - p)$
+\end{frame}
+\begin{frame}{Solution of Problem 33}
+  \textbf{Solution:} Let $a$ and $b$ be two numbers. $G = \sqrt{ab}.$ Let $d$
+  be the common difference, then, $d = \frac{b - a}{3}$ as two A.M. are
+  inserted making no. of terms four.
+  $$p = a + d = \frac{b + 2a}{3}, q = \frac{2b + a}{3}$$
+  $$(2p - q)(2q - p) = \frac{2b + 4a - 2b - a}{3}.\frac{4b + 2a - b - 2a}{3}$$
+  $$= ab = G^2$$
+\end{frame}
+\begin{frame}{Problem 34}
+  \textbf{34.} If one A.M. $A$ and two G.M. $p$ and $q$ be inserted between two
+  numbers, show that $\frac{p^2}{q} + \frac{q^2}{p} = 2A$
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:} We have $A = \frac{a + b}{2}.$ Let $r$ be the common ratio
+  then $r = \sqrt[3]{\frac{b}{a}}$ because there are four terms in G.P.
+  $$p = ar = a\sqrt[3]{\frac{b}{a}}$$
+  $$q = ar^2 = a\left(\frac{b}{a}\right)^\frac{2}{3}$$
+  Clearly, $$\frac{p^2}{q} + \frac{q^2}{p} =
+  \frac{a^2.\left(\frac{b}{q}\right)^\frac{2}{3}}{a\left(\frac{b}{a}\right)^\frac{2}{3}}
+  +
+  \frac{a^2\left(\frac{b}{a}\right)^\frac{4}{3}}{a\left(\frac{b}{a}\right)^\frac{1}{3}}$$
+  $$= a + b = 2A$$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} if A.M. between $a$ and $b$ is equal to $m$ times the H.M.,
+  prove that $a:b = \sqrt{m} + \sqrt{m- 1}: \sqrt{m} - \sqrt{m - 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} Given, $A = mH$
+  $$\Rightarrow \frac{a + b}{2} = \frac{2abm}{a + b}\Rightarrow m = \frac{(a +
+    b)^2}{4ab}$$
+  $$\sqrt{m} = \frac{a + b}{2\sqrt{ab}}, \sqrt{m - 1} = \frac{a -
+    b}{2\sqrt{ab}}$$
+  Clearly, $a:b = \sqrt{m} + \sqrt{m- 1}: \sqrt{m} - \sqrt{m - 1}$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} If $9$ arithmetic means and $9$ harmonic means be inserted
+  between $2$ and $3,$ prove that $A + \frac{6}{H} = 5,$ where $A$ is any
+  arithmetic mean and $H,$ the corresponding mean.
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} Let $d$ and $h$ be common difference for the A.P. and
+  H.P. respectively.
+
+  $$d = \frac{3 - 1}{10} = \frac{1}{10}, h = \frac{\frac{1}{3} -
+    \frac{1}{2}}{10} = -\frac{1}{60}$$
+  $$A = a + rd = \frac{20 + r}{10}, \frac{1}{H} = \frac{1}{2} - \frac{r}{60}
+  \Rightarrow \frac{1}{H} = \frac{30 - r}{60}$$
+
+  $$A + \frac{6}{H} = 5 \Rightarrow \frac{20 + r}{10} + \frac{30 - r}{10} = 5$$
+\end{frame}
+\begin{frame}{Problem 37}
+  \textbf{37.} If $a$ is the A.M. between $b$ and $c, b$ the G.M. between $a$
+  and $c,$ then show that $c$ is the H.M. between $a$ and $b.$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} $$a = \frac{b + c}{2}, b = \sqrt{ac} \Rightarrow c =
+  \frac{b^2}{a}$$
+  Substituting for $c$ in the A.M.,
+  $$a = \frac{b(a + b)}{2a}$$
+  Substituting for $a$ for H.M. between $a$ and $b$
+  $$\frac{2ab}{a + b} = \frac{2b(a + b)b}{2a(a + b)} = \frac{b^2}{a} = c$$
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} If $a_1, a_2$ be the two A.M., $g_1, g_2$ be the two G.M. and
+  $h_1, h_2$ be the two H.M.between any two numbers $x$ and $y,$ show that
+  $a_1h_2 = a_2h_1 = g_1g_2 = xy$
+\end{frame}
+\begin{frame}{Solution of Problem 38}
+  \textbf{Solution:} Clearly
+  $$a_1 = \frac{2x - y}{3}, a_2 = \frac{x - 2y}{3}$$
+  $$g_1 = x\left(\frac{y}{x}\right)^\frac{1}{3}, g_2 =
+  a\left(\frac{y}{x}\right)^\frac{2}{3}$$
+  $$h_1 = \frac{3xy}{x - 2y}, h_2 = \frac{3xy}{2x - y}$$
+  Substituting these values, we get $a_1h_2 = a_2h_1 = g_1g_2 = xy$
+\end{frame}
+\begin{frame}{Problem 39}
+  \textbf{39.} If between any two numbers, there be inserted $2n - 1$
+  arithmetic, geometric and harmonic means show that $n$th means inserted are
+  in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 39}
+  \textbf{Solution:} Let the two numbers be $a$ and $b.$ Common diff. would be
+  $d = \frac{b - a}{2n},$ common ratio would be $r =
+  \left(\frac{b}{a}\right)^\frac{1}{2n}$ and c.d. for harmonic progression
+  would be $= \frac{a - b}{2nab}$
+  \linebreak
+  \linebreak
+  $n$th arithmetic mean $= a + \frac{b - a}{2n}.n = \frac{a + b}{2}$
+  \linebreak
+  \linebreak
+  $n$th geometric mean $= \sqrt{ab}$
+  \linebreak
+  \linebreak
+  $n$th harmonic mean $\ \frac{2ab}{a + b}$
+  \linebreak
+  \linebreak
+  Clearly, these are in G.P.
+\end{frame}
+\begin{frame}{Problem 40}
+  \textbf{40.} If the A.M. between two numbers exceed their G.M. by 2, and the
+  G.M. exceeds the H.M. by $\frac{8}{5},$ find the numbers.
+\end{frame}
+\begin{frame}{Solution of Problem 40}
+  \textbf{Solution:} Let the two numbers be $a$ and $b.$
+  $$\frac{a + b}{2} = 2 + \sqrt{ab}, \sqrt{ab} = \frac{2ab}{a + b} +
+  \frac{8}{5}$$
+  $$AH = G^2\Rightarrow (2 + G)\left(G - \frac{8}{5}\right) =
+  G^2$$
+  $$\Rightarrow 2G - \frac{16}{5} + G^2 -\frac{8G}{5} = G^2$$
+  Now $G$ can be computed and thus $A$ can be computed which will give $a$ and
+  $b$
+\end{frame}
+\end{document}

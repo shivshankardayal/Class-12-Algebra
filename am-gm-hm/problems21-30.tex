@@ -1,0 +1,157 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Arithmetic, Geometric and Harmonic Means\\Problems 21-30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 21}
+  \textbf{21.} Insert $17$ A.M. between $\frac{7}{2}$ and $-\frac{83}{2}.$
+\end{frame}
+\begin{frame}{Solution of Problem 21}
+  \textbf{Solution:} Let $a_1, a_2, \ldots, a_{17}$ are required $17$ A.M. Let
+  $d$ to be the common difference. We know that there will be a total of $19$
+  terms in the A.P. Thus,
+  $$-\frac{83}{2} = \frac{7}{2} + 18d \Rightarrow d = - \frac{5}{2}$$
+  Now the means can be found easily.
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} Between $1$ and $31, n$ A.M. are inserted such that ratio of
+  $7$th and $(n - 1)$th means is $5:9,$ find $n.$
+\end{frame}
+\begin{frame}{Solution of Problem 22}
+  \textbf{Solution:} Let the means are $a_1, a_2, \ldots, a_n$ betweeen $1$ and
+  $31$ then $d = \frac{30}{n + 1},$ where $d$ is the common difference.
+
+  $$\frac{x_7}{x_{n - 1}} = \frac{5}{9}\Rightarrow \frac{1 + 7d}{1 + (n - 1)d}
+  = \frac{5}{9} \Rightarrow n = 14$$
+\end{frame}
+\begin{frame}{Problem 23}
+  \textbf{23.} Find the relation between $x$ and $y$ in order that $r$th mean
+  between $x$ and $2y$ may be the same as $r$th mean between $2x$ and $y;$ if
+  $n$ arithmetic means are inserted in each case.
+\end{frame}
+\begin{frame}{Solution of Problem 23}
+  \textbf{Solution:} In first case $x_r = x + \frac{2y - x}{n + 1}r$ and in
+  second case $y_r = 2x + \frac{y - 2x}{n + 1}r$
+  \linebreak
+  \linebreak
+  Equating them we get $y = \frac{n + 1 - r}{r}x$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} Insert $7$ geometric means between $2$ and $162.$
+\end{frame}
+\begin{frame}{Solution of Problem 24}
+  \textbf{Solution:} If we insert $7$ G.M. then total no. of terms would be
+  $9,$ so if $r$ is common ratio then $162 = 2.r^8$
+
+  $$\Rightarrow r = \sqrt{3}$$
+
+  Thus, G.M. will be $2\sqrt{3}, 6, 6\sqrt{3}, 18, 18\sqrt{3}, 54, 54\sqrt{3}$
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} Insert $6$ geometric means between $\frac{8}{27}$ and
+  $-\frac{81}{16}$
+\end{frame}
+\begin{frame}{Solution of Problem 25}
+  \textbf{Solution:} If we insert $6$ G.M. then total no. of terms would be
+  $8$, so if $r$ is the common ratio then $-\frac{81}{16} = \frac{8}{27}r^7
+  \Rightarrow r = -\frac{3}{2}$
+  \linebreak
+  \linebreak
+  Thus, G.M. will be $-\frac{4}{9}, \frac{2}{3}, -1, \frac{3}{2}, -\frac{9}{4},
+  \frac{27}{8}$
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} If odd number of geometric means are inserted between two given
+  numbers $a$ and $b,$ show that the middle geometric mean is $\sqrt{ab}.$
+\end{frame}
+\begin{frame}{Solution of Problem 26}
+  \textbf{Solution:} Let $2n + 1$ geometric means are inserted between $a$ and
+  $b$ and that $r$ is the common ratio. Then,
+
+  $$b = ar^{2n + 2} \Rightarrow r = \left(\frac{b}{a}\right)^{\frac{1}{2n +
+      2}}$$
+
+  $$\text{Middle geometric mean}~ = g_{n + 1} = a.r^{n + 1} = \sqrt{ab}$$
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} Insert four harmonic means between $1$ and $\frac{1}{11}.$
+\end{frame}
+\begin{frame}{Solution of Problem 27}
+  \textbf{Solution:} Let $h_1, h_2, h_3, h_4$ be four harmonic means between
+  $1$ and $\frac{1}{11}$. Thus corresponding A.P. will be $1, \frac{1}{h_1},
+  \frac{1}{h_2}, \frac{1}{h_3}, \frac{1}{h_4}, 11$
+  \linebreak
+  \linebreak
+  Since there are six terms in A.P. $11 = 1 + 5d \Rightarrow d = 2.$
+  So A.P. will be $1, 3, 5, 7, 8, 11$ and corresponsind H.P. will be composed
+  of reciprocals of these values.
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} $n$ harmonic means are inserted between $1$ and $4$ such that
+  first mean: last mean $= 1:3$
+\end{frame}
+\begin{frame}{Solution of Problem 28}
+  \textbf{Solution:} After inserting $n$ harmonic means there will be a total
+  of $n + 2$ terms. So in corresponding A.P. $1$ will remain $1$ but $4$ will
+  become $\frac{1}{4}$ and the ratio of first mean to last mean will also
+  become its reciprocal i.e. $3:1$
+  \linebreak
+  \linebreak
+  $$\frac{1}{h_1} = 1 + d, \frac{1}{h_n} = 1 + nd, d = \frac{\frac{1}{4} -
+    1}{n + 1}= -\frac{3}{4(n + 1)}$$
+  \linebreak
+  \linebreak
+  Now $n$ can be found to be $11.$
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} Find $n$ such that $\frac{a^{n + 1} + b^{n + 1}}{a^n + b^n}$ may
+  be a single harmonic mean between $a$ and $b.$
+\end{frame}
+\begin{frame}{Solution of Problem 29}
+  \textbf{Solution:} H.M. between $a$ and $b = \frac{2ab}{a + b}$
+
+  $$\frac{a^{n + 1} + b^{n + 1}}{a^n + b^n} = \frac{2ab}{a + b}$$
+  $$a^{n + 1} + ab^{n + 1} + ba^{n + 1} + b^{n+ 2} = 2a^{n + 1}b + 2ab^{n +
+    1}$$
+  $$a^{n + 2} - ab^{n + 1} - ba^{n + 1} + b^{n + 2} = 0$$
+  $$\Rightarrow a^{n + 1} - b^{n + 1} = 0 \Rightarrow n = -1$$
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} If $H_1, H_2, \ldots, H_n$ be $n$ harmonic means between $a$ and
+  $b,$ prove that $\frac{H_1 + a}{H_1 - a} + \frac{H_n + b}{H_n - b} = 2n$
+\end{frame}
+\begin{frame}{Solution of Problem 30}
+  \textbf{Solution:} We have evaluated previously that $H_1 = \frac{ab(n +
+    1)}{a + nb}$ and $H_n = \frac{ab(n + 1)}{na + b}$
+
+  Now it is just a matter of substituting the values and solving the equation
+  to get desired result.
+\end{frame}
+\end{document}
