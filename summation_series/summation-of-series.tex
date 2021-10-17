@@ -1,0 +1,189 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Summation of Series\\Theory and Problems 1-10}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Sum of $\sum_{i=1}^ni^2$}
+  We observe that $$i^3 - (i - 1)^3 = 3i^2 -3i + 1$$
+  $$\sum_{i=1}^ni^3 - (i - 1)^3 = 3\sum_{i=1}^ni^2 -3\sum_{i=1}^ni + \sum_{i=1}^n1$$
+  $$n^3 = 3\sum_{i=1}^ni^2 - 3\frac{n(n + 1)}{2} + n$$
+  $$\sum_{i=1}^ni^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+\end{frame}
+\begin{frame}{Sum of $\sum_{i=1}^ni^3$}
+  Following like previously, we observe that $$i^4 - (i - 1)^4 = 4i^3 - 6i^2 + 4i - 1$$
+  $$\sum_{i=1}^ni^4 - (i - 1)^4 = 4\sum_{i=1}^ni^3 - 6\sum_{i=1}^ni^2 + 4\sum_{i=1}^ni - \sum_{i=1}^n1$$
+  $$n^4 = 4\sum_{i=1}^ni^3 - 6.\frac{n(n + 1)(2n + 1)}{6} + 4\frac{n(n + 1)}{2} - n$$
+  $$\sum_{i=1}^ni^3 = \left(\frac{n(n + 1)}{2}\right)^2$$
+\end{frame}
+\begin{frame}{Arithmetico Geometric Series}
+  If the terms of an A. P. are multiplied by the corresponding terms of a G. P., then the new series obtained is called an
+  Arithmetico Geometric series.
+  \vspace{5mm}\linebreak
+  Example: If the terms of the arithmetic series $2 + 5 + 8 + 11 + ...$ are multiplied with the corresponding terms of the
+  geometric series $x + x^2 + x^3 + ...$ then the following arithmetico-geometric series is formed
+  $$2x + 5x^2 + 8x^3 + 11x^4 + \ldots$$
+\end{frame}
+\begin{frame}{Sum of an Arithmetic Geometric Series}
+  Let $a_1, a_2, \ldots, a_n$ be an A.P. and $b_1, b_2, \ldots, b_2$ be a G.P. Let $d$ be the common difference of the A.P. and $r$
+  be the common ratio of the G.P. Let
+  $$S_n = ab + (a + d)br + (a + 2d)br^2 + \ldots + [a + (n - 1)d]br^{n - 1}$$
+  We multiply each term by $r$ and write first term below second, second term below thirs and so on
+  $$rS_n = abr + (a + d)br^2 + (a + 2d)br^3 + \ldots [a + (n - 1)d]br^n$$
+  Subtracting, we get
+  $$(1 - r)S_n = ab + dbr + dbr^2 + \ldots + dbr^{n - 1} - [a + (n - 1)d]br^2$$
+  $$= ab + \frac{dbr(1 - r^{n - 1})}{1 - r} - [a + (n - 1)d]br^n$$
+  $$S_n = \frac{ab}{1 - r} + \frac{dbr(1 - r^{n - 1})}{(1 - r)^2} - \frac{[a + (n - 1)d]br^n}{1 - r} (r\neq 1)$$
+  If $-1 < r < 1,$ then $\lim_{n \to ~\infty} r^n = 0$
+
+  $$S_{\infty} = \frac{ab}{1 - r} + \frac{dbr}{(1 - r)^2}$$
+\end{frame}
+\begin{frame}{Problem 1}
+  \textbf{1.} Find the sum of $n$ terms of the series whose $n$th term is $12n^2 - 6n + 5$
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} We have $t_n = 12n^2 - 6n + 5$
+  $$S_n = \sum_{i=1}^nt_i = 12\sum_{i=1}^ni^2 - 6\sum_{i=1}^ni + \sum_{i=1}^n5$$
+  $$= 12\frac{n(n + 1)(2n + 1)}{6} - 6\frac{n(n + 1)}{2} + 5n$$
+  $$= 2n(n + 1)(2n + 1) -3n(n + 1) + 5n$$
+  $$= 4n^3 + 3n^2 + 4n$$
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} Find the sum to $n$ terms of the series $1^2 + 3^2 + 5^2 + 7^2 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} Clearly, $n$th term $= 2n - 1$ for A.P. $1, 3, 5, 7, \ldots$
+  \vspace{5mm}\linebreak
+  Thus, $n$th term of the given series $=t_n = (2n - 1)^2 = 4n^2 - 4n + 1$
+  \vspace{5mm}\linebreak
+  Thus, $$S_n = 4\sum_{i=1}^nt_i^2 - 4\sum_{i=1}^ni + \sum_{i=1}^n1$$
+  $$= \frac{4n(n + 1)(2n + 1)}{6} - \frac{4n(n + 1)}{2} + n$$
+  $$= \frac{n}{3}(4n^2 - 1)$$
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} Find the sum to $n$ terms of the series $1.2.3 + 2.3.4 + 3.4.5 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} $n$th term of the series $= [1 + (n - 1).1].[2 + (n - 1).1].[3 + (n - 1).1] = n^3 + 3n^2 + 2n$
+  $$S_n = \sum_{i=1}^nt_i = \sum n^3 + 3\sum n^2 + 2\sum n$$
+  $$=\left[\frac{n(n + 1)}{2}\right]^2 + 3.\frac{n(n + 1)(2n + 1)}{6} + 2.\frac{n(n + 1)}{2}$$
+  $$= \frac{n(n + 1)}{2}\left[\frac{n(n + 1)}{2} + 2n + 1 + 2\right]$$
+  $$= \frac{n(n + 1)}{2}(\frac{n^2 + 5n + 6}{2})$$
+  $$=\frac{1}{4}n(n + 1)(n + 2)(n + 3)$$
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} Find the sum of the series $1.n + 2.(n - 1) + 3.(n - 2) + \ldots + n.1$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution:} $$t_i = i.[n - (i - 1)] = ni - i^2 + i$$
+  $$S_n = n\sum_{i = 1}^ni - \sum_{i = 1}^ni^2 + \sum_{i = 1}^ni$$
+  $$= \frac{n(n + 1)}{2}\left[n - \frac{2n + 1}{3} + 1\right]$$
+  $$= \frac{n(n + 1)(n + 2)}{6}$$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} Find the sum to $n$ terms of the series $1 + (1 + 2) + (1 + 2 + 3) + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} $$t_i = 1 + 2 + 3 + \ldots + i = \frac{i(i + 1)}{2}$$
+  $$\Rightarrow S_n = \frac{1}{2}\left(\sum_{i = 1}^n i^2 + \sum_{i = 1}^ni\right)$$
+  $$= \frac{1}{2}\left(\frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}\right)$$
+  $$= \frac{n(n + 1)(n + 2)}{6}$$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} Find the sum to $n$ terms of the series $1 + (2 + 3) + (4 + 5 + 6) + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:} First term has $1$ number, second term has $2$ numbers, third term has $3$ numbers and so on. Thus, $n$th term
+  will have $n$ numbers. Total no. of numbers for $n$ terms $= 1 + 2 + 3 + \ldots + n = \frac{n(n + 1)}{2}.$ Thus,
+  $$S_n = 1 + 2 + 3 + ... + \frac{n(n + 1)}{2}$$
+  $$= \frac{\frac{n(n + 1)}{2}\left(\frac{n(n + 1)}{2} + 1\right)}{2}$$
+  $$= \frac{n(n + 1)(n^2 + n + 2)}{8}$$
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} Find the sum of series $\frac{1^3}{1} + \frac{1^3 + 2^3}{1 + 3} + \frac{1^3 + 2^3 + 3^3}{1 + 3 + 5} + \ldots$ to $16$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{7.} $$t_i = \frac{1^3 + 2^3 + 3^3 + \ldots + i^3}{1 + 3 + 5 + \ldots + (2i - 1)}$$
+  $$= \frac{\left\{\frac{i(i + 1)}{2}\right\}^2}{\frac{i}{2}[2.1 + (i - 1)2]}$$
+  $$= \frac{(i + 1)^2}{4}$$
+  $$S_{16} = \sum_{i = 1}^{16}\frac{i^2 + 2i + 1}{4}$$
+  $$= \frac{1}{4}\left[\frac{16(16 + 1)(2.16 + 1)}{6} + \frac{2.16(16 + 1)}{2} + 16\right]$$
+  $$= 446$$
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} Find $(3^3 - 2^3) + (5^3 - 4^3) + (7^3 - 6^3) + \ldots$ to $10$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} $$t_i = [(2i + 1)^3 - (2n)^3]$$
+  $$= 12i^2 + 6i + 1$$
+  $$S_{10} = \sum_{i = 1}^{10}(12i^2 + 6i + 1)$$
+  $$= 12.\frac{10(10 + 1)(20 + 1)}{6} + 6.\frac{10.11}{2} + 10$$
+  $$= 4960$$
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} Find $\frac{1}{1.2} + \frac{1}{2.3} + \frac{1}{3.4} + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution to Problem 9}
+  \textbf{Solution:} Rewriting terms
+  $$t_1 = \frac{1}{1} - \frac{1}{2}$$
+  $$t_2 = \frac{1}{2} - \frac{1}{3}$$
+  $$t_3 = \frac{1}{3} - \frac{1}{4}$$
+  $$\ldots$$
+  $$t_n = \frac{1}{n} - \frac{1}{n + 1}$$
+  Adding all the terms
+  $$S_n = \frac{1}{1} - \frac{1}{n + 1} = \frac{n}{n + 1}$$
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} Find the sum of $\frac{1}{1.2.3} + \frac{1}{2.3.4} + \frac{1}{3.4.5} + \ldots$ to infinity.
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:}$t_n = \frac{1}{n(n + 1)(n + 2)}$
+
+  $\text{Let}~t_n = \frac{A}{n} + \frac{B}{n + 1} + \frac{C}{n + 2}$
+
+  $A = $ values of $\frac{1}{(n + 1)(n + 2)}$ when $n = 0 \therefore A = \frac{1}{2}$
+
+  $B = $ values of $\frac{1}{n(n + 2)}$ when $n = -1 \therefore B = -1$
+
+  $C = $ values of $\frac{1}{n(n + 1)}$ when $n = -2 \therefore C = \frac{1}{2}$
+  $$t_n = \frac{1}{2n} - \frac{1}{n + 1} + \frac{1}{2(n + 2)}$$
+  $$t_1 = \frac{1}{2.1} - \frac{1}{2} + \frac{1}{2.3}$$
+  $$t_2 = \frac{1}{2.2} - \frac{1}{3} + \frac{1}{2.4}$$
+  $$t_3 = \frac{1}{2.3} - \frac{1}{4} + \frac{1}{2.5}$$
+  $$\ldots$$
+  $$t_{n - 2} = \frac{1}{2(n - 2)} - \frac{1}{n - 1} + \frac{1}{2n}$$
+  $$t_{n - 1} = \frac{1}{2(n - 1)} - \frac{1}{n} + \frac{1}{2(n + 1)}$$
+  $$t_n = \frac{1}{2n} - \frac{1}{n + 1} + \frac{1}{2(n + 2)}$$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  Adding, we get $$S_n = \frac{1}{2.1} - \frac{1}{2} + \frac{1}{2.2} + \frac{1}{2(n + 1)} - \frac{1}{n + 1} + \frac{1}{2(n + 2)}$$
+  $$= \frac{1}{4} - \frac{1}{2(n + 1)} + \frac{1}{2(n + 2)}$$
+  $$S_\infty = \frac{1}{4}$$
+\end{frame}
+\end{document}
