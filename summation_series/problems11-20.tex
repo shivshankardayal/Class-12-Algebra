@@ -1,0 +1,158 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Summation of Series\\Problems 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} Find the sum of $n$ terms of the series $1 + 5 + 11 + 19 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 11}
+  \textbf{Solution:} Let
+  $$S_n = 1 + 5 + 11 + 19 + \ldots + t_n$$
+  $$S_n = 1 + 5 + 11 + 19 + \ldots + t_{n -1} + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 1 + [4 + 6 + 8 + \ldots \text{to~}n - 1~\text{terms}] - t_n$$
+  $$t_n = 1 + \frac{n - 1}{2}[4 + (n - 2)2] = n^2 + n - 1$$
+  $$S-n = \sum t_n = \sum n^2 + \sum n - \sum 1$$
+  $$= \left[\frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2} - n\right]$$
+  $$= \frac{n(n^2 + 3n - 1)}{3}$$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} A sum is distributed among certain number of persons. Second person gets one rupee more than the first, third person
+  gets two rupees more than the second, fourth person gets three rupees more than the third and so on. If the first person gets one
+  rupee and the last person get $67$ rupees, find the number of persons.
+\end{frame}
+\begin{frame}{Solution of Problem 12}
+  \textbf{Solution:} Given, first person gets $1$ rupees, second person gets $1 + 1 = 2$ rupees, third person gets $2 + 2 = 4$
+  rupees, fourth person gets $4 + 3 = 7$ rupees and so on.
+
+  Let there be $n$ persons and $t_n$ be the amount last person gets which is given as $67$ rupees.
+  $$S_n = 1 + 2 + 4 + 7 + \ldots + t_n$$
+  $$S_n = 1 + 2 + 4 + 7 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 1 + [1 + 2 + 3 + \ldots \text{to~}n - 1~\text{terms}] - t_n$$
+  $$t_n = 1 + \frac{n(n - 1)}{2} = \frac{n^2 - n + 2}{2} = 67$$
+  $$n^2 - n + 132 = 0 \Rightarrow (n - 12)(n + 11) = 0\Rightarrow n = 12, -11$$
+  But no. of persons cannot be negative, therefore no. of persons is $12.$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} Natural numbers have been grouped in the following way $1, (2, 3), (4, 5, 6), (7, 8, 9, 10), \ldots$ Show that the
+  sum of the numbers in the $n$th group is $\frac{n(n^2 + 1)}{2}.$
+\end{frame}
+\begin{frame}{Solution of Problem 13}
+  \textbf{Solution:} Since $1$st group contains $1$ number, $2$nd group contains $2$ numbers, $3$rd group contains $3$ numbers, and
+  so on, therefore, $n$th group will contain $n$ numbers.
+
+  Here, we observe that numbers in each group are in A.P. whose c.d. is $1. (n - 1)$th group will have $(n - 1)$ numbers. Total
+  numbers of numbers till the end of $(n - 1)$th group is
+
+  $$N=1 + 2 + 3 +\ldots \text{~for~} (n - 1) \text{~terms}$$
+  $$= \frac{n(n - 1)}{2}$$
+
+  Thus, first term of nth group will be $N + 1$ i.e $\frac{n^2 - n + 2}{2}$
+
+  Thus, sum of numbers in $n$th group is
+
+  $$S = \frac{n}{2}\left(2.\frac{n^2 - n + 2}{2} + (n - 1).1\right) = \frac{n(n^2 + 1)}{2}$$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} Find $1 + 3 + 7 + 15 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 14}
+  \textbf{Solution:} $$S = 1 + 3 + 7 + 15 + \ldots + t_n$$
+  $$S = 1 + 3 + 7 + 15 + \ldots + t_{n - 1} + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = [1 + 2 + 4 + 8 + \ldots\text{~to~}n\text{~terms}] - t_n$$
+  $$t_n = 2^n - 1$$
+  $$S = \sum t_n = [2^1 + 2^2 + \ldots +2^n] - \sum 1 = 2(2^n - 1) - n = 2^{n + 1} - 2 - n$$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} Find $1 + 2x + 3x^2 + 4x^3 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 15}
+  \textbf{Solution:}
+  $$S_n = 1 + 2x + 3x^2 + \ldots + n.x^{n- 1}$$
+  $$xS_n = x + 2x^2 + 3x^^3 + \ldots + (n - 1)x^{n-1}  + n.x^n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  $$(1 - x)S_n = [1 + x + x^2 + \ldots \text{~to~}n\text{~terms}] -nx^n$$
+  $$S_n = \frac{1 - x^n}{(1 - x)^2} - \frac{nx^n}{1 - x}$$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} Find $1 + 2.2 + 3.2^2 + 4.3^3 + \ldots + 100.2^{99}$
+\end{frame}
+\begin{frame}{Solution of Problem 16}
+  \textbf{Solution:} $$S = 1 + 2.2 + 3.2^2 + 4.3^3 + \ldots + 100.2^{99}$$
+  $$2S = 1.2 + 2.2^2 + 3.2^3 + \ldots + 99.2^{99} + 100.2^{100}$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  $$-S = 1 + 2 + 2^2 + 2^3 + \ldots + 2^{99} - 100.2^{100}$$
+  $$S = 100.2^{100} - (2^{100} - 1)$$
+  $$= 99.2^{100} + 1$$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} find $1 + 2^2x + 3^2x^2 + 4^2x^4 + \ldots \text{~to~}\infty, |x| < 1$
+\end{frame}
+\begin{frame}{Solution of Problem 17}
+  \textbf{Solution:}$$S = 1 + 2^2x + 3^2x^2 + 4^2x^3 + \ldots \text{~to~}\infty$$
+  $$xS = x + 2^2x^2 + 3^2x^3 + \ldots \text{~to~}\infty$$
+  $$(1 - x)S = 1 + 3x + 5x^2 + 7x^3 + \ldots \text{~to~}\infty$$
+  Repeating the process again
+  $$(1 - x)^2S = 1 + 2x(1 + x + x^2 + \ldots \text{~to~}\infty)$$
+  $$S = \frac{1 + \frac{2x}{1 - x}}{(1 - x)^2} = \frac{1 + x}{(1 - x)^3}$$
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} if the sum of $n$ terms of a sequence be $2n^2 + 4,$ find its $n$th term. Is this sequence in A.P.?
+\end{frame}
+\begin{frame}{Solution of Problem 18}
+  \textbf{Solution:}$$S_n = 2n^2 + 4 \Rightarrow S_{n - 1} = 2(n - 1)^2 + 4 = 2n^2 -4n +6$$
+  $$t_n = S_n - S_{n - 1} = 4n - 6$$
+  $$\Rightarrow t_{n - 1} = 4n - 2$$
+  $$d = t_n - t_{n - 1} = 4$$
+  Since common difference is a constant the sequence is in A.P.
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.} Find the sum of $n$ terms of the series whose $n$th term is $n(n - 1)(n + 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 19}
+  \textbf{Solution:}$$t_n = n(n - 1)(n + 1) = n^3 - n$$
+  $$S_n = \sum n^3 - \sum n = \left(\frac{n(n + 1)}{2}\right)^2 - \frac{n(n + 1)}{2}$$
+  $$= \frac{n(n + 1)}{2}\left[\frac{n(n + 1)}{2} - 1\right]$$
+  $$= \frac{n(n + 1)(n^2 + n - 2)}{4}$$
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} Find the sum of $80$ terms of the series whose $n$th term is $n(n^2 - 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 20}
+  \textbf{Solution:} The $n$th term is same as problem 19. Thus,
+  $$S_{80} = \frac{80.81.(80^2 + 80 - 2)}{4} = 10494360$$
+\end{frame}
+\end{document}

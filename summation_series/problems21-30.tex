@@ -1,0 +1,129 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Summation of Series\\Problems 21-30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 21}
+  \textbf{21.} Find the sum of the series $1^3 + 3^3 + 5^3 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 21}
+  \textbf{Solution:} $$t_n = (2n - 1)^3 = 8n^3 -12n^2 + 6n - 1$$
+  $$S_n = \sum t_n = 8\sum n^3 -12\sum n^2 + 6\sum n - \sum 1$$
+  $$= 8\left(\frac{n(n + 1)}{2}\right)^2 - 12\frac{n(n + 1)(2n + 1)}{6} + 6\frac{n(n + 1)}{2} - n$$
+  $$= 4n^2(n + 1)^2 - 2n(n + 1)(2n + 1) + 3n(n + 1) - n$$
+  $$= n^2(2n^2 - 1)$$
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} Find the sum of the series $1^2 + 4^2 + 7^2 + 10^2 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 22}
+  \textbf{Solution:} $$t_n = (3n - 2)^2 = 9n^2 -12n + 4$$
+  $$S_n = \sum t_n = 9\sum n^2 - 12\sum n + 4\sum 1$$
+  $$= 9.\frac{n(n + 1)(2n + 1)}{6} - 12.\frac{n(n + 1)}{2} + 4n$$
+  $$= \frac{1}{2}n(6n^2 - 3n - 1)$$
+\end{frame}
+\begin{frame}{Problem 23}
+  \textbf{23.} Find the sum of the series $1^2 + 2 + 3^2 + 4 + 5^2 + 6 + \ldots$ to $2n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 23}
+  \textbf{Solution:}$$S_{2n} = 1^2 + 3^2 + 5^2 + \ldots\text{~to~}n\text{~terms}+ 2 + 4 + 6 + \ldots\text{~to~}n\text{~terms~}$$
+  $$t_{2n} = (2n - 1)^2 + 2n = 4n^2 -4n + 1 + 2n = 4n^2 - 2n + 1$$
+  $$S_{2n} = 4\sum n^2 -2\sum n +\sum 1$$
+  $$= 4.\frac{n(n + 1)(2n + 1)}{6} -2\frac{n(n + 1)}{2} + n$$
+  $$= \frac{1}{3}n(4n^2 + 3n + 2)$$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} Find the sum of the series $1^2 - 2^2 + 3^2 - 4^2 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 24}
+  \textbf{Solution:} When $n$ is odd i.e. $2m + 1~\forall m\in N$
+  $$S_n = 1^2 + 3^2 + 5^2 + \ldots \text{~to~}m + 1\text{~terms~} - (2^2 + 4^2 + 6^2 + \ldots\text{~to~}m\text{~terms})$$
+  $$= \sum_{i = 1}^{m + 1} (2i - 1)^2 - \sum_{i=1}^{m} (2i)^2$$
+  $$= \sum_{i = 1}^m4i^2 + 4(m + 1)^2 - 4\sum_{i = 1}^{m + 1}i + \sum_{i = 1}^{m + 1}1 -  \sum_{i=1}^{m} 4i^2$$
+  $$= 4(m + 1)^2 -4.\frac{(m + 1)(m + 2)}{2} + m + 1$$
+  $$= \frac{1}{2}n(n + 1)$$
+  When $n$ is even i.e. $2m~\forall m \in N$
+  $$S_n = 1^2 + 3^2 + 5^2 + \ldots \text{~to~}m\text{~terms~} - (2^2 + 4^2 + 6^2 + \ldots\text{~to~}m\text{~terms})$$
+  $$= \sum_{i = 1}^m (2i - 1)^2 - \sum_{i=1}^m (2i)^2$$
+  $$= -4\sum_{i= 1}^mi + \sum_{i=1}^m 1$$
+  $$= -4.\frac{m(m + 1)}{2} + m$$
+  $$= -\frac{1}{2}n(n + 1)$$
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} Find the sum of the series $1.3 + 3.5 + 5.7 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 25}
+  \textbf{Solution:} $$t_n = (2n - 1)(2n + 1) = 4n^2 - 1$$
+  $$S_n = 4\sum n^2 - \sum 1 = 4\frac{n(n + 1)(2n + 1)}{6} - n$$
+  $$= \frac{1}{3}n(4n^2 + 6n - 1)$$
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} Find the sum of the series $1.2 + 2.3 + 3.4 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 26}
+  \textbf{Solution:} $$t_n = n(n + 1)$$
+  $$S_n = \sum n^2 + \sum n = \frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}$$
+  $$= \frac{1}{3}n(n + 1)(n + 2)$$
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} Find the sum of the series $1.2^2 + 2.3^2 + 3.4^2 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 27}
+  \textbf{Solution:} $$t_n = n(n + 1)^2 = n^3 + 2n^2 + n$$
+  $$S_n = \sum n^3 + 2\sum n^2 + \sum n$$
+  $$= \left(\frac{n(n + 1)}{2}\right)^2 + 2\frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}$$
+  $$= \frac{1}{12}n(n + 1)(n + 2)(3n + 5)$$
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} Find the sum of the series $2.1^2 + 3.2^2 + 4.3^2 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 28}
+  \textbf{Solution:} $$t_n = (n + 1).n^2 = n^3 + n^2$$
+  $$S_n = \sum n^3 + \sum n^2 = \left(\frac{n(n + 1)}{2}\right)^2 + \frac{n(n +1)(2n + 1)}{6}$$
+  $$= \frac{1}{12}n(n + 1)(n + 2)(3n + 1)$$
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} Find the sum of the series $1 + (1 + 3) + (1 + 3 + 5) + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 29}
+  \textbf{Solution:} $$t_n = 1 + 3 + 5 + \ldots \text{~to~}n\text{~terms}$$
+  $$= \frac{n}{2}[2.1 + (n - 1)2] = \frac{n(2n)}{2} = n^2$$
+  $$S_n = \sum n^2 = \frac{n(n + 1)(2n + 1)}{6}$$
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} Find the sum of the series $1^2 + (1^2 + 2^2) + (1^2 + 2^2 + 3^2) + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 30}
+  \textbf{Solution:} $$t_n = 1^2 + 2^2 + 3^2 + \ldots\text{~to~}n\text{~terms}$$
+  $$= \frac{n(n + 1)(2n + 1)}{6}$$
+  $$S_n = \frac{1}{6}[\sum 2n^3 + \sum 3n^2 +\sum n]$$
+  $$= \frac{1}{12}n(n + 1)^2(n + 2)$$
+\end{frame}
+\end{document}
