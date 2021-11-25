@@ -1,0 +1,121 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Summation of Series\\Problems 41-48}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 41}
+  \textbf{41.} Find the sum of the series $1 + 9 + 24 + 46 + 75 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 41}
+  \textbf{41.} $$S = 1 + 9 + 24 + 46 + 75 + \ldots + t_n$$
+  $$S = 1 + 9 + 24 + 46 + 75 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0= 1 + 8 + 15 + 22 + 29 + \ldots + \text{~to~}n\text{~terms~} - t_n$$
+  $$t_n = \frac{n}{2}[2 + (n - 1)7] = \frac{1}{2}(7n^2 - 5n)$$
+  $$\therefore S_n = \frac{1}{6}n(n + 1)(7n- 4)$$
+\end{frame}
+\begin{frame}{Problem 42}
+  \textbf{42.} Find the $n$th term of the series $$2 + 4 + 7 + 11 + 16 + \ldots$$
+\end{frame}
+\begin{frame}{Solution of Problem 42}
+  \textbf{42.} $$S = 2 + 4 + 7 + 11 + 16 + \ldots + t_n$$
+  $$S = 2 + 4 + 7 + 11 + 16 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 2 + [2 + 3 + 4 + 5 + \ldots + \text{~to~}(n - 1)\text{~terms~}] - t_n$$
+  $$t_n = 2 + \frac{n - 1}{2}[2.2 + (n - 2).1] = \frac{1}{2}(n^2 + n + 2)$$
+\end{frame}
+\begin{frame}{Problem 43}
+  \textbf{43.} Find the sum to $10$ terms of the series $1 + 3 + 6 + 10 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 43}
+  \textbf{Solution:} $$S = 1 + 3 + 6 + 10 + \ldots + t_n$$
+  $$S = 1 + 3 + 6 + 10 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 1 + 2 + 3 + 4 + \ldots + \text{~to~}n\text{~terms~} - t_n$$
+  $$t_n = \frac{n(n + 1)}{2}$$
+  $$S_n = \frac{1}{2}\left(\sum n^2 + \sum n\right)$$
+  $$\Rightarrow S_{10} = 220$$
+\end{frame}
+\begin{frame}{Problem 44}
+  \textbf{44.} The odd natural numbers have been divided in groups as $(1, 3), (5, 7, 9, 11), (13, 15, 17, 19, 21, 23), \ldots$
+  Show that the sum of numbers in the $n$th group is $4n^3.$
+\end{frame}
+\begin{frame}{Solution of Problem 44}
+  \textbf{Solution:} First group has $2$ numbers, second has $4$ numbers and so on. So $n$th term will have $2n$ terms. Also, total
+  no. of numbers till $n - 1$th group is $S =2 + 4 + 6 + \ldots + 2n - 2$
+  $$S = \frac{n - 1}{2}[2.2 + (n - 2)2] = n(n - 1)$$
+  So first term of the $n$th group will be
+  $$t_{n(n - 1)} + 2 = 1 + (n^2 - n - 1).2 + 2 = 2n^2 - 2n + 1$$
+  Thus, required sum $$S_{2n} = \frac{2n}{2}[2(2n^2 -2n + 1) + (2n - 1).2]$$
+  $$= n[4n^2 -4n + 2 + 4n - 2] = 4n^3$$
+\end{frame}
+\begin{frame}{Problem 45}
+  \textbf{45.} Show that the sum of numbers in each of the following groups is an square of an odd positive integer $(1), (2,3,4),
+  (3,4,5,6,7), \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 45}
+  \textbf{Solution:} First term has one number, second has three numbers and third has five numbers therefore $n$th group will have
+  $2n - 1$ numbers.
+  \vspace{5mm}\linebreak
+  Also, the first number is an A.P. with first term being $1$ and common difference $1$ so the first term of $n$th group is $n$
+  \vspace{5mm}\linebreak
+  Thus, $S = \frac{2n - 1}{2}[2.n + (2n - 2).2] = (2n - 1)^2$
+  \vspace{5mm}\linebreak
+  which is square of an odd positive integer.
+\end{frame}
+\begin{frame}{Problem 46}
+  \textbf{46.} Find the sum to $n$ terms of the series $2 + 5 + 14 + 41 + \ldots$
+\end{frame}
+\begin{frame}{Solution to Problem 46}
+  \textbf{Solution:} $$S = 2 + 5 + 14 + 41 + \ldots + t_n$$
+  $$S = 2 + 5 + 14 + 41 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 2 + [3 + 9 + 27 + \ldots + \text{~to~}(n - 1)\text{~terms~}] - t_n$$
+  $$t_n = 2 + \frac{3(3^{n - 1} - 1)}{2}$$
+  $$S_n = \frac{1}{2}\sum 3^n + \frac{1}{2}\sum 1$$
+  $$= \frac{3}{4}(3^n - 1) + \frac{n}{2}$$
+\end{frame}
+\begin{frame}{Problem 47}
+  \textbf{47.} Find the sum to $n$ terms of the series $1.1 + 2.3 + 4.5 + 8.7 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 48}
+  \textbf{Solution:} Clearly the first number in $t_n$ would be $n$th term of a G.P. with first term $1$ and common ratio $2$
+  i.e. $2^{n - 1}.$ The second number in $t_n$ would be $n$th term of an A.P. whose first term is $1$ and common difference $2$
+  i.e. $2n - 1.$ Thus, $t_n = 2^{n - 1}(2n - 1) = n2^n - 2^{n - 1}$
+  \vspace{5mm}\linebreak
+  This is an arithmetico gerometric series. So we apply the formula
+  $$S_n = \frac{dr^n}{(r - 1)^2} + \frac{[a + (n - 1)d]r^n}{r - 1} -\frac{a}{r - 1} - \frac{dr}{(r - 1)^2}$$
+  $$= \frac{1.2^n}{(2 - 1)^2} + \frac{[1 + (n - 1).1]2^n}{(2 - 1)} - \frac{1}{2 - 1} + \frac{1.2}{(2 - 1)^2}$$
+\end{frame}
+\end{document}

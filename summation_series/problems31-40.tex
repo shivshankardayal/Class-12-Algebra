@@ -1,0 +1,142 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Summation of Series\\Problems 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} Find the sum of the series $1.2.3 + 2.3.5 + 3.4.7 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} $$t_n = n(n + 1)(2n + 1) = 2n^3 + 3n^2 + n$$
+  $$S_n = \sum t_n 2\sum n^3 + 3\sum n^2 + \sum n$$
+  $$= 2\left[\frac{n(n + 1)}{2}\right]^2 + 3\frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}$$
+  $$= \frac{1}{2}n(n + 1)^2(n + 2)$$
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} Find the sum of the series $1.2.3 + 2.3.4 + 3.4.5 + \ldots$ to $n$ terms
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} $$t_n = n(n + 1)(n + 2) = n^3 + 3n^3 + 2n$$
+  $$S_n = \sum t_n = \sum n^3 + 3\sum n^2 + 2\sum n$$
+  $$= \left[\frac{n(n + 1)}{2}\right]^2 + 3\frac{n(n + 1)(n + 2)}{6} + 2\frac{n(n + 1)}{2}$$
+  $$= \frac{1}{4}n(n + 1)(n + 2)(n + 3)$$
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} Find the sum of the series $1.3^2 + 2.5^2 + 3.7^2 + \ldots$ to $20$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 33}
+  \textbf{Solution:} $$t_n = n(2n + 1)^2 = 4n^3 + 4n^2 + n$$
+  $$S_{20} = 4\sum_{n = 1}^{20}n^3 + 4\sum_{n = 1}^{20}n^2 + \sum_{n = 1}^{20}n$$
+  $$= 4\left[\frac{20.21}{2}\right]^2 + 4.\frac{20.21.41}{6} + \frac{20.21}{2}$$
+  $$= 188090$$
+\end{frame}
+\begin{frame}{Problem 34}
+  \textbf{34.} Find the sum of the series $(n^2 - 1^2) + 2(n^2 - 2^2) + 3(n^2 - 3^2) + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:}$$t_i = i(n^2 - i^2) = n^2i -i^3$$
+  $$S_n = n^2\sum_{i = 1}^n i - \sum_{i = 1}^n i^3$$
+  $$S_n = n^2\frac{n(n + 1)}{2} - \left[\frac{n(n + 1)}{2}\right]^2$$
+  $$ = \frac{1}{4}n^2(n^2 - 1)$$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} Find the sum of the series $1^2 + (1^2 + 2^2) + (1^2 + 2^2 + 3^2) + \ldots$ to $10$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} $$t_n = 1^2 + 2^2 + \ldots + n^2 = \frac{n(n + 1)(2n + 1)}{6} = \frac{2n^3 + 3n^2 + n}{6}$$
+  $$S_n = \frac{1}{3}\sum n^3 + \frac{1}{2}\sum n^2 + \frac{1}{6}\sum n$$
+  $$= \frac{1}{3}\left[\frac{n(n + 1)}{2}\right]^2 + \frac{1}{2}\frac{n(n + 1)(2n + 1)}{6} + \frac{1}{12}n(n + 1)$$
+  Substituting $n = 10,$ we get
+  $$S_{10} = 1210$$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} Find the sum of the series $(3^3 - 2^3) + (5^3 - 4^3) + (7^3 - 6^3) + \ldots$ to $10$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} $$t_n = [(2n + 1)^3 - (2n)^3] = 12n^2 + 6n + 1$$
+  $$S_n = 12\sum n^2 + 6\sum n + \sum 1$$
+  $$S_n = 2n(n + 1)(2n + 1) + 3n(n + 1) + n$$
+  Substituting $n = 10,$ we get
+  $$S_{10} = 4960$$
+\end{frame}
+\begin{frame}{Problem 37}
+  \textbf{37.} Find the sum of the series $1 + \frac{1}{1.2} + \frac{1}{1 + 2 + 3} + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{37.} $$t_n = \frac{1}{1 + 2 + 3 + \ldots + n} = \frac{2}{n(n + 1)} = 2\left(\frac{1}{n} - \frac{1}{n + 1}\right)$$
+  $$t_{n - 1} = 2\left(\frac{1}{n - 1} - \frac{1}{n}\right)$$
+  $$\ldots$$
+  $$t_3 = 2\left(\frac{1}{3} - \frac{1}{4}\right)$$
+  $$t_2 = 2\left(\frac{1}{2} - \frac{1}{3}\right)$$
+  $$t_1 = 2\left(1 - \frac{1}{2}\right)$$
+  Adding, we get
+  $$S_n = 2\left(1 - \frac{1}{n + 1}\right) = \frac{2n}{n + 1}$$
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} Find the sum to infinity of the series $\frac{1}{2.4} + \frac{1}{4.6} + \frac{1}{6.8} + \frac{1}{8.10} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 38}
+  \textbf{Solution:} $$t_n = \frac{1}{2n.2(n + 1)} = \frac{1}{4}\left(\frac{1}{n} - \frac{1}{n + 1}\right)$$
+  $$t_1 = \frac{1}{4}\left(1 - \frac{1}{2}\right)$$
+  $$t_2 = \frac{1}{4}\left(\frac{1}{2} - \frac{1}{3}\right)$$
+  $$\ldots$$
+  $$t_{n - 1} = \frac{1}{4}\left(\frac{1}{n - 1} - \frac{1}{n}\right)$$
+  $$t_n = \frac{1}{4}\left(\frac{1}{n} - \frac{1}{n + 1}\right)$$
+  As $n$ approaches $\infty, t_n$ aproaches zero.
+  Thus, $S_\infty = \frac{1}{4}$
+\end{frame}
+\begin{frame}{Problem 39}
+  \textbf{39.} Find the sum of the series $2 + 6 + 12 + 20 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 39}
+  \textbf{Solution:} $$S_n = 2 + 6 + 12 + 20 + \ldots + t_n$$
+  $$S_n = 2 + 6 + 12 + 20 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 2 + 4 + 6 + 8 + \ldots \text{~to~}n\text{~terms~} - t_n)$$
+  $$t_n = \frac{n}{2}[2.2 + (n - 1)2] = n(n + 1)$$
+  $$S_n = \sum t_n = \sum n^2 + \sum n = \frac{n(n + 1)(2n + 1)}{6} + \frac{n(n + 1)}{2}$$
+  $$= \frac{1}{3}n(n + 1)(n + 2)$$
+\end{frame}
+\begin{frame}{Problem 40}
+  \textbf{40.} Find the sum of the series $3 + 6 + 11 + 18 + \ldots$ to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 40}
+  \textbf{Solution:} $$S_n = 3 + 6 + 11 + 18 + \ldots + t_n$$
+  $$S_n = 3 + 6 + 11 + 18 + \ldots + t_n$$
+  Subtracting first term of lower series with second term of upper series, second term of lower series from third term of upper
+  series and so on, we get
+  $$0 = 3 + [3 + 5 + 7 + \ldots \text{~to~}n\text{~terms~} - t_n]$$
+  $$t_n = 3 + \frac{n - 1}{2}[2.3 + (n - 1).2] = 3 + (n - 1)(n + 2)$$
+  $$= n^2 + n + 1$$
+  $$S_n = \sum t_n = \sum n^2 + \sum n + \sum 1$$
+  $$= \frac{1}{6}n(2n^2 + 3n + 13)$$
+\end{frame}
+\end{document}
