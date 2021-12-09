@@ -1,0 +1,145 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} In an A.P. of $2n$ terms the middle pair of terms are $p + q$ and $p - q.$ Show that the sum of cubes of the terms
+  in A.P. are $2np[p^2 + (4n^2 - 1)q^2]$
+\end{frame}
+\begin{frame}{Solution of Problem 11}
+  \textbf{Solution:} Let $t_r$ denote the $r$th term of the A.P.
+  \linebreak\linebreak
+  Given, $t_n = p + q$ and $t_{n + 1} = p - q \therefore d = -2q$
+  \linebreak\linebreak
+  Also, $t_1 + t_{2n + 1} = t_2 + t_{2n - 1} = \ldots = t_n + t_{n + 1} = 2p$
+  \linebreak\linebreak
+  Let $S$ be the sum of cubes of the terms of A.P., then $S = (t_1^3 + t_{2n}^3) + (t_2^3 + t_{2n - 1}^3) + \ldots + (t_n^3 + t_{n
+    - 1}^3)$
+  $$t_1^3 + t_{2n}^3 = (t_1 + t_{2n})^3 - 3t_1t_{2n}(t_1 + t_{2n}) = 8p^3 - 6pt_1t_{2n} = 8p^3 - \frac{6p}{4}[(t_1 + t_{2n})^2 -
+    (t_1 - t_{2n})^2]$$
+  $$= 8p^3 - \frac{3p}{2}[4p^2 - (2n - 1)^2.4q^2][\because t_{2n} = t_1 + (2n - 1)d~\text{and}~d = -2q]$$
+  $$= 2p^3 + 6pq^2(2n - 1)^2$$
+  Similarly $$t_2^3 + t_{2n - 1}^3 = 2p^3 + 6pq^2(2n - 3)^2, t_3^3 + t_{2n - 2}^3 = 2p^3 + 6pq^2(2n - 5)^2, \ldots, t_n^3 + t_{n +
+    1}^3 = 2p^3 + 6pq^2.1^2$$
+  Adding all these, we get
+  $$S = 2np^3 + 6pq^2[1^2 + 3^2 + 5^2 + \ldots~\text{to}~n~\text{terms}]$$
+  $$= 2np[p^2 + (4n^2 - 1)q^2]$$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} Find the sum $S_n$ of the cubes of the first $n$ terms of an A.P. and show that the sum of the first $n$ terms of
+  the A.P. is a factor of $S_n.$
+\end{frame}
+\begin{frame}{Solution of Problem 12}
+  \textbf{Solution:} Let $S$ be the sum of first $n$ terms of the A.P. $a, a + d, a + 2d, \ldots$ then $S = \frac{n}{2}[2a + (n -
+    1)d]$
+  $$S_n = a^3 + (a + d)^3 + (a + 2d)^3 + \ldots + [a + (n - 1)d]^3$$
+  $$= na^3 + 3a^2d[1 + 2 + 3 + \ldots + (n - 1)] + 3ad^2[1^2 + 2^2 + \ldots + (n - 1)^2] + d^3[1^3 + 2^3 + \ldots + (n - 1)^3]$$
+  $$= na^3 + 3a^2d.\frac{n(n - 1)}{2} + 3ad^2.\frac{(n - 1).n.(2n - 1)}{6} + d^3\frac{n^2(n - 1)^2}{4}$$
+  $$= \frac{n}{2}\left(2a^3 + 3(n - 1)a^2d + (n - 1)(2n - 1)ad^2 + \frac{1}{2}n(n - 1)^2d^3\right)$$
+  $$= \frac{n}{2}\left[a^2(2a + (n - 1)d) + (n - 1)ad(2a + (n - 1)d) + \frac{n(n - 1)}{2}d^2(2a + (n - 1)d)\right]$$
+  $$= \frac{n}{2}[2a + (n - 1)d]\left[a^2 + (n - 1)ad + \frac{n()n - 1}{2}d^2\right]$$
+  $$= S\left[a^2 + (n - 1)ad + \frac{n()n - 1}{2}d^2\right]$$
+
+  Hence, $S$ is a factor of $S_n$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} Show that any positive integral power (greater than $1$) of a positive integer $m,$ is the sum of $m$ consecutive
+  odd positive integers. Find the first odd integer for $m^r(r > 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 13}
+  \textbf{Solution:} Let $r$ be a positive integer and $r > 1.$
+  \linebreak\linebreak
+  Let $m^r = (2k + 1)+ (2k + 3) + \ldots + (2k + 2m - 1)$
+  $$m^r = \frac{m}{2}[4k + 2 + (m - 1)2 \Rightarrow m^{r - 1} = 2k + m] \Rightarrow k = \frac{m^{r - 1} - m}{2}$$
+  Clearly for $r > 1, m^{r - 1}$ and $m$ are both odd or both even. $\therefore m^{r - 1} - m$ is an even number. Thus, such
+  integer $k$ exists.
+  \linebreak\linebreak
+  First off interger $= 2k + 1 = m^{r - 1} - m + 1$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} If $a$ be the sum of $n$ terms and $b^2$ the sum of the square of $n$ terms of an A.P., find the first term and
+  common difference of the A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 14}
+  \textbf{14.} Let $x = x_1$ be the first term and $d$ be the common difference. Then,
+  $$x + (x + d) + \ldots + [x + (n - 1)d] = a \Rightarrow nx + \frac{d.(n - 1)n}{2} = a$$
+  Squaring both sides of the above equation
+  $$nx^2 + \frac{d^2(n - 1)^2n}{4} + n(n - 1)xd = \frac{a^2}{n}$$
+  Also,
+  $$x^2 + (x + d)^2 + \ldots + [x + (n - 1)d]^2 = b^2$$
+  $$\Rightarrow nx^2 + d^2[1^2 + 2^2 + \ldots + (n - 1)^2] + 2xd[1 + 2 + 3 + \ldots + (n - 1)]= b^2$$
+  $$\Rightarrow nx^2 + d^2\frac{(n - 1)n(2n - 1)}{6} + 2xd\frac{n(n - 1)}{2} = b^2$$
+  Subtracting the two obtained equations we get
+  $$d^2\frac{n(n - 1)(n + 1)}{12} = \frac{nb^2 - a^2}{n}\Rightarrow d = \pm \frac{2\sqrt{3(nb^2 - a^2)}}{n\sqrt{n^2 - 1}}$$
+  $$\Rightarrow x = \frac{1}{n}\left[a\mp \frac{-(n - 1)\sqrt{3(nb^2 - a^2)}}{\sqrt{n^2 - 1}}\right]$$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} If $a_1, a_2, \ldots, a_n$ are in A.P., whose common diference is $d$, then find the sum of the series $$\sin
+  d[\csc a_1\csc a_2 + \csc a_2\csc a_3 + \ldots + \csc a_{n - 1}\csc a_n]$$
+\end{frame}
+\begin{frame}{Solution of Problem 15}
+  \textbf{Solution:}$$t_1 = \sin d(\csc a_1\csc a_2) = \frac{\sin(a_2 - a_1)}{\sin a_1\sin a_2} = \cot a_1 - \cot a_2$$
+  $$t_2 = \cot a_2 - \cot a_3$$
+  $$\ldots$$
+  $$t_{n - 1} = \cot a_{n - 1} - \cot a_n$$
+
+  Adding, we get $\sin d[\csc a_1\csc a_2 + \csc a_2\csc a_3 + \ldots + \csc a_{n - 1}\csc a_n] = \cot a_1 - \cot a_n$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} If $a_1, a_2, \ldots, a_n$ are in A.P. where $a_i > 0~\forall i,$ show that $$\frac{1}{\sqrt{a_1} + \sqrt{a_2}} +
+  \frac{1}{\sqrt{a_2} + \sqrt{a_3}} + \ldots + \frac{1}{\sqrt{a_{n - 1}} + \sqrt{a_n}} = \frac{n - 1}{\sqrt{a_1} + \sqrt{a_n}}$$
+\end{frame}
+\begin{frame}{Solution of Problem 16}
+  \textbf{Solution:} $$t_1 = \frac{1}{\sqrt{a_1} + \sqrt{a_2}} = \frac{\sqrt{a_2} - \sqrt{a_1}}{a_2 - a_1} =
+  \frac{1}{d}(\sqrt{a_2} - \sqrt{a_1})$$
+  $$t_2 = \frac{1}{d}(\sqrt{a_3} - \sqrt{a_2})$$
+  \ldots
+  $$t_{n - 1} = \frac{1}{d}(\sqrt{a_n} - a_{n - 1})$$
+
+  Adding, we get $$S = \frac{1}{d}(\sqrt{a_n} - \sqrt{a_1}) = \frac{1}{d}\frac{a_n - a_n}{\sqrt{a_1} + \sqrt{a_n}} = \frac{n -
+    1}{\sqrt{a_1} + \sqrt{a_n}}$$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} If $a_1, a_2, \ldots, a_n$ are in A.P., whose common differemce is $d$ show that $\sum_{2}^n\tan^{-1}\frac{d}{1 +
+    a_{n - 1}a_n} = \tan^{-1}\frac{a_n - a_n}{1 + a_na_1}$
+\end{frame}
+\begin{frame}{Solution of Problem 17}
+  \textbf{Solution:} We have to prove that $\tan^{-1}\frac{d}{1 + a_1a_2} + \tan^{-1}\frac{d}{1 + a_2a_3} + \ldots +
+  \tan^{-1}\frac{d}{1 + a_{n - 1}a_n} = \tan^{-1}\frac{a_n - a_n}{1 + a_na_1}$
+  $$t_1 = \tan^{-1}\frac{d}{1 + a_1a_2} = \tan^{-1}\frac{a_2 - a_1}{1 + a_1a_2} = \tan^{-1}a_2 - \tan^{-1}a_1$$
+  $$t_2 = \tan^{-1}\frac{d}{1 + a_2a_3} = \tan^{-1}a_3 - \tan^{-1}a_2$$
+  $$\ldots$$
+  $$t_{n - 1} = \tan^{-1}\frac{d}{1 + a_{n - 1}a_n} = \tan^{-1}a_{n} - \tan^2{-1}a_{n - 1}$$
+  Adding, we get
+  $$\tan^{-1}\frac{d}{1 + a_1a_2} + \tan^{-1}\frac{d}{1 + a_2a_3} + \ldots + \tan^{-1}\frac{d}{1 + a_{n - 1}a_n} = \tan^{-1}a_n -
+  \tan^{-1}a_1 = \tan^{-1}\frac{a_n - a_1}{1 + a_1a_n}$$
+\end{frame}
+\end{document}
