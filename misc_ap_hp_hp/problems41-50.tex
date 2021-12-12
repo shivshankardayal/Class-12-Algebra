@@ -1,0 +1,189 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 41-50}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 41}
+  \textbf{41.} Find the sum of the  product of the first $n$ natural numbers takes two at a time.
+\end{frame}
+\begin{frame}{Solution of Problem 41}
+  \textbf{Solution:} Required sum is $S = 1.2 + 2.3 + 3.4 + \ldots + (n - 1).n$
+  $$= \frac{(1 + 2 + \ldots + n)^2 - (1^2 + 2^2 + \ldots + n^2)}{2}$$
+  $$ = \frac{\frac{n^2(n + 1)^2}{2^2} - \frac{n(n + 1)(2n + 1)}{6}}{2}$$
+  $$= \frac{1}{24}n(n^2 - 1)(3n + 2)$$
+\end{frame}
+\begin{frame}{Problem 42}
+  \textbf{42.} A postman delivered daily for $42$ days $4$ more letters each day than on the previous day. The total delivery made
+  for the first $24$ days of the period was the same as that for the last $18$ days. How many letters did he deliver during the
+  whole period?
+\end{frame}
+\begin{frame}{Solution of Problem 42}
+  \textbf{Solution:} Let the postman deliver $a$ letters on the first day. Given, $d = 4.$ Also, according to the question
+  $$\frac{24}{2}[2a + (24 - 1)4] = \frac{18}{2}[2(a + 24.4) + (18 - 1)4]$$
+  $$24a + 48.23 = 18a + 24.72 + 36.17$$
+  $$a = 206$$
+  Thus, total no. of letters delivered $= \frac{42}{2}[2.206 + (42 - 1).4] = 12096$
+\end{frame}
+\begin{frame}{Problem 43}
+  \textbf{43.} If $S_n$ denotes the sum to $n$ terms of an A.P. and $S_n = n^2p, S_m = m^2p, m\neq n,$ prove that $S_n = p^3$
+\end{frame}
+\begin{frame}{Solution of Problem 43}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P. Then
+  $$S_n = \frac{n}{2}[2a + (n - 1)d] = n^2p\Rightarrow 2a + (n - 1)d = 2np$$
+  $$S_m = \frac{m}{2}[2a + (m - 1)d] = m^2p\Rightarrow 2a + (m - 1)d = 2mp$$
+  Subtracting, we get
+  $$d = 2p$$
+  Substituting this in any of the equations we get $a = p$
+  $$S_p = \frac{p}{2}[2a + (p - 1)d] = p^3$$
+\end{frame}
+\begin{frame}{Problem 44}
+  \textbf{44.} There are $n$ A.P.'s whose common difference are $1, 2, 3, \ldots, n$ respectively the first term of each being
+  unity. Prove that the sum of their $n$th terms is $\frac{n}{2}(n^2 + 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 44}
+  \textbf{Solution:} $n$th term of first A.P. $= 1 + (n - 1).1 = n$
+  \linebreak\linebreak
+  $n$th term of second A.P. $= 1 + (n - 1).2 = 2n - 1$
+  \linebreak\linebreak
+  $n$th term of third A.P. $= 1 + (n - 1).3 = 3n - 2$
+  \linebreak\linebreak
+  $\ldots$
+  \linebreak\linebreak
+  $n$th term of $n$th A.P. $= 1 + (n - 1).n = n^2 - n + 1$
+  \linebreak\linebreak
+  Since all the $n$th terms are in A.P., Sum of all these $= \frac{n}{2}(n + n^2 - n + 1) = \frac{n}{2}(n^2 + 1)$
+\end{frame}
+\begin{frame}{Problem 45}
+  \textbf{45.} If $S_1, S_2, \ldots, S_m$ are the sum of $n$ terms of $m$ A.P.s whose first terms are $1, 2, \ldots, m$ and whose
+  common differences are $1, 3, 5, \ldots, 2m - 1$ respectively, show that $S_1 + S_2 + \ldots + S_m = \frac{1}{2}mn(mn + 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 45}
+  \textbf{Solution:} Sum of first A.P. $S_1 = \frac{n}{2}[2.1 + (n - 1).1]$
+  \linebreak\linebreak
+  Sum of second A.P. $S_2 = \frac{n}{2}[2.2 + (n - 1).3]$
+  \linebreak\linebreak
+  Sum of third A.P. $S_3 = \frac{n}{2}[2.3 + (n - 1).5]$
+  \linebreak\linebreak
+  \ldots
+  \linebreak\linebreak
+  Sum of $m$th A.P. $S_m = \frac{n}{2}[2.m + (n - 1)(2m - 1)]$
+  \linebreak\linebreak
+  Adding all these, we get
+  $$S_1 + S_2 + \ldots + S_m = \frac{n}{2}[2(1 + 2 + \ldots + m) + (n - 1)(1 + 3 + \ldots + 2m - 1)]$$
+  $$= \frac{n}{2}\left(2.\frac{m(m + 1)}{2} + (n - 1).\frac{m}{2}.2m\right)$$
+  $$= \frac{1}{2}mn(mn + 1)$$
+\end{frame}
+\begin{frame}{Problem 46}
+  \textbf{46.} A straight line is drawn through the center of a square $ABCD$ intersecting side $AB$ at point $N$ so that $AN:NB =
+  1:2.$ On this line take an arbitrary point $M$ lying inside the square. Prove that the distances from $M$ to the sides $AB, AD,
+  BC, CD$ of the square taken in that order, form an A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 46}
+  \textbf{Solution:}
+  \begin{center}
+  \begin{tikzpicture}
+    \draw (0, 0) -- (0, 1.5) -- (1.5, 1.5) -- (1.5, 0) -- cycle;
+    \draw (0, 0) node[anchor=north east] {$D$};
+    \draw (0, 1.5) node[anchor=south east] {$A$};
+    \draw (1.5, 1.5) node[anchor=south west] {$B$};
+    \draw (1.5, 0) node[anchor=north west] {$C$};
+    \draw (.5, 1.5) -- (1, 0);
+    \draw (1, 0) -- (1, 1.5);
+    \draw (0, .6) -- (1.5, .6);
+    \draw (.8, 0) -- (.8, 1.5);
+    \draw (.5, 1.5) node[anchor=south] {$N$};
+    \draw (.8, 1.5) node[anchor=south] {$P$};
+    \draw (1, 1.5) node[anchor=south] {$Q$};
+    \draw (1, 0) node[anchor=north] {$R$};
+    \draw (.8, .6) node[anchor=north east] {$M$};
+    \draw (.8, 0) node[anchor=north east] {$S$};
+  \end{tikzpicture}
+  \end{center}
+  Consider the above diagram in which line $NR$ passes through center of square $ABCD$ and divides $AB$ such that $AN: NB = 1:2.$
+  Also, let each side has length equal to $3a.$
+  \linebreak\linebreak
+  $\Rightarrow AN = NQ = QB = a$ So in $\triangle NQR, NQ = \frac{1}{3}QR \Rightarrow NP = \frac{1}{3}PM = \frac{1}{3}x,$ where $x$
+  is distance of $M$ from $AB,$ since the triangles $NPM$ and $NQR$ are similar.
+  \linebreak\linebreak
+  Distance of $M$ from $AD = AN + NP = a + \frac{1}{3}x$
+  \linebreak\linebreak
+  Distance of $M$ from $BC = BN - NP = 2a - \frac{1}{3}x$
+  \linebreak\linebreak
+  Distance of $M$ from $CD = QR - PM = 3a - x$ and thus these are in A.P.
+\end{frame}
+\begin{frame}{Problem 47}
+  \textbf{47.} If the sides of a right-angled triangle are in G.P., find the cosine of the greater acute angle.
+\end{frame}
+\begin{frame}{Solution of Problem 47}
+  \textbf{Solution:} Let the sides of right-angled triangle be $a, ar, ar^2$ where $ar^2$ is the hypotenuse.
+  $$\therefore a^2r^4 = a^2 + a^2r^2 \therefore r2 = \frac{1 \pm \sqrt{5}}{2}$$
+  $$\because r> 1 \Rightarrow r^2> 1 \Rightarrow r^2 = \frac{1 + \sqrt{5}}{2}$$
+  Thus, cosine of greater acute angle $$= \frac{a}{ar^2} = \frac{1}{r^2} = \frac{2}{1 + \sqrt{5}}$$
+\end{frame}
+\begin{frame}{Problem 48}
+  \textbf{48.} If $a, b, c, d$ are non-zero real numbers and $(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) = (ab + bc + cd)^2,$ prove that
+  $a, b, c, d$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 48}
+  \textbf{Solution:}$$(a^2 + b^2 + c^2)(b^2 + c^2 + d^2) = (ab + bc + cd)^2$$
+  $$\Rightarrow a^2b^2 + b^4 + b^2c^2 + a^2c^2 + b^2c^2 + c^4 + a^2d^2 + b^2d^2 + c^2d^2 = a^2b^2 + b^2c^2 + c^2d^2 + 2acb^2 +
+  2bdc^2 + 2abcd$$
+  $$\Rightarrow (b^4 + a^2c^2 - 2acb^2) + (c^4 + b^2d^2 - 2bdc^2) + (a^2d^2 + b^2c^2 - 2abcd) = 0$$
+  $$\Rightarrow (b^2 - ac)^2 + (c^2 - bd)^2 + (ad - bc)^2 = 0$$
+  $$\Rightarrow b^2 = ac, c^2 = bd, ad = bc$$
+  $\Rightarrow a, b, c, d$ are in G.P.
+\end{frame}
+\begin{frame}{Problem 49}
+  \textbf{49.} Does there exist a geometric progression containing $27, 8$ and $12$ as three of its terms? If it exists, how many
+  such progressions are possible?
+\end{frame}
+\begin{frame}{Solution of Problem 49}
+  \textbf{Solution:} If possible let $27, 8$ and $12$ be the $p$th, $q$th and $k$th terms respectively of a G.P. whose first term
+  is $a$ and common ratio is $r.$ Then
+  $$27 = ar^{p - 1}, 8 = ar^{q - 1}, 12 = ar^{k- 1}$$
+  $$\Rightarrow r^{p - q} = \frac{27}{8} = \frac{3^3}{2^3}$$
+  $$\Rightarrow r^{k - q} = \frac{12}{8} = \frac{3}{2}$$
+  $$\Rightarrow 3k - 3q = p - q \Rightarrow p + 2q - 3k = 0$$
+  The posible set of solutions is $p = 4n, q = n, k= 2n$ where $n\in N.$ Thus, infinite such G.P.s are possible.
+\end{frame}
+\begin{frame}{Problem 50}
+  \textbf{50.} Show that $10, 11, 12$ cannot  be terms of a G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 50}
+  \textbf{Solution:} If possible, let $10, 11$ and $12$ be the $p$th, $q$th and $k$th terms respectively of a G.P. whose first term
+  is $a$ and common ratio is $r.$ Then
+  $$10 = ar^{p - 1}, 11 = ar^{q - 1}, 12 = ar^{k - 1}$$
+  $$\Rightarrow \frac{11}{10} = r^{q - p}, \frac{12}{11} = r^{k - q}$$
+  $$\Rightarrow \left(\frac{11}{10}\right)^{k - q} = \left(\frac{12}{11}\right)^{q - p}$$
+  $$11^{k - p} = 5^{q - p}2^{k + q - 2p}.3^{q - p}$$
+  This is possible only when $k - p = 0, k - q = 0, k + q - 2p = 0$ and $q - p = 0$ or $k = p = q$ which is not possible since $p,
+  q, k$ are distinct.
+\end{frame}
+\end{document}
