@@ -33,4 +33,163 @@
 \begin{frame}{Problem 51}
   \textbf{51.} If $\int_0^{\frac{\pi}{2}}\cos^nx\cos(nx)dx,$ then prove that $I_1, I_2, I_3, \ldots$ are in G.P.
 \end{frame}
+\begin{frame}{Solution of Problem 51}
+  \textbf{Solution:} $$I_n = \int_0^{\frac{\pi}{2}}\cos^nx\cos(nx)dx$$
+  $$I_{n + 1} = \int_0^{\frac{\pi}{2}}\cos^{n + 1}x\cos(n + 1)xdx$$
+  $$= \int_0^{\frac{\pi}{2}}\cos^{n}x[\cos x\cos (n + 1)x]dx$$
+  Now, $\cos(nx) = \cos[(n + 1) - 1]x = \cos(n + 1)x\cos x + \sin(n + 1)x\sin x$
+  $\Rightarrow \cos(n + 1)x\cos x = \cos nx - \sin(n + 1)x\sin x$
+  $$\therefore I_{n + 1} = \int_0^{\frac{\pi}{2}}\cos^nx[\cos(nx) - \sin(n + 1)x\sin x]dx$$
+  $$= I_n - \int_0^{\frac{\pi}{2}}\cos^nx \sin x\sin(n + 1)xdx$$
+  Taking $u = \sin(n + 1)x$ and $v = \cos^nx\sin x,$ we get
+  $$= I_n + \left[\frac{\cos^{n + 1}x\sin(n + 1)x}{n + 1}\right]_0^{\frac{\pi}{2}} - \int_0^{\frac{\pi}{2}}\cos^{n + 1}x\cos(n + 1)xdx$$
+  $$= I_n + 0 - 0 - I_{n + 1} \Rightarrow 2I_{n + 1} = I_n\Rightarrow \frac{I_{n + 1}}{I_n} = \frac{1}{2}\forall n\in N$$
+  Thus, $I_1, I_2, I_3, \ldots$ are in G.P.
+\end{frame}
+\begin{frame}{Problem 52}
+  \textbf{52.} Let $I_n = \int_0^\pi \frac{\sin(2n - 1)x}{\sin x}dx.$ Show that $I_1, I_2, I_3, \ldots$ are in A.P. as well as in
+  G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 52}
+  \textbf{Solution:} $$I_{n + 1} - I_{n} = \int_0^\pi \frac{\sin(2n + 1)x - \sin(2n - 1)x}{dx} = \int_0^\pi \frac{2\cos 2nx\sin
+    x}{\sin x}dx$$
+  $$= 2\int_0^\pi\cos 2nx dx = \frac{2}{2n}[\sin 2nx]_0^\pi = 0\Rightarrow I_{n + 1} = I_n$$
+  Also, $I_1 = \int_o^\pi \frac{\sin x}{\sin x}dx = \pi$
+  Thus, $I_1 = I_2 = I_3 = \ldots = \pi$
+  Thus, $I_1, I_2, I_3, \ldots$ are in A.P. as well as in G.P.
+\end{frame}
+\begin{frame}{Problem 53}
+  \textbf{53.} Prove that the three successive terms of a G.P. will form sides of a triangle if the common ratio $r$ satisfied the
+  inequality $\frac{1}{2}(\sqrt{5} - 1) < r < \frac{1}{2}(\sqrt{5} + 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 53}
+  \textbf{Solution:} Let the sides of the triangle be $a, ar, ar^2.$
+  \linebreak\linebreak
+  When $r = 1$ the triangle formed will be equilateral triangle.
+  \linebreak\linebreak
+  If $r > 1$ the triangle will be formed if $a + ar > ar^2$
+  $$r^2 - r - 1 < 0\Rightarrow \frac{1 - \sqrt{5}}{2} < r <\frac{1 + \sqrt{5}}{2}$$
+  $$\Rightarrow r < \frac{1 + \sqrt{5}}{2}[\because r > 1]$$
+  Similarly when $r < 1$ the triangle will be formed if $r > \frac{1 - \sqrt{5}}{2}$
+  \linebreak\linebreak
+  Thus, the range is $\frac{1}{2}(\sqrt{5} - 1) < r < \frac{1}{2}(\sqrt{5} + 1)$
+\end{frame}
+\begin{frame}{Problem 54}
+  \textbf{54.} Find out whether $111\ldots1( 91$ digits $)$ is a prime number.
+\end{frame}
+\begin{frame}{Solution of Problem 54}
+  \textbf{Solution:} $111\ldots 1 = 10^{90} + 10^{89} + 10^{88} + 10^2 + 10 + 1 = \frac{10^{91}}{10 - 1}$
+  Since $91 = 13\times 7$ we can multiply or divide by $10^{13} - 1$ or $10^7 - 1$
+  $$\frac{10^{91}}{10 - 1} = \frac{10^{91}}{10^7 - 1}\frac{10^{7}}{10 - 1}$$
+  $$= (10^{84} + 10^{77} + 10^{70} + \ldots + 1)(10^6 + 10^5 + \ldots + 1)$$
+  Therefore, given no. is not a prime nnumber.
+\end{frame}
+\begin{frame}{Problem 55}
+  \textbf{55.} Find the natural number $a$ for which $\sum_{k = 1}^nf(a + k) = 16(2^n - 1),$ where the function $f$ satisfied the
+  relation $f(x + y) = f(x)f(y)$ for all natural nuumbers $x, y$ and further $f(1) = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 55}
+  \textbf{Solution:} Given $f(x + y) = f(x)f(y)$ for all natural number $x$ and $y$
+  \linebreak\linebreak
+  $$\therefore f(a + k) = f(a)f(k)$$
+  $$\sum_{k = 1}^nf(a + k) = \sum_{k = 1}^nf(a)f(k) = f(a)[f(1) + f(2) + \ldots + f(k)]$$
+  $$f(2) = f(1) + f(1) \Rightarrow f(2) = [f(1)]^2 = 2^2$$
+  $$f(3) = f(1)f(2)= 2^3$$
+  Given $$\sum_{k = 1}^nf(a + k) = 16(2^n - 1)$$
+  $$2^a[2 + 2^2 + \ldots + 2^n] = 16(2^n - 1)$$
+  $$2^a.2.(2^n - 1) = 16.(2^n - 1)\Rightarrow a = 3$$
+\end{frame}
+\begin{frame}{Problem 56}
+  \textbf{56.} In a certain test, there are $n$ questions. In this test $2^{n - i}$ students give wrong answers to at least $i$
+  questions ($1\leq i \leq n.$) If total no. of wrong answers given is $2047,$ find the value of $n.$
+\end{frame}
+\begin{frame}{Solution of Problem 56}
+  \textbf{Solution:} Number of students giving wrong answers to at least $i$ questions $= 2^{n - i}$
+  \linebreak\linebreak
+  Number of students gicing wrong answers to at least $i + 1$ questions $= 2^{n - i - 1}$
+  \linebreak\linebreak
+  $\therefore$ Number of students giving wrong answers to exactly $i$ questions $= 2^{n - i} - 2^{n - i - 1}.$ Also, number of
+  students giving wrong answers to exactly $n$ questions $= 2^{n - n} = 1$
+  \linebreak\linebreak
+  $\therefore$ Total no. of wrong answers $1(2^{n - 1} - 2^{n - 2}) + 2(2^{n - 2} - 2^{n - 3}) + \ldots + (n - 1)(2^1 - 2^0) +
+  n(2^0)$
+  \linebreak\linebreak
+  $= 2^{n - 1} + (-2^{n - 2} + 2.2^{n - 2}) + (-2.2^{n - 3} + 3.2^{n - 3}) + \ldots + \left[-(n - 1)2^0\right] + n.2^0$
+  \linebreak\linebreak
+  $= 2^{n - 1} + 2^{n - 2} + 2^{n - 3} + \ldots + 2^0 = 2^n - 1$
+  \linebreak\linebreak
+  Given, $2^n - 1 = 2047 \Rightarrow n = 11$
+\end{frame}
+\begin{frame}{Problem 57}
+  \textbf{57.} If $S_1, S_2, S_3, \ldots, S_2n$ are the sums of infinite geometric series whose first terms are respectively $1, 2,
+  3, \ldots, 2n$ and common ratio are respectively $\frac{1}{2}, \frac{1}{3}, \ldots, \frac{1}{2n + 1},$ find the value of $S_1^2 +
+  S_2^2 + \ldots + S_{2n - 1}^2$
+\end{frame}
+\begin{frame}{Solution of Problem 57}
+  \textbf{Solution:} $S_1 = \frac{1}{1 - \frac{1}{2}} = 2, S_2 = \frac{2}{1 - \frac{1}{3}} = 3, S_3 = \frac{3}{1 - \frac{1}{4}} =
+  4$ and so on.
+  $$S_1^2 + S_2^2 + \ldots + S_{2n - 1}^2 = 2^2 + 3^2 + \ldots + 2n^2 = 1^2 + 2^2 + 3^2 + \ldots + 2n^2 - 1^2$$
+  $$= \frac{2n(2n + 1)(4n + 1)}{6} - 1 = \frac{n(2n + 1)(4n + 1)}{3} - 1$$
+\end{frame}
+\begin{frame}{Problem 58}
+  \textbf{58.} A sqaure is given, a second square is made by joining the middle points of the first square and then a third square
+  is made by joining the middle points of the sides of second square and so on till infinity. Show that the area of first square is
+  equal to sum of the areas of all the succeeding squares.
+\end{frame}
+\begin{frame}{Solution of Problem 58}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0, 0) -- (2, 0) -- (2, 2) -- (0, 2) -- cycle;
+      \draw (1, 0) -- (2, 1) -- (1, 2) -- (0, 1) -- cycle;
+      \draw (0, 0) -- (2, 2);
+      \draw (0, 0) node[anchor=north east] {$A$};
+      \draw (2, 0) node[anchor=north west] {$B$};
+      \draw (2, 2) node[anchor=south west] {$C$};
+      \draw (0, 2) node[anchor=south east] {$D$};
+      \draw (1, 0) node[anchor=north] {$P$};
+      \draw (2, 1) node[anchor=west] {$Q$};
+      \draw (1, 2) node[anchor=south] {$R$};
+      \draw (0, 1) node[anchor=east] {$S$};
+    \end{tikzpicture}
+  \end{center}
+  Let $ABCD$ be the first sqaure. Let $AB = a \Rightarrow AC = \sqrt{2}a~\therefore PQ = \frac{AC}{2} = \frac{a}{\sqrt{2}}$
+  \linebreak\linebreak
+  $\therefore $ Area of first square $= a^2$
+  \linebreak\linebreak
+  Area of second sqaure $= \frac{a^2}{2}$
+  \linebreak\linebreak
+  Area of third sqaure $= \frac{a^2}{4}$
+  \linebreak\linebreak
+  Sum of areas of all squares except first $= \frac{a^2}{2} + \frac{a^2}{4} + \ldots = \frac{\frac{a^2}{2}}{1 - \frac{1}{2}} = a^2$
+\end{frame}
+\begin{frame}{Problem 59}
+  \textbf{59.} If $a$ is the value of $x$ for which the function $7 + 2x\log 25 - 5^{x - 1} - 5^{2 - x}$ has the greatest value and
+  $r = lim_{x\to 0}\int_{0}^x\frac{t^2}{x^2\tan(\pi + x)}dt,$ find $\lim_{n \to \infty}\sum_{n = 1}^nar^{n - 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 59}
+  \textbf{Solution:} Let $f(x) = 7 + 2x\log 25 - 5^{x - 1} -5^{2 - x}$
+  $$f'(x) = 4\log 5 - 5^{x - 1}\log 5 + 5^{2 - x}\log 5 = \frac{\log 5}{5^{x + 1}}(5^x - 25)(5^x + 5)$$
+  $\because \frac{\log 5}{5^{x + 1}}(5^x + 5) > 0$ for all real $x > 0$
+  \linebreak\linebreak
+  $f'(x) < 0$ or $> 0$ as $x > 2$ or $x < 2$
+  \linebreak\linebreak
+  So $f(x)$ has local max. at $x = 2$ and has no local min. Hence, $f(x)$ has greatest value at $x = 2$ i.e. $a = 2.$ Now
+  $$r = lim_{x\to 0}\int_{0}^x\frac{t^2}{x^2\tan(\pi + x)}dt = lim_{x\to 0}\frac{\int_{0}^xt^2}{x^2\tan(\pi + x)}dt$$
+  $$= \lim_{x\to 0}\frac{x^3}{3x^2\tan x} = \frac{1}{3}$$
+  $$\Rightarrow \lim_{n \to \infty}\sum_{n = 1}^nar^{n - 1} = a + ar + ar^2 + \ldots~\text{to}~\infty = \frac{a}{1 - r}$$
+  $$= 3$$
+\end{frame}
+\begin{frame}{Problem 60}
+  \textbf{60.} If $p$th, $q$th, $r$th terms of a G.P. are positive numbers $a, b, c$ respectively, show that the vectors $(\log
+  a).\vec{i} + (\log b)\vec{j} + (\log c)\vec{k}$ and $(q - r)\vec{i} + (r - p)\vec{j} + (p - q)\vec{k}$ are perpendicular.
+\end{frame}
+\begin{frame}{Solution of Problem 60}
+  \textbf{Solution:} Let $x$ be the first term and $y$ be the common ratio of the G.P. Then
+  $$a = xy^{p - 1}, b = xy^{q - 1}, c = xy^{r - 1}$$
+  $$\Rightarrow \log a = \log x + (p - 1)\log y, \log b = \log x + (q - 1)\log y, \log c = \log x + (r - 1)\log y$$
+  If the vectors are perpendicular the dot product will be zero.
+  $$\therefore (q - r)\log a + (r - p)\log b + (p - q)\log c = 0$$
+  $$(q - r + r - p + p - q)\log x + [(q - r)(p - 1) + (r - p)(q - 1) + (p - q)(r - 1)]\log y = 0$$
+\end{frame}
 \end{document}
