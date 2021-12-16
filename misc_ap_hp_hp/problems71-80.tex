@@ -1,0 +1,149 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 71-80}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 71}
+  \textbf{71.} A G.P. consists of $2n$ terms. If the sum of the terms occupying the odd places is $S_1,$ and that of the terms in
+  even places is $S_2,$ show that the common ratio of the progression is $S_2/S_1.$
+\end{frame}
+\begin{frame}{Solution of Problem 71}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio of the G.P. Then,
+  $$S_1 = a + ar^2 + ar^4 + \ldots + ar^{2n - 2} = \frac{a(r^{2n} - 1)}{r^2 - 1}$$
+  $$S_2 = ar + ar^3 + ar^5 + \ldots + ar^{2n - 1} = \frac{ar(r^{2n} - 1)}{r^2 - 1}$$
+  Thus, $S_2/S1 = r$ which is common ratio of the G.P.
+\end{frame}
+\begin{frame}{Problem 72}
+  \textbf{72.} If $x\neq 1, y\neq 1, x \neq y,$ find the sum to $n$ terms of the series $(x + y) + (x^2 + xy + y^2) + (x^3 + x^2y +
+  xy^2 + y^3) + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 72}
+  \textbf{Solution:} Multiplying and dividing the given series by $x - y,$ we get
+  $$S = \frac{1}{x - y}\left[(x^2 - y^2) + (x^3 - y^3) + (x^4 - y^4) + \ldots\right]$$
+  $$= \frac{1}{x - y}\left[x^2 + x^3 + x^4+ \text{~to~}n\text{~terms~} - y^2 + y^3 + y^4+ \text{~to~}n\text{~terms~}\right]$$
+  $$= \frac{1}{x - y}\left[\frac{x^2(x^n - 1)}{x - 1} - \frac{y^2(y^n - 1)}{y - 1}\right]$$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} Find a geometric progression of real numbers such that the sum of its first four terms is equal to $30$ and sum of
+  the squares of its first four terms is $340.$
+\end{frame}
+\begin{frame}{Solution of Problem 73}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio. Then,
+  $$a + ar + ar^2 + a^3 = 30, a^2 + a^2r^2 + a^2r^4 + a^2r^6 = 340$$
+  $$\Rightarrow \frac{a(r^4 - 1)}{r - 1} = 30, \frac{a^2(r^8 - 1)}{r^2 - 1} = 340$$
+  Solving these two equation will yield two possible values of $r = 2, \frac{1}{2}$ and thus $a = 2, 16$ and hence series can be found.
+\end{frame}
+\begin{frame}{Problem 74}
+  \textbf{74.} If $S_n$ denotes the sum of $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, show
+  that $$rS_n + (1 - r)\sum_{n = 1}^nS_n = na$$
+\end{frame}
+\begin{frame}{Solution of Problem 74}
+  \textbf{Solution:} $$S_1 = a = \frac{a(1 - r)}{1 - r}$$
+  $$S_2 = a + ar = \frac{a(1 - r^2)}{1 - r}$$
+  $$\ldots$$
+  $$S_n = a + ar + \ldots + ar^{n - 1} = \frac{a(1 - r^n)}{1 - r}$$
+  $$(1-r)\sum_{n = 1}^nS_n = \frac{1 - r}{1 - r}\left[a(1 + 1 + \ldots\text{~to~}n\text{~terms~}) -a (r + r^2 + \ldots
+    \text{~to~}n\text{~terms~})\right]$$
+  $$= na - \frac{ar(1 - r^n)}{1 - r}$$
+  $$rS_n = \frac{ar(1 - r^n)}{1 - r}$$
+  $$\therefore rS_n + (1 - r)\sum_{n = 1}^nS_n = na$$
+\end{frame}
+\begin{frame}{Problem 75}
+  \textbf{75.} Find the sum of $2n$ terms of the series where every even term if $x$ times the term just before it and every odd
+  term is $y$ times the term just before it, the first term being $1.$
+\end{frame}
+\begin{frame}{Solution of Problem 75}
+  \textbf{Solution:} The sum of series would be $$S = 1 + x + xy + x^2y + x^2y^2 + x^3y + x^3y^3 + \ldots~\text{to}~2n~\text{terms}$$
+  $$S = 1 + xy + x^2y^2 + \ldots~\text{to}~n~\text{terms} + x + x^2y + x^3y + \ldots~\text{to}~n~\text{terms}$$
+  $$= \frac{(x^ny^n - 1)}{xy - 1} + \frac{x(x^ny^n - 1)}{xy - 1}$$
+  $$= \frac{(x^ny^n - 1)(1 + x)}{xy - 1}$$
+\end{frame}
+\begin{frame}{Problem 76}
+  \textbf{76.} Prove that in the sequence of numbers $49, 4489, 444889, \ldots$ in which every number is made by inserting $48$ in
+  the middle of previous number as indicated, each number is the square of an integer.
+\end{frame}
+\begin{frame}{Solution of Problem 76}
+  \textbf{Solution:}$$49 = (4\times 10) + 9$$
+  $$4489 = (4\times10^3 + 4\times 10^2) + (8\times 10) + 9$$
+  $$\ldots$$
+  $$t_k = 4\frac{10^k-1}{9}\cdot 10^k + 8 \frac{10^k-1}{9} + 1$$
+  $$= 4\frac{10^k-1}{9}\cdot 10^k - 4 \frac{10^k-1}{9} + 12 \frac{10^k-1}{9} + 1$$
+  $$= 36 \frac{10^{2k} - 2\cdot 10^k + 1}{81} + 12\frac{10^k-1}{9} + 1$$
+  $$= \left(6\frac{10^k-1}{9}+1\right)^2$$
+\end{frame}
+\begin{frame}{Problem 77}
+  \textbf{77.} If there be $m$ quantities in a G.P., whose common ratio is $r$ and $S_m$ denotes the sum of the first $m$ terms
+  then prove that the sum of their products taken two and two together is $\frac{r}{r + 1}S_mS_{m - 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 77}
+  \textbf{Solution:} $$S_m = a + ar + ar^2 + \ldots + ar^{m - 1} = \frac{a(r^m - 1)}{r - 1}$$
+  Let $S$ be the required sum then
+  $$S = \frac{(\sum a_i)^2 - \sum a_i^2}{2} = \frac{\left(\frac{a(r^m - 1)}{r - 1}\right)^2 - [a^2 + a^2r^2 + \ldots + a^{2(m -
+        1)}]}{2}$$
+  $$2S = \frac{a^2(r^m - 1)}{r - 1}\left[\frac{r^m - 1}{r - 1} - \frac{r^m + 1}{r + 1}\right]$$
+  $$2S = \frac{r}{r + 1}\frac{a(r^m - 1)}{r - 1}\frac{a(r^{m - 1} - 1)}{r - 1} = \frac{r}{r + 1}S_mS_{m - 1}$$
+\end{frame}
+\begin{frame}{Problem 78}
+  \textbf{78.} Solve the following equations for $x$ and $y$
+  $$\log_{10}x + \log_{10}x^{\frac{1}{2}} + \log_{10}x^{\frac{1}{4}} + \ldots = y$$
+  $$\frac{1 + 3 + 5 + (2y - 1)}{4 + 7 + 10 + \ldots + 3y + 1} = \frac{20}{7\log_{10}x}$$
+\end{frame}
+\begin{frame}{Solution of Problem 78}
+  \textbf{Solution:} $$\log_{10}x + \log_{10}x^{\frac{1}{2}} + \log_{10}x^{\frac{1}{4}} + \ldots = y$$
+  $$\log_{10}x + \frac{1}{2}\log_{10}x + \frac{1}{4}\log_{10}x + \ldots = y$$
+  $$y = \frac{\log_{10}x}{1 - \frac{1}{2}} = 2\log_{10}x$$
+  $$\frac{1 + 3 + 5 + (2y - 1)}{4 + 7 + 10 + \ldots + 3y + 1} = \frac{20}{7\log_{10}x}$$
+  $$\frac{y^2}{\frac{y}{2}[8 + (y - 1).3]} = \frac{40}{7y}$$
+  $$\Rightarrow y = 10, x = 10^5$$
+\end{frame}
+\begin{frame}{Problem 79}
+  \textbf{79.} If $a_1, a_2, \ldots, a_n$ are in G.P. and $S = a_1 + a_2 + \ldots + a_n, T = \frac{1}{a_1} + \frac{1}{a_2} + \ldots
+  + \frac{1}{a_n}$ and $P = a_1.a_2.\ldots.a_n$ show that $P^2 = \left(\frac{S}{T}\right)^n$
+\end{frame}
+\begin{frame}{Solution of Problem 79}
+  \textbf{Solution:} Let $a = a_1$ be the first term and $r$ to be the common ratio of the G.P., then
+  $$S = \frac{a(r^n - 1)}{r - 1}$$
+  $$P = a^nr^{1 + 2 + \ldots + n - 1} = a^nr^{\frac{(n - 1)n}{2}}$$
+  $$T = \frac{1}{a}\frac{1 - \frac{1}{r^n}}{1 - \frac{1}{r}} = \frac{1}{a}\frac{r^n - 1}{r - 1}.\frac{1}{r^{n - 1}}$$
+  Clearly, $$P^n = \left(\frac{S}{T}\right)^n$$
+\end{frame}
+\begin{frame}{Problem 80}
+  \textbf{80.} Let $a, b, c$ be respectively the sums of the first $n$ terms, the next $n$ terms and the next $n$ terms of a
+  G.P. show that $a, b, c$ are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 80}
+  \textbf{Solution:} Let $x$ to be the first term and $r$ to be the common ratio of the G.P.
+  $$a = \frac{x(y^n - 1)}{y - 1}$$
+  $$b = \frac{xy^n(y^n - 1)}{y - 1}$$
+  $$c = \frac{xy^{2n}(y^n - 1)}{y - 1}$$
+
+  Clearly, $a, b, c$ are in G.P.
+\end{frame}
+\end{document}
