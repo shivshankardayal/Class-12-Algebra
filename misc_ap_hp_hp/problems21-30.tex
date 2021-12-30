@@ -1,0 +1,151 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 21-30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 21}
+  \textbf{21.} Prove that $\tan 70^\circ, \tan 50^\circ + \tan 20^\circ, \tan 20^\circ$ are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 21}
+  \textbf{Solution:} $$\tan70^\circ = \tan(50^\circ + 20^\circ) = \frac{\tan50^\circ + \tan 20^\circ}{1 - \tan50^\circ\tan20^\circ}$$
+  $$\tan70^\circ - \tan70^\circ\tan50^\circ\tan20^\circ = \tan50^\circ + \tan 20^\circ$$
+  $$\because \tan70^\circ.\tan20^\circ = \tan70^\circ\cot70^\circ = 1$$
+  $$\Rightarrow \tan70^\circ = \tan20^\circ + 2\tan50^\circ$$
+  Thus, $\tan 70^\circ, \tan 50^\circ + \tan 20^\circ, \tan 20^\circ$ are in A.P. with common difference of $\tan50^\circ.$
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} If $\log_l x, \log_m x, \log_n x$ are in A.P. and $x \neq 1,$ prove that $n^2 = (nl)^{\log_l m}$
+\end{frame}
+\begin{frame}{Solution of Problem 22}
+  \textbf{Solution:} $\because \log_l x, \log_m x, \log_n x$ are in A.P.
+  $$2\log_m x = \log_l x + \log_n x \Rightarrow 2\frac{\log x}{\log m} = \frac{\log x}{\log l} + \frac{\log x}{\log n}$$
+  $$\Rightarrow \frac{2}{\log m} = \frac{\log nl}{\log l\log n}\Rightarrow 2\log n = \log nl\log_l m$$
+  $$\Rightarrow \log n^2 = \log (nl)^{\log_l m}$$
+  Taking anti-log $n^2 = (nl)^{\log_l m}$
+\end{frame}
+\begin{frame}{Problem 23}
+  \textbf{23.} The length of sides of a right angled triangle are in A.P., show that their ratio is $3:4:5$
+\end{frame}
+\begin{frame}{Solution of Problem 23}
+  \textbf{Solution:} Let the sides are $a, a + d, a + 2d$ of the right angled triangle where $d > 0$. Clearly, $a + 2d$ is largest and hence
+  hypotenuse. Thus, we can write
+
+  $$(a + 2d)^2 = a^2 + (a + d^2) \Rightarrow a^2 - 2ad - 3d^2 = 0 \Rightarrow a = -d, a = 3d$$
+
+  However, a side cannot be -ve so $a = 3d$ and hence ratio of sides are $3:4:5$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} If $\log_3 2, \log_3(2^x - 5), \log_3\left(2^x - \frac{7}{2}\right)$ are in A.P., determine the value of $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 24}
+  \textbf{Solution:} $\because \log_3 2, \log_3(2^x - 5), \log_3\left(2^x - \frac{7}{2}\right)$ are in A.P.
+
+  $$\log_3(2^x - 5) - \log_32 = \log_3\left(2^x - \frac{7}{2}\right) - \log_3(2^x - 5)$$
+  $$(2^x - 5)^2 = 2\left(2^x - \frac{7}{2}\right) \Rightarrow 2^{2x} - 12.2^x + 32 = 0$$
+  $$2^x = 8, 4\Rightarrow x = 3, 2$$
+
+  However, if $d = 2, 2^x - 5 < 0$ and logarithm of that wont be real. Thus, $x = 3$
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} Find the values of $a$ for which $5^{1 + x} + 5^{1 - x}, \frac{a}{2}, 25^x + 25^{-x}$ are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 25}
+  \textbf{Solution:} $$a = 5^{1 + x} + 5^{1 - x} + 25^x + 25^{-x} = 5(5^x + 5^{-x}) + 25^x + 25^{-x} \geq 5.2 + 2 = 12$$
+
+  This solution used the fact that for real no. $x + \frac{1}{x}\geq 2$ which can be proved trivially.
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} If $\log 2, \log(2^x - 1)$ and $\log(2^x + 3)$ are in A.P., then find $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 26}
+  \textbf{Solution:} $$\log(2^x - 1) - \log 2 = \log(2^x + 3) - \log(2^x - 1) \Rightarrow (2^x - 1)^2 = 2(2^x + 3)$$
+  $$2^{2x} - 4.2^x -5 = 0 \Rightarrow 2^x = -1, 5$$
+  However, for real $x, 2^x$ cannot be $-1.$ Thus, $x = \log_25$ is the solution.
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} If $1, \log_y x, \log_zy, -15\log_xz$ are in A.P., then prove that $x = z^3$ and $y = z^{-3}$
+\end{frame}
+\begin{frame}{Solution of Problem 27}
+  \textbf{Solution:} Let $d$ be the common difference of the A.P. Then,
+  $$\log_yx = 1 + d\Rightarrow x = y^{1 + d}$$
+  $$\log_zy = 1 + 2d\Rightarrow y = z^{1 + 2d} \Rightarrow x = y^{(1 + d)(1 + 2d)}$$
+  $$-15\log_xz = 1 + 3d \Rightarrow z = x^{-\frac{1 + 3d}{15}}$$
+  $$\therefore x = x^{-\frac{(1 + d)(1 + 2d)(1 + 3d)}{15}}$$
+  $$(1 + d)(1 + 2d)(1 + 3d) = -15$$
+  $$(d + 2)(6d^2 - d + 8 = 0)$$
+  $\therefore d = -2[\because 6d^2-d + 8 = 0$ has complex roots.$]$
+  \linebreak\linebreak
+  $\therefore x = z^3, y = z^{-3}$
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} Show that $\sqrt{2}, \sqrt{3}, \sqrt{5}$ cannot be terms of a single A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 28}
+  \textbf{Solution:} Let $\sqrt{2}, \sqrt{3}, \sqrt{5}$ be $p$th, $q$th and $r$th term of an A.P. Then,
+  $$\frac{\sqrt{5} - \sqrt{3}}{\sqrt{3} - \sqrt{2}} = \frac{r - q}{q - p} = k$$
+  Since $p, q, r$ are integers therefore $k$ will be a rational number.
+  $$\sqrt{5}- \sqrt{3} = k(\sqrt{3}- \sqrt{2})$$
+  Squaring, we get
+  $$5 + 3 - 2\sqrt{15} = k(3 + 2 - 2\sqrt{6})$$
+  $$k = \frac{8 - 2\sqrt{15}}{5 - 2\sqrt{6}}$$
+  Multiplying both numberator and denominator with $5 + 2\sqrt{6},$ we obtain that $k$ is not a rational number. Thus, we have
+  proved the required condition.
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} A circle of one centimeter radius is drawn on a piece of paper and with the same center $3n - 1$ other circles are
+  drawn of radii $2$ cm, $3$ cm, $4$ cm and so on. The inner circle is painted blue, the ring between that and next circle is
+  painted red, the next ring yellow then other rings blue, red, yellow and so on in this order. Show that the successive aread of
+  each color are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 29}
+  \textbf{Solution:} The blue color circles will have radius of $1, 4, 7, 10, \ldots, 3n - 2$ cm each.
+  \linebreak\linebreak
+  So the areas of blue rings are $\pi.1^2, \pi(4^2 - 3^2), \pi(7^2 - 6^2), \ldots, \pi[(3n -2)^2 - (3n - 3)^2]$
+  \linebreak\linebreak
+  $\pi[(3n -2)^2 - (3n - 3)^2] = \pi(6n - 5)$ which is $t_n$ and forms an A.P. with common ratio $6$
+  \linebreak\linebreak
+  Similarly, it can be shown that red and yellow rings form an A.P.
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} If $x, y, z(x, y, z\neq 0)$ are in A.P. and $\tan^{-1}x, \tan^{-1}y, \tan^{-1}z$ are also in A.P., then prove that
+  $x = y = z$
+\end{frame}
+\begin{frame}{Solution of Problem 30}
+  \textbf{Solution:} Since $x, y, z$ are in A.P. $2y = x + z$
+  Similarly, $$2\tan^{-1}y = \tan^{-1}x + \tan^{-1}z$$
+  $$2\tan^{-1}y = \tan^{-1}\frac{x + z}{1 - xz}$$
+  $$\tan(2\tan^{-1}y) = \frac{x + z}{1 - xz}$$
+  $$\frac{2y}{1 - y^2} = \frac{x + z}{1 - xz}$$
+  $$(x + z)\left[\frac{1}{1- y^2} - \frac{1}{1 - xz} = 0\right]$$
+  $$\Rightarrow y^2 = xz$$
+  So $x, y, z$ are in G.P. as well. Thus,
+  $$4y^2 = x^2 + z^2 + 2xz = x^2 + z^2 + 2y^2 \Rightarrow x^2 + z^2 - 2xz = 0 \Rightarrow x = z \Rightarrow x = y = z$$
+\end{frame}
+\end{document}

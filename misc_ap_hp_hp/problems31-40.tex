@@ -1,0 +1,149 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} If $\theta$ and $\alpha$ are two real numbers such that $\frac{\cos^4\theta}{\cos^2\alpha}, \frac{1}{2},
+  \frac{\sin^4\theta}{\sin^2\alpha}$ are in A.P., prove that $\frac{\cos^{2n + 2}\theta}{\cos^{2n}\alpha}, \frac{1}{2},
+  \frac{\sin^{2n + 2}\theta}{\sin^{2n}\alpha}$
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} $$\frac{\cos^4\theta}{\cos^2\alpha} + \frac{\sin^4\theta}{\sin^2\alpha} = 1 = \cos^2\theta + \sin^2\theta$$
+  $$\Rightarrow \frac{\cos^2\theta}{\cos^2\alpha}(\cos^2\theta - \cos^2\alpha) = \frac{\sin^2\theta}{\sin^2\alpha}(\sin^2\alpha -
+  \sin^2\theta) = \frac{\sin^2\theta}{\sin^2\alpha}(\cos^2\theta - \cos^2\alpha)$$
+  $$\Rightarrow \cos^2\theta = \cos^2\alpha, \frac{\cos^2\theta}{\cos^2\alpha} = \frac{\sin^2\theta}{\sin^2\alpha}$$
+  In both the cases required consition is satisfied.
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} If $a_n = \int_0^\pi (\sin 2nx/\sin x)dx,$ show that $a_1, a_2, a_3, \ldots$ are in A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} $$a_n + a_{n + 2} - 2a_{n + 1} = \int_0^\pi \frac{\sin 2nx + \sin2(n + 2)x - 2\sin2(n + 1)x}{\sin x}dx$$
+  $$= \int_0^\pi \frac{2\sin2(n + 1)x\cos 2x - 2\sin2(n + 1)x}{\sin x}dx$$
+  $$= \int_0^\pi \frac{-2\sin^2x.2\sin2(n + 1)x}{\sin x}dx$$
+  $$= -2\int_0^\pi 2\sin2(n + 1)x\sin xdx$$
+  $$= -2\int_0^\pi[\cos(2n + 1)x - \cos(2n + 3)x]dx = 0$$
+  Therefore, $a_1, a_2, a_3, \ldots$ are in A.P.
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} If $l_n = \int_0^{\frac{\pi}{4}}tan^nxdx,$ show that $\frac{1}{l_2 + l_4}, \frac{1}{l_3 + l_5}, \frac{1}{l_4 + l_6},
+  \ldots$ are in A.P. Find the common difference of A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 33}
+  \textbf{Solution:} $$l_n + l_{n + 2} = \int_0^{\frac{\pi}{4}}\tan^nx(1 + \tan^2x)dx = \left[\frac{\tan^{n + 1}x}{n +
+      1}\right]_0^{\frac{\pi}{4}}$$
+  $$= \frac{1}{n + 1}$$
+  Thus, $\frac{1}{l_2 + l_4} = 3, \frac{1}{l_3 + l_5} = 4, \ldots$ and common differene is $1.$
+\end{frame}
+\begin{frame}{Problem 34}
+  \textbf{34.} If $\alpha, \beta, \gamma$ are in A.P.and $\alpha = \sin(\beta + \gamma), \beta = \sin(\gamma + \alpha)$ and $\gamma
+  = \sin(\alpha + \beta).$ Prove that $\tan \alpha = \tan \beta = \tan \gamma$
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:} $$\because \beta - \alpha = \gamma - \beta \Rightarrow \cos(\beta - \alpha) = \cos(\gamma - \beta)$$
+  $$\sin(\gamma + \alpha) - \sin(\beta + \gamma) = \sin(\alpha + \beta) - \sin(\gamma + \alpha)$$
+  $$2\cos\frac{\alpha - \beta}{2}\sin\frac{\alpha + \beta}{2} + \gamma = 2\cos \frac{\beta - \gamma}{2}\sin\frac{\beta + \gamma}{2}
+  + \alpha$$
+  $$\Rightarrow \frac{\alpha + \beta}{2} + \gamma = \frac{\beta + \gamma}{2} + \alpha$$
+  $$\Rightarrow \gamma = \alpha$$
+  $$\Rightarrow \alpha = \beta = \gamma \Rightarrow \tan\alpha = \tan\beta = \tan\gamma$$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} Suppose $a, b, c$ are three positive real numbers in A.P., such that $abc = 4.$ Prove that the minimum value of $b$
+  is $4^{\frac{1}{3}}$
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} Let $d$ be the common difference. Then $(b - d)b(b + d) = 4 \Rightarrow b(b^2 - d^2) = 4$
+  $$b^2 - d^2 < b^2 \Rightarrow b^3 > 4$$
+  Thus, minimum value of $b$ is $4^{\frac{4}{3}}$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} The sixth term of an A.P. is $2,$ and its common difference is greater than $1.$ Show that the value of the common
+  difference of the progression so that the product of first, fourth and fifth terms is greatest is $\frac{8}{5}.$
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common ratio. Then $a + 5d = 2.$ Also, let
+  $$a_1a_4a_5 = p \Rightarrow (2 - 5d)(2 - 2d)(2 - d) = p = 2[4 - 16d + 17d^2 - 5d^3]$$
+  Let $S = 4 - 16d + 17d^2 - 5d^3$
+  Differentiating w.r.t. $d,$ we get
+  $$S' = -15d^2 + 34 d - 16 = 0 \Rightarrow d = \frac{2}{3}, \frac{8}{5}$$
+  Since $d > 1, \Rightarrow d = \frac{8}{5}$
+\end{frame}
+\begin{frame}{Problem 37}
+  \textbf{37.} Find the sum of $n$ terms of the series: $\log a + \log\frac{a^3}{b} + \log \frac{a^5}{b^2} + \log \frac{a^7}{b^3} +
+  \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} Let $$S = \log a + 3\log a + 5\log a + \ldots - [\log b + 2\log b + 3\log b + \ldots]$$
+  $$= \frac{n}{2}[2\log a + (n - 1).2\log a] - \frac{n - 1}{2}[\log b + (n - 2)\log b]$$
+  $$= n^2\log a - \frac{n(n - 1)}{2}\log b$$
+  $$= \log\left(\frac{a^{2n}}{b^{n - 1}}\right)^{\frac{n}{2}}$$
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} The first, second and the last terms of an A.P. are $a,b, c$ respectively. Prove that the sum of al the terms is
+  $\frac{(b + c - 2a)(a + c)}{2(b - a)}$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} Let $d$ be the common difference. $d = b - a, c = a + (n - 1)d \Rightarrow n - 1 = \frac{c - a}{b - a}
+  \Rightarrow n = \frac{b + c - 2a}{b - a}$
+  \linebreak\linebreak
+  Let Sum of $n$ terms be $S,$ then
+  $$S = \frac{n}{2}(a + c) = \frac{(b + c - 2a)(a + c)}{2(b - a)}$$
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} If $S_n$ denotes the sum of $n$ terms of an A.P., show that $S_{n + 3} = 3(S_{n + 2} - S_{n + 1}) + S_n$
+\end{frame}
+\begin{frame}{Solution of Problem 38}
+  \textbf{Solution:} $$3(S_{n + 2} - S_{n + 1}) + S_n = 3t_{n + 2} + S_n = 3a + 3(n + 1)d + S_n$$
+  $$= S_n + a + nd + 2a + (2n + 3)d  = S_n + t_{n + 1} + 2a + (2n + 3)d $$
+  $$= S_{n + 1} + (a + (n + 1)d) + (a + (n + 2)d)$$
+  $$= S_{n +1} + t_{n + 2} + t_{n + 3} = S_{n + 3}$$
+\end{frame}
+\begin{frame}{Problem 39}
+  \textbf{39.} If $a_1, a_2, \ldots, a_n$ are in arithmetic progression with common difference $d,$ prove that
+  $\sum_{r < s}a_ra_s = \frac{1}{2}n(n - 1)[a_1^2 + (n - 1)a_1d + \frac{1}{12}(3n^2 - 7n + 2)d^2]$
+\end{frame}
+\begin{frame}{Solution of Problem 39}
+  \textbf{Solution:} The expression can be written as $\sum_{i = 1}^n = a_i[a_{i + 1} + a_{i + 2} + \ldots + a_n]$
+  $$= \frac{n - i}{2}[a_1 + (i - 1)d][2a_1 + (n + i - 1)d]$$
+  Solving this yields desired result.
+\end{frame}
+\begin{frame}{Problem 40}
+  \textbf{40.} Balls are arranged in rows to form an equilateral triangle. The first row consists of one ball, the second of two
+  balls and so on. If $669$ more balls are added, then all balls can be arranged in the shape of a square and each of the sides
+  contained $8$ balls less than each side of the triangle did. Determine the initial no. of balls.
+\end{frame}
+\begin{frame}{Solution of Problem 40}
+  \textbf{Solution:} Let $n$ be the no. of rows for triangle. Then,
+  $$(n - 8)^2 = \frac{n(n + 1)}{2} + 669 \Rightarrow n = 55$$
+  Thus, total no. of initital balls $= \frac{55.56}{2} = 1540$
+\end{frame}
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 91-100}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 91}
+  \textbf{91.} One side of an equilateral triangle is $24$ cm. The mid-point of its sides are joined to form another triangle,
+  whose mid-points are in turn joined for form still another triangle. The process continues indefinitely. Find the sum of
+  perimeter of all the triangles.
+\end{frame}
+\begin{frame}{Solution of Problem 91}
+  \textbf{Solution:} Perimeter of first triangle will be $24*3$ i.e. $72$ cm. The triangle which will be formed by joining
+  mid-points of this triangle will have sides of $12$ cm each.
+  \linebreak\linebreak
+  Thus, perimeter of second trianble will be $12*3$ i.e. $36$ cm. The triangle which will be formed by joining mid-points of this
+  triangle will have sides of $6$ cm each and so on.
+  \linebreak\linebreak
+  Thus sum of perimeter of all such triangles will be $$72 + 36 + 18 + 9 + \ldots \infty$$
+  $$= \frac{72}{1 - \frac{1}{2}} = 144\text{~cm}$$
+\end{frame}
+\begin{frame}{Problem 92}
+  \textbf{92.} A ball is dropped from a height of $900$ cm. Each time is rebounces, it rises to $2/3$ of the height it has fallen
+  through. Find the total distance travelled by the ball before it comes to rest.
+\end{frame}
+\begin{frame}{Solution of Problem 92}
+  \textbf{Solution:} First the ball will fall a distance for $900$ cm. Then it will rise and fall for $2/3$rd of that distance
+  travelling a total of $2*900*2/3$ cm. Then it will rise and fall for $2/3$rd of that distance travelling a total of
+  $2*900*(2/3)^2$ cm. This process will go on till infinity. Thus we can write following equation for total distance travelled,
+  $S$(say)
+  $$S = 900 + 2*900*\frac{2}{3} + 2*900*\frac{2^2}{3^2} + 2*900*\frac{2^3}{3^3} + \ldots \infty$$
+  $$= 900 + \frac{1200}{1 - \frac{2}{3}} = 4500 \text{~cm}$$
+\end{frame}
+\begin{frame}{Problem 93}
+  \textbf{93.} A square is drawn by joining the mid-points of the sides of a given square. A third square is drawn inside the
+  second square in the same way and this process continutes indeinitely. If the sides of the first square is $4$ cm, determine the
+  sum of the areas of all the squares.
+\end{frame}
+\begin{frame}{Solution of Problem 93}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0, 0) -- (2, 0) -- (2, 2) -- (0, 2) -- cycle;
+      \draw (1, 0) -- (2, 1) -- (1, 2) -- (0, 1) -- cycle;
+      \draw (0, 0) -- (2, 2);
+      \draw (0, 0) node[anchor=north east] {$A$};
+      \draw (2, 0) node[anchor=north west] {$B$};
+      \draw (2, 2) node[anchor=south west] {$C$};
+      \draw (0, 2) node[anchor=south east] {$D$};
+      \draw (1, 0) node[anchor=north] {$P$};
+      \draw (2, 1) node[anchor=west] {$Q$};
+      \draw (1, 2) node[anchor=south] {$R$};
+      \draw (0, 1) node[anchor=east] {$S$};
+    \end{tikzpicture}
+  \end{center}
+  Let $ABCD$ be the first sqaure. Let $AB = a \Rightarrow AC = \sqrt{2}a~\therefore PQ = \frac{AC}{2} = \frac{a}{\sqrt{2}}$
+  \linebreak\linebreak
+  $\therefore $ Area of first square $= a^2$
+  \linebreak\linebreak
+  Area of second sqaure $= \frac{a^2}{2}$
+  \linebreak\linebreak
+  Area of third square $= \frac{a^2}{4}$
+  \linebreak\linebreak
+  Sum of areas of all squares $= a^2 + \frac{a^2}{2} + \frac{a^2}{4} + \ldots = \frac{a^2}{1 - \frac{1}{2}} = 2a^2 = 32$ sq.cm.
+\end{frame}
+\begin{frame}{Problem 94}
+  \textbf{94.} In an increasing G.P., the sum of the first and the last term is $66,$ the product of the second and the last term
+  but one term is $128,$ and the sum of all the terms is $126.$ How many terms are there in the progression?
+\end{frame}
+\begin{frame}{Solution of Problem 94}
+  \textbf{Solution:} Let $a$ be the first term and $r$ be the common ratio. Also, let that there are $n$ terms in the G.P. Then
+  according to the question
+  $$a + ar^{n - 1} = 66, ar.ar^{n - 2} = 128, \frac{a(1 - r^n)}{1 - r} = 126$$
+  $$\Rightarrow a^2r^{n - 1} = 128 \Rightarrow a + \frac{128}{a} = 66 \Rightarrow a^2 - 66a + 128 = 0 \Rightarrow a = 2, 64$$
+  $$\text{For~} a = 2, a - ar^n = 126(1 - r)\Rightarrow 2 - \frac{128}{2}.r = 126(1 - r) \Rightarrow r = 2$$
+  $$\text{For~} a = 64, a - ar^n = 126(1 - r) \Rightarrow 64 - \frac{128}{64}r = 126(1 - r) \Rightarrow r = \frac{1}{2}$$
+  However, the G.P. is increasing so $a = 2, r = 2$
+  $$\Rightarrow ar.ar^{n - 2} = 128 \Rightarrow 2^2.2^{n - 1} = 128 \Rightarrow 2^{n - 1} = 32 \Rightarrow n = 6$$
+\end{frame}
+\end{document}

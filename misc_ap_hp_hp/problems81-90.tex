@@ -1,0 +1,157 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 81-90}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 81}
+  \textbf{81.} If $S_n$ denotes the sum to $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, then
+  prove that $S_1 + S_2 + \ldots + S_n = \frac{na}{1 - r} - \frac{ar(1 - r^n)}{(1 - r)^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 81}
+  \textbf{Solution:}$$S_1 = a = \frac{a(1 - r)}{1 - r}$$
+  $$S_2 = a + ar = \frac{a(1 - r^2)}{1 - r}$$
+  $$S_3 = \frac{a(1 - r^3)}{1 - r}$$
+  $$\ldots$$
+  $$S_n = \frac{a(1 - r^n)}{1 - r}$$
+  $$S_1 + S_2 + \ldots + S_n = \frac{a(1 - r)}{1 - r} + \frac{a(1 - r^2)}{1 - r} + \ldots + \frac{a(1 - r^n)}{1 - r}$$
+  $$= \frac{a}{1 - r}[1 + 1 + \ldots + \text{~to~}n\text{~terms~}] - \frac{ar}{1 - r}[1 + r + r^2 + \ldots + r^{n - 1}]$$
+  $$= \frac{na}{1 - r} - \frac{ar(1 - r^n)}{(1 - r)^2}$$
+\end{frame}
+\begin{frame}{Problem 82}
+  \textbf{82.} If $S_n$ denotes the sum to $n$ terms of a G.P. whose first term and common ratio are $a$ and $r$ respectively, then
+  prove that $S_1 + S_3 + S_5 + \ldots + S_{2n - 1} = \frac{na}{1 - r} - \frac{ar(1 - r^{2n})}{(1 - r)^2(1 + r)}$
+\end{frame}
+\begin{frame}{Solution of Problem 82}
+  \textbf{Solution:} $$S_1 = a = \frac{a(1 - r)}{1 - r}$$
+  $$S_3 = \frac{a(1 - r^3)}{1 - r}$$
+  $$S_5 = \frac{a(1 - r^5)}{1 - r}$$
+  $$\ldots$$
+  $$S_{2n - 1} = \frac{a(1 - r^{2n - 1})}{1 - r}$$
+  $$S_1 + S_3 + S_5 + \ldots + S_{2n - 1} = \frac{a}{1 - r}[1 + 1 + \ldots + \text{~to~}n\text{~terms~}] - \frac{ar}{1 - r^2}[1 +
+    r^2 + r^4 + \ldots + r^{2(n - 1)}]$$
+  $$= \frac{na}{1 - r} - \frac{ar(1 - r^{2n})}{(1 - r)^2(1 + r)}$$
+\end{frame}
+\begin{frame}{Problem 83}
+  \textbf{83.} Let $s$ denote the sum of terms of an infinite geometric progression and $\sigma^2$ the sum of squares of the
+  terms. Show that the sum of first $n$ terms of this geometric progression is given by $s\left[1 - \left(\frac{s^2 - \sigma^2}{s^2
+      + \sigma^2}\right)^n\right],$ where $|r| < 1$
+\end{frame}
+\begin{frame}{Solution of Problem 83}
+  \textbf{Solution:} $$s = \frac{a}{1 - r}, \sigma^2 = \frac{a^2}{1 - r^2}, S_n = \frac{a(1 - r^n)}{1 - r}$$
+  $$s\left[1 - \left(\frac{s^2 - \sigma^2}{s^2 + \sigma^2}\right)^n\right] = \frac{a}{1 - r}\left[1 - \left(\frac{\frac{a^2}{(1 -
+        r)^2} - \frac{a^2}{1 - r^2}}{\frac{a^2}{(1 - r)^2} + \frac{a^2}{1 - r^2}}\right)^n\right]$$
+  $$= \frac{a}{1 - r}\left[1 - \left(\frac{\frac{1}{1 - r} - \frac{1}{1 + r}}{\frac{1}{1 - r} + \frac{1}{1 + r}}\right)^n\right]$$
+  $$= \frac{a}{1 - r}(1 - r^n) = S_n$$
+\end{frame}
+\begin{frame}{Problem 84}
+  \textbf{84.} Let $a_1, a_2, a_3, \ldots, a_n$ be a geometric progression with first term $a$ and common ratio $r,$ then the sum
+  of the products $a_1, a_2, \ldots, a_n$ taken two at a time i.e. $\sum_{i < j}a_ia_j = \frac{a^2r(1 - r^{n - 1})(1 - r^n)}{(1 -
+    r)^2(1 + r)}$
+\end{frame}
+\begin{frame}{Solution of Problem 84}
+  \textbf{Solution:}$$\sum_{i < j}a_ia_j = \frac{1}{2}[(a_1 + a_2 + \ldots + a_n)^2 - (a_1^2 + a_2^2 + \ldots + a_n^2)]$$
+  $$= \frac{1}{2}\left[(a + ar + \ldots + ar^{n - 1})^2 - (a^2 + a^2r^2 + \ldots + a^2r^{2(n - 1)})\right]$$
+  $$= \frac{1}{2}\left[\frac{a^2(1 - r^n)^2}{(1 - r)^2 - \frac{a^2(1 - r^{2n})}{1 - r^2}}\right]$$
+  $$= \frac{1}{2}\left[\frac{a^2(1 - 2r^n + r^{2n})}{(1 - r)^2} - \frac{a^2(1 - r^{2n})}{1 - r^2}\right]$$
+  $$= \frac{a^2r(1 - r^{n - 1})(1 - r^n)}{(1 - r)^2(1 + r)}$$
+\end{frame}
+\begin{frame}{Problem 85}
+  \textbf{85.} If $a_1, a_2, a_3, \ldots$ is a G.P. with first term $a$ and common ratio $r,$ show that $\frac{1}{a_1^2 - a_2^2} +
+  \frac{1}{a_2^2 - a_3^2} + \ldots + \frac{1}{a_{n - 1}^2 - a_n^2}$ $ = \frac{r^2(1 - r^{2n - 2})}{a^2r^{2n - 2}(1 - r^2)^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 85}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{a^2 - a^2r^2} + \frac{1}{a^2r^2 - a^2r^4} + \frac{1}{a^2r^4 - a^2r^6} + \ldots +
+  \frac{1}{a^2r^{2(n - 2)} - a^2r^{2(n - 1)}}$$
+  $$= \frac{1}{a^2(1 - r^2)}\left[1 + \frac{1}{r^2} + \frac{1}{r^4} + \ldots + \frac{1}{r^{2(n - 2)}}\right]$$
+  $$= \frac{1}{a^2(1 - r^2)}.\frac{1 - \frac{1}{r^{2(n - 1)}}}{1 - \frac{1}{r^2}}$$
+  $$= \frac{1}{a^2(1 - r^2)}.\frac{1 - r^{2n - 2}}{1 - r^2}.\frac{r^2}{r^{2n - 2}}$$
+\end{frame}
+\begin{frame}{Problem 86}
+  \textbf{86.} If $a_1, a_2, a_3, \ldots$ is a G.P. with first term $a$ and common ratio $r,$ show that $\frac{1}{a_1^m + a_2^m} +
+  \frac{1}{a_2^m + a_3^m} + \ldots + \frac{1}{a_{n - 1}^m + a_n^m}$ $= \frac{r^{mn - m} - 1}{a^m(1 + r^m)(r^{mn - m} - r^{mn - 2m})}$
+\end{frame}
+\begin{frame}{Solution of Problem 86}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{a^m + a^mr^m} + \frac{1}{a^mr^m + a^mr^{2m}} + \ldots + \frac{1}{a^mr^{m(n - 2)} +
+    a^mr^{m(n - 1)}}$$
+  $$= \frac{1}{a^m(1 + r^m)}\left[1 + \frac{1}{r^m} + \frac{1}{r^{2m}} + \ldots + r^{m(n - 2)}\right]$$
+  $$= \frac{1}{a^m(1 + r^m)}.\frac{1 - \frac{1}{r^{m(n - 1)}}}{1 - \frac{1}{r^m}}$$
+  $$= \frac{r^{mn - m} - 1}{a^m(1 + r^m)(r^{mn - m} - r^{mn - 2m})}$$
+\end{frame}
+\begin{frame}{Problem 87}
+  \textbf{87.} If $a_1, a_2, \ldots, a_{2n}$ are $2n$ positive real numbers which are in G.P. show that $\sqrt{a_1a_2} +
+  \sqrt{a_3a_4} + \sqrt{a_5a_6} + \ldots$ $ + \sqrt{a_{2n - 1}a_{2n}} = \sqrt{a_1 + a_3 + \ldots + a_{2n - 1}}\sqrt{a_2 + a_4 +
+    \ldots + a_{2n}}$
+\end{frame}
+\begin{frame}{Solution of Problem 87}
+  \textbf{Solution:} $$L.H.S. = \sqrt{a^2r} + \sqrt{a^2r^5} + \sqrt{a^2r^9} + \ldots + \sqrt{a^2r^{4n - 3}}$$
+  $$= a\sqrt{r}(1 + r^2 + r^4 + \ldots + r^{2(n - 1)}) = a\sqrt{r}.\frac{(r^{2n - 1})}{r^2 - 1}$$
+  $$\sqrt{a_1 + a_3 + \ldots + a_{2n - 1}} = \sqrt{a(1 + r^2 + \ldots + r^{2n - 2})} = \sqrt{a.\frac{r^{2n - 1}}{r^2 - 1}}$$
+  $$\sqrt{a_2 + a_4 + \ldots + a_{2n}} = \sqrt{ar(1 + r^2 + \ldots + r^{2n - 2})} = \sqrt{a\sqrt{r}.\frac{r^{2n - 1}}{r^2 - 1}}$$
+  $$\therefore \sqrt{a_1a_2} + \sqrt{a_3a_4} + \sqrt{a_5a_6} + \ldots + \sqrt{a_{2n - 1}a_{2n}} = \sqrt{a_1 + a_3 + \ldots +
+    a_{2n - 1}}\sqrt{a_2 + a_4 + \ldots + a_{2n}}$$
+\end{frame}
+\begin{frame}{Problem 88}
+  \textbf{88.} Find the solution of the system of equations $1 + x + x^2 + \ldots + x^{23} = 0$ and $1 + x + x^2 + \ldots + x^{19}
+  = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 88}
+  \textbf{Solution:} Given $$1 + x + x^2 + \ldots + x^{23} = 0, 1 + x + x^2 + \ldots + x^{19} = 0$$
+  $$\frac{x^{24} - 1}{x - 1} = 0, \frac{x^{20} - 1}{x - 1} = 0$$
+  $$x^{24} - 1 = 0, x^{20} - 1 = 0$$
+  $$\therefore x^{20}.x^4 - 1 = 0 \Rightarrow x^4 - 1 = 0$$
+  Thus, roots are $-1, \pm i$
+\end{frame}
+\begin{frame}{Problem 89}
+  \textbf{89.} A man invests $\$a$ at the end of the first year, $\$2a$ at the end of the second year, $\$3a$ at the end of the
+  third year, and so on up to the end of $n$th year. If the rate of interest is $\$r$ per rupee and the interest is compounded
+  annually, find the amount the man will receive at the end of $(n + 1)$th year.
+\end{frame}
+\begin{frame}{Solution of Problem 89}
+  \textbf{Solution:} $\$a$ will become $a + ar$ at the end of second year, $a + ar + ar^2$ at the end of third year and so on. So
+  amount received for $\$a = a + ar + \ldots + ar^n = \frac{a(1 - r^{n + 1})}{1 - r}$
+  \linebreak\linebreak
+  Similarly, amount receoved for $\$2a$ will be $\frac{2a(1 - r^{n})}{1 - r}$ and so on.
+  \linebreak\linebreak
+  Thus, total amount received will be $\frac{a(1 - r^{n + 1})}{1 - r} + \frac{2a(1 - r^{n})}{1 - r} + \ldots + \frac{na(1 - r^2)}{1
+    - r}$
+  \linebreak\linebreak
+  $= \frac{a(1 + r)^2[(1 + r)^n - 1]}{r^2} - \frac{na(1 + r)}{r}$
+\end{frame}
+\begin{frame}{Problem 90}
+  \textbf{90.} Find the value of $(0.16)^{\log_{2.5}\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \ldots \infty\right)}$
+\end{frame}
+\begin{frame}{Solution of Problem 90}
+  \textbf{Solution:} $$\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \ldots \infty\right) = \frac{\frac{1}{3}}{1 -
+    \frac{1}{3}} = \frac{1}{2}$$
+  $$(0.16)^{\log_{2.5}\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \ldots \infty\right)} =
+  \left(\frac{4}{25}\right)^{\log_{\frac{5}{2}}\frac{1}{2}}$$
+  $$= \left(\frac{1}{2}\right)^{\log_{\frac{5}{2}}\frac{4}{25}} = \left(\frac{1}{2}\right)^{-2} = 4$$
+\end{frame}
+\end{document}

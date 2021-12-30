@@ -1,0 +1,138 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 61-70}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 61}
+  \textbf{61.} The pollution in a normal atmosphere is less that $0.01\%.$ Due to leakage of gas from a factory the pollution
+  increased to $20\%.$ If everyday $80\%$ of the pollution us neutralised, in how many days the atmosphere will be normal?
+\end{frame}
+\begin{frame}{Solution of Problem 61}
+  \textbf{Solution:} Each day pollution decreases by $80\%$ i.e. $20\%$ pollution remains. Thus common ratio for pollution
+  remaining is $\frac{20}{100} = \frac{1}{5}$
+  \linebreak\linebreak
+  Let it takes $n$ days for pollution to become normal. Then,
+  $$a = 20, 20.\frac{1}{5^{n - 1}} < .01$$
+  $$\Rightarrow n > 4$$
+  Thus, atmosphere becomes normal on $5$th day.
+\end{frame}
+\begin{frame}{Problem 62}
+  \textbf{62.} The sides of a triangle are in G.P. and its largest angle is twice the smallest one. Prove that the common ratio of
+  the G.P. lies in the interval $(1, \sqrt{2})$
+\end{frame}
+\begin{frame}{Solution of Problem 62}
+  \textbf{Solution:} Let $a, ar, ar^2$ be the sides of the G.P. with $r > 1.$ Let smallest angle be $\alpha.$ The according to
+  question largest angle will be $2\alpha.$ Applying sine rule to smallest and largest angle
+  $$\frac{a}{\sin\alpha} = \frac{ar^2}{\sin2\alpha}\Rightarrow \frac{\sin2\alpha}{\sin\alpha} = r^2$$
+  $$\Rightarrow 2\cos \alpha = r^2$$
+  $$\because \alpha\neq 0 \therefore \cos\alpha < 1 \Rightarrow r^2 < 2 \Rightarrow r < \sqrt{2}$$
+  Thus, common ratio lies in the range $(1, \sqrt{2})$
+\end{frame}
+\begin{frame}{Problem 63}
+  \textbf{63.} If $a, b, c, d$ are in G.P., then prove that $ax^3 + bx^2 + cx + d$ is divisible by $ax^2 + c.$
+\end{frame}
+\begin{frame}{Solution of Problem 63}
+  \textbf{Solution:} Let $r$ be the common ratio of G.P. Then, $b = ar, c = ar^2, d = ar^3$
+  $$ax^3 + bx^2 + cx + d = ax^3 + arx^2 + ar^2x + ar^3 = a(x^2 + r^2)(x + r)$$
+  $$ax^2 + c = a(x^2 + r^2)$$
+  Clearly, $ax^3 + bx^2 + cx + d$ is divisible by $ax^2 + c.$
+\end{frame}
+\begin{frame}{Problem 64}
+  \textbf{64.} If $a, b, c$ are three distinct real numbers and they are in G.P. If $a + b + c = xb,$ then prove that $x < -1$ or
+  $x > 3.$
+\end{frame}
+\begin{frame}{Solution of Problem 64}
+  \textbf{Solution:} Let $r$ be the common ratio of the G.P. Then $b = ar, c = ar^2$ Given that
+  $$a + ar + ar^2 = xar \Rightarrow r^2 + (1 - x)r + 1 = 0$$
+  $$\because r\in R \Rightarrow D \geq 0 \Rightarrow (1 - x)^2 - 4 \geq 0 \Rightarrow x^2 - 2x - 3 \geq 0$$
+  $$(x + 1)(x - 3)\geq 0 \Rightarrow x\leq -1, x \geq 3$$
+\end{frame}
+\begin{frame}{Problem 65}
+  \textbf{65.} If $a, b, c, d, p$ are real and $(a^2 + b^2 + c^2)p^2 - 2(ab + bc + cd)p + (b^2 + c^2 + d^2)\leq 0.$ Show that $a,
+  b, c, d$ are in G.P. whose common ratio is $p$
+\end{frame}
+\begin{frame}{Solution of Problem 65}
+  \textbf{Solution:} Given, $(a^2 + b^2 + c^2)p^2 - 2(ab + bc + cd)p + (b^2 + c^2 + d^2)\leq 0$ and $p$ is real.
+  $$D = 0, (ab + bc + cd)^2 - (a^2 + b^2 + c^2)(b^2 + c^2 + d^2) = 0 \Rightarrow (b^2 - ac)^2 + (c^2 - bd)^2 + (bc - ad)^2 = 0$$
+  $$b^2 = ac, c^2 = ad, bc = ad$$
+  Thus, $a, b, c, d$ are in G.P. Let $r$ be the common ratio then
+  $$p = \frac{ab + bc + cd}{a^2 + b^2 + c^2} = \frac{a^2r + a^2r^3 + a^2r^5}{a^2 + a^2r^2 + a^2r^4} = r$$
+\end{frame}
+\begin{frame}{Problem 66}
+  \textbf{66.} If $2x^4 = y^4 + z^4, xyz = 8$ and $\log_yx, \log_zy, \log_xz$ are in G.P., show that $x = y = z = 2.$
+\end{frame}
+\begin{frame}{Solution of Problem 66}
+  \textbf{Solution:} $\log_yx, \log_zy, \log_xz$ are in G.P.
+  $$\Rightarrow 2\log_zy = \log_yx\log_xz \Rightarrow \left(\frac{\log y}{\log z}\right)^2 = \frac{\log x}{\log y}.\frac{\log
+    z}{\log x}$$
+  $$\Rightarrow (\log y)^3 = (\log z)^3 \Rightarrow y = z$$
+  Also, $2x^4 = y^4 + z^4 \Rightarrow 2x^4 = 2y^4 \Rightarrow x = y \therefore x = y = z$
+  \linebreak\linebreak
+  Also, $xyz = 8, \Rightarrow x = y = z = 2$
+\end{frame}
+\begin{frame}{Problem 67}
+  \textbf{67.} If $a, b, c, d$ are in both A.P. and G.P. and $b = 2,$ then find the number of such sequences.
+\end{frame}
+\begin{frame}{Solution of Problem 67}
+  \textbf{Solution:} Let $r$ be the common ratio. Since $a, b, c, d$ are in A.P.
+  $$\therefore b - a = c - b \Rightarrow a(r - 1) = ar(r - 1) \Rightarrow a(r - 1)(r - 1) = 0$$
+  $$\Rightarrow r = 1$$
+  Thus one such series is possible.
+\end{frame}
+\begin{frame}{Problem 68}
+  \textbf{68.} If $\log_x a, a^{\frac{x}{2}}, \log_b x$ are in G.P., then find $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 68}
+  \textbf{Solution:} Given, $\log_x a, a^{\frac{x}{2}}, \log_b x$ are in G.P.
+  $$\therefore \left(a^{\frac{x}{2}}\right)^2 = \log_x a. \log_b x$$
+  $$\Rightarrow a^x = \log_b a \Rightarrow x = \log_a(\log_b a)$$
+\end{frame}
+\begin{frame}{Problem 69}
+  \textbf{69.} The $(m + n)$th and $(m - n)$th terms of a G.P. are $p$ and $q$ respectively. Show that $m$th and $n$th terms are
+  $\sqrt{pq}$ and $p\left(\frac{q}{p}\right)^\frac{m}{2n}$ respectively.
+\end{frame}
+\begin{frame}{Solution of Problem 69}
+  \textbf{Solution:} Let $x$ be the first term and $y$ be the common difference. Then,
+  $$t_{m + n} = xy^{m + n - 1} = p, t_{m - n} = xy^{m - n - 1} = q$$
+  $$\Rightarrow pq = x^2y^2(m - 1) = (xy^{m - 1})^2 = t_{m}^2\Rightarrow t_p = \sqrt{pq}$$
+  $$\frac{q}{p} = y^{-2n}\Rightarrow y = \left(\frac{p}{q}\right)^{\frac{1}{2n}}$$
+  Now $x$ and $t_n$ can be found easily.
+\end{frame}
+\begin{frame}{Problem 70}
+  \textbf{70.} If the $p$th, $q$th and $r$th terms of an A.P. are in G.P., then find the common ratio of the G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 70}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P. Also, let $t_p = x$ and common ratio be $r$
+  of the G.P. Then
+  $$a + (p - 1)d = t_p = x, a + (q - 1) = xr, a + (r - 1) = xr^2$$
+  $$(q - p)d = x(r - 1), (r - q)d = xr(r - 1)$$
+  $$\Rightarrow r = \frac{r - q}{q - p}$$
+\end{frame}
+\end{document}
