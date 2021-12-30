@@ -39,7 +39,7 @@
   \linebreak\linebreak
   Given, $t_n = p + q$ and $t_{n + 1} = p - q \therefore d = -2q$
   \linebreak\linebreak
-  Also, $t_1 + t_{2n + 1} = t_2 + t_{2n - 1} = \ldots = t_n + t_{n + 1} = 2p$
+  Also, $t_1 + t_{2n} = t_2 + t_{2n - 1} = \ldots = t_n + t_{n + 1} = 2p$
   \linebreak\linebreak
   Let $S$ be the sum of cubes of the terms of A.P., then $S = (t_1^3 + t_{2n}^3) + (t_2^3 + t_{2n - 1}^3) + \ldots + (t_n^3 + t_{n
     - 1}^3)$
@@ -78,7 +78,7 @@
   \textbf{Solution:} Let $r$ be a positive integer and $r > 1.$
   \linebreak\linebreak
   Let $m^r = (2k + 1)+ (2k + 3) + \ldots + (2k + 2m - 1)$
-  $$m^r = \frac{m}{2}[4k + 2 + (m - 1)2 \Rightarrow m^{r - 1} = 2k + m] \Rightarrow k = \frac{m^{r - 1} - m}{2}$$
+  $$m^r = \frac{m}{2}[4k + 2 + (m - 1)2] \Rightarrow m^{r - 1} = 2k + m \Rightarrow k = \frac{m^{r - 1} - m}{2}$$
   Clearly for $r > 1, m^{r - 1}$ and $m$ are both odd or both even. $\therefore m^{r - 1} - m$ is an even number. Thus, such
   integer $k$ exists.
   \linebreak\linebreak
@@ -89,7 +89,7 @@
   common difference of the A.P.
 \end{frame}
 \begin{frame}{Solution of Problem 14}
-  \textbf{14.} Let $x = x_1$ be the first term and $d$ be the common difference. Then,
+  \textbf{14.} Let $x$ be the first term and $d$ be the common difference. Then,
   $$x + (x + d) + \ldots + [x + (n - 1)d] = a \Rightarrow nx + \frac{d.(n - 1)n}{2} = a$$
   Squaring both sides of the above equation
   $$nx^2 + \frac{d^2(n - 1)^2n}{4} + n(n - 1)xd = \frac{a^2}{n}$$
@@ -169,6 +169,11 @@
   \textbf{20.} If $a, b, c$ are three terms of an A.P. such that $a\neq b,$ show that $(b - c)/(a - b)$ is a rational number.
 \end{frame}
 \begin{frame}{Solution of Problem 20}
-  \textbf{Solution:} $b = \frac{a + c}{2}\therefore (b - c)/(a - b) = 1$
+  \textbf{Solution:} Let $x$ be the first term and $y$ be the common difference. Also, let $a, b, c$ to be the $p$th, $q$th, $r$th
+  term of the A.P.
+  \linebreak\linebreak
+  $$a = x + (p - 1)y, b = x + (q - 1)y, c = x + (r - 1)y$$
+  $$(b - c)/(a - b) = \frac{q - r}{p - q}$$
+  Since $p, q, r$ are integers $\frac{q - r}{p - q}$ will be a rational number.
 \end{frame}
 \end{document}
