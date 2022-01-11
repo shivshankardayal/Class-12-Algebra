@@ -1,0 +1,62 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 121-130}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 121}
+  \textbf{121.} The sum of first ten terms of an A.P. is equal to $155,$ and the sum of first two terms of a G.P. is $9.$ Find
+  these progressions if the first term of the A.P. euqals the common ratio of the G.P. and the first term of G.P. equals the common
+  difference of A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 121}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P. and thus $d$ will be the first term and $a$
+  be the common ratio of the G.P. Given,
+  $$155 = \frac{10}{2}[2a + (10 - 1)d] \Rightarrow 2a + 9d = 31$$
+  $$d + ad = 9$$
+  $$\Rightarrow a = \frac{25}{2}, 2 \Rightarrow d = \frac{2}{3}, 3$$
+  Thus, A.P. is $2, 5, 8, \ldots$ or $\frac{25}{2}, \frac{79}{6}, \frac{83}{6}, \ldots$ and the G.P. is $3, 6, 12, \ldots$ or
+  $\frac{2}{3}, \frac{25}{3}, \frac{625}{6}, \ldots$
+\end{frame}
+\begin{frame}{Problem 122}
+  \textbf{122.} If $a, b, c$ be in H.P., prove that $\left(\frac{1}{a} + \frac{1}{b} - \frac{1}{c}\right)\left(\frac{1}{b} +
+  \frac{1}{c} - \frac{1}{a}\right) = \frac{4}{ac} - \frac{3}{b^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 122}
+  \textbf{Solution:} Since $a, b, c$ are in H.P. therefore $\frac{1}{a}, \frac{1}{b}, \frac{1}{c}$ are in A.P.
+  \linebreak\linebreak
+  $\Rightarrow \frac{2}{b} = \frac{1}{a} + \frac{1}{c} \Rightarrow b = \frac{2ac}{a + c} \Rightarrow \frac{3}{b} - \frac{2}{c} =
+  \frac{1}{a} + \frac{1}{b} - \frac{1}{c} \text{~and~}\frac{3}{b} - \frac{2}{a} = \frac{1}{b} + \frac{1}{c} - \frac{1}{a}$
+  $$\left(\frac{1}{a} + \frac{1}{b} - \frac{1}{c}\right)\left(\frac{1}{b} + \frac{1}{c} - \frac{1}{a}\right) = \left(\frac{3}{b} -
+  \frac{2}{c}\right)\left(\frac{3}{b} - \frac{2}{a}\right)$$
+  $$= \frac{9ac - 6ab - 6bc + 4b^2}{acb^2} = \frac{4}{ac} + \frac{9}{b^2} - \frac{6b(a + c)}{acb^2}$$
+  $$= \frac{4}{ac} + \frac{9}{b^2} - \frac{6b}{acb^2}.\frac{2}{b}$$
+  $$= \frac{4}{ac} - \frac{3}{b^2}$$
+\end{frame}
+\end{document}

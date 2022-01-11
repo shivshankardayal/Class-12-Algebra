@@ -134,15 +134,22 @@
   annually, find the amount the man will receive at the end of $(n + 1)$th year.
 \end{frame}
 \begin{frame}{Solution of Problem 89}
-  \textbf{Solution:} $\$a$ will become $a + ar$ at the end of second year, $a + ar + ar^2$ at the end of third year and so on. So
-  amount received for $\$a = a + ar + \ldots + ar^n = \frac{a(1 - r^{n + 1})}{1 - r}$
+  \textbf{Solution:} $\$a$ will become $a + r.(a) = a(1 + r)$ at the end of second year, $a + ar + r(a + ar) = a + 2ar + ar^2 = a(1
+  + r)^2$ at the end of third year, $a + 2ar + ar^2 + r(a + 2ar + ar^2) = a + 3ar + 3ar^2 + ar^3 = a(1 + r)^3$ and so on. So
+  amount received for $\$a$ will be $a(1 + r)^{n + 1}$
   \linebreak\linebreak
-  Similarly, amount receoved for $\$2a$ will be $\frac{2a(1 - r^{n})}{1 - r}$ and so on.
+  Similarly, amount receoved for $\$2a$ will be $2a(1 + r)^n$ and so on.
   \linebreak\linebreak
-  Thus, total amount received will be $\frac{a(1 - r^{n + 1})}{1 - r} + \frac{2a(1 - r^{n})}{1 - r} + \ldots + \frac{na(1 - r^2)}{1
-    - r}$
+  Thus, total amount received will be $S = a(1 + r)^{n + 1} + 2a(1 + r)^n + 3a(1 + r)^{n - 1} + \ldots + na(1 + r)$
   \linebreak\linebreak
-  $= \frac{a(1 + r)^2[(1 + r)^n - 1]}{r^2} - \frac{na(1 + r)}{r}$
+  $\frac{S}{1 + r} = a(1 + r)^n + 2a(1 + r)^{n - 1} + \ldots + (n - 1)(1 + r) + na$
+  \linebreak\linebreak
+  Writing first term of second sum against second term of first sum, second term of second sum agains third term of first sum and
+  so on and subtracting, we get $\frac{rS}{1 + r} = a(1 + r)^{n + 1} + a(1 + r)^{n} + a(1 + r)^{n - 1} + \ldots + a(1 + r) - na$
+  \linebreak\linebreak
+  $\frac{rS}{1 + r} = a(1 + r)[(1 + r)^n + (1 + r)^{n - 1}  + \ldots + 1]) - na$
+  \linebreak\linebreak
+  $S = \frac{a(1 + r)^2[(1 + r)^n - 1]}{r^2} - \frac{na(1 + r)}{r}$
 \end{frame}
 \begin{frame}{Problem 90}
   \textbf{90.} Find the value of $(0.16)^{\log_{2.5}\left(\frac{1}{3} + \frac{1}{3^2} + \frac{1}{3^3} + \ldots \infty\right)}$

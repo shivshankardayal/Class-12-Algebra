@@ -1,0 +1,157 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 101-110}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 101}
+  \textbf{101.} If $S_n$ be the sum of infinite G.P.'s whose first term is $n$ and the common ratio is $\frac{1}{n + 1},$ find
+  $\lim_{n\to \infty} \frac{S_1S_n + S_2S_{n - 1} + \ldots + S_nS_1}{S_1^2 + S_2^2 + \ldots + S_n^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 101}
+  \textbf{Solution:} $$S_1 = \frac{1}{1 - \frac{1}{2}} = 2, S_2 = \frac{2}{1 - \frac{1}{3}} = 3,\ldots S_n = \frac{n}{1 -
+    \frac{1}{n + 1}} = n + 1$$
+  $$\text{General term of numerator~}t_i = S_iS_{n - i + 1} = (i + 1)(n - i + 2) = (n + 1)i - i^2 + (n + 1)$$
+  $$\therefore \text{Sum for numerator~} = \sum_{i=1}^nt_i = \sum[(n + 1)i - i^2 + (n + 1)] = \frac{n(n + 1)^2}{2} - \frac{n(n + 1)(2n
+    + 1)}{6} + n(n + 1)$$
+  $$\text{Sum for denominator~}= 1^2 + 2^2 + \ldots + (n + 1)^2 - 1 = \frac{(n + 1)(n + 2)(2n + 3)}{6} - 1$$
+  Upon simplification $$\lim_{n\to \infty} \frac{S_1S_n + S_2S_{n - 1} + \ldots + S_nS_1}{S_1^2 + S_2^2 + \ldots + S_n^2} = \frac{1}{2}$$
+\end{frame}
+\begin{frame}{Problem 102}
+  \textbf{102.} The sum of the terms of an infinitely decreasing G.P. is equal to the greatest value of the function $f(x) = x^3 +
+  3x - 9$ on the interval $[-5, 3],$ and the difference between the first and second terms is $f'(0).$ Prove that the common ratio
+  of the progression is $\frac{2}{3}.$
+\end{frame}
+\begin{frame}{Solution of Problem 102}
+  \textbf{Solution:} $f'(x) = 3x^2 + 3$ which yields imaginary roots implying that there is no local maxima. However, $3x^2 + 3$ is
+  positive for all values of $x$ which means that $f(x)$ is monotonically increasing in $[-5, 3]$ implying that maximum value will
+  be at $x = 3$
+  \linebreak\linebreak
+  $f(3) = 27,$ also let $a$ to be the first term and $r$ to be the common ratio then given, $a - ar = f'(0) = 3.$ The sum is given
+  as $\frac{a}{1 - r} = 27$ solving these yields $r = \frac{2}{3}, -\frac{4}{3}$ but the series is decreasing so $r = \frac{2}{3}$
+\end{frame}
+\begin{frame}{Problem 103}
+  \textbf{103.} Find the sum of the series $\frac{5}{13} + \frac{55}{13^2} + \frac{555}{13^3} + \ldots \infty$
+\end{frame}
+\begin{frame}{Solution of Problem 103}
+  \textbf{Solution:} $$\text{Let~}S = \frac{5}{13} + \frac{55}{13^2} + \frac{555}{13^3} + \ldots \infty$$
+  $$= \frac{5}{9}\left[\frac{10 - 1}{13} + \frac{100 - 1}{13^2} + \frac{1000 - 1}{13^3} + \ldots \infty\right]$$
+  $$= \frac{5}{9}\left[\frac{10}{13} + \frac{10^2}{13^2} + \frac{10^3}{13^3} + \ldots \infty - \frac{1}{13} - \frac{1}{13^2} -
+    \frac{1}{13^3} - \ldots \infty\right]$$
+  $$= \frac{5}{9}\left[\frac{\frac{10}{13}}{1 - \frac{10}{13}} - \frac{\frac{1}{13}}{1 - \frac{1}{13}}\right]$$
+  $$= \frac{5}{9}\left[\frac{10}{13}.\frac{13}{3} - \frac{1}{13}.\frac{13}{12}\right]$$
+  $$= \frac{65}{36}$$
+\end{frame}
+\begin{frame}{Problem 104}
+  \textbf{104.} If $e^{{\sin^2x + \sin^4x + \sin^6x + \ldots \infty}\log_e2}$ satisfies the equation $x^2 - 9x + 8 = 0,$ find the
+  value of $\frac{\cos x}{\cos x + \sin x}, 0 < x < \frac{\pi}{2}$
+\end{frame}
+\begin{frame}{Solution of Problem 104}
+  \textbf{Solution:}$$e^{{\sin^2x + \sin^4x + \sin^6x + \ldots \infty}\log_e2} = 2^{\frac{\sin^2x}{1 - \sin^2x}\log_e e} =
+  2^{\tan^2x}$$
+  $$x^2 - 9x + 8 = 0 \Rightarrow (x - 1)(x - 8) = 0\Rightarrow x = 1 = 2^0, x = 8 = 2^3$$
+  $$\therefore 2^{\tan^2x} = 2^0, 2^3~\because 0 < x < \frac{\pi}{2}\Rightarrow  \tan x= \sqrt{3} \Rightarrow x = \frac{\pi}{3}$$
+  $$\frac{\cos x}{\cos x + \sin x} = \frac{\frac{1}{2}}{\frac{1}{2} + \frac{\sqrt{3}}{2}} = \frac{1}{1 + \sqrt{3}}$$
+\end{frame}
+\begin{frame}{Problem 105}
+  \textbf{105.} If $-\frac{\pi}{2} < x < \frac{\pi}{2}$ and the sum to infinite number of terms of series $\cos x + \frac{2}{3}\cos
+  x\sin^2x + \frac{4}{9}\cos x\sin^4x + \ldots$ is finite, then show that $x$ lies in the set $\left(-\frac{\pi}{2},
+  \frac{\pi}{2}\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 105}
+  \textbf{Solution:} $$S = \cos x + \frac{2}{3}\cos x\sin^2x + \frac{4}{9}\cos x\sin^4x + \ldots$$
+  $$= \frac{\cos x}{1 - \frac{2}{3}\sin^2x} = \frac{3\cos x}{3 - 2\sin^2x} = \frac{3\cos x}{2 + \cos 2x}$$
+  The term $\frac{3\cos x}{2 + \cos 2x}$ is finite for all $x\in \left(-\frac{\pi}{2},\frac{\pi}{2}\right)$
+\end{frame}
+\begin{frame}{Problem 106}
+  \textbf{106.} Suppose $0 < x < \pi$ and the expression $e^{{1 + |\cos x| + \cos^2x + |\cos^3x| + \ldots \infty}\log_e 4}$
+  satisfies the quadratic equation $y^2 - 20y + 64 = 0,$ then find the value of $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 106}
+  \textbf{Solution:} $$e^{{1 + |\cos x| + \cos^2x + |\cos^3x| + \ldots \infty}\log_e 4} = 4^{{\frac{1}{1 - |\cos x|}}\log_e e} =
+  4^{\frac{1}{1 - |\cos x|}}$$
+  $$y^2 - 20y + 64 = 0 \Rightarrow (y - 16)(y - 4) = 0 \Rightarrow y = 4^1, 4^2\Rightarrow \frac{1}{1 - |\cos x|} = 1, 2$$
+  $$\text{If~}\frac{1}{1 - |\cos x|} = 1 \text{~then~} |\cos x| = 0 \Rightarrow x\notin(0, \pi)$$
+  $$\therefore 1 - |\cos x| = \frac{1}{2} \Rightarrow x = n\pi + \frac{\pi}{3}, n \in I$$
+\end{frame}
+\begin{frame}{Problem 107}
+  \textbf{107.} An A.P. and a G.P. with positive terms have the same number of terms and their first terms as well as the last
+  terms are equal. Show that the sum of A.P. is greater than or equal to the sum of the G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 107}
+  \textbf{Solution:} Let $a$ be the first term, $b$ be the last term and $n$ be the number of terms of A.P. and G.P.
+  \linebreak\linebreak
+  Then c.d. of A.P. $= \frac{b - a}{n - 1}$ and c.r. of the G.P. $= \left(\frac{b}{a}\right)^{n - 1}.$ Let $S$ be the sum of $n$
+  terms of A.P. and $S'$ the sum of $n$ terms of G.P. then $S = \frac{n}{2}(a + b)$
+  \linebreak\linebreak
+  $$S' = a(1 + r + r^2 + \ldots + r^{n - 1})$$
+  $$S' = a(r^{n - 1} + r^{n - 2} + \ldots + 1)$$
+  $$\therefore S' = \frac{a}{2}[(1 + r^{n - 1}) + (r + r^{n - 2}) + (r^k + r^{n - k - 1}) + \ldots + (r^{n - 1} + 1)]$$
+  Now, $$(r^k + r^{n - k - 1}) - (r^{n - 1} + 1) = (r^k - 1) + r^{n - 1}(r^{-k} - 1)$$
+  $$= (r^k - 1)\left(1 - \frac{r^{n - 1}}{r^k}\right) = (r^k - 1)(1 - r^{n - k - 1})\leq 0$$
+  $$\therefore S'\leq \frac{an}{2}(1 + r^{n - 1}) = \frac{an}{2}\left(1 + \frac{b}{a}\right) = \left(\frac{a + b}{2}\right)n = S$$
+  $$\therefore S \geq S'$$
+\end{frame}
+\begin{frame}{Problem 108}
+  \textbf{108.} Given a G.P. and A.P. of positive terms $a, a_1, a_2, \ldots, a_n, \ldots$ and $b, b_1, b_2, \ldots, b_n, \ldots$
+  respectively, with the common ratio of the G.P. being different from $1,$ prove that there exists $x\in R, x > 0$ such that
+  $\log_x a_n - b_n = \log_x a - b,~\forall n\in N.$
+\end{frame}
+\begin{frame}{Solution of Problem 108}
+  \textbf{Solution:} Given $a, a_1, a_2, a_3, \ldots$ are in G.P. so $\log a, \log a_1, \log a_2, \ldots$ are in A.P. Let the
+  common difference of this A.P. be $d_1.$ Now $\log a_n = \log a + nd_1.$ Further if $d$ be the common difference of the A.P. $b,
+  b_1, b_2, \ldots$ then $b_n = b + nd$
+  $$\therefore \frac{\log a_n - \log a}{b_n - b} = \frac{nd_1}{nd} = \frac{d_1}{d}$$
+  Let $\log x = \frac{d_1}{d}$ for a fixed positive real number $x.$
+  $$\Rightarrow \frac{\log a_n - \log a}{b_n - b} = \log x \Rightarrow b_n - b = \log_x\left(\frac{a_n}{a}\right)$$
+  $$\Rightarrow \log_x a_n - \log_x a = b_n - b \Rightarrow \log_x a_n - b_n = \log_x a - b$$
+\end{frame}
+\begin{frame}{Problem 109}
+  \textbf{109.} If the $(m + 1)$th, $(n + 1)$th and $(r + 1)$th terms of an A.P. are in G.P., and $m, n, r$ are in H.P., show that
+  the ratio of the first term to the common difference of the A.P. is $-n/2.$
+\end{frame}
+\begin{frame}{Solution of Problem 109}
+  \textbf{Solution:} Given $a + md, a + nd, a + rd$ are in G.P., where $a$ is the first term and $d$ is the c.d. of A.P.
+  $$\Rightarrow (a + nd)^2 = (a + md)(a + rd)$$
+  $$\Rightarrow d(n^2d + 2an) = d(am + ar + mrd)\Rightarrow (n^2 - mr)d = a(m + r - rn)$$
+  $$\frac{d}{a} = \frac{m + r - 2n}{n^2 - mr}$$
+  Given, $m, n, r$ are in H.P. $\therefore n = \frac{2mr}{m + r} \Rightarrow m + r = \frac{2mr}{n}$
+  $$\therefore \frac{d}{a} = \frac{\frac{2mr}{n} - 2n}{n^2 - mr} = -\frac{2}{n}~\therefore~ \frac{a}{d} = -\frac{n}{2}$$
+\end{frame}
+\begin{frame}{Problem 110}
+  \textbf{110.} If $a, b, c$ are in G.P. and $a - b, c - a, b - c$ are in H.P., then show that $a + 4b + c = 0$
+\end{frame}
+\begin{frame}{Solution to Problem 110}
+  \textbf{Solution:} Let $r$ be the common ratio of the G.P., then $b = ar, c = ar^2.$ Given, $a - b, c - a, b - c$ are in H.P.
+  $$\therefore c - a = \frac{2(a - b)(b - c)}{a - b + b - c}$$
+  $$(c - a)^2 = 2(a - b)(b - c)\Rightarrow (ar^2 - a)^2 = 2(a - ar)(ar - ar^2)$$
+  $$a^2(r^2 - 1)^2 = -2a^2(1 - r)r(1 - r)\Rightarrow (r + 1)^2 = -2r \Rightarrow 1 + 4r + r^2 = 0$$
+  $$\Rightarrow a + 4ar + ar^2 = 0 \Rightarrow a + 4b + c = 0$$
+\end{frame}
+\end{document}

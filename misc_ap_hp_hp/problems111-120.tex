@@ -1,0 +1,177 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 111-120}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 111}
+  \textbf{111.} If $S_1, S_2$ and $S_3$ denote the sum to $n(> 1)$ terms of three sequences in A.P., whose first terms are unity
+  and common differences are in H.P., prove that $n = \frac{2S_3S_1 - S_1S_2 - S_2S_3}{S_1 - 2S_2 + S_3}$
+\end{frame}
+\begin{frame}{Solution to Problem 111}
+  \textbf{Solution:} Let $d_1, d_2, d_3$ be the common differences of the A.P.'s.
+  $$\Rightarrow S_1 = \frac{n}{2}[2 + (n - 1)d_1]\Rightarrow d = \frac{2(S_1 - n)}{n(n - 1)}$$
+  $$\text{Similalrly~}d_2 = \frac{2(S_2 - n)}{n(n - 1)}, d_3 = \frac{2(S_3 - n)}{n(n - 1)}$$
+  $\because d_1, d_2, d_3$ are in H.P. $\therefore \frac{1}{d_2} - \frac{1}{d_1} = \frac{1}{d_3} - \frac{1}{d_2}$
+  $$\Rightarrow \frac{n(n - 1)}{2(S_2 - n)} - \frac{n(n - 1)}{2(S_1 - n)} = \frac{n(n - 1)}{2(S_3 - n)} - \frac{n(n - 1)}{2(S_2 -
+    n)}$$
+  $$\Rightarrow \frac{1}{S_2 - n} - \frac{1}{S_1 - n} = \frac{1}{S_3 -n} - \frac{1}{S_2 -n}$$
+  $$\Rightarrow \frac{S_1 - S_2}{(S_1 - n)(S_2 - n)} = \frac{S_2 - S_3}{(S_3 - n)(S_2 - n)}$$
+  $$\Rightarrow n = \frac{2S_3S_1 - S_1S_2 - S_2S_3}{S_1 - 2S_2 + S_3}$$
+\end{frame}
+\begin{frame}{Problem 112}
+  \textbf{112.} Find a three-digit number such that its digits are in G.P. and the digits of the number obtained from it by
+  subtracting $400$ form an A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 112}
+  \textbf{Solution:} Let the digits at hundreds, tens and units places be $a, ar$ and $ar^2$ and the required number be $x,$ then
+  $x = 100a + 10a + ar^2$
+  \linebreak\linebreak
+  Let $y = x - 400 \Rightarrow y = 100(a - 4) + 1 - ar + ar^2$ In the number $y,$ the digit at hundreds place is $a - 4.$ Clearly
+  \linebreak\linebreak
+  $1\leq a - 4\leq 5~[\because~1\leq a \leq 9 \text{~and~}a - 4\geq 1] \Rightarrow 5\leq a\leq 9$
+  \linebreak\linebreak
+  According to question $a - 4, ar, ar^2$ are in A.P. $\therefore~ 2ar = a - 4 + ar^2\Rightarrow a(r - 1)^2 = 4\Rightarrow r - 1 =
+  \pm\frac{2}{\sqrt{a}}$
+  \linebreak\linebreak
+  $\because a$ and $ar$ are integers. $\therefore r$ is a rational number. Thus, $a$ must be a perfect square. $\therefore a = 9$
+  \linebreak\linebreak
+  Thus, $r = \frac{5}{3}, \frac{1}{3}$ but $r\neq \frac{5}{3}$ othereise $ar = 15\therefore r = \frac{1}{3}\therefore ar = 3, ar^2
+  = 1$
+  \linebreak\linebreak
+  Hence required number is $931.$
+\end{frame}
+\begin{frame}{Problem 113}
+  \textbf{113.} If $a, b, c$ be distinct positive numbers in G.P. and $\log_c a, \log_b c, \log_a b$ be in A.P., prove that the
+  common difference of the progression is $3/2.$
+\end{frame}
+\begin{frame}{Solution of Problem 113}
+  \textbf{Solution:} Given $a, b, c$ are in G.P. Let $r$ be the common ratio of this G.P. then $b = ar$ and $c = ar^2$.
+  \linebreak\linebreak
+  Given, $\log_c a, \log_b c, \log_a b$ are in A.P.
+  $$\Rightarrow \frac{\log a}{\log c}, \frac{\log c}{\log b}, \frac{\log b}{\log a}\text{~are in A.P.}$$
+  $$\Rightarrow \frac{\log a}{\log a + 2\log r}, \frac{\log a + 2\log r}{\log a + \log r}, \frac{\log a + \log r}{\log a}\text{~are
+    in A.P.}$$
+  $$\frac{1}{1 + 2x}, \frac{1 + 2x}{1 + x}, 1 + x\text{~are in A.P. where~}\frac{\log r}{\log a} = x$$
+  $$2\left(\frac{1 + 2x}{1 + x} = \frac{1}{1 + 2x} + 1 + x\right)\Rightarrow x(2x^2 - 3x - 3) = 0$$
+  $$2x^2 - 3x - 3 = 0[\because x\neq 0,\text{~else~}\log r = 0 \Rightarrow r = 1\text{~which is not possible as~} a, b, c\text{~are
+      distinct}]$$
+  $$2d = 1 + x - \frac{1}{1 + 2x} = \frac{2x^2 + 3x}{1 + 2x} = \frac{3x + 3 + 3x}{1 + 2x} = 3\Rightarrow d = \frac{3}{2}$$
+\end{frame}
+\begin{frame}{Problem 114}
+  \textbf{114.} If $p$ be the first of the $n$ arithmetic means between two numbers $a$ and $b$ and $q$ the first of the $n$
+  harmonic means between the same two numbers, prove that the value of $q$ cannot lie between $p$ and $\left(\frac{n + 1}{n -
+    1}\right)^2p$
+\end{frame}
+\begin{frame}{Solution to Problem 114}
+  \textbf{Solution:} Let the two numbers be $a$ and $b.$ Since $n$ A.M.'s have been inserted between $a$ and $b~\therefore~$ common
+  difference of A.P., $d = \frac{b - a}{n + 1}$
+  \linebreak\linebreak
+  Now $p =$ first A.M. $= 2$nd term of A.P. $= a + d = \frac{an + b}{n + 1}$
+  \linebreak\linebreak
+  Similarly for harmonic series $q = \frac{ab(n + 1)}{bn + a}$
+  \linebreak\linebreak
+  We know that $x$ will not lie between $\alpha$ and $\beta$ if $(x - \alpha)(x - \beta) > 0$
+  $$q - p = -\frac{n(a - b)^2}{(bn + a)(n + 1)}$$
+  $$q - \left(\frac{n + 1}{n - 1}\right)^2p = -\frac{(n + 1)(a + b)^2n}{(n - 1)^2(bn + a)}$$
+  $$\Rightarrow (q - p)\left[q - \left(\frac{n + 1}{n - 1}\right)^2p\right] = \frac{n^2(a - b)^2(a + b)^2}{(n - 1)^2(bn + a)^2} > 0$$
+\end{frame}
+\begin{frame}{Problem 115}
+  \textbf{115.} Find a three digit number whose consecutive numbers form a G.P. If we subtract $792$ from this number, we get a
+  number consisting of the same digits written in the reverse order. Now if we increase the second digit of the required number by
+  $2,$ the resulting number will form an A.P.
+\end{frame}
+\begin{frame}{Solution of Problem 115}
+  \textbf{Solution:} Let $a$ be the first digit and $r$ be the common ratio and $x$ be the required number.
+  $$\therefore~ 100a + 10ar + ar^2 = x \Rightarrow x - 792 = 100(a - 7) + 10(ar - 9) + 2ar^2 = 100ar^2 + 10ar + a$$
+  Also, $$2(ar + 2) = a + ar^2 \Rightarrow ar^2 - 2ar + a = 4 \Rightarrow a(1 - r)^2 = 4 \Rightarrow r - 1 =
+  \pm\frac{2}{\sqrt{a}}$$
+  \linebreak\linebreak
+  Clearly, $a - 7 \geq 0 \Rightarrow a \geq 7$
+  \linebreak\linebreak
+  $\because a$ and $ar$ are integers. $\therefore r$ is a rational number. Thus, $a$ must be a perfect square. $\therefore a = 9$
+  $\Rightarrow r = \frac{1}{3}, \frac{5}{3}$ but $r\neq \frac{5}{3}$ othereise $ar = 15\therefore r = \frac{1}{3}\therefore ar = 3,
+  ar^2 = 1$
+  \linebreak\linebreak
+  Hence required number is $931.$
+\end{frame}
+\begin{frame}{Problem 116}
+  \textbf{116.} An A.P. and a G.P. each has $p$ as first term and $q$ as second term where $0 < q < p.$ Find the sum to infinity,
+  $s$ of the G.P., and prove that the sum of first $n$ terms of the A.P. may be written as $np - \frac{n(n - 1)}{2}.\frac{p^2}{s}$
+\end{frame}
+\begin{frame}{Solution of Problem 116}
+  \textbf{Solution:} Common difference of A.P. $= q - p$ and common ratio of G.P. $= \frac{q}{p} < 1$
+  $$s = \frac{p}{1 - \frac{q}{p}} = \frac{p^2}{p - q}$$
+  Let $S_n$ be the sum of $n$ terms of A.P., then
+  $$S_n = \frac{n}{2}[2p + (n - 1)d] = np + \frac{n(n - 1)d}{2} = np + \frac{n(n - 1)(q - p)p^2}{2p^2} = np - \frac{n(n -
+    1)}{2}.\frac{p^2}{s}$$
+\end{frame}
+\begin{frame}{Problem 117}
+  \textbf{117.} If $\log_xy, \log_zx, \log_yz$ are in G.P., $xyz = 64$ and $x^3, y^3, z^3$ are in A.P., then find $x, y$ and $z.$
+\end{frame}
+\begin{frame}{Solution of Problem 117}
+  \textbf{Solution:} $\because \log_xy, \log_zx, \log_yz$ are in G.P.
+  $$\Rightarrow (\log_zx)^2 = \log_xy.\log_yz \Rightarrow \left(\frac{\log x}{\log z}\right)^2 = \frac{\log y}{\log x}.\frac{log
+    z}{\log y}$$
+  $$\Rightarrow (\log x)^3 = (\log z)^3 \Rightarrow x = z$$
+  $$\Rightarrow x = y = z = 4~\because xyz = 64\text{~and~}2y^3 = x^3 + z^3$$
+\end{frame}
+\begin{frame}{Problem 118}
+  \textbf{118.} Find all complex numbers $x$ and $y$ such that $x, x + 2y, 2x + y$ are in A.P. and $(y + 1)^2, xy + 5, (x + 1)^2$
+  are in G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 118}
+  \textbf{118.} $$2(x + 2y) = x + 2x + y \Rightarrow 3y = x$$
+  $$(xy + 5)^2 = (y + 1)^2(x + 1)^2 \Rightarrow (3y^2 + 5) = \pm(y + 1)(3y + 1)$$
+  $$\Rightarrow y = 1, \frac{-1\pm2\sqrt{2}i}{3}$$
+  $$x = 3, -1\pm2\sqrt{2}i$$
+\end{frame}
+\begin{frame}{Problem 119}
+  \textbf{119.} Find A.P. of distinct terms whose first term is $3$ and second, tenth and thirty fourth terms form a G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 119}
+  \textbf{Solution:} Let $a = 3$ be the first term and $d$ be the common difference of the G.P. then, given
+  $$(a + 9d)^2 = (a + d)(a + 33d)\Rightarrow a^2 + 18ad + 81d^2 = a^2 + 34ad + + 33d^2 \Rightarrow d = \frac{a}{3} = 1$$
+  So the A.P. is $3, 4, 5, \ldots$
+\end{frame}
+\begin{frame}{Problem 120}
+  \textbf{120.} Let $a, b, c, d$ be four positive real numbers such that the geometric mean of $a$ and $b$ is equal to the
+  gerometric mean of $c$ and $d$ and the arithmetic mean of $a^2$ and $b^2$ is equal to the arithmetic mean of $c^2$ and $d^2.$
+  Show that the arithmetic mean of $a^n$ and $b^n$ is equal to the arithmetic mean of $c^n$ and $d^n$ for every integral value of
+  $n.$
+\end{frame}
+\begin{frame}{Solution of Problem 120}
+  \textbf{Solution:} Given, $$\sqrt{ab} = \sqrt{cd}, \frac{a^2 + b^2}{2} = \frac{c^2 + d^2}{2}$$
+  $$\Rightarrow ab = cd, a^2 + b^2 = c^2 + d^2$$
+  $$\Rightarrow (a - b)^2 = (c - d)^2, (a + b)^2 = (c + d)^2$$
+  $$\Rightarrow a = c, b = d$$
+  Thus, arithmetic mean of $a^n$ and $b^n$ is equal to the arithmetic mean of $c^n$ and $d^n$ for every integral value of
+  $n.$
+\end{frame}
+\end{document}
