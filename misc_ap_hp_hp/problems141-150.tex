@@ -1,0 +1,222 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 141-150}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Some useful results}
+  $$\sum_{n = 1}^n1 = n = {}^nC_1$$
+  $$\sum_{n = 1}^nn = \frac{n(n + 1)}{2} = {}^{n + 1}C_2$$
+  $$\sum_{n = 1}^n{}^{n + 1}C_2 = {}^2C_2 + {}^3C_2 + {}^4C_2 + \ldots +{}^{n + 1}C_2$$
+  $$= ({}^3C_3 + {}^3C_2) + {}^4C_2 + \ldots +{}^{n + 1}C_2$$
+  $$= {}^4C_3 + {}^4C_2 + {}^5C_2 + \ldots +{}^{n + 1}C_2$$
+  $$\ldots$$
+  $$= {}^{n + 1}C_3$$
+  Similarly $$\sum_{n = 1}^n{}^{n + 2}C_3 = {}^{n + 3}C_4$$
+\end{frame}
+\begin{frame}{To find $t_1 + t_2 + \ldots + t_n$}
+  Let $S_n = t_1 + t_2 + \ldots + t_n$
+  \linebreak\linebreak
+  Terms of the given series are: $t_1, t_2, t_3, \ldots, t_{n - 1}, t_n$
+  \linebreak\linebreak
+  First order differences are: $\Delta t_1, \Delta t_2, \ldots, \Delta t_{n - 1}$
+  \linebreak\linebreak
+  Second order differences are: $\Delta^2t_1, \Delta^2t_2, \ldots, \Delta^2t_{n - 1}$
+  \linebreak\linebreak
+  Then, $t_n = t_1 + {}^{n - 1}C_1\Delta t_1 + {}^{n - 1}C_2\Delta^2t_1+ \ldots + {}^{n - 1}C_{n - 1}\Delta^{n - 1}t_1$
+  \linebreak\linebreak
+  When $n =1,$ L.H.S $= t_1$ and R.H.S. $= t_1$ so the theorem is true for $n = 1.$ Let the theorem be true for $n = m$
+  \linebreak\linebreak
+  $t_m = t_1 + {}^{m - 1}C_1\Delta t_1 + {}^{m - 1}C_2\Delta^2t_1 + \ldots + {}^{m - 1}C_{m - 1}\Delta^{m - 1}t_1$
+  \linebreak\linebreak
+  $\therefore \Delta t_m = \Delta t_1 + {}^{m - 1}C_1\Delta^2 t_1 + {}^{m - 1}C_2\Delta^3t_1 + \ldots + {}^{m - 1}C_{m -
+    1}\Delta^mt_1$
+  \linebreak\linebreak
+  $t_m + \Delta t_m = t_1 + ({}^{m - 1}C_1 + {}^{m - 1}C_0)\Delta t_1 + ({}^{m - 1}C_2 + {}^{m - 1}C1)\Delta^2t_1 + \ldots + ({}^{m
+    - 1}C_{m - 1} + {}^{m - 1}C_{m - 2})\Delta^{m - 1}t_1 + {}^{m - 1}C_{m - 1}\Delta^mt_1$
+  \linebreak\linebreak
+  $\therefore t_{m + 1} = t_1 + {}^mC_1\Delta t_1 + {}^mC_2\Delta^2 t_1 + {}^mC_{m - 1}\Delta^{m - 1}t_1 + {}^mC_m\Delta^mt_1$
+  \linebreak\linebreak
+  Thus, theorem is true for $n = m + 1$ whenever it is true for $n = m$
+  \linebreak\linebreak
+  Thus, $t_n = t_1 + {}^{n - 1}C_1\Delta t_1 + {}^{n - 1}C_2\Delta^2t_1 + \ldots + {}^{n - 1}C_{n - 1}\Delta^{n - 1}t_1$
+\end{frame}
+\begin{frame}{Problem 141}
+  \textbf{141.} Two trains $A$ and $B$ start from the same station $P$ at the same time. $A$ covers half the distance between first
+  station $P$ and second station $Q$ with speed $x$ and other half distance with speed $y$. Train $B$ covers the whole distance
+  with speed $\frac{x + y}{2}.$ Which train will reach $Q$ earlier.
+\end{frame}
+\begin{frame}{Solution of Problem 141}
+  \textbf{Solution:} Let $s$ be the distance between $P$ and $Q.$
+  \linebreak\linebreak
+  Time taken by train $A = \frac{s}{2x} + \frac{s}{2y} = \frac{s(x + y)}{2xy} = \frac{s}{\text{~H.M of~}x \text{~and~}y}$
+  \linebreak\linebreak
+  Time taken by train $B = \frac{2s}{x + y} = \frac{s}{\text{~A.M of~}x \text{~and~}y}$
+  \linebreak\linebreak
+  So, second train wil reach earlier as A.M. $\geq$ H.M.
+\end{frame}
+\begin{frame}{Problem 142}
+  \textbf{142.} If $n$ is a root of equation $x^2(1 - ac) - x(a^2+c^2) - (1 + ac) = 0$ and if $n$ H.M.'s are inserted between $a$
+  and $c,$ show that the difference between the first and last mena is equal to $ac(a - c).$
+\end{frame}
+\begin{frame}{Solution of Problem 142}
+  \textbf{142.} Let $d$ be the common difference of corresponding A.P. Also, let $H_1$ and $H_n$ be first and last H.M.
+   $$\Rightarrow d = \frac{\frac{1}{c} - \frac{1}{a}}{n + 1} = \frac{ac}{ac(n + 1)}$$
+  $$\frac{1}{H_1} = \frac{1}{a} + \frac{a - c}{ac(n + 1)} \Rightarrow H_1 = \frac{ac(n + 1)}{nc + a}$$
+  $$\frac{1}{H_n} = \frac{1}{a} + \frac{n(a - n)}{ac(n + 1) \Rightarrow H_n = \frac{ac(n + 1)}{na + c}}$$
+  $$H_1 - H_n = \frac{ac(n + 1)}{nc + a} - \frac{ac(n + 1)}{na + c} = \frac{ac(n^2 - 1)(a - c)}{(n^1 + 1)ac + n(a^2 + c^2)}$$
+  Also, given that $n$ is a root of equation $x^2(1 - ac) - x(a^2+c^2) - (1 + ac) = 0$
+  $$\therefore n^2(1 - ac) - n(a^2 + c^2) - 1 - ac = 0 \Rightarrow n^2 - 1 = (n^2 + 1)ac + n(a^2 + c^2)$$
+  $$\therefore H_1 - H_n = ac(a - c)$$
+\end{frame}
+\begin{frame}{Problem 143}
+  \textbf{143.} If $A_1, A_2, \ldots, A_n$ are the $n$ A.M.'s and $H_1, H_2, \ldots, H_n$ the $n$ H.M.'s between $a$ and $b,$ show
+  that $A_rH_{n - r + 1} = ab$ for $1\leq r\leq n$
+\end{frame}
+\begin{frame}{Solution of Problem 143}
+  \textbf{Solution:} Let $d$ be the common difference for A.P. and $d'$ be the common difference for H.P., then
+  $$d = \frac{b - a}{n + 1}, d' = \frac{\frac{1}{b} - \frac{1}{a}}{n + 1} = \frac{a - b}{(n + 1)ab}$$
+  $$A_r = a + rd = a + \frac{r(b - a)}{n + 1} = \frac{(n - r + 1)a + rb}{n + 1}$$
+  $$\frac{1}{H_{n - r + 1}} = \frac{1}{a} + \frac{(n - r + 1)(a - b)}{(n + 1)ab} = \frac{(n - r + 1)a + rb}{(n + 1)ab}$$
+  $$\Rightarrow H_{n - r + 1} = \frac{(n + 1)ab}{(n - r + 1)a + rb}$$
+  $$\Rightarrow A_rH_{n - r + 1} = ab$$
+\end{frame}
+\begin{frame}{Problem 144}
+  \textbf{144.} Find the coefficient of $x^{99}$ and $x^{98}$ in the polynomial $(x - 1)(x - 2)(x - 3)\ldots(x - 100).$
+\end{frame}
+\begin{frame}{Solution of Problem 144}
+  \textbf{Solution:} Consider the equation $(x - 1)(x - 2)(x - 3)\ldots(x - 100) = 0.$ Its roots are $1, 2, 3, \ldots, 100$
+  \linebreak\linebreak
+  So the equation is a polynomial of $x$ of degree $100.$ Coefficient of $x^{100} = 1$
+  \linebreak\linebreak
+  Now sum of roots of equation taken one at a time
+  \linebreak\linebreak
+  $1 + 2 + 3 + \ldots + 100 = (-1)^1\frac{\text{coeff. of~}x^{99}}{\text{coeff. of~}x^{100}} = -\text{coeff. of~}x^{99}$
+  \linebreak\linebreak
+  $\therefore \text{~coeff. of~}x^{99} = -(1 + 2 + 3 + \ldots + 100) = -5050$
+  \linebreak\linebreak
+  Sum of products of roots taken two at a time = coeff. of $x^{98} = \frac{1}{2}[(1 + 2 + 3 + \ldots + 100)^2 - (1^2 + 2^2 +
+    \ldots + 100^2)]$
+  \linebreak\linebreak
+  $= \frac{1}{2}\left[5050^2 - \frac{100\times101\times102}{6}\right] = 12582075$
+\end{frame}
+\begin{frame}{Problem 145}
+  \textbf{145.} Find the $n$th term and sum to $n$ terms of the series $12, 40, 90, 168, 280, 432, \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 145}
+  \textbf{Solution:} $$t_1 = 12, 40, 90, 168, 280, 432, \ldots$$
+  $$\Delta t_1 = 28, 50, 78, 112, 152, \ldots$$
+  $$\Delta^2 t_1 = 22, 28, 34, 40, \ldots$$
+  $$\Delta^3 t_1 = 6, 6, 6, \ldots$$
+  $$t_n = 12 + 28{}^{n - 1}C_1 + 22.{}^{n - 1}C_2 + 6.{}^{n - 1}C_3$$
+  $$S_n = \sum_{n = 1}^n (12 + 28{}^{n - 1}C_1 + 22.{}^{n - 1}C_2 + 6.{}^{n - 1}C_3)$$
+  $$S_n = 12n + 28.{}^nC_2 + 22.{}^nC_3 + 6.{}^nC_4$$
+  $$= 12n + 28.\frac{n(n - 1)}{2!} + 22.\frac{n(n - 1)(n - 2)}{3!} + 6.\frac{n(n - 1)(n - 2)(n - 3)}{4!}$$
+  $$= \frac{n}{12}(n + 1)(3n^2 + 23n + 46)$$
+\end{frame}
+\begin{frame}{Problem 146}
+  \textbf{146.} Find the $n$th term and the sum to $n$ terms of the series $10, 23, 60, 169, 494, \ldots$
+\end{frame}
+\begin{frame}{Solution of problem 146}
+  \textbf{Solution:} The series and the successive order differences are:
+  $$10, 23, 60, 169, 494, \ldots$$
+  $$13, 37, 109, 325, \ldots$$
+  $$24, 72, 216, \ldots$$
+  Here second order differences are in G.P. whose common ratio is $3.$ Let $t_n = a + bn + c.3^{n - 1}$
+  $$\therefore a + b + c = t_1 = 10, a + 2b + 3c = t_2 = 23, a + 3b + 9c = t_3 = 60$$
+  $$\Rightarrow a = 3, b = 1, c = 6$$
+  $$t_n = 3 + n + 6.3^{n - 1}$$
+  $$S_n = \sum_{n = 1}^n t_n = \frac{1}{2}(n^2 + 7n - 6) + 3^{n + 1}$$
+\end{frame}
+\begin{frame}{Problem 147}
+  \textbf{147.} Find the sum of the series $3 + 5x + 9x^2 + 15x^3 + 23x^4 + 33x^5 + \ldots \infty$
+\end{frame}
+\begin{frame}{Solution of Problem 147}
+  \textbf{Solution:} Here one factor of the terms is in G.P. i.e. $x.$
+
+  Now the series of the coeff. of terms together with successive order differences are
+  $$3, 5, 9, 15, 23, 33, \ldots$$
+  $$2, 4, 6, 8, 10, \ldots$$
+  $$2, 2, 2, ,2, \ldots$$
+  $$0, 0, 0, \ldots$$
+  Hence third order differences are constant. Now,
+  $$S = 3 + 5x + 9x^2 + 15x^3 + 23x^4 + 33x^5 + \ldots \infty$$
+  $$-3xS = -9x - 15x^2 - 27x^3 - 45x^4 - 69x^5 -\ldots$$
+  $$3x^2S = 9x^2 + 15x^3 + 27x^4 + 45x^5 + \ldots$$
+  $$-x^3S = -3x^3 - 5x^4 - 9x^5 - \ldots$$
+  Adding, we get $(1 - x)^3S = 3 - 4x + 3x^2$
+  $$\therefore S = \frac{3 - 4x + 3x^2}{(1 - x)^3}$$
+\end{frame}
+\begin{frame}{Problem 148}
+  \textbf{148.} If $H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}$ and $H_n' = \frac{n + 1}{2} - \{\frac{1}{n(n - 1)}
+  + \frac{2}{(n - 1)(n - 2)} + \ldots + \frac{n - 2}{2.3}\},$ show that $H_n = H_n'$
+\end{frame}
+\begin{frame}{Solution of Problem 148}
+  \textbf{Solution:} Let $t_r$ denote the $r$th term of the series $\frac{1}{n(n - 1)} + \frac{2}{(n - 1)(n - 2)} + \ldots +
+  \frac{n - 2}{2.3},$ then
+  $$t_1 = \frac{1}{n(n - 1)} = \frac{1}{n - 1} - \frac{1}{n}$$
+  $$t_2 = \frac{2}{n - 2} - \frac{2}{n - 1} = \frac{2}{n - 2} - \frac{1}{n - 1} - \frac{1}{n - 1}$$
+  $$t_3 = \frac{3}{n - 3} - \frac{3}{n - 2} = \frac{3}{n - 3} - \frac{2}{n - 2} - \frac{1}{n - 2}$$
+  $$\ldots$$
+  $$t_{n - 2} = \frac{n - 2}{2} - \frac{n - 2}{3} = \frac{n - 2}{2} - \frac{n - 3}{3} - \frac{1}{3}$$
+  $$t_1 + t_2 + \ldots t_n = \frac{n - 2}{2}\left(-\frac{1}{n} - \frac{1}{n - 1} -\frac{1}{n - 2} -\ldots -\frac{1}{3}\right)$$
+  $$= \frac{n + 1}{2} - \left(1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}\right)$$
+  $$\therefore H_n' = \frac{n + 1}{2} - (t_1 + t_2 + \ldots + t_n) = 1 + \frac{1}{2} + \ldots + \frac{1}{n} = H_n$$
+\end{frame}
+\begin{frame}{Problem 149}
+  \textbf{149.} Show that $\tan^{-1}\left(\frac{x}{1 + 1.2x^2}\right) + \tan^{-1}\left(\frac{x}{1 + 2.3x^2}\right) + \ldots+
+  \tan^{-1}\left(\frac{x}{1 + n(n + 1)x^2}\right) = \tan^{-1}\left(\frac{nx}{1 + (n + 1)x^2}\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 149}
+  \textbf{Solution:} $$\tan^{-1}\left(\frac{x}{1 + 1.2x^2}\right) = \tan^{-1}\left(\frac{2x - x}{1 + x. 2x}\right) = \tan^{-1}2x -
+  \tan^{-1}x$$
+  $$\tan^{-1}\left(\frac{x}{1 + 2.3x^2}\right) = \tan^{-1}\left(\frac{3x - 2x}{1 + 2x.3x}\right) = \tan^{-1}3x - \tan^{-1}2x$$
+  $$\ldots$$
+  $$\tan^{-1}\left(\frac{x}{1 + n(n + 1)x^2}\right) = \tan^{-1}\left(\frac{(n + 1)x - nx}{1 + nx.(n + 1)x}\right) = \tan^{-1}(n +
+  1)x - \tan^{-1}nx$$
+  Adding, we get
+  $$L.H.S. = \tan^{-1}(n + 1)x - \tan^{-1}x = \tan^{-1}\left(\frac{nx}{1 + (n + 1)x^2}\right) = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 150}
+  \textbf{150.} Find the sum to $n$ terms of the series $\frac{1}{1 + 1^2 + 1^4} + \frac{2}{1 + 2^2 + 2^4} + \frac{3}{1 + 3^2 +
+    3^4} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 150}
+  \textbf{Solution:} The $n$th term of the given series is
+  $$t_n = \frac{n}{1 + n^2 + n^4} = \frac{n}{(1 + n^2)^2 - n^2} = \frac{1}{2}\left(\frac{1}{1 + n^2 - n} - \frac{1}{1 + n^2 +
+    n}\right)$$
+  $$\therefore t_1 = \frac{1}{2}\left(1 - \frac{1}{3}\right)$$
+  $$t_2 = \frac{1}{2}\left(\frac{1}{3} - \frac{1}{7}\right)$$
+  $$t_3 = \frac{1}{2}\left(\frac{1}{7} - \frac{1}{13}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{2}\left(\frac{1}{1 + n^2 - n} - \frac{1}{1 + n^2 + n}\right)$$
+  Adding, we get
+  $$S= \frac{1}{2}\left(1 - \frac{1}{1 + n^2 + n}\right) = \frac{n(n + 1)}{2(1 + n + n^2)}$$
+\end{frame}
+\end{document}

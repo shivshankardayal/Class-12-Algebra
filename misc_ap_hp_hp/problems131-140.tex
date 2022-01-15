@@ -1,0 +1,145 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 131-140}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 131}
+  \textbf{131.} The second, third and sixth terms of an A.P. are consecutive terms of a geometric progression. Find the common
+  ratio of the G.P.
+\end{frame}
+\begin{frame}{Solution of Problem 131}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P., then
+  $$(a + 2d)^2 = (a + d)(a + 5d)\Rightarrow a^2 + 4ad + 4d^2 = a^2 + 6ad + 5d^2$$
+  $$\Rightarrow d^2 + 2ad = 0 \Rightarrow d = -2a$$
+  Hence, common ratio of the G.P. $= \frac{a + 2d}{a + d} = \frac{-3a}{-a} = 3$
+\end{frame}
+\begin{frame}{Problem 132}
+  \textbf{132.} A sequence of numbers is formed by adding together corresponding terms of an A.P. and a G.P. with common ratio $2.$
+  The first term of the sequence is $57,$ the second term is $94$ and the third term is $171.$ Find the fourth term. Find also an
+  expression for the $n$th term of the sequence.
+\end{frame}
+\begin{frame}{Solution of Problem 132}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P. Also, let $a'$ to be the first term of
+  G.P. Then, given
+  $$a + a' = 57, a + d + 2a' = 94, a + 2d + 4a' = 171$$
+  $$\Rightarrow 2a' + d = 94 - a \Rightarrow a + 2(94 - a) = 171 \Rightarrow a = 17$$
+  $$a' = 40 \Rightarrow d = -3$$
+  $$\Rightarrow t_4 = a + 3d + 8a' = 328$$
+  $$\Rightarrow t_n = 17 + (n - 1).-3 + 40.2^{n - 1} = 20 - 3n + 10.2^{n + 1}$$
+\end{frame}
+\begin{frame}{Problem 133}
+  \textbf{133.} The first, eighth and twenty second terms of an arithmetic progression are three consecutive terms of a geometric
+  progression. Find the common ratio of the geometric progression. If sum of the first twenty two terms of arithmetic progression
+  is $275,$ find its first term.
+\end{frame}
+\begin{frame}{Solution of Problem 133}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common ratio of the A.P. then given
+  $$a(a + 21d) = (a + 7d)^2 \Rightarrow 49d^2 - 7ad = 0 \Rightarrow d = a/7[\because d\neq 0]$$
+  $$\therefore r = \frac{a + 7d}{a} = 2$$
+  Also, given $$S_{22} = \frac{22}{2}[2a + 21.d] = 275 \Rightarrow 5a = 25 \Rightarrow a = 5$$
+\end{frame}
+\begin{frame}{Problem 134}
+  \textbf{134.} An arithmetic progression has common difference $2$ and a geometric progression has common ratio $2.$ A new
+  sequence is formed by adding together the corresponding terms of these progressions. Given that the first term of this new
+  sequence is $8$ and the fifth term is $91,$ find the first terms.
+\end{frame}
+\begin{frame}{Solution of Problem 134}
+  \textbf{Solution:} Let $a$ and $a'$ be the first term of the A.P. and G.P. respectively. Then, given
+  $$a + a' = 8, a + 8 + 16a' = 91$$
+  $$\Rightarrow 15a' = 91 -16 = 75 \Rightarrow a' = 5 \Rightarrow a = 3$$
+\end{frame}
+\begin{frame}{Problem 135}
+  \textbf{135.} If $a, b, c$ are in A.P. and $b, c, d$ are in H.P., prove that $ad = bc$
+\end{frame}
+\begin{frame}{Solution of Problem 135}
+  \textbf{Solution:} $$2b = a + c, c = \frac{2bd}{b + d}$$
+  $$\Rightarrow bc + cd = d(a + c)\Rightarrow bc = ad$$
+\end{frame}
+\begin{frame}{Problem 136}
+  \textbf{136.} If $a, b, c$ are in H.P., $b, c, d$ are in G.P. and $c, d, e$ are in A.P., show that $e = \frac{ab^2}{(2a - b)^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 136}
+  \textbf{Solution:} $$b = \frac{2ac}{a + c}, c^2 = bd, 2d = c + e$$
+  $$\Rightarrow ab + bc = 2ac \Rightarrow c = \frac{ab}{2a - b}$$
+  $$e = 2d - c = \frac{2c^2}{b} - c = \frac{2a^2b^2}{b(2a - b)^2} - \frac{ab}{2a - b}$$
+  $$= \frac{2a^2b - 2a^2b + ab^2}{(2a - b)^2} = \frac{ab^2}{(2a - b)^2}$$
+\end{frame}
+\begin{frame}{Problem 137}
+  \textbf{137.} If an A.P. and a G.P. have the same 1st and 2nd terms then show that every other term of the A.P. will be less than
+  the corresponding term of G.P. all the terms being positive.
+\end{frame}
+\begin{frame}{Solution of Problem 137}
+  \textbf{Solution:} $$ar^n - a - nd = a\left(1 + \frac{d}{a}\right)^n - a - nd\left[\because r = \frac{a + d}{a}\right]$$
+  $$= a\left[1 + {}^nC_1\left(\frac{d}{a}\right) + {}^nC_2\left(\frac{d}{a}\right)^2 + \ldots +
+    {}^nC_n\left(\frac{d}{a}\right)^n\right] - a - nd$$
+  $$= a\left[{}^nC_2\frac{d^2}{a^2} + {}^nC_3\frac{d^3}{a^3} + \ldots + {}^nC_n\frac{d^n}{a^n}\right] > 0 \left(\because
+  \frac{d}{a}> 0\right)$$
+\end{frame}
+\begin{frame}{Problem 138}
+  \textbf{138.} If three unequal numbers are in H.P. and their squares are in A.P. show that they are in the ratio $1 +
+  \sqrt{3}:-2:1 - \sqrt{3}$ or $1 - \sqrt{3}:-2:1 + \sqrt{3}$
+\end{frame}
+\begin{frame}{Solution of Problem 138}
+  \textbf{Solution:} Let $a, b, c$ be three numbers in H.P. Then, given that
+  $$b = \frac{2ac}{a + c}, 2b^2 = a^2 + c^2$$
+  Let $a = ck$
+  $$\Rightarrow \frac{8a^2c^2}{(a + c)^2} = a^2 + c^2$$
+  $$8a^2c^2 = (a^2 + c^2)(a + c)^2\Rightarrow (1 + k^2)(1 + k)^2 - 8k^2 = 0$$
+  $$(k - 1)^2(k^2 + 4k + 1) = 0$$
+  $$\because k\neq 1 k = -2\pm 3$$
+  So $a:c = 1:-2\pm 3$ and now the ratio for $b$ can be found.
+\end{frame}
+\begin{frame}{Problem 139}
+  \textbf{139.} If $A, G, H$ are the arithmetic, geometric and harmonic means of two positive real numbers $a$ and $b$, and if $A =
+  kh,$ prove that $A^2 = kG^2.$ Find the ratio of $a$ to $b.$ For what value of $k$ does the ratio exist.
+\end{frame}
+\begin{frame}{Solution of Problem 139}
+  \textbf{Solution:} $$A = \frac{a + b}{2}, H=\frac{2ab}{a + b}, G = \sqrt{ab}$$
+  $$A = kH\Rightarrow (a + b)^2 = 4kab \Rightarrow A = kG^2$$
+  Let $b = ma$
+  $$\Rightarrow a^2(1 + m^2) = 4kma^2 \Rightarrow 1 + m^2 = 4km \Rightarrow m = \frac{4k \pm \sqrt{16k^2 - 4}}{2} = 2k\pm
+  \sqrt{4k^2 - 1}$$
+  Also, $(a + b)^2 = 4kab \Rightarrow (a - b)^2 = 4kab - 4ab\because (a - b)^2 \geq 0 \therefore k \geq 1$
+\end{frame}
+\begin{frame}{Problem 140}
+  \textbf{140.} If $p$ be the $r$th term when $n$ A.M.'s are inserted between $a$ and $b$ and $q$ be the $r$th term when $n$ H.M.'s
+  are inserted between $a$ and $b,$ then show that $\frac{p}{a} + \frac{b}{q}$ is independent of $n$ and $r.$
+\end{frame}
+\begin{frame}{Solution of Problem 140}
+  \textbf{Solution:} Since $n$ means are inserted therefore total no. of terms will be $n + 2.$ Let $d$ be the c.d. of A.P. and
+  $d'$ be the c.d of H.P.
+  $$\Rightarrow d = \frac{b - a}{n + 1}, d' = \frac{a - b}{(n + 1)ab}$$
+  $$\Rightarrow p = a + rd = \frac{(n + 1)a + r(b - a)}{n + 1}, \frac{1}{q} = \frac{1}{a} + r\frac{a - b}{(n + 1)ab} \Rightarrow q =
+  \frac{(n + 1)ab}{r(a - b) + (n + 1)b}$$
+  $$\frac{p}{a} + \frac{b}{q} = \frac{(n + 1)a + r(b - a)}{a(n + 1)} + \frac{r(a - b) + (n + 1)b}{(n + 1)a}$$
+  $$= \frac{a + b}{a}$$
+  which is independent of $n$ and $r$
+\end{frame}
+\end{document}
