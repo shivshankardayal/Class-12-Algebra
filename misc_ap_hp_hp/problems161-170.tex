@@ -1,0 +1,159 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 161-170}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 161}
+  \textbf{161.} Find the sum of the series $1 + \frac{x}{b_1} + \frac{x(x + b_1)}{b_1b_2} + \frac{x(x + b_1)(x + b_2)}{b_1b_2b_3} +
+  \ldots + \frac{x(x + b_1)\ldots(x + b_{n - 1})}{b_1b_2\ldots b_n}$
+\end{frame}
+\begin{frame}{Solution of Problem 161}
+  \textbf{Solution:} Let $t_n$ denote the $n$th term of the series.
+  $$t_1 = 1$$
+  $$t_2 = \frac{x}{b_1} = \frac{(x + b_1) - b_1}{b_1} = \frac{x+ b_1}{b_1} - 1$$
+  $$t_3 = \frac{x(x + b_1)}{b_1b_2} = \frac{[(x + b_2) - b_2](x + b_1)}{b_1b_2} = \frac{(x + b_1)(x + b_2)}{b_1b_2} - \frac{x +
+    b_1}{b_1}$$
+  $$\ldots$$
+  $$t_{n+1} = \frac{(x + b_1)\ldots (x+b_n)}{b_1b_2\ldots b_n} - \frac{(x+b_1)\ldots(x+b_{n - 1})}{b_1b_2\ldots b_{n - 1}}$$
+  $$\therefore S_n = \frac{(x + b_1)\ldots (x+b_n)}{b_1b_2\ldots b_n}$$
+\end{frame}
+\begin{frame}{Problem 162}
+  \textbf{162.} Let $S_k(n) = 1^k + 2^k + \ldots + n^k,$ show that $nS_k(n) = S_{k+1}(n) + S_k(n - 1) + S_k(n - 2) + \ldots +
+  S_k(2) + S_k(1)$
+\end{frame}
+\begin{frame}{Solution of Problem 162}
+  \textbf{Solution:} $$nS_k(n) = n[1^k + 2^k + \ldots + n^k]$$
+  $$= 1^k + (1^k + 2.2^k) + (1^k + 2^k + 3.3^k) + \ldots + (1^k + 2^k + \ldots + n.n^k)$$
+  $$= 1^{k + 1} + [S_k(1) + 2^{k + 1}] + [S_k(2) + 3^{k + 1}] + \ldots + [S_k(n - 1) + n^{k + 1}]$$\
+  $$= S_k(1) + S_k(2) + \ldots + S_k(n - 1) + S_{k + 1}(n)$$
+\end{frame}
+\begin{frame}{Problem 163}
+  \textbf{163.} Find the sum of all the numbers of the form $n^3$ which lie between $100$ and $10000.$
+\end{frame}
+\begin{frame}{Solution of Problem 163}
+  \textbf{Solution:} $n^3 > 100 \Rightarrow n > 4, n^3 < 100000 \Rightarrow n < 22$
+
+  So $$S = 5^3 + 6^3 + \ldots + 21^3$$
+  $$S' = 1^3 + 2^3 + 3^3 + 4^3$$
+  $$S' + S - S' = 1^3 + 2^2 + \ldots + 21^3 - (1^3 + 2^3 + \ldots + 4^3)$$
+  $$= 53261$$
+\end{frame}
+\begin{frame}{Problem 164}
+  \textbf{164.} If $S$ be the sum of the $n$ consecutive integers beginning with $a$ and $t$ the sum of their squares, show that
+  $nt - S^2$ is independent of $a$
+\end{frame}
+\begin{frame}{Solution of Problem 164}
+  \textbf{Solution:} $$S = a + (a + 1) + \ldots + (a + n - 1)$$
+  $$= na + \frac{n(n - 1)}{2}$$
+  $$S^2 = n^2a^2 + n^2(n - 1)a + \frac{n^2(n - 1)^2}{4}$$
+  $$t = a^2 + (a + 1)^2 + \ldots + (a + n - 1)^2$$
+  $$nt = na^2 + n^2(n - 1)a + n\sum_{i = 1}^{n - 1}i^2$$
+  Clearly, $nt - S^2$ is independent of $a.$
+\end{frame}
+\begin{frame}{Problem 165}
+  \textbf{165.} If $\sum_{x = 5}^{n + 5}4(x - 3) = Pn^2 + Qn + R,$ find the value of $P + Q.$
+\end{frame}
+\begin{frame}{Solution of Problem 165}
+  \textbf{Solution:} $$\sum_{x = 5}^{n + 5}4(x - 3) = \sum_{x = 1}^{n + 5}4(x - 3) - \sum_{x = 1}^{4}4(x - 3)$$
+  $$= \frac{4(n + 5)(n + 6)}{2} - 12(n + 5) - \frac{4.4.5}{2} + 12.4$$
+  $$= 2n^2 + 10n + 8$$
+  $$\therefore P + Q = 12$$
+\end{frame}
+\begin{frame}{Problem 166}
+  \textbf{166.} Find the sum to $2n$ terms of the series $5^3 + 4.6^3 + 7^3 + 4.8^3 + 9^3 + 4.10^3 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 166}
+  \textbf{Solution:} Let $S$ be the sum of series, then
+  $$S = 5^3 + 7^3 + 9^3 + \ldots \text{~to~}n\text{~terms~} + 2^5(3^3 + 4^3 + 5^3 + \ldots \text{~to~}n\text{~terms~})$$
+  $$= 1^3 + 3^3 + 5^3 + \ldots \text{~to~}n + 2\text{~terms~} - 1^3 - 3^3 + 2^5(1^3 + 3^3 + 5^3 + \ldots \text{~to~}n +
+  1\text{~terms~}) - 2^5$$
+  $$= \sum_{i = 1}^{n + 2}(2i - 1)^3 - 28 + 2^5\sum_{i = 1}^{n + 1}(2i - 1)^3 - 32$$
+  $$= n(10n^3 + 96n^2 + 243n + 540)$$
+\end{frame}
+\begin{frame}{Problem 167}
+  \textbf{167.} Find the sum to $n$ terms of the series $\left(\frac{2n + 1}{2n - 1}\right) + 3\left(\frac{2n + 1}{2n - 1}\right)^2
+  + 5\left(\frac{2n + 1}{2n - 1}\right)^3 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 167}
+  \textbf{Solution:} Let $S$ be the sum of the series and $x = \frac{2n + 1}{2n - 1},$ then
+  $$S = x + 3x^2 + 5x^3 + \ldots$$
+  $$xS = x^2 + 3x^3 + \ldots + (2n - 1)x^{n + 1}$$
+  $$(1 - x)S = x + 2x^2 + 2x^3 + \ldots = x + 2x^2(1 + x + x^2 + \ldots \text{~to~}n - 1\text{~terms}) -(2n - 1)x^{n+1}$$
+  $$= x + \frac{2x^2(1 - x^{n - 1})}{1 - x} - (2n - 1)x^{n+1}$$
+  $$S = \frac{x}{1 - x} + \frac{2x^2(1 - x^{n - 1})}{(1 - x)^2} - \frac{(2n - 1)x^{n+1}}{1 - x}$$
+  $$= \frac{x^2 - x + 2x^{n + 1} - 2x^2 + (x - 1).(2n - 1)x^{n + 1}}{(x - 1)^2}$$
+  $$= n(2n + 1)$$
+\end{frame}
+\begin{frame}{Problem 168}
+  \textbf{168.} Find the sum to $n$ terms of the series $1 + 5\left(\frac{4n + 1}{4n - 3}\right) + 9\left(\frac{4n + 1}{4n -
+    3}\right)^2 + 13\left(\frac{4n + 1}{4n - 3}\right)^3 + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 168}
+  \textbf{Solution:} Let $S$ be the sum to $n$ terms and $x = \frac{4n + 1}{4n - 3},$ then
+  $$S = 1 + 5x + 9x^2 + 13x^3 + \ldots$$
+  $$xS = x + 5x^2 + 9x^3 + \ldots + (4n + 1)x^n$$
+  $$(1 - x)S = 1 + 4x + 4x^2 + 4x^3 + \ldots + 4x^{n - 1} - (4n + 1)x^n$$
+  $$S = \frac{1}{x - 1} + \frac{4x(x^{n - 1} - 1)}{(x - 1)^2} - \frac{(4n + 1)x^n}{(x - 1)}$$
+  $$= 4n^2 - 3n$$
+\end{frame}
+\begin{frame}{Problem 169}
+  \textbf{169.} Prove that the numbers of the sequence $121, 12321, 1234321, \ldots$ are each a perfect square of an odd integer.
+\end{frame}
+\begin{frame}{Solution of Problem 169}
+  \textbf{Solution:} $$t_n = 1.10^{2n} + 2.10^{2n - 1} + 3.10^{n - 2} + \ldots + n.10^{n + 1} + (n + 1)10^n + n.10^n + (n - 1)10^{n
+    - 2} + \ldots + 3.10^2 + 2.10 + 1$$
+  $$= 10^{2n}\left[1 + 2.\frac{1}{10} + 3.\frac{1}{10^2} + \ldots + n.\frac{1}{10^{n - 1}}\right] + (1 + 2.10 + 3.10^2 + \ldots +
+  n.10^{n - 1} + (n + 1)10^n)$$
+  $$= 10^{2n}S_1 + S_2$$
+  $$S_1 = 1 + 2.\frac{1}{10} + 3.\frac{1}{10^2} + \ldots + n.\frac{1}{10^{n - 1}}$$
+  $$\frac{S_1}{10} = \frac{1}{10} + 2\frac{1}{10^2} + \ldots + (n - 1)\frac{1}{10^{n - 1}} + n.\frac{1}{10^n}$$
+  $$S_1 = \frac{100}{81}\left(1 - \frac{1}{10^n}\right) - \frac{90n}{81.10^n}$$
+  $$S_2 = 1 + 2.10 + 3.10^2 + \ldots + (n + 1)10^n$$
+  $$10S_2 = 10 + 2.10^2 + \ldots + n.10^n + (n + 1)10^{n + 1}$$
+  $$S_2 = \frac{1 - 10^{n + 1}}{81} + \frac{(n + 1)10^{n + 1}}{9}$$
+  Substituting $S_1$ and $S_2$ we obtain $t_n$ as
+  $$t_n = \left(\frac{10^{n + 1} - 1}{9}\right)^2$$
+  Thus, the numbers in the sequence will be square of odd positive integer.
+\end{frame}
+\begin{frame}{Problem 170}
+  \textbf{170.} Prove that the sum to $n$ terms of the series $\frac{3}{1^2} + \frac{5}{1^2 + 2^2} + \frac{7}{1^2 + 2^2 + 3^2} +
+  \frac{9}{1^2 + 2^2 + 3^2 + 4^2} + \ldots$ is $6n/(n + 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 170}
+  \textbf{Solution:} $$t_n = \frac{2n + 1}{1^2 + 2^2 + \ldots + n^2}$$
+  $$= \frac{2n + 1}{\frac{n(n + 1)(2n + 1)}{6}} = \frac{6}{n(n + 1)}$$
+  $$\therefore t_1 = \frac{6}{1.2} = 6\left(1 - \frac{1}{2}\right)$$
+  $$t_2 = \frac{6}{2.3} = 6\left(\frac{1}{2} - \frac{1}{3}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{6}{n(n + 1)} = 6.\left(\frac{1}{n} - \frac{1}{n + 1}\right)$$
+  Adding, we get
+  $$S = \frac{6n}{n + 1}$$
+\end{frame}
+\end{document}

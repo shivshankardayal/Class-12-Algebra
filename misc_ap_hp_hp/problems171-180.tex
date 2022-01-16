@@ -1,0 +1,173 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 171-180}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 171}
+  \textbf{171.} Find the sum to $n$ terms of the series $\frac{1}{(1 + x)(1 + 2x)} + \frac{1}{(1 + 2x)(1 + 3x)} + \frac{1}{(1 +
+    3x)(1 + 4x)} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 171}
+  \textbf{Solution:} $$t_n = \frac{1}{(1 + nx)[1 + (n + 1)x]} = \frac{1}{x}\left(\frac{1}{1 + nx} - \frac{1}{1 + (n + 1)x}\right)$$
+  $$t_1 = \frac{1}{x}\left(\frac{1}{1 + x} - \frac{1}{1 + 2x}\right)$$
+  $$t_2 = \frac{1}{x}\left(\frac{1}{1 + 2x} - \frac{1}{1 + 3x}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{x}\left(\frac{1}{1 + nx} - \frac{1}{1 + (n + 1)x}\right)$$
+  Adding, we get
+  $$S_n = \frac{1}{x}\left(\frac{1}{1 + x} - \frac{1}{1 + (n + 1)x}\right) = \frac{n}{(1 + x)[1 + (n + 1)x]}$$
+\end{frame}
+\begin{frame}{Problem 172}
+  \textbf{172.} Find the sum to $n$ terms of the series $\frac{1}{(1 + x)(1 + ax)} + \frac{a}{(1 + ax)(1 + a^2x)} + \frac{1}{(1 +
+    a^2x)(1 + a^3x)} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 172}
+  \textbf{Solution:} $$t_n = \frac{a^{n - 1}}{(1 + a^{n - 1}x)(1 + a^nx)} = \frac{1}{(a - 1)x}\left(\frac{1}{1 + a^{n - 1}x} -
+  \frac{1}{1 + a^nx}\right)$$
+  $$t_1 = \frac{1}{(a - 1)x}\left(\frac{1}{1 + x} - \frac{1}{1 + ax}\right)$$
+  $$t_2 = \frac{1}{(a - 1)x}\left(\frac{1}{1 + ax} - \frac{1}{1 + a^2x}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{(a - 1)x}\left(\frac{1}{1 + a^{n - 1}x} - \frac{1}{1 + a^nx}\right)$$
+  Adding, we get
+  $$S = \frac{1}{(a - 1)x}\left(\frac{1}{1 + x} - \frac{1}{1 + a^n x}\right)$$
+\end{frame}
+\begin{frame}{Problem 173}
+  \textbf{173.} Find the $n$th term of the series $-1, -3, 3, 23, 63, 129, \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 173}
+  \textbf{Solution} First order differences are: $-2, 6, 20, 40, 66, \ldots$
+  \linebreak\linebreak
+  Secodn order differences are: $8, 14, 20, 26, \ldots$
+  \linebreak\linebreak
+  Third order differences are; $6, 6, 6, \ldots$
+  \linebreak\linebreak
+  $$\Rightarrow t_n = -1 -2.{}^{n- 1}C_1 + 8.{}^{n - 1}C_2 + 6.{}^{n - 1}C_3$$
+  $$= n^3 - 2n^2 - 3n + 3$$
+\end{frame}
+\begin{frame}{Problem 174}
+  \textbf{174.} Find the sum to $n$ terms of the series $\frac{1}{\sqrt{1} + \sqrt{3}} + \frac{1}{\sqrt{3} + \sqrt{5}} +
+  \frac{1}{\sqrt{5} + \sqrt{7}} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 174}
+  \textbf{Solution:} $$t_n = \frac{1}{\sqrt{2n - 1} + \sqrt{2n + 1}} = \frac{\sqrt{2n + 1} - \sqrt{2n - 1}}{2}$$
+  $$\therefore t_1 = \frac{\sqrt{3}}{2} - \frac{1}{2}$$
+  $$t_2 = \frac{\sqrt{5}}{2} - \frac{\sqrt{3}}{2}$$
+  $$\ldots$$
+  $$t_n = \frac{\sqrt{2n + 1}}{2} - \frac{\sqrt{2n - 1}}{2}$$
+  Adding, we get
+  $$S = \frac{\sqrt{2n + 1} - 1}{2}$$
+\end{frame}
+\begin{frame}{Problem 175}
+  \textbf{175.} If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ then prove that
+  $a_1a_2 + a_2a_3$ $+ \ldots + a_na_{n +1} = \frac{[a + (n - 1)d](a + nd) - (a - d)a(a + d)}{3d} = \frac{n}{3}[3a^2 + 2and + (n^2
+    - 1)d^2]$
+\end{frame}
+\begin{frame}{Solution of Problem 175}
+  \textbf{Solution:} $$t_k = a_ka_{k + 1}, t_{k + 1} = a_{k +1}a_{k + 2}$$
+  $$a_{k + 2}t_k = a_kt_{k + 1}$$
+  $$[a_1 + (k + 1)d]t_k - [a_1 + (k - 1)d]t_{k + 1} = 0$$
+  $$[a_1 + (k - 2)d]t_k - [a_1 + (k - 1)d]t_{k + 1} = -3dt_k$$
+  $$\therefore (a_1 - d)t_1 - (a_1 + 0d)t_2 = -3dt_1$$
+  $$(a_1 + 0d)t_2 - (a_1 + d)t_3 = -3dt_2$$
+  $$\ldots$$
+  $$[a_1 + (n - 2)d]t_n - [a_1+(n - 1)]t_{n + 1} = -3dt_n$$
+  Adding, we get
+  $$-3d(t_1 + t_2 + \ldots + t_n) = (a_1 -d)t_1` - [a_1+(n - 1)]t_{n + 1}$$
+  $$S = \frac{[a + (n - 1)d](a + nd)[a + (n + 1)d] - (a - d)a(a + d)}{3d}$$
+  $$= \frac{n}{3}[3a^2 + 3nad + (n^2 - 1)d^2]$$
+\end{frame}
+\begin{frame}{Problem 176}
+  \textbf{176.} If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ then prove that
+  $a_1a_2a_3 + a_2a_3a_4$ $+ \ldots + a_na_{n +1}a_{n + 2}$ $= \frac{[a + (n - 1)d](a + nd)[a + (n + 1)d][a + (n + 2)d] - (a -
+    d)a(a + d)(a + 2d)}{4d}=$ $\frac{n}{4}[4a^3 + 6(n + 1)a^2d + 2(2n^2 + 3n - 1)ad^2 + (n^3 - 2n^2 - n - 2)d^3]$
+\end{frame}
+\begin{frame}{Solution of Problem 176}
+  \textbf{Solution:} $$t_k = a_ka_{k+1}a_{k+2}, t_{k+1}=a_{k+1}a_{k+2}a_{k+3}$$
+  $$a_{k+3}t_k = a_kt_{k+1}$$
+  $$[a_1 + (k + 2)d]t_k = [a_1 + (k - 1)d]t_{k + 1}$$
+  $$[a_1 + (k - 2)d]t_k - [a_1 + (k - 1)d]t_{k+1} = -4dt_k$$
+  $$(a_1 - d)t_1 - (a_1 + 0d)t_2 = -4dt_1$$
+  $$(a_1 + 0d)t_2 - (a_1 + d)t_3 = -4dt_2$$
+  $$\ldots$$
+  $$[a_1 + (n - 2)d]t_n - [a_1+(n - 1)]t_{n + 1} = -4dt_n$$
+  Adding, we get
+  $$-4d(t_1 + t_2 + \ldots + t_n) = (a_1 - d)t_1 - [a_1 + (n - 1)]t_{n + 1}$$
+  $$S = \frac{[a + (n - 1)d](a + nd)[a + (n + 1)d][a + (n + 2)d] - (a - d)a(a + d)(a + 2d)}{4d}$$
+  $$= \frac{n}{4}[4a^3 + 6(n + 1)a^2d + 2(2n^2 + 3n - 1)ad^2 + (n^3 - 2n^2 - n - 2)d^3]$$
+\end{frame}
+\begin{frame}{Problem 177}
+  \textbf{177.} Find the sum to $n$ terms of the series $\frac{3}{1^2.2^2} + \frac{5}{2^2.3^2} + \frac{7}{3^2.4^2} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 177}
+  \textbf{Solution:} $$t_n = \frac{2n + 1}{n^2.(n + 1)^2} = \frac{1}{n^2} - \frac{1}{(n + 1)^2}$$
+  $$t_1 = \frac{1}{1} - \frac{1}{2^2}$$
+  $$t_2 = \frac{1}{2^2} - \frac{1}{3^2}$$
+  $$\ldots$$
+  $$t_n = \frac{1}{n^2} - \frac{1}{(n + 1)^2}$$
+  Adding, we get
+  $$S = 1 - \frac{1}{(n + 1)^2} = \frac{n(n + 2)}{(n + 1)^2}$$
+\end{frame}
+\begin{frame}{Problem 178}
+  \textbf{178.} Let $S_n$ denote the sum to $n$ terms of the series $1.2 + 2.3 + 3.4 + \ldots$ and $\sigma_{n - 1}$ that to $n - 1$
+  terms of the series $\frac{1}{1.2.3.4} + \frac{1}{2.3.4.5} + \frac{1}{3.4.5.6} + \ldots$ Then prove that $18S_n\sigma_{n - 1} -
+  S_n = -2$
+\end{frame}
+\begin{frame}{Solution of Problem 178}
+  \textbf{Solution:} $$t_n = n(n + 1), S_n = \sum(n^2 + n) = \frac{n(n + 1)(2n + 1)}{6} + \frac{n(n +1)}{2}$$
+  $$\Rightarrow S_n = \frac{n(n + 1)(n + 2)}{3}$$
+  We have proved in problem $155$ that $\sigma_n = \frac{1}{18} - \frac{1}{3(n + 1)(n + 2)(n + 3)}$
+  $$\therefore \sigma_{n - 1} = \frac{1}{18} - \frac{1}{3n(n + 1)(n + 2)}$$
+  Now it is trivial to prove that $18S_n\sigma_{n - 1} - S_n = -2$
+\end{frame}
+\begin{frame}{Problem 179}
+  \textbf{179.} Find $\frac{5}{1.2}.\frac{1}{3} + \frac{7}{2.3}.\frac{1}{3^2} + \frac{9}{3.4}.\frac{1}{3^3} +
+  \ldots\text{~to~}n\text{~terms}$
+\end{frame}
+\begin{frame}{Solution of Problem 179}
+  \textbf{Solution:} $$t_n = \frac{2n + 3}{n(n + 1)}.\frac{1}{3^n} = \left(\frac{3}{n} - \frac{1}{n + 1}\right).\frac{1}{3^n}$$
+  $$\therefore t_1 = \left(3 - \frac{1}{2}\right).\frac{1}{3}$$
+  $$t_2 = \left(\frac{3}{2} - \frac{1}{3}\right).\frac{1}{3^2}$$
+  $$t_3 = \left(\frac{3}{3} - \frac{1}{4}\right).\frac{1}{3^3}$$
+  $$\ldots$$
+  $$t_n = \left(\frac{3}{n} - \frac{1}{n + 1}\right).\frac{1}{3^n}$$
+  Adding, we get
+  $$S_n = 1 - \frac{1}{n + 1}.\frac{1}{3^n}$$
+\end{frame}
+\begin{frame}{Problem 180}
+  \textbf{180.} If $\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots\infty = \frac{\pi^2}{6}$ then find
+  $\frac{1}{1^2} + \frac{1}{3^2} + \frac{1}{5^2} + \ldots \infty$
+\end{frame}
+\begin{frame}{Solution of Problem 180}
+  \textbf{Solution:} $$S = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots\infty$$
+  $$S' = \frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \ldots \infty$$
+  $$4S' = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots\infty$$
+  $$4S' = S \Rightarrow S' = \frac{S}{4}$$
+  $$\therefore \frac{1}{1^2} + \frac{1}{3^2} + \frac{1}{5^2} + \ldots \infty = S - S' = \frac{3}{4}S = \frac{\pi^2}{8}$$
+\end{frame}
+\end{document}

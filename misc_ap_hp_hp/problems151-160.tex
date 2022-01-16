@@ -30,4 +30,154 @@
 \begin{frame}
   \titlepage
 \end{frame}
+\begin{frame}{Problem 151}
+  \textbf{151.} Find $\sum_{k=n}^n\tan^{-1}\frac{2k}{2 + k^2 + k^4}$
+\end{frame}
+\begin{frame}{Solution of Problem 151}
+  \textbf{Solution:} $$t_n = \tan^{-1}\frac{2n}{2 + n^2 + n^4} = \tan^{-1}\frac{2n}{1 + 1 + n^2 + n^4}$$
+  $$= \tan^{-1}\frac{2n}{1 + 1 + (n^2 + 1)^2 - n^2} = \tan^{-1}\frac{2n}{1 + (n^2 + n + 1)(n^2 - n + 1)}$$
+  $$= \tan^{-1}\frac{(n^2 + n + 1) - (n^2 - n + 1)}{1 + (n^2 + n + 1)(n^2 - n + 1)}$$
+  $$ = \tan^{-1}(n^2 + n + 1) - \tan^{-1}(n^2 - n + 1)$$
+  $$\therefore t_1 = \tan^{-1}3 - \tan^{-1}1$$
+  $$t_2 = \tan^{-1}7 - \tan^{-1}3$$
+  $$\ldots$$
+  $$t_{n - 1} = \tan^{-1}(n^2 -n + 1) - \tan^{-1}[(n - 1)^2 - (n - 1) + 1]$$
+  $$t_n = \tan^{-1}(n^2 + n + 1) - \tan^{-1}(n^2 - n + 1)$$
+  Adding, we get $$S_n = \tan^{-1}(n^2 + n + 1) - \tan^{-1}1 = \tan^{-1}\frac{n^2 + n}{n^2 + n + 2}$$
+\end{frame}
+\begin{frame}{Problem 152}
+  \textbf{152.} Show that $\frac{1^4}{1.3} + \frac{2^4}{3.5} + \frac{3^4}{5.7} + \ldots + \frac{n^4}{(2n - 1)(2n + 1)} =
+  \frac{n(4n^2 + 6n + 5)}{48} + \frac{n}{16(2n + 1)}$
+\end{frame}
+\begin{frame}{Solution of Problem 152}
+  \textbf{Solution:} $$t_n = \frac{n^4}{4n^2 - 1} = \frac{1}{16}\left[\frac{16n^4}{4n^2 - 1}\right]$$
+  $$= \frac{1}{16}\left[\frac{16n^4 - 1 + 1}{4n^2 - 1}\right] = \frac{1}{16}\left[4n^2 + 1 + \frac{1}{(2n - 1)(2n + 1)}\right]$$
+  $$= \frac{1}{16}\left[4n^2 + 1 + \frac{1}{2}\left(\frac{1}{2n - 1} - \frac{1}{2n + 1}\right)\right]$$
+  $$S_n = \sum t_n = \frac{1}{4}\sum n^2 + \frac{1}{16}\sum 1 + \frac{1}{32}\sum \left(\frac{1}{2n - 1} - \frac{1}{2n + 1}\right)$$
+  $$= \frac{1}{4}\left[\frac{n(n + 1)(2n + 1)}{6}\right] + \frac{n}{16} + \frac{1}{32}\left(1 - \frac{1}{2n + 1}\right)$$
+  $$= \frac{n}{48}(4n^2 + 6n + 5) + \frac{1}{16}\frac{n}{2n + 1}$$
+  $$= \frac{n(4n^2 + 6n + 5)}{48} + \frac{n}{16(2n + 1)}$$
+\end{frame}
+\begin{frame}{Problem 153}
+  \textbf{153.} If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. with first term $a$ and common difference $d,$ find the sum for $r >
+  1$ of $a_1a_2\ldots a_r + a_2a_3\ldots a_{r + 1} + \ldots \text{~to~}n\text{~terms}$
+\end{frame}
+\begin{frame}{Solution of Problem 153}
+  \textbf{Solution:} $$t_k = a_ka_{k+1}\ldots a_{k + r - 1}, t_{k+1} = a_{k+1}a_{k+2}\ldots a_{k+r}$$
+  $$\therefore a_{k+r}t_k = a_kt_{k+1}$$
+  $$[a_1 + (k + r - 1)d]t_k = [a_1 + (k - 1)d]t_{k + 1}$$
+  $$\Rightarrow [a_1 + (k - 2)d]t_k - [a_1 + (k - 1)d]t_{k + 1} = -(1 + r)dt_k$$
+  Thus,
+  $$(a - d)t_1 - (a_1 + 0d)t_2 = -(1 + r)dt_1$$
+  $$(a + 0d)t_2 - (a_1 + d)t_3 = -(1 + r)dt_2$$
+  $$\ldots$$
+  $$[a_1 + (n - 2)d]t_n - [a_1 + (n - 1)d]t_{n+1} = -(1 + r)dt_n$$
+  $$(a - d)t_1 - [a_1 + (n - 1)d]t_{n + 1} = -(1 + r)d[t_1 + t_2 + \ldots + t_n]$$
+  $$\therefore t_1 + t_2 + \ldots + t_n = \frac{a_na_{n + 1}\ldots a_{n +r} - a_0a_1\ldots a_r}{(r + 1)d}$$
+\end{frame}
+\begin{frame}{Problem 154}
+  \textbf{154.} If $a_1, a_2, \ldots, a_n, \ldots$ are in A.P. and none of them is zero. Then prove that $\frac{1}{a_1a_2\ldots
+    a_r} + \frac{1}{a_2a_3\ldots a_{r + 1}} + \ldots + \frac{1}{a_na_{n + 1}\ldots a_{n + r - 1}} = \frac{1}{(r - 1)(a_2 -
+    a_1)}\left[\frac{1}{a_1a_2\ldots a_{r - 1}} - \frac{1}{a_{n + 1}a_{n + 2}\ldots a_{n + r - 1}}\right]$
+\end{frame}
+\begin{frame}{Solution of Problem 154}
+  \textbf{Solution:} Let $a$ be the first term and $d$ be the common difference of A.P. Let $t_k$ be the $k$th term of the given
+  sequence. Then,
+  $$t_k = \frac{1}{a_ka_{k + 1}\ldots a_{k + r - 1}}, t_{k + 1} = \frac{1}{a_{k + 1}a_{k + 2}\ldots a_{k + r}}$$
+  $$\Rightarrow a_kt_k = a_{k+r}t_{k + 1}$$
+  $$[a + (k - 1)d]t_k - (a + kd)t_{k + 1} = d(r - 1)t_{k + 1}$$
+  $$\therefore (a + 0d)t_1 - (a + d)t_2 = d(r - 1)t_2$$
+  $$(a + d)t_2 - (a + 2d)t_3 = d(r - 1)t_3$$
+  $$\ldots$$
+  $$[a + (n - 2)d]t_{n - 1} - [a + (n - 1)d]t_n = d(r - 1)t_n$$
+  Adding, we get
+  $$at_1 - [a + (n - 1)d]t_n = d(r - 1)[t_2 + t_3 + \ldots + t_n]$$
+  $$[a + (r - d)d]t_1 - [a + (n - 1)d]t_n = d(r - 1)S[t_1 + t_2 + \ldots + t_n]$$
+  $$t_1 + t_2 + \ldots + t_n = \frac{1}{(r - 1)d}\left(\frac{a_r}{a_1a_2\ldots a_r} - \frac{a_n}{a_na_{n + 1}\ldots a_{n + r -
+      1}}\right)$$
+  $$S_n = \frac{1}{(r - 1)(a_2 - a_1)}\left(\frac{1}{a_1a_2\ldots a_{r - 1}} - \frac{1}{a_{n + 1}a_{n + 2}\ldots a_{n + r -
+      1}}\right)$$
+\end{frame}
+\begin{frame}{Problem 155}
+  \textbf{155.} Find the sum to $n$ terms of the series $\frac{1}{1.2.3.4} + \frac{1}{2.3.4.5} + \frac{1}{3.4.5.6} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 155}
+  \textbf{Solution:} Let $t_i$ be the $i$th term of the series, then
+  $$t_i = \frac{1}{i(i + 1)(i + 2)(i + 3)}, t_{i+1} = \frac{1}{(i + 1)(i + 2)(i + 3)(i + 4)}$$
+  $$\Rightarrow it_i = (i + 4)t_{i + 1}\Rightarrow it_i - (i + 1)t_{i + 1} = 3t_{i+1}$$
+  $$\therefore 1.t_1 - 2t_2 = 3t_2$$
+  $$2.t_2 - 3.t_3 = 3t_3$$
+  $$\ldots$$
+  $$(n - 1).t_i - nt_n = 3t_n$$
+  Adding, we get
+  $$t_1 - nt_n = 3(t_1 + t_2 + \ldots + t_n)\Rightarrow 4t_1 - nt_n = 3[t_1 + t_2 + \ldots + t_n]$$
+  $$t_1 + t_2 + \ldots + t_n = \frac{1}{18} - \frac{1}{3(n + 1)(n + 2)(n + 3)}$$
+\end{frame}
+\begin{frame}{Problem 156}
+  \textbf{156.} Find the sum to $n$ terms of the series $\frac{3}{2.4.6} + \frac{4}{2.3.5} + \frac{5}{3.4.6} + \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 156}
+  \textbf{Solution:} $$t_n = \frac{n + 2}{n(n + 1)(n + 3)} = \frac{(n + 2)^2}{n(n + 1)(n + 2)(n + 3)}$$
+  $$= \frac{n^2 + 4n + 4}{n(n + 1)(n + 2)(n + 3)} = \frac{n(n + 4)}{n(n + 1)(n + 2)(n + 3)} + \frac{4}{n(n + 1)(n + 2)(n + 3)}$$
+  $$= \frac{n(n + 1) + 3n}{n(n + 1)(n + 2)(n + 3)} + \frac{4}{n(n + 1)(n + 2)(n + 3)} = \frac{1}{(n + 2)(n + 3)} + \frac{3}{(n +
+    1)(n + 2)(n + 3)} + \frac{4}{n(n + 1)(n + 2)(n + 3)}$$
+  Now that we have found $t_n$ we can find $S_n$ like previous problem.
+  $$S_n = \frac{29}{36} - \frac{1}{n + 3} - \frac{3}{2(n + 2)(n + 3)} - \frac{4}{3(n + 1)(n + 2)(n + 3)}$$
+\end{frame}
+\begin{frame}{Problem 157}
+  \textbf{157.} Find $\frac{1}{1.3} + \frac{2}{1.3.5} + \frac{3}{1.3.5.7} + \ldots \text{~to~}n\text{~terms}$
+\end{frame}
+\begin{frame}{Solution of Problem 157}
+  \textbf{Solution:} $$t_n = \frac{n}{1.3.5.7\ldots (2n - 1)(2n + 1)}$$
+  $$= \frac{1}{2}\left[\frac{1}{1.3.5.7\ldots(2n - 1)} - \frac{1}{1.3.5.7\ldots(2n + 1)}\right]$$
+  $$\therefore t_1 = \frac{1}{2}\left(1 - \frac{1}{1.3}\right)$$
+  $$t_2 = \frac{1}{2}\left(\frac{1}{1.3} - \frac{1}{1.3.5}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{2}\left(\frac{1}{1.3.5.7\ldots(2n - 1)} - \frac{1}{1.3.5.7\ldots(2n + 1)}\right)$$
+  $$S_n = \frac{1}{2}\left[1 - \frac{1}{1.3.5.7\ldots (2n + 1)}\right]$$
+\end{frame}
+\begin{frame}{Problem 158}
+  \textbf{158.} Find $\frac{2}{1.3}.\frac{1}{3} + \frac{3}{3.5}.\frac{1}{3^2} + \frac{4}{5.7}.\frac{1}{3^3} + \ldots
+  \text{~to~}n\text{~terms}$
+\end{frame}
+\begin{frame}{Solution of Problem 158}
+  \textbf{Solution:} $$t_n = \frac{n + 1}{(2n - 1)(2n + 1)}.\frac{1}{3^n}$$
+  $$= \frac{1}{4}\left[\frac{3}{2n - 1} - \frac{1}{2n + 1}\right].\frac{1}{3^n} = \frac{1}{4}\left[\frac{1}{2n - 1}.\frac{1}{3^{n -
+        1}} - \frac{1}{2n + 1}.\frac{1}{3^n}\right]$$
+  $$\therefore t_1 = \frac{1}{4}\left(\frac{1}{1.1} - \frac{1}{3}.\frac{1}{3}\right)$$
+  $$t_2 = \frac{1}{4}\left(\frac{1}{3.3} - \frac{1}{5}.\frac{1}{3^2}\right)$$
+  $$t_3 = \frac{1}{4}\left(\frac{1}{5}.\frac{1}{3^2} - \frac{1}{7}.\frac{1}{3^3}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{4}\left(\frac{1}{2n - 1}.\frac{1}{3^{n - 1}} - \frac{1}{2n + 1}.\frac{1}{3^n}\right)$$
+  $$S_n = \frac{1}{4}\left[1 - \frac{1}{2n + 1}.\frac{1}{3^n}\right]$$
+\end{frame}
+\begin{frame}{Problem 159}
+  \textbf{159.} Find the sum of $n$ terms of the series $\frac{1}{3} + \frac{3}{3.7} + \frac{5}{3.7.11} + \frac{7}{3.7.11.15} +
+  \ldots$
+\end{frame}
+\begin{frame}{Solution of Problem 159}
+  \textbf{Solution:} $$t_n = \frac{2n - 1}{3.5.7.11\ldots (4n - 1)}$$
+  $$= \frac{1}{2}\left[\frac{1}{3.5.7\ldots (4n - 5) - \frac{1}{3.5.7\ldots (4n + 1)}}\right]$$
+  $$t_2 = \frac{1}{2}\left(\frac{1}{3} - \frac{1}{3.7}\right)$$
+  $$t_3 = \frac{1}{2}\left(\frac{1}{3.7} - \frac{1}{3.7.11}\right)$$
+  $$\ldots$$
+  $$t_n = \frac{1}{2}\left(\frac{1}{3.7.11\ldots(4n - 5) - \frac{1}{3.7.11\ldots(4n - 1)}}\right)$$
+  $$t_1 + t_2 + \ldots t_n = \frac{1}{3} + \frac{1}{2}\left[\frac{1}{3} - \frac{1}{3.7.11\ldots (4n - 1)}\right]$$
+  $$S_n = \frac{1}{2} - \frac{1}{2}.\frac{1}{3.7.11\ldots(4n - 1)}$$
+\end{frame}
+\begin{frame}{Problem 160}
+  \textbf{160.} Find the sum of the series: $1 + 2(1 - a) + 3(1 - a)(1 - 2a) + 4(1 - a)(1 -2a)(1 - 3a) +
+  \ldots\text{~to~}m\text{~terms}$
+\end{frame}
+\begin{frame}{Solution of Problem 160}
+  \textbf{Solution:}$$t_n = n(1 - a)(1 - 2a)\ldots [a - (n - 1)a]$$
+  $$t_n = -\frac{1}{a}(1 - na - 1)(1 - a)(1 - 2a)\ldots [a - (n - 1)a]$$
+  $$= -\frac{1}{a}[(1 - a)(1 - 2a)\ldots(1 - na) - (1 - a)(1 -2a)\ldots\{a + (n - 1)a\}]$$
+  $$\therefore t_1 = -\frac{1}{a}[(1 - a) - 1]$$
+  $$t_2 = -\frac{1}{qa}[(1 - a)(1 - 2a) - (1 - a)]$$
+  $$\ldots$$
+  $$= -\frac{1}{a}[(1 - a)(1 - 2a)\ldots(1 - na) - (1 - a)(1 -2a)\ldots\{a + (n - 1)a\}]$$
+  Adding, we get
+  $$S_n = \frac{1}{a}[1 - (1 - a)(1 - 2a)\ldots(1 - na)]$$
+\end{frame}
 \end{document}
