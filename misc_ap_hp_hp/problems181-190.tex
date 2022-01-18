@@ -1,0 +1,142 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 181-190}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 181}
+  \textbf{181.} If $\frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \ldots \infty = \frac{\pi^2}{6},$ then find $1
+  - \frac{1}{2^2} + \frac{1}{3^2} - \frac{1}{4^2} + \ldots \infty$
+\end{frame}
+\begin{frame}{Solution of Problem 181}
+  \textbf{Solution:} In problem 180 we have proved that $\frac{1}{2^2} + \frac{1}{4^2} + \frac{1}{6^2} + \ldots \infty =
+  \frac{\pi^2}{24}$ and $\frac{1}{1^2} + \frac{1}{3^3} + \frac{1}{5^2} + \ldots \infty = \frac{\pi^2}{8}$
+  \linebreak\linebreak
+  $$\therefore 1- \frac{1}{2^2} + \frac{1}{3^2} - \frac{1}{4^2} + \ldots \infty = \frac{\pi^2}{8} - \frac{\pi^2}{24} =
+  \frac{\pi^2}{12}$$
+\end{frame}
+\begin{frame}{Problem 182}
+  \textbf{182.} If $H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n},$ then prove that $H_n = n - \left(\frac{1}{2} +
+  \frac{2}{3} + \frac{3}{4} + \ldots + \frac{n - 1}{n}\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 182}
+  \textbf{Solution:} $$H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}$$
+  $$= n - n + 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}$$
+  $$= n -\left(1 - 1\right) - \left(1 - \frac{1}{2}\right) - \left(1 - \frac{1}{3}\right) + \ldots + \left(1 - \frac{1}{n}\right)$$
+  $$= n - \left(\frac{1}{2} + \frac{2}{3} + \frac{3}{4} + \ldots + \frac{n - 1}{n}\right)$$
+\end{frame}
+\begin{frame}{Problem 183}
+  \textbf{183.} Show that $\frac{1}{x + 1} + \frac{2}{x^2 + 1} + \frac{4}{x^4 + 1} + \ldots + \frac{2^n}{x^{2^{n}} + 1} =
+  \frac{1}{x + 1} - \frac{2^{n + 1}}{x^{2^{n + 1}} -1}$
+\end{frame}
+\begin{frame}{Solution of Problme 183}
+  \textbf{Solution:} We can rewrite the question like $\frac{1}{x + 1} - \frac{1}{x + 1} - \frac{2}{x^2 + 1} - \frac{4}{x^4 + 1} -
+  \ldots - \frac{2^n}{x^{2^{n}} + 1} = \frac{2^{n + 1}}{x^{2^{n + 1}} - 1}$
+  $$L.H.S. = \left(\frac{1}{x + 1} - \frac{1}{x + 1}\right) - \frac{2}{x^2 + 1} - \frac{4}{x^4 + 1} - \ldots - \frac{2^n}{x^{2^{n}} + 1}$$
+  $$= \left(\frac{2}{x^2 - 1} - \frac{2}{x^2 + 1}\right) - \frac{4}{x^4 + 1} - \ldots - \frac{2^n}{x^{2^{n}} + 1}$$
+  $$= \left(\frac{4}{x^4 - 1} - \frac{4}{x^4 + 1}\right) - \ldots - \frac{2^n}{x^{2^{n}} + 1}$$
+  Processing similarly we obtain R.H.S.
+\end{frame}
+\begin{frame}{Problem 184}
+  \textbf{184.} Show that $\left(1 + \frac{1}{3}\right)\left(1 + \frac{1}{3^2}\right)\left(1 + \frac{1}{3^4}\right) \ldots \left(1
+  + \frac{1}{3^{2^{n}}}\right) = \frac{3}{2}\left(1 - \frac{1}{3^{2^{n + 1}}}\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 184}
+  \textbf{Solution:} Multiplying and dividing by $1 - \frac{1}{3},$ we get
+  $$L.H.S. = \frac{\left(1 - \frac{1}{3}\right)}{\left(1 - \frac{1}{3}\right)}\left(1 + \frac{1}{3}\right)\left(1 +
+  \frac{1}{3^2}\right)\left(1 + \frac{1}{3^4}\right) \ldots \left(1 + \frac{1}{3^{2^{n}}}\right)$$
+  $$= \frac{1}{\left(1 - \frac{1}{3}\right)}\left(1 - \frac{1}{3^2}\right)\left(1 + \frac{1}{3^2}\right)\left(1 +
+  \frac{1}{3^4}\right) \ldots \left(1 + \frac{1}{3^{2^{n}}}\right)$$
+  $$= \frac{1}{\left(1 - \frac{1}{3}\right)}\left(1 - \frac{1}{3^4}\right)\left(1 + \frac{1}{3^4}\right) \ldots \left(1 +
+  \frac{1}{3^{2^{n}}}\right)$$
+  Proceeding similarly we obtain the R.H.S.
+\end{frame}
+\begin{frame}{Problem 185}
+  \textbf{185.} If $x + y + z = 1$ and $x, y, z$ are positive numbers show that $(1 - x)(1 - y)(1 - z)\geq 8xyz$
+\end{frame}
+\begin{frame}{Solution of Problem 185}
+  \textbf{Solution:} Since A.M $\geq$ G.M.
+
+  $$\therefore \frac{x + y}{2}\geq \sqrt{xy}, \frac{y + z}{2}\geq \sqrt{yz}, \frac{x + z}{2}\geq \sqrt{zx}$$
+
+  $$\frac{(x + y)(y + z)(z + x)}{8}\geq xyz \Rightarrow (1 - x)(1 - y)(1 - z)\geq 8xyz$$
+\end{frame}
+\begin{frame}{Problem 186}
+  \textbf{186.} If $a>0, b > 0$ and $c> 0,$ prove that $(a + b + c)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right)\geq 9$
+\end{frame}
+\begin{frame}{Solution of Problem 186}
+  \textbf{Solution:} Since A.M $geq$ H.M.
+
+  $$\therefore \frac{a + b + c}{3}\geq \frac{3}{\frac{1}{a} + \frac{1}{b} + \frac{1}{c}} \Rightarrow (a + b + c)\left(\frac{1}{a} +
+  \frac{1}{b} + \frac{1}{c}\right)\geq 9$$
+\end{frame}
+\begin{frame}{Problem 187}
+  \textbf{187.} If $a + b + c = 3$ and $a>0, b>0, c>0,$ find the greatest value of $a^2b^3c^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 187}
+  \textbf{Solution:} Taking A.M. and G.M of $7$ numbers $\frac{a}{2}, \frac{a}{2}, \frac{b}{3}, \frac{b}{3}, \frac{b}{3},
+  \frac{c}{2}, \frac{c}{2},$ we get
+  $$\frac{2.\frac{a}{2} + 3.\frac{b}{3} + 2.\frac{c}{2}}{7}\geq
+  \left[\left(\frac{a}{2}\right)^2\left(\frac{b}{3}\right)^3\left(\frac{c}{2}\right)^2\right]^{\frac{1}{7}}$$
+  $$\frac{3}{7}\geq \left(\frac{a^2b^3c^2}{2^23^32^2}\right)^{\frac{1}{7}}\Rightarrow \frac{3^7}{7^7}\geq
+  \frac{a^2b^3c^2}{2^23^32^2}$$
+  $$a^2b^3c^2 \leq \frac{3^{10}2^4}{7^7}$$
+\end{frame}
+\begin{frame}{Problem 188}
+  \textbf{188.} Let $a_i + b_i = 1(i = 1, 2, \ldots, n)$ and $a = \frac{1}{n}(a_1 + a_2 + \ldots + a_n), b=\frac{1}{n}(b_1 + b_2 +
+  \ldots + b_n),$ show that $a_1b_1 + a_2b_2 + \ldots + a_nb_n = nab - (a_1 - a)^2 - (a_2 - a)^2 - \ldots - (a_n - a)^2$
+\end{frame}
+\begin{frame}{Solution of Problem 188}
+  \textbf{Solution:} $$\sum_{i=1}^na_ib_i = \sum_{i=1}^na_i(1 - a_i) = \sum_{i=1}^na)i - \sum_{i=1}^na_i^2 = na - \sum_{i=1}^n(a_i
+  - a + a)^2$$
+  $$= na - \sum_{i=1}^n[(a_i - a)^2 + a^2 + 2a(ai - a)] = na - \sum_{i=1}^n(ai - a)^2 - na^2 + 2a\sum_{i=1}^n(a_i - na)$$
+  $$= na(1 - a) - \sum_{i=1}^n(a_i - a)^2 = nab - \sum_{i=1}^n(a_i - a)^2$$
+  $$\because na + nb = \sum_{i=1}^n(a_i + b_i) = n \therefore a+ b = 1$$
+\end{frame}
+\begin{frame}{Problem 190}
+  \textbf{190.} A sequence $a_1, a_2, a_3, \ldots, a_n$ of real numbers is such that $a_1=0, |a_2| = |a_1 + 1|, |a_3| = |a_2 + 1|,
+  \ldots,$ $|a_n| = |a_{n - 1} + 1|.$ Prove that the arithmetic mean $(a_1 + a_2 + \ldots + a_n)/n$ of these numbers cannot be less
+  than $-1/2.$
+\end{frame}
+\begin{frame}{Solution of Problem 190}
+  \textbf{Solution:} Let $a_{n+1}$ be a number such that $|a_{n+1}| = |a_n + 1|$
+  \linebreak\linebreak
+  Squaring all the numbers, we get
+  \linebreak\linebreak
+  $$a_1^2 = 0$$
+  $$a_2^2 = a_1^2 + 2a_1 + 1$$
+  $$a_3^2 = a_2^2 + 2a_2 + 1$$
+  $$\ldots$$
+  $$a_n^2 = a_{n-1}^2 + 2a_{n-1} + 1$$
+  $$a_{n+1}^2 = a_n^2 + 2a_n + 1$$
+  Adding, we get
+  $$a_1^2 + a_2^2 + \ldots + a_n^2 + a_{n+1}^2 = a_1^2 + a_2^2 + \ldots + a_n^2 + 2(a_1 + a_2 + \ldots + a_n) + n$$
+  $$\Rightarrow 2(a_1 + a_2 + \ldots + a_n) = -n + a_{n+1}^2 \geq -n \Rightarrow (a_1 + a_2 + \ldots + a_n)/n\geq -1/2$$
+\end{frame}
+\end{document}

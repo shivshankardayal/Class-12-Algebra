@@ -1,0 +1,172 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+
+\title{Theory of Logarithm}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Theory of Logarithm}
+  \textbf{Definition:} A number $x$ is called the logartihm of a number $y$ to the base $b$ if $b^x = y$ where $b>0, b\neq , y > 0$
+  \linebreak\linebreak
+  Mathematically, it is represented by the equation $\log_b y = x or b^x = y$
+  \linebreak\linebreak
+  \textbf{Notes:}
+  \begin{enumerate}
+  \item The conditions $b>0, b\neq 1$ and $y > 0$ are necessary in the definition of logarithm.
+  \item When $b=1$ suppose logarithm is defined, and we have to find the value of $\log_1y = x.$ Let $\log_1y = x\Rightarrow 1^x =
+    y \Rightarrow 1 = y$
+
+    If $\log_12$ is defined then $1=2.$ So we see that $b=1$ leads to meaningless result.
+  \item Similalrlh if $y<0,$ then $b^x = y$ which is meaningless as L.H.S. is positive and R.H.S. is negative.
+    \item Let the condition to be true when $b=0.$ Thus, $0^x = N$ i.e. if $\log_02$ is defined will mean that $0=2$ which
+      signifies that our assumption is false.
+    \item No number can have two different logarithms to a given base. Assume that a number $N$ has two different logarithms $x$
+      and $y$ with base $b.$ Then, $\log_b N = x, \log_bN = y\Rightarrow N = b^x, N = b^y \Rightarrow b^x = b^y \Rightarrow x = y$
+      \item When the number or base is negative the value of logarithm comes out to be a complex number with non-zero imaginary
+        part. Let $\log_e(-5) = x\Rightarrow \log_e5.e^{i\pi} = x\Rightarrow x = \log_e5 + i\pi$
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Important Results}
+  \begin{enumerate}
+  \item $\log_b 1 = 0$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_b 1= x\Rightarrow b^x = 1\Rightarrow x = 0$
+  \item $\log_bb = 1$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_bb = x\Rightarrow b^x = b \Rightarrow x = 1$
+  \item $b^{\log_bN} = N$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_bN = x \Rightarrow b^x = N$
+    \linebreak\linebreak
+    $b^{\log_bN} = N$
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Important Formulas}
+  \begin{enumerate}
+  \item $\log_b(x.y) = \log_b x + \log_by(x > 0, y >0)$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_bx = m\Rightarrow b^m = x$ and $\log_by = n \Rightarrow b^n = y$
+    \linebreak\linebreak
+    $x.y = b^m.b^n = b^{m+n} = b^0$(say)
+    \linebreak\linebreak
+    $m + n = o$
+    \linebreak\linebreak
+    $\log_bx.y = \log_b x + \log_b y$
+    \linebreak\linebreak
+    \textbf{Corollary:} $\log_b(x.y.z) = \log_bx + \log_by + \log_bz$
+    \linebreak\linebreak
+    If $x<0, y<0, \log_b(x.y) = \log_b|x| + \log_b|y|$
+  \item $\log_b\left(\frac{x}{y}\right) = \log_b x - \log_b y(x>0, y>0)$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_bx = m \Rightarrow b^m = x$ and $\log_by = n \Rightarrow b^n = y$
+    \linebreak\linebreak
+    $\log_b\left(\frac{x}{y}\right) = o \Rightarrow b^o = \frac{x}{y}$
+    \linebreak\linebreak
+    $\frac{x}{y} = \frac{b^m}{b^n} = b^{m - n} = b^o \Rightarrow m - n = o$
+    \linebreak\linebreak
+    $\log_b\left(\frac{x}{y}\right) = \log_b|x| - \log_b|y|(x<0, y<0)$
+    \setcounter{counter}{\value{enumi}}
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Important Formulas}
+  \begin{enumerate}
+    \setcounter{enumi}{\value{counter}}
+  \item $\log_bN^k = k\log_bN$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_b N = x\Rightarrow b^x = N$
+    \linebreak\linebreak
+    Lety $\log_bN^k = y \Rightarrow b^y = N^k \Rightarrow b^y = (b^x)^k = b^{kx}$
+    \linebreak\linebreak
+    $\Rightarrow y = kx \Rightarrow \log_bN^k = k\log_bN$
+  \item $\log_ba = \log_ca\log_bc$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_ba = x~ \therefore~ b^x = a$
+    \linebreak\linebreak
+    $\log_ca = y~\therefore~c^y = a$
+    \linebreak\linebreak
+    $\log_bc = z~\therefore~ b^z = c$
+    \linebreak\linebreak
+    $b^x = a = c^y = b^{yz}\Rightarrow x = yz[\because b\neq 1]$
+    \linebreak\linebreak
+    Alternatively, we can also write it as $\log_ba = \frac{\log_ca}{\log_cb}$
+    \setcounter{counter}{\value{enumi}}
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Important Formulas}
+  \begin{enumerate}
+    \setcounter{enumi}{\value{counter}}
+  \item $\log_{(b^k)}N = \frac{1}{k}\log_b N[b > 0]$
+    \linebreak\linebreak
+    \textbf{Proof:} From previous point we can infer that $\log_{(b^k)}N = \frac{\log N}{\log b^k} = \frac{\log N}{k\log b} =
+    \frac{1}{k}\log_bN$
+  \item $\log_ba = \frac{1}{\log_ab}$
+    \linebreak\linebreak
+    \textbf{Proof:} Let $\log_ba = x~\therefore ~b^x = a$
+    \linebreak\linebreak
+    $\log_ab = y~\therefore ~a^y = b$
+    \linebreak\linebreak
+    $a = b^y = a^{xy}\Rightarrow xy = 1$
+    \linebreak\linebreak
+    $\Rightarrow \log_ba = \frac{1}{\log_ab}$
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Characteristics and Mantissa}
+  Typically a logarithm will have an integral part and a fractional part. The integral part is called \textit{characteristics} and
+  the fractional part is called \textit{mantissa.}
+  \linebreak\linebreak
+  For exmaple, if $\log x = 4.7,$ then $4$ is the characteristics and $.7$ is the mantissa. If characteristics is less than zero
+  then at times it is written with a bar above. For example, $\log x = -5.3 = \overline{5}.3$
+  \linebreak\linebreak
+  \Large\textbf{Bases of Logarithms}
+  \normalsize
+  \linebreak\linebreak
+  There are two popular bases of logarithms. Common base is $10$ and another is $e,$ When base is $10,$ logarithm is knows as
+  common logarithms and when base is $e,$ logarithms is known as \textit{natual} or \textit{Napierian} logarithm.
+  \linebreak\linebreak
+  $\log_{10}x$ is also written as $lg x$ and $\log_e x$ as $ln x$
+  \linebreak\linebreak
+  \Large\textbf{Inequality of Logarithms}
+  \normalsize
+  \linebreak\linebreak
+  If $b>1,$ and $\log_bx_1 > \log_bx_2$ then $x_1 > x_2.$ If $b < 1,$ and $\log_bx_1 > \log_bx_2$ then $x_1 < x_2.$
+\end{frame}
+\begin{frame}{Expansion of Logarithm and its Graph}
+  The logarithm series is given below:
+  \linebreak
+  $\log(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{r} + \ldots$
+  Given below is an example how logarithm function behaves:
+  \begin{center}
+    \begin{tikzpicture}
+      \draw [help lines] (0,-4) grid [step=.1] (10,4);
+      \draw (0,0) -- (10,0);
+      \draw [green] plot [domain=0.1:10,samples=100] (\x,{log10(\x)});
+      \draw [blue] plot [domain=0.1:10,samples=100] (\x,{log2(\x)});
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title{Miscellaneous Problems on A.P., G.P. and H.P.\\Problems 191-200}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 191}
+  \textbf{191.} If $a,b,c > 0,$ show that $(a + b)(b + c)(a + c) \geq 8abc$
+\end{frame}
+\begin{frame}{Solution of Problem 191}
+  \textbf{Solution:} We know that A.M. $\geq$ G.M.
+  $$\frac{a + b}{2}\geq \sqrt{ab}, \frac{b + c}{2}\geq \sqrt{bc}, \frac{a + c}{2}\geq \sqrt{ac}$$
+  Multiplying, we get
+  $$(a + b)(b + c)(c + a) \geq 8abc$$
+\end{frame}
+\begin{frame}{Problem 192}
+  \textbf{192.} If $x + y + z = a,$ show that $\frac{1}{x} + \frac{1}{y} + \frac{1}{z}\geq \frac{9}{a}$
+\end{frame}
+\begin{frame}{Solution of Problem 192}
+  \textbf{Solution:} We know that A.M $\geq$ H.M.
+  $$\frac{x + y + z}{3}\geq \frac{3}{\frac{1}{x} + \frac{1}{y} + \frac{1}{z}}$$
+  $$\frac{1}{x} + \frac{1}{y} + \frac{1}{z}\geq \frac{9}{a}$$
+\end{frame}
+\begin{frame}{Problem 193}
+  \textbf{193.} If $n$ is a positive integer, show that $n^n \geq 1.3.5\ldots (2n - 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 193}
+  \textbf{Solution:} We know that A.M $\geq$ G.M.
+  $$\frac{1 + 3 + 5 + \ldots + (2n - 1)}{n}\geq (1.3.5.\ldots(2n - 1))^{\frac{1}{n}}$$
+  $$\Rightarrow \frac{n^2}{n}\geq (1.3.5.\ldots(2n - 1))^{\frac{1}{n}}$$
+  $$\Rightarrow n^n \geq 1.3.5\ldots (2n - 1)$$
+\end{frame}
+\begin{frame}{Problem 194}
+  \textbf{194.} Find the greatest value of $(7 - x)^4(2 + x)^5$ if $-2<x<7$
+\end{frame}
+\begin{frame}{Solution of Problem 194}
+  \textbf{Solution:} We consider seven numbers five of which are $2 + x$ and remaining four are $7 - x.$ Now, we know that A.M
+  $\geq$ G.M.
+  $$\frac{4.\frac{7 - x}{4} + 5.\frac{2 + x}{5}}{9}\geq \left[\left(\frac{7 - x}{4}\right)^4\left(\frac{2 +
+      x}{5}\right)^5\right]^{\frac{1}{9}}$$
+  $$\frac{9}{9}\geq \left[\left(\frac{7 - x}{4}\right)^4\left(\frac{2 + x}{5}\right)^5\right]^{\frac{1}{9}}$$
+  $$(7 - x)^4(2 + x)^5 \leq 4^4.5^5$$
+  So the greatest value would be $4^4.5^5$
+\end{frame}
+\begin{frame}{Problem 195}
+  \textbf{195.} If $x, y > 0,$ find the least value of $3x + 4y,$ when $x^2y^3 = 6.$
+\end{frame}
+\begin{frame}{Solution of Problem 195}
+  \textbf{Solution:} We consider five numbers two of which are $\frac{3x}{2}$ and remaining three are $\frac{4y}{3}.$ Now we know
+  that, A.M. $\geq$ G.M.
+  $$\frac{2.\frac{3x}{2} + 3.\frac{4y}{3}}{5}\geq
+  \left[\left(\frac{3x}{2}\right)^2\left(\frac{4y}{3}\right)^3\right]^{\frac{1}{5}}$$
+  $$\Rightarrow \frac{3x + 4y}{5}\geq \left[\frac{9x^2}{4}.\frac{64y^3}{27}\right]^{\frac{1}{5}}$$
+  $$\Rightarrow 3x + 4y \leq 5.{32}^{\frac{1}{5}} = 10$$
+  So the least value of $3x + 4y$ is $10.$
+\end{frame}
+\begin{frame}{Problem 196}
+  \textbf{196.} If $a, b, c > 0,$ show that $\frac{bc}{b + c} + \frac{ca}{c + a} + \frac{ab}{a + b}\leq \frac{a + b + c}{2}$
+\end{frame}
+\begin{frame}{Solution of Problem 196}
+  \textbf{Solution:} We know that A.M $\geq$ H.M.
+  $$\frac{a + b}{2}\geq \frac{2ab}{a + b}, \frac{b + c}{2}\geq \frac{2bc}{b + c}, \frac{c + a}{2}\geq \frac{2ca}{c + a}$$
+  $$\frac{a + b + c}{2}\geq \frac{bc}{b + c} + \frac{ca}{c + a} + \frac{ab}{a + b}$$
+\end{frame}
+\begin{frame}{Problem 197}
+  \textbf{197.} If $a, b, c > 0,$ show that $\frac{b + c}{a} + \frac{c + a}{b} + \frac{a + b}{c}\geq 6$
+\end{frame}
+\begin{frame}{Solution of Problem 197}
+  \textbf{Solution:} $$(a - b)^2 \geq 0, (b - c)^2\geq 0, (c - a)^2\geq 0$$
+  $$\Rightarrow \frac{(a - b)^2}{ab}\geq 0, \frac{(b - c)^2}{bc}\geq 0, \frac{(c - a)^2}{ac}\geq 0$$
+  $$\Rightarrow \frac{a^2 + b^2}{ab}\geq 2, \frac{b^2 + c^2}{bc}\geq 2, \frac{c^2 + a^2}{ca}\geq 2$$
+  $$\Rightarrow \frac{a}{b} + \frac{b}{a} + \frac{b}{c} + \frac{c}{b} + \frac{c}{a} + \frac{a}{c}\geq 6$$
+  $$\Rightarrow \frac{b + c}{a} + \frac{c + a}{b} + \frac{a + b}{c}\geq 6$$
+\end{frame}
+\begin{frame}{Problem 198}
+  \textbf{198.} If $x_i > 0, i = 1, 2, 3, \ldots, n$ show that $(x_1 + x_2 + \ldots + x_n)\left(\frac{1}{x_1} + \frac{1}{x_2} +
+  \ldots + \frac{1}{x_n}\right) \geq n^2$
+\end{frame}
+\begin{frame}{Solution of Problem 198}
+  \textbf{Solution:} We know that A.M. $\geq$ H.M.
+  $$\frac{x_1 + x_2 + \ldots + x_n}{n}\geq \frac{n}{\left(\frac{1}{x_1} + \frac{1}{x_2} + \ldots + \frac{1}{x_n}\right)}$$
+  $$\Rightarrow (x_1 + x_2 + \ldots + x_n)\left(\frac{1}{x_1} + \frac{1}{x_2} +
+  \ldots + \frac{1}{x_n}\right) \geq n^2$$
+\end{frame}
+\begin{frame}{Problem 199}
+  \textbf{199.} If $x,y$ are positive real numbers and $m, n$ are positive integers, then show that $\frac{x^ny^m}{(1 + x^{2n})(1 +
+    y^{2m})}\leq \frac{1}{4}$
+\end{frame}
+\begin{frame}{Solution of Problem 199}
+  \textbf{Solution:} We know that A.M $\geq$ G.M.Considering $1$ and $x^{2n}$
+  $$\Rightarrow \frac{1 + x^{2n}}{2}\geq \sqrt{1.x^{2n}} = x^n$$
+  Considering $1$ and $y^{2m}$
+  $$\Rightarrow \frac{1 + y^{2m}}{2}\geq \sqrt{1.y^{2m}} = y^m$$
+  Myltiplying. we get
+  $$(1 + x^{2n})(1 + y^{2m})\geq 4x^ny^m$$
+  $$\frac{x^ny^m}{(1 + x^{2n})(1 + y^{2m})}\leq \frac{1}{4}$$
+\end{frame}
+\begin{frame}{Problem 200}
+  \textbf{200.} If the arithmetic mean of $(b - c)^2, (c - a)^2$ and $(a - b)^2$ is the same as that of $(b + c - 2a)^2, (c + a -
+  2b)^2$ and $(a + b - 2c)^2$, show that $a = b = c$
+\end{frame}
+\begin{frame}{Solution of Problem 200}
+  \textbf{Solution:} Let $b - c = x, c - a = y$ and $a - b = z,\Rightarrow x + y + z = 0.$ This also implies that $a + b - 2c = x -
+  y, b + c - 2a = y - z, c + a - 2b = z - x$
+  \linebreak\linebreak
+  Clearly, $x + y + z = 0$
+  \linebreak\linebreak
+  Given, $$\frac{(x - y)^2 + (y - z)^2 + (z - x)^2}{3} = \frac{x^2 + y^2 + z^2}{3}$$
+  $$\Rightarrow x^2 + y^2 + z^2 - 2xy - 2yz - 2zx = 0$$
+  $$\Rightarrow (x + y + z)^2 = 4(xy + yz + zx)$$
+  $$\Rightarrow xy + yz + zx = 0$$
+  $$\Rightarrow (c - a)(a - b) + (a - b)(b - c) + (c - a)(b - c) = 0$$
+  $$\Rightarrow ca - bc - a^2 + ab + ab - ca - b^2 + bc + bc - c^2 - ab + ca = 0$$
+  $$\Rightarrow ab + bc + ca - a^2 - b^2 - c^2 = 0$$
+  $$\Rightarrow (a - b)^2 + (b - c)^2 + (c - a)^2 = 0$$
+  $$\Rightarrow a = b = c$$
+\end{frame}
+\end{document}

@@ -1,0 +1,107 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+
+\title{Logarithm Problem 1-10}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 1}
+  \textbf{1.} Find the value of $x$ where $\log_{\sqrt{8}}x = \frac{10}{3}$
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} $$\log_{\sqrt{8}}x = \frac{10}{3}\Rightarrow \log_{2^{\frac{3}{2}}}x = \frac{10}{4}$$
+  $$\Rightarrow \frac{2}{3}\log_2 x = \frac{10}{3}\Rightarrow \log_2x = 5$$
+  $$\Rightarrow x = 5^2 = 25$$
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} Prove that $\log_ba.\log_cb\log_ac = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} $$L.H.S. \log_ba.\log_cb\log_ac = \frac{\log a}{\log b}\frac{\log b}{\log c}\frac{\log c}{\log a} = 1 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} Prove that $\log_3\log_2\log_{\sqrt{5}}(625) = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} $$\log_3\log_2\log_{\sqrt{5}}(625) = \log_3\log_2\log_{\sqrt{5}}5^4$$
+  $$= \log_3\log_28 = \log_33 = 1$$
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} If $a^2 + b^2 = 23ab,$ then prove that $\log \frac{a + b}{5} = \frac{1}{2}(\log a + \log b)$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution:} $$a^2 + b^2 = 23ab \Rightarrow (a + b)^2 = 25ab \Rightarrow \left(\frac{a + b}{5}\right)^2 = ab$$
+  Taking $\log$ of both sides
+  $$2\log\frac{a + b}{5} = \log(ab) \Rightarrow \log \frac{a + b}{5} = \frac{1}{2}(\log a + \log b)$$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} Prove that $7\log\frac{16}{15}+ 5\log\frac{25}{24} + 3\log\frac{81}{80} = \log 2$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} $$L.H.S. = 7[\log 2^4 - \log(3.5)] + 5[\log 5^2 - \log(8.3)] + 3[\log 3^4 - \log 16.5]$$
+  $$= 7[4\log 2 - \log 3 - \log 5] + 5[2\log 5 - 3\log 2 - \log 3] + 3[4\log 3 - 4\log 2 - \log 5]$$
+  $$= \log 2 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} Find the value of $\log\tan1^\circ + \log\tan2^\circ + \ldots + \log\tan89^\circ$
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:}$$L.H.S. = \log\tan1^\circ + \log\tan2^\circ + \ldots + \log\tan89^\circ$$
+  $$= \log(\tan1^\circ .\tan2^\circ . \ldots \tan89^\circ)$$
+  $$= \log(\tan1^\circ.\tan89^\circ)(\tan2^\circ.\tan88^\circ)\ldots\tan45^\circ$$
+  $$= \log(\tan1^\circ.\cot1^\circ)(\tan2^\circ\cot2^\circ)\ldots\tan45^\circ$$
+  $$= \log(1.1.1.\ldots1) = \log 1 = 0$$
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} Evaluate $\log_9\tan\frac{\pi}{6}$
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{Solution:} $$\log_9\tan\frac{\pi}{6} = \log_{3^2}\frac{1}{\sqrt{3}}$$
+  $$= \frac{1}{2}\log_33^{-\frac{1}{2}} = -\frac{1}{4}$$
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} Evaluate $\frac{\log_{a^2}b}{\log_{\sqrt{a}}b^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} $$\frac{\log_{a^2}b}{\log_{\sqrt{a}}b^2} = \frac{2\log_a b}{2.2\log_a b}$$
+  $$= \frac{1}{8}$$
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} Evaluate $\log_{\sqrt{5}}.008$
+\end{frame}
+\begin{frame}{Solution of Problem 9}
+  \textbf{Solution:} $$\log_{\sqrt{5}}.008 = \log_{\sqrt{5}} \frac{8}{1000}$$
+  $$= \log_{\sqrt{5}}8 - \log_{\sqrt{5}}1.125 = \log_{\sqrt{5}}8 - \log_{\sqrt{5}}8 - \log_{\sqrt{5}}125 = -\log_{\sqrt{5}}5^3 = -6$$
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} Evaluate $\log_{2\sqrt{3}}144$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:}$$\log_{2\sqrt{3}}144 = \log_{12^{\frac{1}{2}}}12^2 = 4$$
+\end{frame}
+\end{document}
