@@ -1,0 +1,76 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 21-30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 21}
+  \textbf{21.} Simplify $\frac{\log_911}{\log_513}\div\frac{\log_311}{\log_{\sqrt{5}}13}$
+\end{frame}
+\begin{frame}{Solution of Problem 21}
+  \textbf{Solution:} Given $$\frac{\log_911}{\log_513}\div\frac{\log_311}{\log_{\sqrt{5}}13}$$
+  $$= \frac{\log_{3^2}11}{\log_513}.\frac{\log_{5^{\frac{1}{2}}}13}{\log_311}$$
+  $$= \frac{\frac{1}{2}\log_311}{\log_513}.\frac{2\log_513}{\log_311} = 1$$
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} Simplify $3^{\sqrt{\log_32}} - 2^{\sqrt{\log_23}}$
+\end{frame}
+\begin{frame}{Solution of Problem 22}
+  \textbf{Solution:} Taking $\log$ with base $10,$ we get
+  $$= \sqrt{\log_32}\log 3 - \sqrt{\log_23}\log 2$$
+  $$= \sqrt{\frac{\log2}{\log3}(\log 3)^2} - \sqrt{\frac{\log3}{\log2}(\log2)^2}$$
+  $$=\sqrt{\log2\log3} - \sqrt{\log3\log2} = 0$$
+\end{frame}
+\begin{frame}{Problem 23}
+  \textbf{23.} Find the least integer $n$ such that $7^n > 10^5,$ given that $\log_{10}343 = 2.5353$
+\end{frame}
+\begin{frame}{Solution of Problem 23}
+  \textbf{Solution:} $$\log_{10}343 = 2.5353 \Rightarrow \log_{10}7^3 = 2.5353 \Rightarrow \log_{10}7 = 0.8451$$
+  $$7^n > 10^5 \Rightarrow n\log_{10}7 > 5\Rightarrow n > \frac{5}{0.8451}$$
+  Thus, least value of such integer is $6.$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} If $a,b,c$ are in G.P. then prove that $\log_ax, \log_bx,
+  \log_cx$ are in H.P.
+\end{frame}
+\begin{frame}{Solution of Problem 24}
+  \textbf{Solution:} Since $a,b,c$ are in G.P. therefore we can write $b^ = ac$
+  \linebreak\linebreak
+  Taking $log,$ on both sides, we get $2\log b = \log a + \log c.$
+  Thus, $\log a, \log b, \log c$ are in A.P.
+  \linebreak\linebreak
+  $\therefore \frac{1}{\log a}, \frac{1}{\log b}, \frac{1}{\log c}$ are in H.P.
+  \linebreak\linebreak
+  $\therefore~ \frac{\log x}{\log a}, \frac{\log x}{\log b}, \frac{\log x}{\log c}$ are in H.P.
+  \linebreak\linebreak
+  $\therefore~\log_xa, \log_xb, \log_xc$ are in H.P.
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} Prove that $\log \sin8x = 3\log2 + \log\sin x + \log\cos x + \log\cos2x + \log\cos4x$
+\end{frame}
+\end{document}
