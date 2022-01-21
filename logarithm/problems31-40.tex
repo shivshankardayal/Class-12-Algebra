@@ -1,0 +1,132 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} Prove that $\frac{1}{\log_2N} + \frac{1}{\log_3N} + \ldots + \frac{1}{\log_{1988}N} = \frac{1}{\log_{1988!}N}$
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{\log_2N} + \frac{1}{\log_3N} + \ldots + \frac{1}{\log_{1988}N}$$
+  $$= \log_N2 + \log_N3 + \ldots + \log_N1988$$
+  $$= \log_N(2.3.\ldots 1988) = \log_N1988! = \frac{1}{\log_{1988!}N} = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} If $0 < x < 1,$ prove that $\log(1 + x) + \log(1 + x^2) + \log(1 + x^4)\ldots\infty = -\log(1 - x)$
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} Given equation can be rewritten as
+  $$\log(1 - x) + \log(1 + x) + \log(1 + x^2) + \log(1 + x^4) + \ldots\infty = 0$$
+  $$= \log(1 - x^2) + \log(1 + x^2) + \log(1 + x^4) + \ldots\infty$$
+  $$= \log(1 - x^4) + \log(1 + x^4) + \ldots\infty$$
+  The powers of $x$ will grow till infinity and since $0 < x < 1$ it will aproach $0$ leaving $\log 1 = 0$
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} Find the sum of the series $\frac{1}{\log_2a} + \frac{1}{\log_4}a + \ldots$ up to $n$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 33}
+  \textbf{Solution:} $$L.H.S. = \log_a2 + \log_a4 + \log_a8 + \ldots \text{~upto~}n\text{~terms}$$
+  $$= (1 + 2 + 3+ \ldots + n)\log_a2$$
+  $$= \frac{n(n + 1)}{2}\log_a2$$
+\end{frame}
+\begin{frame}{Problem 34}
+  \textbf{34.} If $\log_410 = x, \log_220 = y$ and $\log_58 = z,$ prove that $\frac{1}{x + 1} + \frac{1}{y + 1} + \frac{1}{z + 1} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{x + 1} + \frac{1}{y + 1} + \frac{1}{z + 1}$$
+  $$= \frac{1}{\log_410 + \log_44} + \frac{1}{\log_220 + \log_22} + \frac{1}{\log_58 + \log_55}$$
+  $$= \frac{1}{\log_440} + \frac{1}{\log_240} + \frac{1}{\log_540}$$
+  $$= \log_{40}4 + \log_{40}2 + \log_{40}2$$
+  $$= \log_{40}40 = 1 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} If $x = \log_abc, y = \log_bca, z = \log_cab,$ prove that $\frac{1}{x + 1} + \frac{1}{y + 1} + \frac{1}{z + 1} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{\log_abc + 1} + \frac{1}{\log_bca + 1} + \frac{1}{\log_cab + 1}$$
+  $$= \frac{1}{\log_abc + \log_aa} + \frac{1}{\log_bca + \log_bb} + \frac{1}{\log_cab + \log_cc}$$
+  $$= \frac{1}{\log_aabc} + \frac{1}{\log_babc} + \frac{1}{\log_cabc}$$
+  $$= \log_{abc}a + \log_{abc}b + \log_{abc}c = \log_{abc}abc = 1 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} Prove that $\frac{1}{1 + \log_ba + \log_bc} + \frac{1}{1 + \log_ca + \log_cb} + \frac{1}{1 + \log_ab + \log_ac} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{1 + \log_ba + \log_bc} + \frac{1}{1 + \log_ca + \log_cb} + \frac{1}{1 + \log_ab + \log_ac}$$
+  $$= \frac{1}{\log_bb + \log_ba + \log_bc} + \frac{1}{\log_cc + \log_ca + \log_cb} + \frac{1}{\log_aa + \log_ab + \log_ac}$$
+  $$= \frac{1}{\log_babc} + \frac{1}{\log_cabc} + \frac{1}{\log_aabc}$$
+  $$= \log_{abc}b + \log_{abc}c + \log_{abc}a = \log_{abc}abc = 1 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 37}
+  \textbf{37.} Prove that $x^{\log y - \log z}y^{\log z - \log x}z^{\log x - \log y} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} We have to prove that $$x^{\log y - \log z}y^{\log z - \log x}z^{\log x - \log y} = 1$$
+  $$\text{Taking~} \log \text{~of both sides, we get}$$
+  $$(\log y - \log z)\log x + (\log z - \log x)\log y + (\log x - \log y)\log z = 0$$
+  $$0=0$$
+\end{frame}
+\begin{frame}{Problem 38}
+  \textbf{38.} If $\frac{\log a}{y - z} = \frac{\log b}{z - x} = \frac{\log c}{x - y},$ prove that $a^xb^yc^z = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 38}
+  \textbf{Solution:} We have to prove that $a^xb^yc^z = 1$
+  \linebreak\linebreak
+  Taking $\log$ of both sides, we get $x\log a + y\log b + z\log c = 0$
+  $$\frac{\log a}{y - z} = \frac{\log b}{z - x} = \frac{\log c}{x - y} = k(\text{say})$$
+  $$x\log a = k(xy - zx), y\log b = k(yz - xy), z\log c = k(zx - yz)$$
+  Adding all these, we get
+  $$x\log a + y\log b + z\log c = k(xy - zx + yz - xy + zx - yz) = 0$$
+\end{frame}
+\begin{frame}{Problem 39}
+  \textbf{39.} If $\frac{x(y + z - x)}{\log x} = \frac{y(z + x - y)}{\log y} = \frac{z(x + y - z)}{\log z},$ prove that $y^zz^y = z^xx^z = x^yy^x$
+\end{frame}
+\begin{frame}{Solution of Problem 39}
+  \textbf{Solution:} $$\frac{x(y + z - x)}{\log x} = \frac{y(z + x - y)}{\log y} = \frac{z(x + y - z)}{\log z} = \frac{1}{k}(\text{let})$$
+  $$\log x = kx(y + z - x), \log y = ky(z + x - y) = \log z = kz(x + y - z)$$
+  $$\text{Let~}y^zz^y = z^xx^z = x^yy^x = c$$
+  $$\text{Taking~}\log\text{~of both sides, we get}$$
+  $$z\log y + y\log z = x\log z + z\log x = y\log x + x\log y = \log c$$
+  $$\Rightarrow zky(z + x - y) + ykz(x + y - z) = xkz(x + y - z) + zkx(y + z - x) = ykx(y + z - x) + xky(x + z - y)$$
+  $$\Rightarrow yz^2 + xyz - y^2z + xyz + y^2z - z^2y = x^2z + xyz - xz^2 + xyz + xz^2 - x^2z = xy^2 + xyz - x^2y + xyz - xy^2$$
+  $$2xyz = 2xyz = 2xyz$$
+\end{frame}
+\begin{frame}{Problem 40}
+  \textbf{40.} If $\frac{\log a}{b - c} = \frac{\log b}{c - a} = \frac{\log c}{a - b},$ prove that $a^{b + c}b^{c + a}c^{a + b} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 40}
+  \textbf{Solution:} $$\frac{\log a}{b - c} = \frac{\log b}{c - a} = \frac{\log c}{a - b} = k(\text{let})$$
+  $$\log a = k(b - c), \log b = k(c - a), \log c = k(a - b)$$
+  We have to prove that $$a^{b + c}b^{c + a}c^{a + b} = 1$$
+  Taking $\log$ of both sides, we get
+  $$(b + c)\log a + (c + a)\log b + (a + b)\log c = 0$$
+  $$\Rightarrow k(b^2 - c^2) + k(c^2 - a^2) + k(a^2 - b^2) = 0$$
+  $$0 = 0$$
+\end{frame}
+\end{document}

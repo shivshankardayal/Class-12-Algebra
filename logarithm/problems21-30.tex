@@ -73,4 +73,75 @@
 \begin{frame}{Problem 25}
   \textbf{25.} Prove that $\log \sin8x = 3\log2 + \log\sin x + \log\cos x + \log\cos2x + \log\cos4x$
 \end{frame}
+\begin{frame}{Solution of Problem 25}
+  \textbf{Solution:} $$L.H.S. - \log\sin8x = \log2\sin4x\cos4x$$
+  $$= \log 2 + \log\sin4x + \log\cos4x$$
+  $$=\log2 + \log2\sin2x\cos2x + \log\cos4x$$
+  $$= 2\log2 + \log\sin2x + \log\cos2x + \log\cos4x$$
+  $$= 2\log 2 + \log2\sin x\cos x + \log\cos2x + \log\cos4x$$
+  $$= 4\log2 + \log \sin x + \log\cos x + \log\cos2x + \log\cos4x = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} If $x=\log_{2a}a, y =\log_{3a}2a$ and $z = \log_{4a}3a,$ then prove that $xyz + 1 = 2yz$
+\end{frame}
+\begin{frame}{Solution of Problem 26}
+  \textbf{Solution:} We have to prove that $xyz +1 = 2yx$
+  \linebreak\linebreak
+  Dividing both sides with $yz,$ we get $x + \frac{1}{yz} = 2$
+  $$L.H.S. = \log_{2a}a + \frac{1}{\log_{3a}2a\log_{4a}3a}$$
+  $$= \frac{\log a}{\log 2a} + \frac{\log 3a\log 4a}{\log 2a\log 3a}$$
+  $$= \frac{\log a}{\log 2a} + \frac{\log 4a}{\log 2a}$$
+  $$= \frac{\log a + \log 4a}{\log 2a} = \frac{\log(2a)^2}{\log 2a} = 2 = R.H.S.$$
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} If $a$ and $b$ are lengths of the sides and $c$ be the length of hypotenuse of a right angle triangle and $c - b\neq
+  1$ and $c + b\neq 1,$ prove that $\log_{c + b}a + \log_{c - b}a = 2\log_{c+b}a\log_{c - b}a$
+\end{frame}
+\begin{frame}{Solution of Problem 27}
+  \textbf{Solution:} We have to prove that $\log_{c + b}a + \log_{c - b}a = 2\log_{c+b}a\log_{c - b}a$
+  \linebreak\linebreak
+  Dividing both side by $\log_{c + b}a\log_{c - b}a,$ we get
+  $$L.H.S. = \frac{1}{\log_{c - b}a} + \frac{1}{\log_{c + b}a} = 2$$
+  $$\log_a(c - b) + \log_a(c + b) = 2$$
+  $$\log_a(c^2 - b^2) = a \Rightarrow c^2 - b^2 = a^2$$
+  $$\Rightarrow c^2 = a^2 + b^2$$
+  which is true for the given right angle triangle.
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} If $\frac{\log z}{y - z} = \frac{\log y}{z - x} = \frac{\log z}{x - y},$ then prove that $x^xy^yz^x = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 28}
+  \textbf{Solution:} Let $\frac{\log z}{y - z} = \frac{\log y}{z - x} = \frac{\log z}{x - y} = k$
+  $$\Rightarrow \log x = k(y - z), \log y = k(z - x), \log z = k(x - y)$$
+  We have to prove that $x^xy^yz^z = 1$
+  Taking $\log$ of both sides, we get
+  $$x\log x + y\log y + z\log z = 0$$
+  $$kx(y - z) + ky(z - x) + kz(x - y) = 0$$
+  $$0 = 0$$
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} If $\frac{yz\log(yz)}{y + z} = \frac{zx\log(zx)}{z + x} = \frac{xy\log(xy)}{x + y},$ then prove that $x^x = y^y = z^z$
+\end{frame}
+\begin{frame}{Solution of Problem 29}
+  \textbf{Solution:} Given, $\frac{yz\log(yz)}{y + z} = \frac{zx\log(zx)}{z + x} = \frac{xy\log(xy)}{x + y}$
+  \linebreak\linebreak
+  Dividing each term by $xyz,$ we get
+  $$\frac{\log y + \log z}{xy + zx} = \frac{\log z + \log x}{yz + xy} = \frac{\log x + \log y}{zx + yz} = k(\text{let})$$
+  $$\log y + \log z = k(xy + zx), \log z + \log x = k(yz + zx), \log x + \log y = k(zx + yz)$$
+  $$2(\log x + \log y + \log z) = 2k(xy + yz + zx)$$
+  $$\therefore ~\log x = kyz \Rightarrow x\log x = kxyz$$
+  $$\text{Similarly,} \log y = kzx \Rightarrow y\log y = kxyz$$
+  $$\log z = kxy \Rightarrow z\log z = kxyz$$
+  $$\therefore x\log x = y\log y = z\log z$$
+  $$\therefore x^x = y^y = z^z$$
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} Prove that $(yz)^{\log y - \log z}zx^{\log z - \log x}(xy)^{\log x - \log y} = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 30}
+  \textbf{Solution:} Taking log of both sides, we get
+  $$(\log y - \log z)(\log y + \log z) + (\log z - \log x)(\log z + \log x) + (\log x - \log y)(\log x + \log y) = 0$$
+  $$(\log y)^2 - (\log z)^2 + (\log z)^2 - (\log x)^2 + (\log x)^2 - (\log y)^2 = 0$$
+  $$0 = 0$$
+\end{frame}
 \end{document}
