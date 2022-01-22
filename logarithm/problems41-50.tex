@@ -1,0 +1,135 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 41-50}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 41}
+  \textbf{41.} If $\frac{\log x}{q - r} = \frac{\log y}{r - p} = \frac{\log z}{p - q},$ prove that $x^{q+r}y^{p+r}z^{p+q} = x^py^qz^r$
+\end{frame}
+\begin{frame}{Solution of Problem 41}
+  \textbf{Solution:} $$\frac{\log x}{q - r} = \frac{\log y}{r - p} = \frac{\log z}{p - q} = k(\text{let})$$
+  $$\Rightarrow \log x = k(q - r), \log y = k(r - p), \log z = k(p - q)$$
+  We have to prove that $x^{q+r}y^{p+r}z^{p+q} = x^py^qz^r.$ Taking $\log$ of both sides
+  $$(q + r)\log x + (p + r)\log y + (p + q)\log z = p\log x + q\log y + r\log z$$
+  $$k(q^2 - r^2) + k(r^2 - p^2) + k(p^2 - q^2) = k(pq - pr + qr - pq + pr - qr)$$
+  $$0 = 0$$
+\end{frame}
+\begin{frame}{Problem 42}
+  \textbf{42.} If $y = a^{\frac{1}{1 - \log_ax}}$ and $z = a^{\frac{1}{1 -\log_ay}},$ prove that $x = a^{\frac{1}{1 - \log_az}}$
+\end{frame}
+\begin{frame}{Solution of Problem 42}
+  \textbf{Solution:} Given $y = a^{\frac{1}{1 - \log_ax}}$ and $z = a^{\frac{1}{1 -\log_ay}}$
+  $$\Rightarrow z = a^{\frac{1}{1 - \log_a{a^{\frac{1}{1 - \log_ax}}}}}$$
+  $$z = a^{\frac{1}{1 - {\frac{1}{1 - \log_ax}}}}$$
+  Taking $\log$ of both sides with base $a,$ we get
+  $$\log_az = \frac{1}{1 - \frac{1}{1-\log_ax}}$$
+  $$= \frac{1 - \log_ax}{-\log_ax} = 1 - \frac{1}{\log_ax}$$
+  $$x = a^{\frac{1}{1 - \log_az}}$$
+\end{frame}
+\begin{frame}{Problem 43}
+  \textbf{43.} Let $f(x) = \frac{1}{1 - \log_e x}.$ If $f(y) = e^{f(z)}$ and $z = e^{f(x)},$ prove that $x = e^{f(y)}$
+\end{frame}
+\begin{frame}{Solution of Problem 43}
+  \textbf{Solution:} $$f(y) = e^{\frac{1}{1 - \log_az}}, z = e^{\frac{1}{1- \log_ex}}$$
+  $$\Rightarrow f(y) = e^{\frac{1}{1 - \log_ee^{\frac{1}{1 - \log_ex}}}}$$
+  $$f(y) = e^{\frac{1}{1 - {\frac{1}{1 - \log_ex}}}}$$
+  Following like previous problem
+  $$x = e^{f(y)}$$
+\end{frame}
+\begin{frame}{Problem 44}
+  \textbf{44.} Show that $\frac{1}{\log_2n} + \frac{1}{\log_3n} + \frac{1}{\log_4n} + \ldots + \frac{1}{\log_{43}n} = \frac{1}{\log_{43!}n}$
+\end{frame}
+\begin{frame}{Solution of Problem 44}
+  \textbf{Solution:} $$L.H.S. = \frac{1}{\log_2n} + \frac{1}{\log_3n} + \frac{1}{\log_4n} + \ldots + \frac{1}{\log_{43}n}$$
+  $$= \log_n2 + \log_n3 + \log_n4 + \ldots + \log_n43$$
+  $$= \log_n(2.3.4.\ldots 43) = \log_n43! = \frac{1}{\log_{43!}n}$$
+\end{frame}
+\begin{frame}{Problem 45}
+  \textbf{45.} Show that $2(\log a + \log a^2 + \log a^3 + \ldots + \log a^n) = n(n + 1)\log a$
+\end{frame}
+\begin{frame}{Solution of Problem 45}
+  \textbf{Solution:} $$L.H.S. = 2(\log a + \log a^2 + \log a^3 + \ldots + \log a^n)$$
+  $$= 2\log a(1 + 2 + 3 + \ldots + n) = 2\log a\frac{n(n + 1)}{2}$$
+  $$= n(n +1)\log a$$
+\end{frame}
+\begin{frame}{Problem 46}
+  \textbf{46.} Find the number of digits in $12^{12},$ without actual computation. Given $\log 2 = 0.301$ and $\log 3 = 0.477$
+\end{frame}
+\begin{frame}{Solution of Problem 46}
+  \textbf{Solution:} We will make use of the fact that positive characteristics of $n$ of a logarithm there are $n + 1$ digits in the number.
+  \linebreak\linebreak
+  Let $y = 12^{12} \Rightarrow \log y = 12\log 12 = 12\log (2.2.3) = 12[2*0.301 + 0.477]$
+  \linebreak\linebreak
+  $= 12.96$
+  \linebreak\linebreak
+  Thus, number of digits is $13.$
+\end{frame}
+\begin{frame}{Problem 47}
+  \textbf{47.} How many positive integers have characteristics $2$ when base is $3?$
+\end{frame}
+\begin{frame}{Solution of Problem 47}
+  \textbf{Solution:} Number of positive integers having base $b$ and characteristics $n$ is $b^{n + 1} - b^n$
+  \linebreak\linebreak
+  Thus, number of integers with base $3$ and characteristics $2$ is $3^3 - 3^2 = 18.$
+\end{frame}
+\begin{frame}{Problem 48}
+  \textbf{48.} How many zeros are there between the decimal point and the first significant digit in $0.0504^{10}.$ Given, $\log 2 = 0.301, \log 3 = 0.477, \log 7 = 0.845$
+\end{frame}
+\begin{frame}{Solution of Problem 48}
+  \textbf{Solution:} Let $y = 0.0504^{10}$
+  \linebreak\linebreak
+  $\log_{10}y = 10\log_{10}0.0504 = 10\log_{10}(504*10^{-4})$
+  \linebreak\linebreak
+  $= 10\log_{10}[-4 + \log(2^3.3^2.7)]$
+  \linebreak\linebreak
+  $= -12.98$
+  \linebreak\linebreak
+  Thus, characteristics is $-13,$ therefore number of zeros after decimal and first significant digit $= 12$
+\end{frame}
+\begin{frame}{Problem 49}
+  \textbf{49.} Find the number of digits in $72^{15}$ without actual computation. Given $\log 2 = 0.301, \log 3 = 0.477.$
+\end{frame}
+\begin{frame}{Solution of Problem 49}
+  \textbf{Solution:} Let $x = 72^{15}~\therefore~ \log_{10}x = 15\log_{10}72$
+  \linebreak\linebreak
+  $= 15\log_{10}(2^3*3^2) = 15\log_{10}[3\log_{10}2 + 2\log_{10}3]$
+  \linebreak\linebreak
+  $= 15[3*0.301 + 2*0.477] = 27.855$
+  \linebreak\linebreak
+  So characteristics is $27$, therefore, the number of digits will be $28.$
+\end{frame}
+\begin{frame}{Problem 50}
+  \textbf{50.} How many positive integers have characteritics $2$ when base is $5?$
+\end{frame}
+\begin{frame}{Solution of Problem 50}
+  \textbf{Solution:} Number of integers with base $b$ and characteristics $n$ is $b^{n + 1} - b^n.$
+  \linebreak\linebreak
+  $\therefore ~$ number of integers is $5^3 - 5^2 = 100$
+\end{frame}
+\end{document}

@@ -1,0 +1,145 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 51-60}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 51}
+  \textbf{51.} Solve $\log_a[1 + \log_b\{1 + \log_c(1 + \log_px)\}] = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 51}
+  \textbf{Solution:} $$\text{Given,~}\log_a[1 + \log_b\{1 + \log_c(1 + \log_px)\}] = 0$$
+  $$1 + \log_b\{1 + \log_c(1 + \log_px)\} = 1$$
+  $$\log_b\{1 + \log_c(1 + \log_px)\} = 0$$
+  $$1 + \log_c(1 + \log_px) = 1$$
+  $$\log_c(1 + \log_px) = 0$$
+  $$1 + \log_px = 1$$
+  $$\log_px = 0$$
+  $$x = 1$$
+\end{frame}
+\begin{frame}{Problem 52}
+  \textbf{52.} Solve $\log_7\log_5(\sqrt{x + 5} + \sqrt{x}) = 0$
+\end{frame}
+\begin{frame}{Solution of the Problem 52}
+  \textbf{Solution:} $$\text{Given,~}\log_7\log_5(\sqrt{x + 5} + \sqrt{x}) = 0$$
+  $$\Rightarrow \log_5(\sqrt{x + 5} + \sqrt{x}) = 1$$
+  $$\Rightarrow \sqrt{x + 5} + \sqrt{x} = 5$$
+  $$\Rightarrow \sqrt{x + 5} = 5 - \sqrt{x}$$
+  $$\text{Squaring both sides, we get}$$
+  $$x + 5 = 25 + x - 10\sqrt{x}$$
+  $$\sqrt{x = 2}\Rightarrow x = 4$$
+\end{frame}
+\begin{frame}{Problem 53}
+  \textbf{53.} Solve $\log_2x + \log_4(x + 2) = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 53}
+  \textbf{Solution:} $$\log_2x + \log_4(x + 2) = 2$$
+  $$\Rightarrow \log_2x + \log_{2^2}(x + 2) = 2$$
+  $$\Rightarrow \log_2x + \frac{1}{2}\log_2(x + 2) = 2$$
+  $$\Rightarrow 2\log_2x + \log_2(x + 2) = 4$$
+  $$\Rightarrow x^2(x + 2) = 16$$
+  $$\Rightarrow x = 2$$
+\end{frame}
+\begin{frame}{Problem 54}
+  \textbf{54.} Solve $\frac{\log(x + 1)}{\log x} = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 54}
+  \textbf{Solution:} $$\frac{\log(x + 1)}{\log x} = 2$$
+  $$\Rightarrow \log(x + 1) = 2\log x = \log x^2$$
+  $$\Rightarrow x + 1 = x^2$$
+  $$\Rightarrow x = \frac{1 \pm 5}{2}$$
+  $$\because~ x>0, x = \frac{1 + \sqrt{5}}{2}$$
+\end{frame}
+\begin{frame}{Problem 55}
+  \textbf{55.} Solve $2\log_xa + \log_{ax}a + 3\log_{a^2x}a = 0[a > 0]$
+\end{frame}
+\begin{frame}{Solution of Problem 54}
+  \textbf{Solution:} $$2\log_xa + \log_{ax}a + 3\log_{a^2x}a = 0[a > 0]$$
+  $$\Rightarrow \frac{2}{\log_ax} + \frac{1}{\log_aax} + \frac{3}{\log_aa^2x} = 0$$
+  $$\Rightarrow \frac{2}{\log_ax} + \frac{1}{\log_aa + \log_ax} + \frac{3}{\log_aa^2 + \log_ax} = 0$$
+  $$\Rightarrow \frac{2}{\log_ax} + \frac{1}{1 + \log_ax} + \frac{3}{2+ \log_ax} = 0$$
+  $$\text{Let~}\log_ax= z,\text{~so the above equation becomes}$$
+  $$\frac{2}{z} + \frac{1}{z + 1} + \frac{3}{z + 2} = 0$$
+  $$\Rightarrow 6z^2 + 11z + 4 = 0$$
+  $$\Rightarrow z = -\frac{1}{2}, -\frac{4}{3}$$
+  $$\therefore ~x = \frac{1}{\sqrt{a}}, \frac{1}{\sqrt[3]{a^4}}$$
+\end{frame}
+\begin{frame}{Problem 56}
+  \textbf{56.} Solve $x + \log_{10}(1 + 2^x) = x\log_{10}5 + \log_{10}6$
+\end{frame}
+\begin{frame}{Solution of Problem 56}
+  \textbf{Solution:} $$x + \log_{10}(1 + 2^x) = \log_{10}5^x + \log_{10}6$$
+  $$\Rightarrow \log_{10}10^x + \log_{10}(1 + 2^x) = \log_{10}5^x + \log_{10}6$$
+  $$\Rightarrow \log_{10}10^x(1 + 2^x) = \log_{10}5^x*6$$
+  $$\Rightarrow 2^x(1 + 2^x) = 2*3$$
+  $$\Rightarrow 2^x = 2, 1 + 2^x = 3 \Rightarrow x = 1$$
+\end{frame}
+\begin{frame}{Problem 57}
+  \textbf{57.} Solve $x^{\frac{3}{4}(\log_2x)^2 +\log_2x - \frac{5}{4}} = \sqrt{2}$
+\end{frame}
+\begin{frame}{Solution of Problem 57}
+  \textbf{Solution:} $$x^{\frac{3}{4}(\log_2x)^2 +\log_2x - \frac{5}{4}} = \sqrt{2}$$
+  $$\text{Taking~}\log_2\text{~of both sides}$$
+  $$\left(\frac{3}{4}(\log_2x)^2 + \log_2x - \frac{5}{4}\right)\log_2x = \frac{1}{2}\log_22$$
+  $$\left(\frac{3}{4}(\log_2x)^2 + \log_2x - \frac{5}{4}\right)\log_2x = \frac{1}{2}$$
+  $$\text{Let~}z = \log_2x$$
+  $$\Rightarrow \left(\frac{3}{4}z^2 + z - \frac{5}{4}\right)z = \frac{1}{2}$$
+  Solving this cubic equation yields $x = 2, \frac{1}{4}, \frac{1}{\sqrt[3]{2}}$
+\end{frame}
+\begin{frame}{Problem 58}
+  \textbf{58.} Solve $(x^2 + 6)^{\log_3x} = (5x)^{\log_3x}$
+\end{frame}
+\begin{frame}{Solution of Problem 58}
+  \textbf{Solution:} $\log_3x$ has a possible value of $0,$ in which case $x = 1.$ If $\log_3x \neq 1$
+  $$x^2 + 6 = 5x\Rightarrow x = 2,3$$
+\end{frame}
+\begin{frame}{Problem 59}
+  \textbf{59.} Solve $(3 + 2\sqrt{2})^{x^2 - 6x + 9} + (3 - 2\sqrt{2})^{x^2 - 6x + 9} = 6$
+\end{frame}
+\begin{frame}{Solution of Problem 59}
+  \textbf{Solution:} $$3 + 2\sqrt{2} = \frac{1}{3 - 2\sqrt{2}}$$
+  $$\text{So given equation can be written as}$$
+  $$(3 + 2\sqrt{2})^{x^2 - 6x + 9} + (3 + 2\sqrt{2})^{-(x^2 - 6x + 9)} = 6$$
+  $$\text{Let~} z= (3 + 2\sqrt{2})^{x^2 - 6x + 9}$$
+  $$\Rightarrow z + \frac{1}{z} = 6$$
+  $$\Rightarrow z = 3\pm2\sqrt{2}$$
+  $x = 2, 4$ because other roots are irrational.
+\end{frame}
+\begin{frame}{Problem 60}
+  \textbf{60.}Solve $\log_8\left(\frac{8}{x^2}\right)\div (\log_8x)^2 = 3$
+\end{frame}
+\begin{frame}{Solution of Problem 60}
+  \textbf{Solution:} $$\text{Given,~}\log_8\left(\frac{8}{x^2}\right)\div (\log_8x)^2 = 3$$
+  $$\Rightarrow \log_88 - \log_8x^2 = 3(\log_8x)^2$$
+  $$1 - 2\log_8x = 3(\log_8x)^2$$
+  $$\text{Let~}z = \log_8x$$
+  $$1 - 2z = 3z^2$$
+  $$z = -1, \frac{1}{3}$$
+  $$x = 2, \frac{1}{8}$$
+\end{frame}
+\end{document}
