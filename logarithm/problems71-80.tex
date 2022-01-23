@@ -1,0 +1,155 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 71-80}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 71}
+  \textbf{71.} Solve $\log_5\left(5^{\frac{1}{x}} + 125\right) = \log_56 + 1 + \frac{1}{2x}$
+\end{frame}
+\begin{frame}{Solution of Problem 71}
+  \textbf{Solution:} $$\text{Given,~}\log_5\left(5^{\frac{1}{x}} + 125\right) = \log_56 + 1 + \frac{1}{2x}$$
+  $$\Rightarrow \log_5\left(5^{\frac{1}{x}} + 126\right) - \log_56 = 1 + \frac{1}{2x}$$
+  $$\Rightarrow \log_5\left(\frac{5^{\frac{1}{x}} + 125}{6}\right) = 1 + \frac{1}{2x}$$
+  $$\Rightarrow \frac{5^{\frac{1}{x}} + 125}{6} = 5^{1 + \frac{1}{2x}}$$
+  $$\Rightarrow 5^{\frac{1}{x}} + 126 = 30.5^{\frac{1}{2x}}$$
+  $$\text{Let~}z=5^{\frac{1}{2x}}$$
+  $$\Rightarrow z^2 - 30z + 125 = 0$$
+  $$z = 5, 25 \Rightarrow x = \frac{1}{2}, \frac{1}{4}$$
+\end{frame}
+\begin{frame}{Problem 72}
+  \textbf{72.} Solve for $x$ and $y$: $\log_{100}|x + y| = 2$ and $\log_{10}y - \log_{10}|x| = \log_{100}4$
+\end{frame}
+\begin{frame}{Solution of Problem 72}
+  \textbf{Solution:} $$\text{For~}\log_{100}|x + y| = \frac{1}{2}$$
+  $$\Rightarrow (x + y)^2 = 100$$
+  $$\text{For~}\log_{10}y - \log_{10}|x| = \log_{100}4$$
+  $$\Rightarrow \log_{10}\frac{y}{|x|} = \log_{10}2$$
+  $$\Rightarrow y = 2|x|\Rightarrow y^2 = 4x^2$$
+  $$\text{When~} x>0, x = \frac{10}{3}, \text{~when~} x<0, x = -10\Rightarrow y = \frac{20}{3}, 20$$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} Solve $2\log_2\log_2x + \log_{\frac{1}{2}}\log_2(2\sqrt{2}x) = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 73}
+  \textbf{Solution:} $$\text{Given,~}2\log_2\log_2x + \log_{\frac{1}{2}}\log_2(2\sqrt{2}x) = 1$$
+  $$\Rightarrow \log_2(\log_2x)^2 - \log_2\log_2(2\sqrt{2}x)=1$$
+  $$\Rightarrow \log_2\left(\frac{(\log_2x)^2}{\log_2(2\sqrt{2}x)}\right) = 1$$
+  $$\Rightarrow (\log_2x)^2 = 2\log_2(2\sqrt{2}x)$$
+  $$\Rightarrow (\log_2x)^2 - 3 - 2\log_2x = 0$$
+  $$\Rightarrow z^2 - 2z - 3 = 0,\text{~where~}z=\log_2x$$
+  $$\Rightarrow z = -1, 3$$
+  $$\Rightarrow x = \frac{1}{2}, 8$$
+  However, for log to be defined $x > 0,\log_2x>0, \log_22\sqrt{2}x > 0$ and thus $x =8$ is only acceptable solution.
+\end{frame}
+\begin{frame}{Problem 74}
+  \textbf{74.} Solve $\log_{\frac{3}{4}}\log_8(x^2 + 7) + \log_{\frac{1}{2}}\log_{\frac{1}{4}}(x^2 + 7)^{-1} = -2$
+\end{frame}
+\begin{frame}{Solution of Problem 74}
+  \textbf{Solution:} $$\text{Given,~}\log_{\frac{3}{4}}\log_8(x^2 + 7) + \log_{\frac{1}{2}}\log_{\frac{1}{4}}(x^2 + 7)^{-1} = -2$$
+  $$\Rightarrow \log_{\frac{3}{4}}\log_{2^3}(x^2 + 7)+ \log_{\frac{1}{2}}\log_{2^{-2}}(x^2 + 7)^{-1} = -2$$
+  $$\Rightarrow \log_{\frac{3}{4}}[\frac{1}{3}\log_2(x^2 + 7)] + \log_{\frac{1}{2}}[\frac{1}{2}\log_2(x^2 + 7)] = -2$$
+  $$\text{Let~}y = \log_2(x^2 + 7)$$
+  $$\Rightarrow \log_{\frac{3}{4}}\frac{y}{3} + \log_{\frac{1}{2}}\frac{1}{2} + \log_{\frac{1}{2}}y = -2$$
+  $$\Rightarrow \log_{\frac{3}{4}}y - \log_{\frac{3}{4}}3 + 1 - \log_2y = -2$$
+  $$\Rightarrow \log_2y(\log_{\frac{3}{4}}2 - 1) = -3 + \log_{\frac{3}{4}}3$$
+  $$\Rightarrow \log_2y\left(\log_{\frac{3}{4}}2 - \log_{\frac{3}{4}}\frac{3}{4}\right) = \log_{\frac{3}{4}}\left(\frac{3}{4}\right)^{-3}+ \log_{\frac{3}{4}}3$$
+  $$\Rightarrow \log_2y\log_{\frac{3}{4}}\frac{8}{3} = \log_{\frac{3}{4}}\frac{64}{9} = 2\log_{\frac{3}{4}}\frac{8}{3}$$
+  $$\log_2y = 2 \Rightarrow y = 4 \Rightarrow \log_2(x^2 + 7) = 4 \Rightarrow x = \pm3$$
+\end{frame}
+\begin{frame}{Problem 75}
+  \textbf{75.} Solve the following equations for $x$ and $y:$
+  $$\log_{10}x + \log_{10}x^{\frac{1}{2}} + \log_{10}x^{\frac{1}{4}} + \ldots \infty = y$$
+  $$\frac{1 + 3 + 5 + \ldots + (2y - 1)}{4 + 7 + 10 + \ldots + (3y + 1)} = \frac{20}{7\log_{10}x}$$
+\end{frame}
+\begin{frame}{Solution of Problem 75}
+  \textbf{Solution:} $$\log_{10}x + \log_{10}x^{\frac{1}{2}} + \log_{10}x^{\frac{1}{4}} + \ldots \infty = y$$
+  $$\left[1 + \frac{1}{2} + \frac{1}{4} + \ldots \infty\right]\log_{10}x= y$$
+  $$\frac{1}{1 - \frac{1}{2}}\log_{10}x = y$$
+  $$\Rightarrow \log_{10}x = \frac{y}{2}$$
+  $$\frac{1 + 3 + 5 + \ldots + (2y - 1)}{4 + 7 + 10 + \ldots + (3y + 1)} = \frac{20}{7\log_{10}x}$$
+  $$\Rightarrow \frac{\frac{y}{2}[2 + (y - 1)2]}{\frac{y}{2}[8 + (y - 1)3]} = \frac{20}{7.\frac{y}{2}}$$
+  $$\Rightarrow \frac{2y}{3y + 5} = \frac{40}{7y}$$
+  $$\Rightarrow 7y^2 - 60y - 100 = 0$$
+  $$y = 10, \frac{-10}{7}$$
+  $$\text{Since no. of terms cannot be a fraction, therefore~}y = 10.\text{~Hence~}x =10^5$$
+\end{frame}
+\begin{frame}{Problem 76}
+  \textbf{76.} Solve $18^{4x - 3} = (54\sqrt{2})^{3x - 4}$
+\end{frame}
+\begin{frame}{Solution of Problem 76}
+  \textbf{Solution:} $$\text{Given,~}18^{4x - 3} = (54\sqrt{2})^{3x - 4}$$
+  $$\text{Taking~}\log\text{~of both sides, we get}$$
+  $$(4x - 3)\log 18 = (3x - 4)\log(18.3\sqrt{2}) = (3x - 4)\log18^{\frac{3}{2}}$$
+  $$\Rightarrow 4x - 3 = (3x - 4)\frac{3}{2}$$
+  $$\Rightarrow x = 6$$
+\end{frame}
+\begin{frame}{Problem 77}
+  \textbf{77.} Solve $4^{\log_93} + 9^{\log_24} = 10^{\log_x83}$
+\end{frame}
+\begin{frame}{Solution of Problem 77}
+  \textbf{Solution:} $$\text{Given,~}4^{\log_93} + 9^{\log_24} = 10^{\log_x83}$$
+  $$\Rightarrow 4^{\log_{3^2}3} + 9^{\log_22^2} = 10^{\log_x83}$$
+  $$\Rightarrow 4^{\frac{1}{2}\log_33} + 9^{2\log_22} = 10^{\log_x83}$$
+  $$\Rightarrow 4^{\frac{1}{2}} + 9^2 = 10^{\log_x83}$$
+  $$\Rightarrow 83 = 10^{\log_x83}$$
+  $$\text{Taking~}\log_{10}\text{~of both sides, we gte}$$
+  $$\log_{10}83 = \log_x83 \Rightarrow x = 10$$
+\end{frame}
+\begin{frame}{Problem 78}
+  \textbf{78.} Solve $3^{4\log_9(x + 1)} = 2^{2\log_2x} + 3$
+\end{frame}
+\begin{frame}{Solution of Problem 78}
+  \textbf{Solution:} $$\text{Given,~}3^{4\log_9(x + 1)} = 2^{2\log_2x} + 3$$
+  $$\Rightarrow 3^{4\log_{3^2}(x + 1)} = 2^{\log_2x^2} + 3$$
+  $$\Rightarrow 3^{\log_3(x + 1)^2} = x^2 + 3$$
+  $$\Rightarrow (x + 1)^2 = x^2 + 3 \Rightarrow x = 1$$
+\end{frame}
+\begin{frame}{Problem 79}
+  \textbf{79.} Solve $\frac{6}{5}a^{\log_ax\log_{10}a\log_a5} - 3^{\log_{10}\left(\frac{x}{10}\right)} = 9^{\log_{100}x + \log_{4}2}$
+\end{frame}
+\begin{frame}{Solution of Problem 79}
+  \textbf{Solution:} $$\text{Given,~}\frac{6}{5}a^{\log_ax\log_{10}a\log_a5} - 3^{\log_{10}\left(\frac{x}{10}\right)} = 9^{\log_{2^2}x + \log_{2^2}2}$$
+  $$\Rightarrow \frac{6}{5}a^{\log_ax\log_{10}a\log_a5} - 3^{\log_{10}x - \log_{10}10} = 9^{\log_{10^2}x + \log_{2^2}2}$$
+  $$\Rightarrow \frac{6}{5}a^{\log_ax\log_{10}a\log_a5} - 3^{\log_{10}x - 1} = 9^{\frac{1}{2}\log_{10}x + \frac{1}{2}\log_{2}2}$$
+  $$\Rightarrow \frac{6}{5}(a^{\log_a5})^{\log_{10}x} = 3^{\log_{10}x - 1} = 3^{\log_{10}x + 1}$$
+  $$\Rightarrow \frac{6}{5}5^{\log_{10}x} = 3^{\log_{10}x - 1}[1 + 3^2]$$
+  $$\Rightarrow \left(\frac{5}{3}\right)^{\log_{10}x - 1} = \frac{10}{6} = \frac{5}{3}$$
+  $$\Rightarrow \log_{10}x - 1 = 1 \Rightarrow x = 100$$
+\end{frame}
+\begin{frame}{Problem 80}
+  \textbf{80.} Solve $2^{3x + \frac{1}{2}} + 2^{x + \frac{1}{2}} = 2^{\log_26}$
+\end{frame}
+\begin{frame}{Solution of Problem 80}
+  \textbf{Solution:} $$\text{Given,~}2^{3x + \frac{1}{2}} + 2^{x + \frac{1}{2}} = 2^{\log_26}$$
+  $$\Rightarrow 2^{3a}\sqrt{2} + 2^x\sqrt{2} = 6$$
+  $$\Rightarrow (2x^2)^3 + 2^x = 3\sqrt{2}$$
+  $$\Rightarrow 2^x = \sqrt{2}, \frac{-\sqrt{2}\pm\sqrt{5}i}{2}$$
+  Ignoring complex roots we have $2^x = \sqrt{2} \Rightarrow x = \frac{1}{2}$
+\end{frame}
+\end{document}

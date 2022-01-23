@@ -1,0 +1,144 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 61-70}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 61}
+  \textbf{61.} Solve $\sqrt{\log_2x^4} + 4\log_4\sqrt{\frac{2}{x}} = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 61}
+  \textbf{Solution:} $$\text{Given,~}\sqrt{\log_2x^4} + 4\log_4\sqrt{\frac{2}{x}} = 2$$
+  $$\Rightarrow \sqrt{4\log_2x} + 2\log_2\sqrt{\frac{2}{x}} = 2$$
+  $$\Rightarrow 2\sqrt{\log_2x} + \log_2\frac{2}{x} = 2$$
+  $$\Rightarrow 2\sqrt{\log_2x} + 1 - \log_2x = 2$$
+  $$\Rightarrow 2\sqrt{\log_2x} = 1 + \log_2x$$
+  $$\Rightarrow 4\log_2x = 1 + 2\log_2x + (\log_2x)^2$$
+  $$\Rightarrow (\log_2x)^2 - 2\log_2x + 1 = 0$$
+  $$\Rightarrow \log_2x = 1 \Rightarrow x = 2$$
+\end{frame}
+\begin{frame}{Problem 62}
+  \textbf{62.} Solve $2\log_{10}x - \log_x0.001 = 5$
+\end{frame}
+\begin{frame}{Solution of Problem 62}
+  \textbf{Solution:} $$\text{Given,~}2\log_{10}x - \log_x0.001 = 5$$
+  $$\Rightarrow 2\log_{10}x - \log_x(10)^{-2} = 5$$
+  $$\Rightarrow 2\log_{10}x + 2\log_x10 = 5$$
+  $$\Rightarrow 2\log_{10}x + \frac{2}{\log_{10}x} = 5$$
+  $$\Rightarrow 2(\log_{10}x)^2 + 2 = 5\log_{10}x$$
+  $$\Rightarrow \log_{10}x = 2, \frac{1}{2}$$
+  $$\Rightarrow x = 100, \sqrt{10}$$
+\end{frame}
+\begin{frame}{Problem 63}
+  \textbf{63.} Solve $\log_{\sin x}2\log_{\cos x}2 + \log_{\sin x}2 + \log_{\cos x}2 = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 63}
+  \textbf{Solution:} $$\text{Given,~}\log_{\sin x}2\log_{\cos x}2 + \log_{\sin x}2 + \log_{\cos x}2 = 0$$
+  $$\Rightarrow \frac{\log 2}{\log \sin x}.\frac{\log 2}{\log \cos x} + \frac{\log 2}{\log \sin x} + \frac{2}{\log \cos x} = 0$$
+  $$\Rightarrow \log 2 + \log \sin x + \log \cos x = 0$$
+  $$\Rightarrow \log \sin2x = 0\Rightarrow \sin 2x = 1$$
+  $$\Rightarrow x = 2n\pi + \frac{\pi}{4},~\forall n\in I$$
+\end{frame}
+\begin{frame}{Problem 64}
+  \textbf{64.} Solve $2^{x + 3} + 2^{x + 2} + 2^{x + 1} = 7^{x} + 7^{x - 1}$
+\end{frame}
+\begin{frame}{Solution of Problem 64}
+  \textbf{Solution:} $$2^{x + 3} + 2^{x + 2} + 2^{x + 1} = 7^{x} + 7^{x - 1}$$
+  $$\Rightarrow 2^{x + 1}(2^2 + 2 + 1) = 7^{x -1}(7 + 1)$$
+  $$\Rightarrow 2^{x+1}.7 = 7^{x-1}.2^3$$
+  $$\text{Taking~}\log\text{~of both sides, we get}$$
+  $$(x + 1)\log 2 + \log 7 = (x - 1)\log 7 + 3\log 2$$
+  $$\Rightarrow (x - 2)(\log 7 - \log 2) = 0$$
+  $$\Rightarrow x = 2$$
+\end{frame}
+\begin{frame}{Problem 65}
+  \textbf{65.} Solve $\log_{\sqrt{2}\sin x}(1 + \cos x) = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 65}
+  \textbf{Solution:} $$\text{Given,~}\log_{\sqrt{2}\sin x}(1 + \cos x) = 2$$
+  $$\Rightarrow 1 + cos x = (\sqrt{2}\sin x)^2 = 2\sin^2x$$
+  $$\Rightarrow 1 + \cos x = 2 - 2\cos^2x$$
+  $$\Rightarrow 2\cos^2x + \cos x - 1= 0$$
+  $$\Rightarrow \cos x = -1, \frac{1}{2}$$
+  $$\Rightarrow x = 2n\pi, 2n\pi + \frac{\pi}{3}, n\in I$$
+\end{frame}
+\begin{frame}{Problem 66}
+  \textbf{66.} Solve $\log_{10}[98+ \sqrt{x^3 - x^2 - 12x + 36}] = 2$
+\end{frame}
+\begin{frame}{Solution of Problem 66}
+  \textbf{Solution:} $$\text{Given,~}\log_{10}[98+ \sqrt{x^3 - x^2 - 12x + 36}] = 2$$
+  $$\Rightarrow 98 + \sqrt{x^3 - x^2 - 12x + 36} = 100$$
+  $$\Rightarrow x^3 - x^2 - 12x + 36 = 0$$
+  Only one root, $-4,$ is appropriate solution.
+\end{frame}
+\begin{frame}{Problem 67}
+  \textbf{67.} If $\log 2 = 0.30103$ and $\log 3 = 0.47712,$ solve the equation $2^x3^{2x} - 100 = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 67}
+  \textbf{Solution:} $$\text{Given,~}2^x3^{2x} - 100 = 0$$
+  $$\Rightarrow x\log_{10}2 + 2x\log_{10}3 = 2$$
+  $$0.30103x + 0.95424x = 2$$
+  $$x = 1.593$$
+\end{frame}
+\begin{frame}{Problem 68}
+  \textbf{68.} Solve $\log_x3\log_{\frac{x}{3}}3 + \log_{\frac{x}{81}}3 = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 68}
+  \textbf{Solution:} $$\text{Given,~}\log_x3\log_{\frac{x}{3}}3 + \log_{\frac{x}{81}}3 = 0$$
+  $$\Rightarrow \frac{1}{\log_3x}.\frac{1}{\log_3\frac{x}{3}} + \frac{1}{\log_3\frac{x}{81}} = 0$$
+  $$\Rightarrow \frac{1}{\log_3x}.\frac{1}{\log_3x - \log_33} + \frac{1}{\log_3x - \log_381} = 0$$
+  $$\text{Let~}z = \log_3x$$
+  $$\frac{1}{z}.\frac{1}{z -1} + \frac{1}{z - 4} = 0$$
+  $$\Rightarrow z^2 - 4 = 0 \Rightarrow z = \pm 2$$
+  $$\Rightarrow x = 9, \frac{1}{9}$$
+\end{frame}
+\begin{frame}{Problem 69}
+  \textbf{69.} Solve $\log_{(2x + 3)}(6x^2 + 23x + 21) = 4 - \log_{(3x + 7)}(4x^2 + 12x + 9)$
+\end{frame}
+\begin{frame}{Solution of Problem 69}
+  \textbf{Solution:} $$\text{Given,~}\log_{(2x + 3)}(6x^2 + 23x + 21) = 4 - \log_{(3x + 7)}(4x^2 + 12x + 9)$$
+  $$\Rightarrow \log_{(2x+3)}(2x + 3)(3x + 7) = 4 - \log_{(3x + 7)}(2x + 3)^2$$
+  $$\Rightarrow 1 + \log_{(2x + 3)}(3x + 7) = 4 - 2\log_{(3x+7)}(2x + 3)$$
+  $$\Rightarrow \text{Let~}z = \log_{(2x + 3)}(3x + 7)$$
+  $$1 + z = 4 - \frac{2}{z}\Rightarrow z = 1, 2$$
+  $$\text{When~}z = 1, 2x + 3 = 3x + 7 \Rightarrow x = -4$$
+  $$\text{When~}z = 2, (2x + 3)^2 = 3x + 7, \Rightarrow x = -4, -2$$
+  For logarithm to be deffined $2x + 3 > 0, 2x + 3 \neq 1$ and $3x + 7 > 0, 3x + 7 \neq 1.$ Thus, $x = -\frac{1}{4}$ is the only
+  valid solution.
+\end{frame}
+\begin{frame}{Problem 70}
+  \textbf{70.} Solve $\log_2(x^2 - 1) = \log_{\frac{1}{2}}(x - 1)$
+\end{frame}
+\begin{frame}{Solution of Problem 70}
+  \textbf{Solution:} $$\text{Given,~}\log_2(x^2 - 1) = \log_{\frac{1}{2}}(x - 1)$$
+  $$\Rightarrow \log_2(x^2 - 1) = \log_{2^{-1}}(x - 1) = -\log_2(x - 1) = \log_2\frac{1}{x - 1}$$
+  $$\Rightarrow x^2 - 1 = \frac{1}{x - 1}$$
+  $$x = 0, x^2 - x - 1 = 0\Rightarrow x = 0, \frac{1\pm\sqrt{5}}{2}$$
+  For logarithm to be defined $x^2 - 1>0$ and $x - 1>0,$ which implies that $x = \frac{1 + \sqrt{5}}{2}$ is the only acceptable solution.
+\end{frame}
+\end{document}
