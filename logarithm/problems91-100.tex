@@ -1,0 +1,127 @@
+\documentclass[aspectratio=1610,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 91-100}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 91}
+  \textbf{91.} Prove that $\log_217\log_{\frac{1}{5}}2\log_3\frac{1}{5} > 2$
+\end{frame}
+\begin{frame}{Solution of Problem 91}
+  \textbf{Solution:} $$L.H.S. = \log_217\log_{\frac{1}{5}}2\log_3\frac{1}{5}$$
+  $$= \log_217\log_32 = \log_317$$
+  $$\because 17 > 3^2 \Rightarrow \log_317 > 2$$
+\end{frame}
+\begin{frame}{Problem 92}
+  \textbf{92.} Show that $\log_{49}3$ lies between $\frac{1}{3}$ and $\frac{1}{4}.$
+\end{frame}
+\begin{frame}{Solution of Problem 92}
+  \textbf{Solution:} $$3^3 < 49 < 3^4$$
+  $$\Rightarrow 3\log_33 < \log_349 < 4\log_33$$
+  $$\Rightarrow 3 < \log_349 < 4$$
+  $$\Rightarrow \frac{1}{3} > \frac{1}{\log_349} > \frac{1}{4}$$
+  $$\Rightarrow \frac{1}{3} > \log_{49}3 > \frac{1}{4}$$
+\end{frame}
+\begin{frame}{Problem 93}
+  \textbf{93.} Show that $\log_{20}3$ lies between $\frac{1}{2}$ and $\frac{1}{3}.$
+\end{frame}
+\begin{frame}{Solution of Problem 93}
+  \textbf{Solution:} $$3^2 < 20 < 3^3$$
+  $$\Rightarrow 2\log_33 < \log_320 < 3\log_33$$
+  $$\Rightarrow 2 < \log_320 < 3$$
+  $$\Rightarrow \frac{1}{2} > \frac{1}{\log_320} > \frac{1}{3}$$
+  $$\Rightarrow \frac{1}{2} > \log_{20}3 > \frac{1}{3}$$
+\end{frame}
+\begin{frame}{Problem 94}
+  \textbf{94.} Show that $\log_{10}2$ lies between $\frac{1}{4}$ and $\frac{1}{3}.$
+\end{frame}
+\begin{frame}{Solution of Problem 94}
+  \textbf{Solution:} $$2^3 < 10 < 2^4$$
+  $$\Rightarrow 3\log_22 < \log_210 < 4\log_22$$
+  $$\Rightarrow 3 < \log_210 < 4$$
+  $$\Rightarrow \frac{1}{3} > \frac{1}{\log_210} > \frac{1}{4}$$
+  $$\Rightarrow \frac{1}{3} > \log_{10}2 > \frac{1}{4}$$
+\end{frame}
+\begin{frame}{Problem 95}
+  \textbf{95.} Solve $\log_{0.1}(4x^2 -1) > \log_{0.1}3x$
+\end{frame}
+\begin{frame}{Solution of Problem 95}
+  \textbf{Solution:} $$\text{Given,~}\log_{0.1}(4x^2 -1) > \log_{0.1}3x$$
+  $$\Rightarrow 4x^2 - 3x - 1 < 0 \Rightarrow (4x + 1)(x - 1) < 0$$
+  Thus, $\frac{-1}{4}< x < 1$ is the initial solution.
+
+  However, $x > 0$ from R.H.S. From L.H.S. $4x^2 - 1 > 0 \Rightarrow x < \frac{-1}{2}, x > \frac{1}{2}$
+
+  Thus, $\frac{1}{2 < x < 1}$ is what we have combining all the solutions.
+\end{frame}
+\begin{frame}{Problem 96}
+  \textbf{96.} Solve $\log_2(x^2 - 24) > \log_25x$
+\end{frame}
+\begin{frame}{Solution of Problem 96}
+  \textbf{Solution:} $$\text{Given,~}\log_2(x^2 - 24) > \log_25x$$
+  $$\Rightarrow x^2 - 24 > 5x$$
+  $$\Rightarrow (x - 8)(x + 3) > 0$$
+  $$\Rightarrow x< -3, x > 8$$
+  But $x^2 -24 > 0$ and also $x > 0$ for logarithm function to  be defined. $\therefore x > 8$ is the solution.
+\end{frame}
+\begin{frame}{Problem 97}
+  \textbf{97.} Show that $\frac{1}{\log_3\pi} + \frac{1}{\log_4\pi} > 2$
+\end{frame}
+\begin{frame}{Solution of Probelm 97}
+  \textbf{Solution:} $$\frac{1}{\log_3\pi} + \frac{1}{\log_4\pi} > 2$$
+  $$\Rightarrow \log_{\pi}3 + \log_{\pi}4 > 2$$
+  $$\Rightarrow \log_{\pi}12 > 3$$
+  $$\Rightarrow 12 > \pi^2$$
+  which is true.
+\end{frame}
+\begin{frame}{Problem 98}
+  \textbf{98.} Without actual computation find greater among $(0.01)^{\frac{1}{3}}$ and $(0.001)^{\frac{1}{5}}$
+\end{frame}
+\begin{frame}{Solution of Problem 98}
+  \textbf{Solution:} Taking log of both with base $10$ we get $\frac{1}{3}\log0.01$ and $\frac{1}{4}\log 0.001$ i.e. $-\frac{2}{3}$ and $-\frac{3}{5}$
+
+  Since $.\frac{3}{5}$ is graeter so $(0.001)^{\frac{1}{5}}$ is graeter.
+\end{frame}
+\begin{frame}{Problem 99}
+  \textbf{99.} Without actual computation find greater among $\log_23$ and $\log_311$
+\end{frame}
+\begin{frame}{Solution of Problem 99}
+  \textbf{Solution:} $$\log_23 < \log_24 =2$$
+  $$\log_311 > \log_39 = 2$$
+  So $\log_311$ is greater.
+\end{frame}
+\begin{frame}{Problem 100}
+  \textbf{100.} Solve, $\log_3(x^2 + 10) > \log_37x$
+\end{frame}
+\begin{frame}{Solution of Problem 100}
+  \textbf{Solution:} $$\text{Given,~}\log_3(x^2 + 10) > \log_37x$$
+  $$\Rightarrow x^2 - 7x + 10 > 0 \Rightarrow (x - 2)(x - 5) > 0$$
+  $$\Rightarrow x < 2, x > 5$$
+  Howeever, for logarithm to be defined $x > 0$ and $x^2 + 10 > 0.$ Thus, range is $(0, 2)$ and $(5, \infty]$
+\end{frame}
+\end{document}
