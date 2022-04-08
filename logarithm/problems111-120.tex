@@ -1,0 +1,146 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+
+% Author, Title, etc.
+\title{Logarithm Problem 111-120}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+% The main document
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 111}
+  \textbf{111.} If $n$ is a natural number such that $n = p_1^{a_1}p_2^{a_2}p_3^{a_3}\ldots p_k^{a_k}$ and $p_1, p_2, p_3, \ldots, p_k$ are distinct primes, then show that $\log n\geq k\log 2$
+\end{frame}
+\begin{frame}{Solution of Problem 111}
+  \textbf{Solution:} Since $n$ is a natural number and $p_1, p_2, p_3, \ldots, p_k$ are distinct primes, therefore $a_1, a_2, \ldots, a_k$ are also natural numbers.
+  \linebreak\linebreak
+  Now, $n = p_1^{a_1}p_2^{a_2}p_3^{a_3}\ldots p_k^{a_k}$
+  \linebreak\linebreak
+  $\log n = a_1\log p_1 + a_2\log p_2 + \ldots + a_k\log p_k$
+  $\log n \geq \log 2 + \log 2 + \ldots + \log 2$ [since bases are $p_i$s are primes so minimum value is $2$ and powers are natural numbers so they are greater than $1$]
+  \linebreak\linebreak
+  $\log n\geq k\log 2$
+\end{frame}
+\begin{frame}{Problem 112}
+  \textbf{112.} Prove that $\log_4 18$ is an irrational number.
+\end{frame}
+\begin{frame}{Solution of Problem 112}
+  \textbf{Solution:} $\log_418 = \log_{2^2}(2.3^2) = \frac{1}{2} + \log_23$
+  \linebreak\linebreak
+  Thus, it will be enough to prove that $\log_23$ is a irrational number.
+  \linebreak\linebreak
+  Let $\log_23 = \frac{p}{q}$ where $p, q\in I$
+  \linebreak\linebreak
+  $2^{\frac{p}{q}} = 3 \Rightarrow 2^p = 3^q$
+  \linebreak\linebreak
+  However, $2^p$ is an even number and $3^q$ is an odde number, and hence the equality will never be achieved. Therefore, $\log_23$ is an irrational number.
+\end{frame}
+\begin{frame}{Problem 113}
+  \textbf{113.} Find the value of $\log_{30}8,$ if $\log_{30}3 = a$ and $\log_{30}5 = b.$
+\end{frame}
+\begin{frame}{Solution of Problem 113}
+  \textbf{Solution:} $$\log_{30}8 = 3\log_{30}2 = 3\log_{30}\frac{30}{15}$$
+  $$=3\log_{30}30 - 3\log_{30}15 = 3 - 3(\log_{30}3 + \log_{30}5)$$
+  $$= 3(1 - a - b)$$
+\end{frame}
+\begin{frame}{Problem 114}
+  \textbf{114.} Find the value of $\log_{54}168,$ if $\log_712 =a $ and $\log_{12}24 = b.$
+\end{frame}
+\begin{frame}{Solution of Problem 114}
+  \textbf{Solution:} Given, $\log_712 = a$ and $\log_{12}24 = b$
+  \linebreak\linebreak
+  Multiplying, $ab = \log_724$
+  \linebreak\linebreak
+  Adding $1$ on both sides
+  \linebreak\linebreak
+  $ab + 1 = \log_724 + \log_77 = \log_7168$
+  \linebreak\linebreak
+  Similalry, $8a = \log_712^8$ and $5ab = \log_724^5$
+  \linebreak\linebreak
+  $\frac{ab + 1}{8a - 5ab} = \frac{\log_7168}{\log_712^8 - \log_724^5}$
+  \linebreak\linebreak
+  $= \frac{\log_7168}{\log_7\frac{12^8}{24^5}} = \frac{\log_7168}{\log_754} = \log_{54}168$
+\end{frame}
+\begin{frame}{Problem 115}
+  \textbf{115.} If $a\neq 0$ and $\log_x(a^2 + 1) < 0$ then find the interval in which $x$ lies.
+\end{frame}
+\begin{frame}{Solution of Problem 115}
+  \textbf{Solution:} In all the cases $x > 0$ for logarithm to exist.
+  \linebreak\linebreak
+  Case I: When $x > 1, x > a^2 + 1.$ Also, $a^2 + 1 > 1 \therefore x > 1$
+  \linebreak\linebreak
+  Case II: When $x < 1, x < a^2 + 1.$ Also, $a^2 > 0 \therefore x < 1$
+\end{frame}
+\begin{frame}{Problem 116}
+  \textbf{116.} If $\log_{12}18 = a$ and $\log_{24}54 = b,$ prove that $ab + 5(a - b) = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 116}
+  \textbf{Solution:} $$ab + 5(a - b) = \frac{\log 18\log 54}{\log 12\log 24} + 5\left(\frac{\log 18}{\log 12} - \frac{\log 54}{\log 24}\right)$$
+  $$= \frac{\log 18\log 54 + 5(\log 18\log 24 - \log 54\log 12)}{\log 12\log 24}$$
+  $$\log 18 = \log 2 + 2\log 3, \log 12 = 2\log 2 + \log 3, \log 24 = 3\log 2 + \log 3, \log 54 = \log 2 + 3\log 3$$
+  Substituting and simplifying we will obtain the desired result.
+\end{frame}
+\begin{frame}{Problem 117}
+  \textbf{117.} If $a, a_1, a_2, \ldots, a_n$ are in G.P. and $b, b_1, b_2, \ldots, b_n$ in A.P. with positive terms and also the common difference of A.P. and common ratios of G.P. are positive, show that there exists a system of logarithm for which $\log a_n - b_n = \log a - b$ for any $n.$ Find base of the system.
+\end{frame}
+\begin{frame}{Solution of Problem 117}
+  \textbf{Solution:} Let $r$ be the common ratio of G.P. and $d$ be the common difference.
+  \linebreak\linebreak
+  $\log a_n - b_n = \log a + n\log r - (b + nd) = \log a - d$
+  \linebreak\linebreak
+  $n\log r - nd = 0 \Rightarrow \log r = d$
+  \linebreak\linebreak
+  Thus, base $= r^{\frac{1}{d}}$
+\end{frame}
+\begin{frame}{Problem 118}
+  \textbf{118.} If $\log_32, \log_3(2^x - 5)$ and $\log_3\left(2^x - \frac{7}{2}\right)$ are in A.P., find the value of $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 118}
+  \textbf{Solution:} $$\text{Given,~}\log_32, \log_3(2^x - 5) \text{~and~} \log_3\left(2^x - \frac{7}{2}\right) \text{~are in A.P.}$$
+  $$\Rightarrow 2\log_3(2^x - 5) = \log_3\left(2^x - \frac{7}{2}\right) + \log_32$$
+  $$(2^x - 5)^2 = 2(2^x - \frac{7}{2})$$
+  $$\text{Let~} z=2^x,\text{~then we have}$$
+  $$z^2 - 10z + 25 = 2x - 7 \Rightarrow z^2 - 12z + 32 = 0$$
+  $$\Rightarrow z = 8, 4 \Rightarrow x = 2, 3$$
+  But if $x = 2, 2^x - 5 < 0$ which cannot be so only acceptable value of $x$ is $3.$
+\end{frame}
+\begin{frame}{Problem 119}
+  \textbf{119.} Prove that $\log_27$ is an irrational number.
+\end{frame}
+\begin{frame}{Solution of Problem 119}
+  \textbf{Solution:} Let $\log_27 = \frac{p}{q}$ where $p, q\in I$
+  \linebreak\linebreak
+  $\Rightarrow 2^p = 7^2,$ however, $2^p$ is an even number and $7^q$ is an odd number. Thus, our assumption is wrong and $\log_27$ is an irrational number.
+\end{frame}
+\begin{frame}{Problem 120}
+  \textbf{120.} If $\log_{0.5}(x - 2) < \log_{0.25}(x - 2),$ then find the interval in which $x$ lies.
+\end{frame}
+\begin{frame}{Solution of Problem 120}
+  \textbf{Solution:} $$\text{Given,~}\log_{0.5}(x - 2) < \log_{0.25}(x - 2)$$
+  $$\Rightarrow (x - 2)^2 > (x - 2)$$
+  $$(x - 2)(x - 3) > 0$$
+  $$\Rightarrow x < 2, x > 3$$
+  Thus, $x > 3$ for logarithm function to be defined.
+\end{frame}
+\end{document}

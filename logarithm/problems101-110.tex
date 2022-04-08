@@ -8,8 +8,8 @@
 %\usepackage[T1]{fontenc}
 \usepackage{fontspec}
 \usepackage[]{unicode-math}
-\setmathfont{Consolas}
-\setsansfont{Arial}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
 % Setup TikZ
 
 \usepackage{tikz}
@@ -28,5 +28,129 @@
 \begin{document}
 \begin{frame}
   \titlepage
+\end{frame}
+\begin{frame}{Problem 101}
+  \textbf{101.} Solve $x^{\log_{10}x} > 10$
+\end{frame}
+\begin{frame}{Solution of Problem 101}
+  \textbf{Solution:} $$\text{Given,~}x^{\log_{10}x} > 10$$
+  $$\Rightarrow \log_{10}x\log_{10}x > 1$$
+  $$\Rightarrow \log_{10x} < -1, \log_{10}x > 1$$
+  Thus range for values of $x$ would be $(0, 0.1)\cup(10, \infty]$
+\end{frame}
+\begin{frame}{Problem 102}
+  \textbf{102.} Solve $\log_x2\log_{2x}2\log_24x > 1$
+\end{frame}
+\begin{frame}{Solution of Problem 102}
+  \textbf{Solution:} $$\text{Given,~}\log_x2\log_{2x}2\log_24x > 1$$
+  $$\Rightarrow \frac{1}{\log_2x}\frac{1}{\log_22x}\log_22^2x > 1$$
+  $$\Rightarrow \frac{1}{\log_x2}\frac{1}{1 + \log_2x}(2 + \log_2x) > 1$$
+  $$\text{Let~}z = \log_2x, \text{~then we have}$$
+  $$\Rightarrow \frac{1}{z}\frac{1}{1 + z}(2 + z) > 1$$
+  $$\Rightarrow z^2 - 2 < 0\Rightarrow -\sqrt{2} <z < \sqrt{2}$$
+  However, for logarithm to be defined $x > 0, 2x \neq 1 \Rightarrow x\neq \frac{1}{2},$ and thus the ranges is $(2^{-\sqrt{2}}, \frac{1}{2})\cup(\frac{1}{2}, 2^{\sqrt{2}})$
+\end{frame}
+\begin{frame}{Problem 103}
+  \textbf{103.} Solve $\log_2x\log_32x + \log_3x\log_24x > 0$
+\end{frame}
+\begin{frame}{Solution of Problem 103}
+  \textbf{Solution:} $$\text{Given,~}\log_2x\log_32x + \log_3x\log_24x > 0$$
+  $$\Rightarrow \log_3x\log_22x + \log_3x\log_24x > 0$$
+  $$\Rightarrow \log_3x(\log_22 + \log_2x + \log_24 + \log_2x) > 0$$
+  $$\Rightarrow \log_3x(3 + 2\log_2x) > 0$$
+  This can be true if $\log_3x > 0\Rightarrow x > 1$ and $3 + 2\log_2x > 0, x > 2^{-\frac{3}{2}}$ i.e $x > 1$
+  \linebreak\linebreak
+  This is also true if $\log_3x < 0 \Rightarrow x < 1$ and $3 + 2\log_2x < 0, x < 2^{\frac{-3}{2}}$ i.e. $x < 2^{\frac{-3}{2}}$
+  \linebreak\linebreak
+  However, for logarithm to be defined $x > 0.$
+  \linebreak\linebreak
+  So the range is $(0, 2^{\frac{-3}{2}})\cup (1, \infty)$
+\end{frame}
+\begin{frame}{Problem 104}
+  \textbf{104.} Find the value of $\log_{12}60$ if $\log_630 = a$ and $\log_{15}24 = b$
+\end{frame}
+\begin{frame}{Solution of Problem 104}
+  \textbf{Solution:} $$\log_{12}60 = \frac{\log_260}{\log_212} = \frac{\log_2(2^2.3.5)}{\log_2(2^2.3)} = \frac{2 + \log_23 + \log_25}{2 + 2\log_23}$$
+  $$\text{Let,~}\log_23 = x\text{~and~}\log_25 = y$$
+  $$\Rightarrow \log_{12}60 = \frac{2 + x + y}{2 + x}$$
+  $$\text{Given,~}a = \log_630 = \frac{\log_230}{\log_26} = \frac{\log_2(2.3.5)}{\log_2(2.3)} = \frac{1 + \log_23 + \log_25}{1 + \log_23} = \frac{1 + x + y}{1 + x}$$
+  $$\text{Also,~}b = \log_{15}24 = \frac{\log_224}{\log_215} = \frac{\log_2(2^3.3)}{\log_2(3.5)} = \frac{3 + \log_23}{\log_23 + \log_25} = \frac{3 + x}{x + y}$$
+  Solving these equations, we get $x = \frac{b + 3 - ab}{ab - 3}, y = \frac{2a - b - 2 + ab}{ab - 1}$
+  \linebreak\linebreak
+  Substituting these values of $a$ and $b$ for $\log_{12}60,$ we get
+  $\log_{12}60 = \frac{2ab + 2a - 1}{ab + b + 1}$
+\end{frame}
+\begin{frame}{Problem 105}
+  \textbf{105.} If $\log_ax, \log_bx$ and $\log_cx$ be in A.P. and $x\neq 1,$ prove that $c^2 = (ac)^{\log_ab}$
+\end{frame}
+\begin{frame}{Solution of Problem 105}
+  \textbf{Solution:} Since $\log_ax, \log_bx$ and $\log_cx$ are in A.P.
+  $$\Rightarrow 2\log_bx = \log_ax + \log_cx$$
+  $$\Rightarrow \frac{2}{\log_xb} = \frac{1}{\log_xa} + \frac{1}{\log_xc}$$
+  $$\Rightarrow \frac{2}{\log_xb} = \frac{\log_xa + \log_xc}{\log_xa\log_xc}$$
+  $$\Rightarrow 2\log_xc = \log_xac\frac{\log_xb}{\log_xa}$$
+  $$\Rightarrow \log_xc^2 = \log_xac\log_ab$$
+  $$\Rightarrow c^2 = ac^{\log_ab}$$
+\end{frame}
+\begin{frame}{Problem 106}
+  \textbf{106.} If $a = \log_{\frac{1}{2}}(\sqrt{0.125})$ and $b = \log_3\left(\frac{1}{\sqrt{24} - \sqrt{17}}\right)$ then find $a>0, b>0$ or not.
+\end{frame}
+\begin{frame}{Solution of Problem 106}
+  \textbf{Solution:} Given, $a = \log_{\frac{1}{2}}(\sqrt{0.125})$ in this case both base and the number are less than $1$ so the logarithm i.e. $a > 0.$
+  \linebreak\linebreak
+  Also, $b = \log_3\left(\frac{1}{\sqrt{24} - \sqrt{17}}\right) = \log_3\left(\frac{\sqrt{24} + \sqrt{17}}{7}\right)$ where both base and the number are greater than $1$ so the logarithm i.e $b > 0.$
+\end{frame}
+\begin{frame}{Problem 107}
+  \textbf{107.} Which one is greater among $\cos(\log_e\theta)$ or $\log_e(\cos\theta)$ if $e^{-\frac{\pi}{2}} < \theta < \frac{\pi}{2}$
+\end{frame}
+\begin{frame}{Solution of Problem 107}
+  \textbf{Solution:} $$\text{Given,~}e^{-\frac{\pi}{2}} < \theta < \frac{\pi}{2}$$
+  $$\Rightarrow \log_ee^{-\frac{\pi}{2}} < \log_e\theta < \log_e\frac{\pi}{2}$$
+  $$\Rightarrow -\frac{\pi}{2}<\log_e\theta < 1< \frac{\pi}{2}[\because \log_e\frac{\pi}{2} < \log_ee]$$
+  $$\Rightarrow -\frac{\pi}{2}<\log_e\theta < \frac{\pi}{2}$$
+  $$\Rightarrow \cos(\log_e\theta) > 0$$
+  $$\text{Again,~}e^{-\frac{\pi}{2}} < \theta < \frac{\pi}{2}$$
+  $$\Rightarrow 0 < \theta < \frac{\pi}{2}$$
+  $$\Rightarrow 0 < \cos\theta < 1$$
+  $$\Rightarrow \log_e\cos\theta < 0$$
+  $$\therefore \cos(\log_e\theta) > \log_e(\cos\theta)$$
+\end{frame}
+\begin{frame}{Problem 108}
+  \textbf{108.} If $\log_2x + \log_2y \geq 6,$ prove that $x + y \geq 16$
+\end{frame}
+\begin{frame}{Solution of Problem 108}
+  \textbf{Solution:} Given, $\log_2x + \log_2 y \geq 6 \Rightarrow \log_2xy \geq 6 \Rightarrow xy \geq 64$
+  \linebreak\linebreak
+  In the given inequality both $x$ and $y$ are positive values as negative values will make the logarithm invalid.
+  \linebreak\linebreak
+  We know that $A.M. \geq G.M. \Rightarrow \frac{x + y}{2} \geq \sqrt{xy}\Rightarrow x + y \geq 16$
+\end{frame}
+\begin{frame}{Problem 109}
+  \textbf{109.} If $a, b, c$ be three distinct positive numbers, each different from $1$ such that $\log_ba\log_ca - \log_aa + \log_ab\log_cb - \log_bb + \log_ac\log_bc - \log_cc = 0$ then prove that $abc = 1$
+\end{frame}
+\begin{frame}{Solution of Problem 109}
+  \textbf{Solution:} $$\text{Given,~}\log_ba\log_ca - \log_aa + \log_ab\log_cb - \log_bb + \log_ac\log_bc - \log_cc = 0$$
+  $$\Rightarrow \frac{(\log a)^2}{\log b\log c} - 1 + \frac{(\log b)^2}{\log a\log c} - 1 + \frac{(\log c)^2}{\log a\log b} -1 = 0$$
+  $$\text{Let~}\log a = x, \log b = y, \log c = z, \text{~then we have}$$
+  $$\frac{x^2}{yz} + \frac{y^2}{zx} + \frac{z^2}{xy} - 3 = 0$$
+  $$\Rightarrow \frac{x^3 + y^3 + z^3 - 3xyz}{xyz} = 0$$
+  $$\Rightarrow (x + y + z)(x^2 + y^2 + z^2 - xy - yz - zx) = 0$$
+  $$\Rightarrow (x + y + z)\frac{1}{2}[(x - y)^2 + (y - z)^2 + (z - x)^2] = 0$$
+  $\because x, y, z$ are different the term inside brackets will be always positive. Thus,
+  $$x + y + z = 0 \Rightarrow \log a + \log b + \log c = 0$$
+  $$\log abc = 0\Rightarrow abc = 1$$
+\end{frame}
+\begin{frame}{Problem 110}
+  \textbf{110.} If $y = 10^{\frac{1}{1 - \log x}}$ and $z = 10^{\frac{1}{1 - \log y}},$ prove that $x = 10^{\frac{1}{1 - \log x}}$
+\end{frame}
+\begin{frame}{Solution of Problem 110}
+  \textbf{Solution:} $$\text{Given,~}y = 10^{\frac{1}{1 - \log x}}$$
+  $$\Rightarrow \log y = \frac{1}{1 - \log x}$$
+  $$z = 10^{\frac{1}{1 - \log y}}$$
+  $$\Rightarrow \log z = \frac{1}{1 - \log y}$$
+  $$\Rightarrow \log y = 1 - \frac{1}{\log z}$$
+  $$\Rightarrow \frac{1}{1 - \log x} = 1 - \frac{1}{\log z}$$
+  $$\Rightarrow \log x = \frac{1}{1 - \log z}$$
+  $$x = 10^{\frac{1}{1 - \log z}}$$
 \end{frame}
 \end{document}
