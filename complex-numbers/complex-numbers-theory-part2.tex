@@ -1,0 +1,118 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Theory contd}
+  A complex number $z$ which we have considered to be equal to $x + iy$ can be
+  represented by a point $P$ whose caretesian coordinates are $(x, y)$ referred
+  to rectangular axes $Ox$ and $Oy$ where $O$ is origin i.e. $(0, 0)$ and are
+  called \textit{real} and \textit{imaginary} axis respectively. The $xy$ two
+  dimensional plane is also called \textit{Argand plane, complex plane or
+    Gaussian plane}. The point $P$ is also called the \textit{image} of the
+  complex number and $z$ is also called the \textit{affix} or \textit{complex
+    coordinate} of point $P.$
+
+  The modulus is given by the length of segment $OP$ which is equal to $OP =
+  \sqrt{x^2 + y^2} = |z|.$ Thus, $|z|$ is the length of $OP$.
+\end{frame}
+\begin{frame}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw[->] (-.5,0) -- (3,0);
+      \draw[->] (0,-.5) -- (0,3);
+      \draw (0, 3.5) node {$Y$};
+      \draw (3.5, 0) node {$X$};
+      \draw (2.5,0) -- (2.5,2.5);
+      \draw (0,0) -- (2.5, 2.5);
+      \draw (.5,0) arc(0:45:.5);
+      \draw (.7,.3) node{$\theta$};
+      \draw (1.5, 0.2) node {$x$};
+      \draw (2.7, 1.5) node {$y$};
+      \draw (3.4, 1.1) node {$OP=|z|$};
+      \draw (3.5, 0.7) node {$arg(z)=\theta$};
+      \draw (2.5, 2.7) node{$P=x+iy$};
+      \node [label = below left:{$O$}] (o) at (0, 0) {};
+      \draw (o);
+    \end{tikzpicture}
+  \end{center}
+  In the diagram $\theta$ is known as the argument of $z.$ it is the angle made
+  with positive direction(i.e. counter-clockwise) of real axis. This arhument
+  is not unique. If $\theta$ is an argument of a complex number $z$ then $2n\pi
+  + \theta$ where $n\in I$ where $I$ is the set of integers will be arguments
+  as well. The value of argument for which $-\pi<\theta\leq \pi$ is called the
+  \textit{principal argument.}
+\end{frame}
+\begin{frame}{Different Arguments of a Complex Number}
+  In the digram given in previous slide the argument is given as
+  $$arg(z) = \tan^{-1}\left(\frac{y}{x}\right)$$
+  this value is for when $z$ is in first quadrant. When $z$ will lie in second,
+  third and fourth quadrants then arguments will be
+  $$arg(z) = \pi - \tan^{-1}\left(\frac{y}{|z|}\right), arg(z) = -\pi +
+  \tan^{-1}\left(\frac{|y|}{|x|}\right), arg(z) =
+  -\tan^{-1}\left(\frac{|y|}{x}\right)$$
+  \vspace*{0.2cm}
+  \textbf{\large{Polar Form of a Complex Number}}\\
+  \vspace*{0.2cm}
+  If $z$ is a non-zero complex number, then we can write $z = r(\cos\theta +
+  i\sin\theta)$ where $r = |z|$ and $\theta = arg(z)$\\
+  \vspace*{0.2cm}
+  In this case $z$ is also given by $z = r[\cos(2n\pi + \theta) + i\sin(2n\pi +
+    \theta)]$ where $n\in I.$\\
+  \vspace*{0.2cm}
+  \textbf{\large{Euler's Formula}}\\
+  The complex number $\cos\theta + i\sin\theta$ is denoted by $e^{i\theta}$.
+\end{frame}
+\begin{frame}{Properties of Arguments}
+  If $z, z_1$ and $z_2$ are complex numbers then
+  \begin{enumerate}
+    \item $arg(\overline{z}) = -arg(z)$. This can be easily proven as $z = x +
+      iy$ and $\overline{z} = x - iy$ so sign of argument will get a -ve sign
+      as $y$ gets one.
+    \item $arg(z_1z_2) = arg(z_1) + arg(z_2) + 2k\pi$ where
+      $$k = \begin{cases}0 & -\pi <arg(z_1) + arg(z_2) \leq \pi\\
+      1 & -2\pi < arg(z_1) + arg(z_2)\leq -\pi\\
+      -1 & -\pi < arg(z_1) + arg(z_2)\leq 2\pi\end{cases}$$
+    \item $arg(z_1\overline{z_2}) = arg(z_1) - arg(z_2)$
+    \item $\arg\left(\frac{z_1}{z_2}\right) = arg(z_1) + arg(z_2) + 2k\pi$
+      where $k$ is same as item 2 with $+$ sign between $z_1$ and $z_2$ are
+      replaced with $-$ sign.
+    \item $|z_1 + z_2| = |z_1 - z_2|\Leftrightarrow arg(z_1) - arg(z_2) =
+      \pi/2$
+    \item $|z_1 + z_2| = |z_1| + |z_2|\Leftrightarrow arg(z_1) = arg(z_2)$
+    \item $|z_1 + z_2|^2 = r_1^2 + r_2^2 + 2r_1r_2\cos(\theta_1 - \theta_2)$
+    \item $|z_1 - z_2|^2 = r_1^2 + r_2^2 + 2r_1r_2\cos(\theta_1 + \theta_2)$
+  \end{enumerate}
+\end{frame}
+\begin{frame}{Vector Representation}
+  Complex numbers can also be represented as vectors. Length of the vector is
+  nothing but modulus of complex number and argument is the angle which the
+  vector makes with the real axis. It is denoted as $\overrightarrow{OP}$ where
+  $OP$ represents the vector of the complex number $z.$
+\end{frame}
+\end{document}
