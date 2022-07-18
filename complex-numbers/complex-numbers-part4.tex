@@ -1,0 +1,164 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}[fragile]{Geometrical Results contd}
+
+  {\large Length of a Perpendicular from a Point to a Line\\}
+  \vspace*{0.2cm}
+  Length of a perpendicular of point $A(\omega)$ from the line $\overline{a}z + a\overline{z} + b = 0, (a\in C, b\in R)$
+  is given by
+
+  $$p = \frac{|\overline{a}\omega + a\overline{\omega} + b|}{2|a|}$$
+  {\large Equation of a Circle\\}
+  \vspace*{0.2cm}
+  The equation of a circle with center $z_0$ and radius $r$ is $|z- z_0| = r$ or $z = z_0 + re^{i\theta}, 0\leq \theta\leq 2\pi$ or
+  $z\overline{z} - z_0\overline{z} - \overline{z_0}z + z_0\overline{z_0} - r^2 = 0$\\
+  \vspace*{0.2cm}
+  General equation of a circle is $z\overline{z} - a\overline{z} + \overline{a}z + b = 0, (a\in C, b\in R)$ such that $\sqrt{a\overline{a} - b}\geq 0.$
+  Center of this circle is $-a$ and radius is $a\overline{a} - b.$\\
+  \vspace*{0.2cm}
+  An equation of the circle, one of whose diameter is the line segment joining $z_1$ and $z_2$ is $(z - z_1)(\overline{z} - \overline{z_2}) +
+  (\overline{z} - \overline{z_1})(z - z_2) = 0$
+  \vspace*{0.2cm}
+  An equation of the the circle passing through two points $z_1$ and $z_2$ is
+  $$(z - z_1)(\overline{z} - \overline{z_2}) + (\overline{z} - \overline{z_1})(z - z_2) + k \begin{vmatrix}z & \overline{z} & 1\\z_1 & \overline{z_1} & 1\\z_2 & \overline{z_2} & 1 \end{vmatrix} = 0$$
+  where $k$ is a parameter.
+\end{frame}
+\begin{frame}[fragile]{Geometrical Results contd}
+
+  {\large Equation of a Circle Passing through Three Points\\}
+  \vspace*{0.2cm}
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw(circle((0,0), 1));
+      draw((.707, .707) -- (.707, -.707));
+      draw((-.707, .707) -- (-.707, -.707));
+      draw((-.707, .707) -- (.707, -.707));
+      draw((-.707, -.707) -- (.707, .707));
+      draw((.707, -.707) -- (0, - 1) -- (-.707, -.707), dashed);
+      label("$A(z_1)$", (-.707, -.707), align=SW);
+      label("$B(z_2)$", (.707, -.707), align=SE);
+      label("$C(z_3)$", (.707, .707), align=NE);
+      label("$P(z)$", (-.707, .707), align=NW);
+      label("$P(z)$", (0, -1), align=S);
+    \end{asy}
+  \end{center}
+  We choose any point $P(z)$ on the circle. Two such points are shown in the figure above one is in same segment with $C$
+  and the other one in different segement. So we have
+  $$\angle ACB = \angle APB\text{~or~}\angle ACB + \angle APB = \pi$$
+  $$\arg\frac{z_3 - z_2}{z_3 - z_1} - arg\frac{z - z_2}{z - z_1} = 0\text{~or~}\arg\frac{z_3 - z_2}{z_3 - z_1} + arg\frac{z - z_2}{z - z_1} = \pi$$
+  Clearly, in both cases the fraction must be purely real. Thus we can apply the property of conjugates i.e. $z = \overline{z}$ which also gives
+  us the condition for four concyclic points.
+\end{frame}
+\begin{frame}[fragile]{Finding Loci by Examination}
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(.4cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw((-4,0) -- (4,0), arrow=Arrows);
+      draw((0,-4) -- (0,4), arrow=Arrows);
+      draw((-4, -2) -- (2, 4), arrow=Arrow);
+      dot((-3, -1));
+      dot((1, 3));
+      label("$x$", (4,0), align=E);
+      label("$y$", (4,0), align=N);
+      label("$z_0$", (-3,-1), align=SW);
+      label("$O$", (0,0), align=SE);
+      label("$z$", (1,3), align=E);
+      markangle("$\alpha$", radius=10, (0,0), (-2, 0), (0, 2));
+    \end{asy}
+  \end{center}
+  The argument above line can be represented by equation $arg(z - z_0) = \alpha$ where $\alpha$ is a real number and $z_0$
+  is a fixed point. If $z_0$ is origin then the equation becomes $arg(z) = \alpha$ which is a vector starting at origin and
+  making angle $\alpha$ with $x$-axis.
+\end{frame}
+\begin{frame}[fragile]{Finding Loci by Examination}
+  If $z_1$ and $z_2$ are two fixed points such that $|z - z_1| = |z - z_2|$ then $z$ represents perpendicular bisector of the
+  segment joining $A(z_1)$ and $B(z_2).$ And $z, z_1, z_2$ will form an isoscles triangle.
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw((-1, 0) -- (1, 0));
+      draw((0, -0.2) -- (0, 2.2));
+      draw((-1, 0) -- (0, 2));
+      draw((1, 0) -- (0, 2));
+      label("$A(z_1)$", (-1, 0), align=SW);
+      label("$B(z_2)$", (1, 0), align=SE);
+      Label l = Label("|$z - z_1|$", (-.5,1));
+      l = rotate(atan(2)*180/pi)*l;
+      label(l, (-.5, 1), align=W);
+      Label l = Label("|$z - z_2|$", (.5,1));
+      l = rotate(atan(-2)*180/pi)*l;
+      label(l, (.5, 1), align=E);
+      label("$z$", (0,2), align=E);
+    \end{asy}
+  \end{center}
+  If $z_1$ and $z_2$ are two fixed points and $k > 0, k\neq 1$ is a real number then $\frac{|z- z_1|}{|z - z_2|} = k$ represents a circle.
+\end{frame}
+\begin{frame}[fragile]{Finding Loci by Examination}
+  Consider $|z - z_1| + |z - z_2| = k.$ Let $z_1$ and $z_2$ be two fixed points and $k$ be a positive real number.
+  \begin{enumerate}
+  \item If $k > |z - z_2|,$ then $|z - z_1| + |z - z_2| = k$ represents an ellipse with foci at $z_1$ and $z_2$ and $k$ is length of major axis.
+  \item If $k = |z - z_2|$ then it represents the line segment joining $z_1$ and $z_2.$
+  \item If $k < |z - z_2|$ then it does not represent any curve.
+  \end{enumerate}
+  Consider $|z- z_1| - |z- z_2| = k$ like previous case.
+  \begin{enumerate}
+  \item If $k\neq |z- z_2|$ then it represents parabolas with foci at $z_1$ and $z_2.$
+  \item If $k = |z - z_2|,$ then it represents the straight line joining $A(z_1)$ and $B(z_2)$ but excluding the the segment $AB$.
+  \end{enumerate}
+  $|z- z_1|^2 + |z - z_2|^2 = |z_1 - z_2|^2$ represents a circle with $z_1$ and $z_2$ representing the diameter.
+\end{frame}
+\begin{frame}{Finding Loci by Examination}
+  Consider $arg\frac{z - z_1}{z - z_2} = \alpha$ where $z_1$ and $z_2$ are two fixed points and $\alpha$ be a real number such that
+  $0\leq \alpha \leq \pi.$
+  \begin{enumerate}
+  \item If $0 < \alpha < \pi$ and $\alpha\neq \pi/2,$ then it represents a segment of a circle passing through $z_1$ and $z_2.$
+  \item If $\alpha = \pi/2,$ then it represents a circle with diameter as the line segment joining $z_1$ and $z_2.$
+  \item If $\alpha = 0,$ then it represents the line segment joining $z_1$ and $z_2.$
+  \item If $\alpha = \pi,$ then it represents the line segment joining $z_1$ and $z_2$ but excluding $z_1z_2.$
+  \end{enumerate}
+\end{frame}
+\end{document}

@@ -31,4 +31,239 @@
 \begin{frame}
   \titlepage
 \end{frame}
+\begin{frame}{nth Root of Unity}
+  $$1 = \cos 0 + i\sin 0 \Rightarrow 1^{\frac{1}{n}} = (\cos 0 + i\sin 0)^{\frac{1}{n}}$$
+  $$= \cos\frac{2k\pi}{n} + i\sin\frac{2k\pi}{n},~\forall~k = 0, 1,2, 3, \ldots (n - 1)$$
+  $$= e^{i2k\pi/n}$$
+  $$= 1, e^{i2\pi/n}, e^{i4\pi/n}, \ldots, e^{i2(k - 1)\pi/n} = 1, \alpha, \alpha^2, \ldots, \alpha^{n - 1}~\text{where~}\alpha= e^{i2k\pi/n}$$
+  Since $\alpha$ is one of the roots $\Rightarrow 1 + \alpha + \alpha^2 + \ldots + \alpha^{n - 1} = 0$ and $1\alpha.\alpha^2.\ldots\alpha^{n - 1} = \alpha^{n(n - 1)/2} = 1$
+\end{frame}
+\begin{frame}{De Moivre's Theorem}
+  \textbf{Statement:} If $n$ is any integer then $(\cos\theta + i\sin\theta)^n = \cos n\theta+ i\sin n\theta$\\
+  \vspace*{0.2cm}
+  \textbf{Proof:} By Euler's formula $\cos\theta + i\sin\theta = e^{i\theta} \Rightarrow (\cos\theta + i\sin\theta)^n = e^{in\theta} = \cos n\theta + i\sin n\theta$\\
+  \vspace*{0.2cm}
+  Proof by Induction:\\
+  \vspace*{0.2cm}
+  For $n = 1, (\cos\theta + i\sin\theta)^1 =\cos\theta + i\sin\theta$\\
+  \vspace*{0.2cm}
+  Let it be true for $n = m$ i.e. $(\cos\theta + i\sin\theta)^m = \cos m\theta+ i\sin m\theta$\\
+  \vspace*{0.2cm}
+  For $n = m + 1, (\cos\theta + i\sin\theta)^{m + 1} = (\cos m\theta+ i\sin m\theta)(\cos\theta + i\sin\theta)$\\
+  \vspace*{0.2cm}
+  $= \cos m\theta\cos\theta - \sin m\theta\sin\theta + i(\sin m\theta\cos\theta + \cos m\theta\sin\theta) = \cos(m + 1)\theta + i\sin(m + 1)\theta$\\
+  \vspace*{0.2cm}
+  Thus, it is true for $n = m + 1.$ Hence, we have proven the theorem by induction.\\
+  \vspace*{0.2cm}
+  It is now trivial to prove it for fractional and negative powers.
+\end{frame}
+\begin{frame}{Important Geometrical Results}
+
+  {\large Section Formula\\}
+  \vspace*{0.2cm}
+  Let $z_1=x_1+iy_1, z_2=x_2+iy_2$ then if $z=x+iy$ which divides the previous two points in the ratio $m:n$ can be given by using the results from coordinate geometry as below:
+  $$x = \frac{mx_2 + nx_1}{m + n}, y = \frac{my_2 + ny_1}{m + n} \therefore z = \frac{mz_2 + nz_1}{m + n}$$
+  Extending this section formula we can say that if there is a point which divides this line in two equal parts i.e. the point is mid-point then $m = 1$ and $n = 1$ and $z$ is given my $\frac{1}{2}(z_1 + z_2)$\\\vspace*{0.2cm}
+  {\large Distance Formula\\}
+  \vspace*{0.2cm}
+  Distance between $A(z_1)$ and $B(z_2)$ is given by $AB = |z_1 - z_2|$\\
+  \vspace*{0.2cm}
+          {\large Equation of Line Passing Through Two points\\}
+          \vspace*{0.2cm}
+          The equation between two point $z_1$ and $z_2$ is given by the determinant
+          $$\begin{vmatrix}z&\overline{z} & 1\\z_1&\overline{z_1} & 1\\z_2&\overline{z_1} & 1\end{vmatrix} = 0$$
+            or, $$\frac{z - z_1}{\overline{z} - \overline{z_1}} = \frac{z_1 - z_2}{\overline{z_1} - \overline{z_2}}$$
+\end{frame}
+\begin{frame}[fragile]{Geometrical Results contd}
+
+  {\large Collinear Points\\}
+  \vspace*{0.2cm}
+  Three points $z_1, z_2$ and $z_3$ are collinear if and only if
+  $$\begin{vmatrix}z_1 & \overline{z_1} & 1\\z_2 & \overline{z_2} & 1\\z_3 & \overline{z_3} & 1\end{vmatrix} = 0$$
+    The above formula comes from the equation of line passing through two points.
+    \vspace*{0.2cm}
+
+    {\large Parallelogram\\}
+    \vspace*{0.2cm}
+    Four complex numbers $A(z_1), B(z_2), C(z_3)$ and $D(z_4)$ represent the vertices of a parallelogram if $z_1 + z_3 = z_2 + z_4$\\
+
+    \begin{center}
+      \begin{asy}
+        import geometry;
+        import fontsize;
+        unitsize(1cm);
+        defaultpen(fontsize(6pt));
+        draw((0, 0) -- (1.5, 0) -- (2, 1) -- (0.5, 1) -- (0,0));
+        draw((0, 0) -- (2, 1));
+        draw((1.5, 0) -- (0.5, 1));
+        label("$A(z_1)$", (0, 0), align=SW);
+        label("$B(z_2)$", (1.5, 0), align=SE);
+        label("$C(z_3)$", (2, 1), align=NE);
+        label("$D(z_4)$", (.5, 1), align=NW);
+      \end{asy}
+    \end{center}
+    The diagonals of a paralleogram bisect each other i.e. mid-point of $AC$ and $BD$ are same i.e. $\frac{1}{2}(z_1 + z_3) = \frac{1}{2}(z_2 + z_4) \Rightarrow z_1 + z_3 = z_2 + z_4$
+\end{frame}
+\begin{frame}[fragile]{Geometrical Results contd}
+
+  {\large Rhombus\\}
+  \vspace*{0.2cm}
+  Four complex numbers $A(z_1), B(z_2), C(z_3)$ and $D(z_4)$ represent the vertices of a rhombus if $z_1 + z_3 = z_2 + z_4$ and
+  $|z_4 - z_1| = |z_2 - z_1|$
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      draw((0, 0) -- (1.5, 0) -- (2, 1) -- (0.5, 1) -- (0,0));
+      draw((0, 0) -- (2, 1));
+      draw((1.5, 0) -- (0.5, 1));
+      label("$A(z_1)$", (0, 0), align=SW);
+      label("$B(z_2)$", (1.5, 0), align=SE);
+      label("$C(z_3)$", (2, 1), align=NE);
+      label("$D(z_4)$", (.5, 1), align=NW);
+    \end{asy}
+  \end{center}
+  The diagonals must bisect each other. Thus, $z_1 + z_3 = z_2 + z_4.$ Also, four sides of a rhombus are equal i.e. $AD = AB \Rightarrow |z_4 - z_1| = |z_2 - z_1|$\\
+  \vspace*{0.2cm}
+    {\large Square\\}
+  \vspace*{0.2cm}
+  Four complex numbers $A(z_1), B(z_2), C(z_3)$ and $D(z_4)$ represent the vertices of a square if $z_1 + z_3 = z_2 + z_4,
+  |z_4 - z_1| = |z_2 - z_1|$ and $|z_3 - z_1| = |z_4 - z_2|$
+    \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      draw((0, 0) -- (1, 0) -- (1, 1) -- (0, 1) -- (0,0));
+      draw((0, 0) -- (1, 1));
+      draw((1, 0) -- (0, 1));
+      label("$A(z_1)$", (0, 0), align=SW);
+      label("$B(z_2)$", (1, 0), align=SE);
+      label("$C(z_3)$", (1, 1), align=NE);
+      label("$D(z_4)$", (0, 1), align=NW);
+    \end{asy}
+  \end{center}
+    The diagonals must bisect each other. Thus, $z_1 + z_3 = z_2 + z_4.$ Also, four sides of a square are equal i.e. $AD = AB \Rightarrow |z_4 - z_1| = |z_2 - z_1|.$
+    Also the digonals are equal in length so $|z_3 - z_1| = |z_4 - z_2|$
+\end{frame}
+\begin{frame}[fragile]{Geometricla Results contd}
+
+  {\large Rectangle\\}
+  \vspace*{0.2cm}
+  Four complex numbers $A(z_1), B(z_2), C(z_3)$ and $D(z_4)$ represent the vertices of a square if $z_1 + z_3 = z_2 + z_4$ and $|z_3 - z_1| = |z_4 - z_2|$
+    \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      draw((0, 0) -- (1.5, 0) -- (1.5, 1) -- (0, 1) -- (0,0));
+      draw((0, 0) -- (1.5, 1));
+      draw((1.5, 0) -- (0, 1));
+      label("$A(z_1)$", (0, 0), align=SW);
+      label("$B(z_2)$", (1.5, 0), align=SE);
+      label("$C(z_3)$", (1.5, 1), align=NE);
+      label("$D(z_4)$", (0, 1), align=NW);
+    \end{asy}
+  \end{center}
+    The diagonals must bisect each other. Thus, $z_1 + z_3 = z_2 + z_4.$
+    Also the digonals are equal in length so $|z_3 - z_1| = |z_4 - z_2|$
+
+\end{frame}
+\begin{frame}[fragile]{Geometricla Results contd}
+
+  {\large Centroid of a Triangle\\}
+  \vspace*{0.2cm}
+  Let $A(z_1), B(z_2)$ and $C(z_3)$ be the vertices of a $\triangle ABC.$ Centroid $G(z)$ of the $\triangle ABC$
+  is the point of concurrence of the medians of all three sides and is given by
+  $$z = \frac{z_1 + z_2 + z_3}{3}$$
+
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      draw((-2,0) -- (2, 0) -- (0, 3) -- (-2, 0));
+      draw((-2, 0) -- (1, 1.5));
+      draw((2, 0) -- (-1, 1.5));
+      draw((0, 0) -- (0, 3));
+      label("$A(z_1)$", (0, 3), align=N);
+      label("$B(z_1)$", (-2, 0), align=SW);
+      label("$C(z_3)$", (2, 0), align=SE);
+      label("$D$", (0, 0), align=S);
+      label("$E$", (1, 1.5), align=E);
+      label("$F$", (-1, 1.5), align=W);
+      label("$G(z)$", (0, 1), align=NE);
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile]{Geometricla Results contd}
+
+  {\large Incenter of a Triangle\\}
+  \vspace*{0.2cm}
+  Let $A(z_1), B(z_2)$ and $C(z_3)$ be the vertices of a $\triangle ABC.$ inceneter $I(z)$ of the $\triangle ABC$
+  is the point of concurrence of the internal bisectors of and is given by
+  $$z = \frac{az_1 + bz_2 + cz_3}{a + b + c}$$
+  where $a, b, c$ are the lengths of the sides.
+
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      pair a = (0, 3);
+      pair b = (-2, 0);
+      pair c = (2, 0);
+      triangle t = triangle(a, b, c);
+      pair p = incenter(t);
+      line l1 = line(a, p);
+      line l2 = line(b, p);
+      line l3 = line(c, p);
+      pair d = intersectionpoint(l1, line(b, c));
+      draw(a -- d);
+      pair e = intersectionpoint(l2, line(a, c));
+      draw(b -- e);
+      pair f = intersectionpoint(l3, line(a, b));
+      draw(c -- f);
+      show(t, LA="", LB="", LC="", La="", Lb="", Lc="");
+      label("$A(z_1)$", a, align=N);
+      label("$B(z_1)$", b, align=SW);
+      label("$C(z_3)$", c, align=SE);
+      label("$D$", d, align=S);
+      label("$E$", e, align=E);
+      label("$F$", f, align=W);
+      label("$I(z)$", p + (0, 0.2), align=NE);
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}[fragile]{Geometricla Results contd}
+
+  {\large Circumcenter of a Triangle\\}
+  \vspace*{0.2cm}
+  Circumcenter $S(z)$ of a $\triangle ABC$ is the point of concurrence of perpendicular bisectors of sides of the triangle. It is given by
+
+  $$z = \frac{(z_2 - z_3)|z_1|^2 + (z_3 - z_1)|z_2|^2 + (z_1 - z_2)|z_3|^2}{\overline{z_1}(z_2 - z_3) + \overline{z_2}(z_3 - z_1) + \overline{z_3}(z_1 - z_2)}$$
+  $$= \frac{\begin{vmatrix}|z_1|^2 & z_1 & 1\\ |z_2|^2 & z_2 & 1 \\ |z_3|^2 & z_3 & 1\end{vmatrix}}{\begin{vmatrix}\overline{z_1} & z_1 & 1\\\overline{z_2} & z_2 & 1\\\overline{z_3} & z_3 & 1 \end{vmatrix}}$$
+  Also,
+  $$z = \frac{z_1\sin2A + z_2\sin2B + z_3\sin2C}{\sin2A + \sin2B + \sin2C}$$
+\end{frame}
+\begin{frame}[fragile]{Geometricla Results contd}
+
+  {\large Circumcenter of a Triangle\\}
+  \vspace*{0.2cm}
+  The orthocenter $H(z)$ of the $\triangle ABC$ is the point of concurrence of altitudes of the side. It is given by
+  $$z = \frac{\begin{vmatrix}z_1^2 & \overline{z_1} & 1\\z_2^2 & \overline{z_2} & 1\\z_3^2 & \overline{z_3} & 1\end{vmatrix} + \begin{vmatrix}|z_1|^2 & z_1 & 1\\|z_2|^2 & z_2 & 1\\|z_3|^2 & z_3 & 1\end{vmatrix}}{\begin{vmatrix}\overline{z_1} & z_1 & 1\\\overline{z_2} & z_2 & 1\\\overline{z_3} & z_3 & 1\end{vmatrix}}$$
+  $$= \frac{z_1\tan A + z_2\tan B + z_3\tan C}{\tan A + \tan B + \tan C}$$
+  $$= \frac{z_1a\sec A + bz_2\sec B + cz_3\sec C}{a\sec A + b\sec B + c\sec C}$$
+  \vspace*{0.2cm}
+  {\large Euler's Line\\}
+  \vspace*{0.2cm}
+  The centroid $G$ of a triangle lies on the segment joining the orthocenter $H$ and the circumcenter $S$ of the triangle. $G$ divides the line $H$ and $S$ in the ratio $2:1$.
+\end{frame}
 \end{document}

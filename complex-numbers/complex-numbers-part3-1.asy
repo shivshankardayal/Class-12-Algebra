@@ -1,0 +1,23 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+settings.inlinetex=true;
+deletepreamble();
+defaultfilename="complex-numbers-part3-1";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+import geometry;
+import fontsize;
+unitsize(1cm);
+defaultpen(fontsize(6pt));
+draw((0, 0) -- (1.5, 0) -- (2, 1) -- (0.5, 1) -- (0,0));
+draw((0, 0) -- (2, 1));
+draw((1.5, 0) -- (0.5, 1));
+label("$A(z_1)$", (0, 0), align=SW);
+label("$B(z_2)$", (1.5, 0), align=SE);
+label("$C(z_3)$", (2, 1), align=NE);
+label("$D(z_4)$", (.5, 1), align=NW);
