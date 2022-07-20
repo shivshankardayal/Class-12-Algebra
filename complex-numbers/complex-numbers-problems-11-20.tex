@@ -1,0 +1,150 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 11-20}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 11}
+  \textbf{11.} If $z_1 = 2 + 3i$ and $z_2 = 1 + 2i,$ then find the value of $z_1/z_2.$
+\end{frame}
+\begin{frame}{Solution of Problem 11}
+  \textbf{Solution:} $z_1/z_2 = \frac{2 + 3i}{1 + 2i} = \frac{(2 + 3i)(1 - 2i)}{(1 + 2i)(1 - 2i)}$\\
+  \vspace*{0.2cm}
+  $= \frac{2 - 4i + 3i + 6}{1^2 + 2^2} = \frac{8 - i}{5}$
+\end{frame}
+\begin{frame}{Problem 12}
+  \textbf{12.} If $z_1 = 9y^2 - 4 -i10x$ and $z_2 = 8y^2 - 20i$ such that $z_1 = \overline{z_2},$ then find $z = x + iy.$
+\end{frame}
+\begin{frame}{Solution of Problem 12}
+  \textbf{Solution:} Given $z_1 = \overline{z_2}\Rightarrow 9y^2 - 4 -i10x = 8y^2 + 20 i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (y^2 - 4) -i10(x + 2) = 0$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $y^2 - 4 = 0 \Rightarrow y = \pm 2$ and $x + 2 = 0 \Rightarrow x = -2$\\
+  \vspace*{0.2cm}
+  Thus, $z = x + iy = -2\pm 2i$
+\end{frame}
+\begin{frame}{Problem 13}
+  \textbf{13.} Find $z$ if $|z + 1| = z + 2(1 + i),$ where $z\in C.$
+\end{frame}
+\begin{frame}{Solution of Problem 13}
+  \textbf{Solution:} Let $z = x + iy, \Rightarrow |x + 1 + iy| = (x + 2) + i(y + 2)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sqrt{(x + 1)^2 + y^2} = (x + 2) + i(y + 2)$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $y + 2 = 0 \Rightarrow y = -2$ and $(x + 1)^2 + y^2 = (x + 2)^2 \Rightarrow x^2 + 2x + 1 + 4 = x^2 + 4x + 4 \Rightarrow x = \frac{1}{2}$\\
+  \vspace*{0.2cm}
+  Thus, $z = \frac{1}{2}(1 - 4i)$
+\end{frame}
+\begin{frame}{Problem 14}
+  \textbf{14.} Find the modulus and argument of the complex number $\frac{1 + 2i}{1 - 3i}$
+\end{frame}
+\begin{frame}{Solution of Problem 14}
+  \textbf{Solution:} $z = \frac{1 + 2i}{1 - 3i} = \frac{(1 + 2i)(1 + 3i)}{1^2 + 3^2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z = \frac{-1 + i}{2} \Rightarrow |z| =- \sqrt{\frac{1}{4} + \frac{1}{4}} = \frac{1}{\sqrt{2}}$\\
+  \vspace*{0.2cm}
+  $arg(z) = \tan^{-1}-1 \Rightarrow arg(z) = \frac{3\pi}{4}$
+\end{frame}
+\begin{frame}{Problem 15}
+  \textbf{15.} If $\frac{x - 3}{3 + i} + \frac{y - 3}{3 - i} = i,$ where $x, y \in R$ then find $x$ and $y.$
+\end{frame}
+\begin{frame}{Solution of Problem 15}
+  \textbf{Solution:} Given, $\frac{x - 3}{3 + i} + \frac{y - 3}{3 - i} = i(3 - i)(3 + i)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 3)(3 - i) + (y - 3)(3 + i) = 10i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 3x - 9 + i(3 - x) + (3y - 9) + i(y - 3) = 10i$\\
+  \vspace*{0.2cm}
+  Comp[aring real and imaginary parts, we get\\
+    \vspace*{0.2cm}
+    $3x + 3y - 18 = 0$ and $y - x = 10 \Rightarrow x = -2, y = 8$
+\end{frame}
+\begin{frame}{Problem 16}
+  \textbf{16.} What is the real part of $(1 + i)^{50}.$
+\end{frame}
+\begin{frame}{Solution of Problem 16}
+  \textbf{Solution:} $(1 + i)^2 = 1 + 2i - i = 2i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (1 + i)^{50} = (2i)^{25} = 2^{25}i^{4.6 + 1} = 2^{25}i$\\
+  \vspace*{0.2cm}
+  Thus, real part will be $0.$
+\end{frame}
+\begin{frame}{Problem 17}
+  \textbf{17.} If a complex number is $z,$ such that $z + |z| = 2 + 8i.$ Find the value of $z.$
+\end{frame}
+\begin{frame}{Solution of Problem 17}
+  \textbf{Solution:} Let $z = x + iy$ then $x + iy + \sqrt{x^2 + y^2} = 2 + 8i$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $y = 8$ and $x + \sqrt{x^2 + y^2} = 2 \Rightarrow \sqrt{x^2 + y^2} = 2 - x$\\
+  \vspace*{0.2cm}
+  $x^2 + 64 = 4 - 4x + x^2 \Rightarrow x = -15\Rightarrow z = -15 + 8i$
+\end{frame}
+\begin{frame}{Problem 18}
+  \textbf{18.} Find the sum of sequence $S = i + 2i^2 + 3i^3 + \ldots$ up to $100$ terms.
+\end{frame}
+\begin{frame}{Solution of Problem 18}
+  \textbf{Solution:} $S = i + 2i^2 + 3i^3 +\ldots + 100i^{100}$\\
+  \vspace*{0.2cm}
+  $iS = i^2 + 2i^3 + \ldots + 99i^{100} + 100i^{101}$\\
+  \vspace*{0.2cm}
+  $S(1- i) = i + i^2 + \ldots + i^{100} - 100i^{101} = \frac{1 - i^{101}}{1 - 1} - 100i^{101}$\\
+  \vspace*{0.2cm}
+  $S = \frac{1 - i^{101}}{(1- i^2)} - \frac{100i^{101}}{1 - i}$
+\end{frame}
+\begin{frame}{Problem 19}
+  \textbf{19.} Find the value of the sum $\frac{1}{1 + i} + \frac{1}{1 - i} + \frac{1}{-1 + i} + \frac{1}{-1 - i} + \frac{2}{1 + i} + \frac{2}{1 - i} + \frac{2}{-1 + i} + \frac{2}{-1 - i} + \ldots \frac{n}{1 + i} + \frac{n}{1 - i} + \frac{n}{-1 + i} + \frac{n}{-1 - i}$
+\end{frame}
+\begin{frame}{Solution of Problem 19}
+  \textbf{Solution:} Consider $t_1 = \frac{1}{1 + i} + \frac{1}{1 - i} + \frac{1}{-1 + i} + \frac{1}{-1 - i}$\\
+  \vspace*{0.2cm}
+  $= \frac{1 + i + 1 - i}{1^2 - i^2} + \frac{-1 + i - 1 - i}{(-1)^2 - i^2} = \frac{2}{2} + \frac{-2}{2} = 0$\\
+  \vspace*{0.2cm}
+  $t_2 = 2\left(\frac{1}{1 + i} + \frac{1}{1 - i} + \frac{1}{-1 + i} + \frac{1}{-1 - i}\right) = 0$\\
+  \vspace*{0.2cm}
+  Similarly all other terms and sum will be zero.
+\end{frame}
+\begin{frame}{Problem 20}
+  \textbf{20.} Find the product of real parts of the roots of $z^2 - z - 5 + 5i = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 20}
+  \textbf{Solution:} Given, $z^2 - z - 5 + 5i = 0 \Rightarrow D = (-1)^2 - 4.1.(-5 + 5i) = 21 - 20i$ and we will need $\sqrt{D}$\\
+  \vspace*{0.2cm}
+  $\sqrt{D} = \sqrt{b^2 - 4ac} = \sqrt{21 - 20i} = \pm \left[\sqrt{\frac{x^2 + y^2 + x}{2}} - i\sqrt{\frac{x^2 + y^2 - x}{2}}\right] = \pm(5 - 2i)$\\
+  \vspace*{0.2cm}
+  $z = \frac{1 + 5 - 2i}{2}$ or $z = \frac{1 - 5 + 2i}{2}\Rightarrow z = 3 - i, i - 2$\\
+  \vspace*{0.2cm}
+  Thus, product of real parts $= -2\times 3 = -6$
+\end{frame}
+\end{document}

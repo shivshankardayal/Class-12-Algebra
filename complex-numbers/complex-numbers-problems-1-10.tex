@@ -1,0 +1,141 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 1-10}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 1}
+  \textbf{1.} Evaluate i. $i^5$ ii. $i^{67}$ iii. $i^{-49}$ iv. $i^{2014}$
+\end{frame}
+\begin{frame}{Solution of Problem 1}
+  \textbf{Solution:} i. $i^5 = i^4.i = 1.i = i$\\
+  \vspace*{0.2cm}
+  ii. $i^{67} = i^{64}.i^3 = i^{4.16}.i^3 = 1^{16}.-i = -i$\\
+  \vspace*{0.2cm}
+  iii. $i^{-49} = \frac{1}{i^{49}} = \frac{1}{i^{48}.i} = \frac{1}{i^{4.12}.i}
+  = \frac{1}{1^{12}.i} = \frac{1}{i} = -i$\\
+  \vspace*{0.2cm}
+  iv. $i^{2014} = {i^2}^1007 = (-1)^{1007} = -1$
+\end{frame}
+\begin{frame}{Problem 2}
+  \textbf{2.} If $a<0, b>0,$ then prove that $\sqrt{ab}$ is equal to $\sqrt{|a|b}i$
+\end{frame}
+\begin{frame}{Solution of Problem 2}
+  \textbf{Solution:} $\because a < 0 \Rightarrow a = -|a|$\\
+  \vspace*{0.2cm}
+  $\therefore \sqrt{ab} = \sqrt{-|a|b} = \sqrt{|a|b}i$
+\end{frame}
+\begin{frame}{Problem 3}
+  \textbf{3.} Prove that $i^n + i^{n + 1} + i^{n + 2} + i^{n+ 3} = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 3}
+  \textbf{Solution:} $i^n + i^{n + 1} + i^{n + 2} + i^{n+ 3} = i^n(1 + i + i^2 + i^3) = i^n(1 = i - 1 - i) = 0$
+\end{frame}
+\begin{frame}{Problem 4}
+  \textbf{4.} Find the value of the sum $\sum_{n=1}^{13}(i^n + i^{n + 1})$
+\end{frame}
+\begin{frame}{Solution of Problem 4}
+  \textbf{Solution:} Sum of any four consecutive powers of $i$ is zero. Thus,\\
+  \vspace*{0.2cm}
+  $\sum_{n=1}^{13}(i^n + i^{n + 1}) = (i + i^2 + i^3 + \ldots + i^{13}) + (i^2 = i^3 + \ldots + i^{14})$\\
+  \vspace*{0.2cm}
+  $= i - 1$
+\end{frame}
+\begin{frame}{Problem 5}
+  \textbf{5.} Simplify and find the value of $\frac{2^n}{(1 + i)^2n} + \frac{(1 + i)^2n}{2^n}$
+\end{frame}
+\begin{frame}{Solution of Problem 5}
+  \textbf{Solution:} Given $\frac{2^n}{(1 + i)^2n} + \frac{(1 + i)^2n}{2^n}$\\
+  \vspace*{0.2cm}
+  $= \frac{2^n}{(1 + 2i + i^2)^n} + \frac{(1 + 2i + i^2)^n}{2^n}$\\
+  \vspace*{0.2cm}
+  $= \frac{2^n}{2^ni^{2n}} + \frac{2^ni^{2n}}{2^n}$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{(-i)^n} + (-1)^n$
+\end{frame}
+\begin{frame}{Problem 6}
+  \textbf{6.} Find different values of $i^n + i^{-n},~\forall~n\in I$
+\end{frame}
+\begin{frame}{Solution of Problem 6}
+  \textbf{Solution:} Let $S = i^n + i^{-n} = \frac{i^{2n} + 1}{i^n}$\\
+  \vspace*{0.2cm}
+  For $n = 1, S = \frac{i^2 + 1}{i} = 0$\\
+  \vspace*{0.2cm}
+  For $n = 2, S = \frac{i^4 + 1}{i^2} = -2$\\
+  \vspace*{0.2cm}
+  For $n = 3, S = \frac{i^6 + 1}{i^3} = 0$\\
+  \vspace*{0.2cm}
+  For $n = 4, S = \frac{i^8 + 1}{i^4} = 2$\\
+  \vspace*{0.2cm}
+  Thus, we find three different values for the given expression.
+\end{frame}
+\begin{frame}{Problem 7}
+  \textbf{7.} If $4x + (3x - y)i = 3 -6i,$ then find the value of $x$ and $y.$
+\end{frame}
+\begin{frame}{Solution of Problem 7}
+  \textbf{Solution:} Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $4x = 3$ and $3x - y = -6$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = \frac{3}{4}, y = \frac{33}{4}$
+\end{frame}
+\begin{frame}{Problem 8}
+  \textbf{8.} Find the value of $\left(\frac{1}{3} + i\frac{7}{3}\right) + \left(4 + i\frac{1}{3}\right) - \left(-\frac{4}{3} + i\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 8}
+  \textbf{Solution:} Given, $\left(\frac{1}{3} + i\frac{7}{3}\right) + \left(4 + i\frac{1}{3}\right) - \left(-\frac{4}{3} + i\right)$\\
+  \vspace*{0.2cm}
+  $= \left(\frac{1}{3} + 4 + \frac{4}{3}\right) + i\left(\frac{7}{3} + \frac{1}{3} - 1\right)$\\
+  \vspace*{0.2cm}
+  $= \frac{17}{3} +i\frac{5}{3}$
+\end{frame}
+\begin{frame}{Problem 9}
+  \textbf{9.} Find the real values of $x$ and $y$ if $\frac{(1 + i)x - 2i}{3 + i} + \frac{(2 - 3i)y + i}{3 - i} = i.$
+\end{frame}
+\begin{frame}{Solution of Problem 9}
+  \textbf{Solution:} Given, $\frac{(1 + i)x - 2i}{3 + i} + \frac{(2 - 3i)y + i}{3 - i} = i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (1 + i)(3 - i)x - 2i(3 - i) + (2 - 3i)(3 + i)y + (3 + i)i = i(3 + i)(3 - i)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (4x + 9y - 3) + i(2x - 7y - 3) = 10i$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $4x + 9y - 3 = 0$ and $2x - 7y - 3 = 10$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = 3, y = -1$
+\end{frame}
+\begin{frame}{Problem 10}
+  \textbf{10.} Find the multiplicative inverse of $4 - 3i.$
+\end{frame}
+\begin{frame}{Solution of Problem 10}
+  \textbf{Solution:} Let $z = 4 - 3i$ then multiplicative inverse would be $\frac{1}{z}$\\
+  \vspace*{0.2cm}
+  $\frac{1}{z} = \frac{1}{4 - 3i} = \frac{4 + 3i}{(4 -3i)(4 + 3i)} = \frac{4 + 3i}{25}$
+\end{frame}
+\end{document}
