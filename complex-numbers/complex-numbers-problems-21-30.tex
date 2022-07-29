@@ -1,0 +1,168 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 21-30}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 21}
+  \textbf{21.} Find the number of complex numebrs satisfying $z^3 + \overline{z} = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 21}
+  \textbf{Solution:} Given, $z^3 = -\overline{z}\Rightarrow |z|^3 = |z|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z|(|z| - 1)(|z| + 1) = 0 \Rightarrow |z| = 0, |z| = 1 [\because |z| + 1 > 0]$\\
+  \vspace*{0.2cm}
+  If $|z| = 0,$ then $z = 0.$ If $|z| = 1 \Rightarrow |z|^2 = 1\Rightarrow z\overline{z} = 1$\\
+  \vspace*{0.2cm}
+  $z^3 + \frac{1}{z} = 0 \Rightarrow z^4 + 1 = 0,$ which has four distinct roots. Thus, given equation
+  has five roots.
+\end{frame}
+\begin{frame}{Problem 22}
+  \textbf{22.} Find the number of real roots of the equation $z^3 + iz - 1=0.$
+\end{frame}
+\begin{frame}{Solution of Problem 22}
+  \textbf{Solution:} Since we have to find real roots, let $z = x,$ a real value. The given equation becomes\\
+  \vspace*{0.2cm}
+  $x^3 + ix - 1= 0\Rightarrow x^3 = 1, x = 0$ which is not possible. So there are no real solutions.
+\end{frame}
+\begin{frame}[fragile]{Problem 23}
+  \textbf{23.} In the following diagram if given circle is unit circle then find the reciprocal of point $A.$
+  \begin{center}
+    \begin{asy}
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      draw((-2, 0) -- (2, 0), arrow=Arrow);
+      draw((0, -2) -- (0, 2), arrow=Arrow);
+      label("$x$", (2, 0), align=E);
+      label("$y$", (0, 2), align=N);
+      draw(circle((0, 0), 1));
+      dot((1.5, 1.5));
+      label("$A$", (1.5, 1.5), align=NE);
+      dot((1.5, -1.5));
+      label("$B$", (1.5, -1.5), align=SE);
+      dot((-1.5, -1.5));
+      label("$C$", (-1.5, -1.5), align=SW);
+      dot((-.5, -.5));
+      label("$D$", (-.5, -.5), align=SW);
+      dot((.5, -.5));
+      label("$E$", (.5, -.5), align=SE);
+      dot((-.5, .5));
+      label("$F$", (-.5, .5), align=NW);
+      dot((.5, .5));
+      label("$G$", (.5, .5), align=NE);
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}{Solution of Problem 23}
+  \textbf{Solution:} Let $z = x + iy,$ then $\sqrt{x^2 + y^2} > 1,$ because point $A$ is outside circle.\\
+  \vspace*{0.2cm}
+  $\frac{1}{z} = \frac{x - iy}{\sqrt{x^2 + y^2}}$ so $\frac{x}{\sqrt{x^2 + y^2}}, \frac{y}{x^2 + y^2}< 1$\\
+  \vspace*{0.2cm}
+  This leads to the fact that point $E$ is reciprocal of point $A.$
+\end{frame}
+\begin{frame}{Problem 24}
+  \textbf{24.} If $z = (3 + 7i)(p + iq),$ where $p, q\in I,$ is purely imaginary, then find the minimum value of $|z|^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 24}
+  \textbf{Solution:} $z = (3p - 7q) + i(3q + 7p),$ which is purely imaginary, $\Rightarrow 3p - 7q = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{p}{q} = \frac{7}{3} \Rightarrow \frac{p}{q} + i = \frac{7}{3} + i \Rightarrow \frac{p + iq}{q} = \frac{7 + 3i}{3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow p+ iq = 7 + 3i \Rightarrow z = 21 + 9i + 49i - 21 = 58i \Rightarrow |z|^2 = 3364.$
+\end{frame}
+\begin{frame}{Problem 25}
+  \textbf{25.} If $\alpha = \left(\frac{a - ib}{a + ib}\right)^2 + \left(\frac{a + ib}{a - ib}\right)^2,~\forall~a,b \in R$ then prove
+  that $\alpha$ is purely real.
+\end{frame}
+\begin{frame}{Solution of Problem 25}
+  \textbf{Solution:} Given, $\alpha = \left(\frac{a - ib}{a + ib}\right)^2 + \left(\frac{a + ib}{a - ib}\right)^2 = \frac{(a - ib)^4 + (a + ib)^4}{(a - ib)^2(a + (ib)^2)}$\\
+  \vspace*{0.2cm}
+  $= \frac{a^4 - 4a^3.ib + 6a^2i^2b^2 - 4ai^3b^3 + b^4 + a^4 + 4a^3ib + 6a^2i^2b^2 + 4ai^3b^3 + b^4}{(a^2 + b^2)^2}$\\
+  \vspace*{0.2cm}
+  $= \frac{2a^4 - 12a^2b^2 + 2b^4}{(a^2 + b^2)^2}$ which is purely real.
+\end{frame}
+\begin{frame}{Problem 26}
+  \textbf{26.} If $\beta = \frac{z - 1}{z + 1}$ such that $|z| = 1,$ then prove that $\beta$ is purely imaginary.
+\end{frame}
+\begin{frame}{Solution of Problme 26}
+  \textbf{Solution:} Let $z = x + iy$ then given $|z| = 1 \Rightarrow x^2 + y^2 = 1$\\
+  \vspace*{0.2cm}
+  $\beta = \frac{z - 1}{z + 1} = \frac{(x - 1) + iy}{(x + 1) + iy} = \frac{(x - 1) + iy}{(x + 1) + iy}.\frac{(x + 1) - iy}{(x + 1) - iy}$\\
+  \vspace*{0.2cm}
+  $= \frac{x^2 - 1 + y^2 + iy(x + 1 -x + 1)}{(x + 1)^2 + y^2} = \frac{2iy}{(x + 1)^2 + y^2}$ which is purely imaginary.
+\end{frame}
+\begin{frame}{Problem 27}
+  \textbf{27.} If $|z - 3i| = 3$ such that its argument $arg(z) \in\left(0, \frac{\pi}{2}\right),$ then find the value of $\cot(arg(z)) - \frac{6}{z}.$
+\end{frame}
+\begin{frame}{Solution of Problem 27}
+  \textbf{Solution:} Let $z = x + iy \Rightarrow x^2 + (y - 3)^2 = 9 \Rightarrow x = 3\cos\theta, y = 3\sin\theta + 3$\\
+  \vspace*{0.2cm}
+  $z = 3[\cos\theta + i(\sin\theta + 1)] = 3\left[\sin\left(\frac{\pi}{2} - \theta\right) + i\left(1 + \cos\left(\frac{\pi}{2} - \theta\right)\right)\right]$\\
+  \vspace*{0.2cm}
+  $= 3\left[2\sin\left(\frac{\pi}{4} - \frac{\theta}{2}\right)\cos\left(\frac{\pi}{4} - \frac{\theta}{2}\right) + i2\cos^2\left(\frac{\pi}{4} - \frac{\theta}{2}\right)\right]$\\
+  \vspace*{0.2cm}
+  $= 6\cos\left(\frac{\pi}{4} - \frac{\theta}{2}\right)\left[\sin\left(\frac{\pi}{4} - \frac{\theta}{2}\right) + i\cos\left(\frac{\pi}{4} - \frac{\theta}{2}\right)\right]
+  = 6\cos\left(\frac{\pi}{4} - \frac{\theta}{2}\right)e^{i\left(\frac{\pi}{4} + \frac{\theta}{2}\right)}$\\
+  \vspace*{0.2cm}
+  $\cot\left(arg(z)\right) = \cot\left(\frac{\pi}{4} + \frac{\theta}{2}\right) = \tan\left(\frac{\pi}{4} - \frac{\theta}{2}\right)$\\
+  \vspace*{0.2cm}
+  $\frac{6}{z} = \sec\left(\frac{\pi}{4} - \frac{\theta}{2}\right)e^{-i\left(\frac{\pi}{4} + \frac{\theta}{2}\right)} = \sec\left(\frac{\pi}{4} - \frac{\theta}{2}\right)
+  \left[\sin\left(\frac{\pi}{4} - \frac{\theta}{2} - i\cos\left(\frac{\pi}{4} - \frac{\theta}{2}\right)\right)\right]$\\
+  \vspace*{0.2cm}
+  $= \tan\left(\frac{\pi}{4} - \frac{A}{2}\right) - i \Rightarrow \cot(arg(z)) - \frac{6}{z} = i$
+\end{frame}
+\begin{frame}{Problem 28}
+  \textbf{28.} Find the polar form of the complex number $\frac{-16}{1 + i\sqrt{3}}$
+\end{frame}
+\begin{frame}{Solution of Problem 28}
+  \textbf{Solution:} Let $z = r(\cos\theta + i\sin\theta) = \frac{-16}{1 + \sqrt{3}} = \frac{-16}{1 + i\sqrt{3}}.\frac{1 - i\sqrt{3}}{1 - i\sqrt{3}} = \frac{-16(1 - i\sqrt{3})}{1 + 3}$\\
+  \vspace*{0.2cm}
+  $= -4 + i4\sqrt{3}$ then $r\cos\theta = 4, r\sin\theta = 4\sqrt{3} \Rightarrow r^2 = 64 \Rightarrow r = 4, \cos\theta = \frac{-1}{2}, \sin\theta = \frac{\sqrt{3}}{2} \Rightarrow \theta = \frac{2\pi}{3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z = 8\left(\cos\frac{2\pi}{3} + i\sin\frac{2\pi}{3}\right)$
+\end{frame}
+\begin{frame}{Problem 29}
+  \textbf{29.} Let $z$ and $w$ be two non-zero complex numbers such that $|z| = |w|$ and $arg(z) + arg(w) = \pi$ then prove that $z = -\overline{w}.$
+\end{frame}
+\begin{frame}{Solution of Problem 29}
+  \textbf{Solution:} Let $z = r(\cos\theta + i\sin\theta)$ then because $arg(z) + arg(w) = \pi \Rightarrow arg(w) = \pi - \theta$\\
+  \vspace*{0.2cm}
+  $\Rightarrow w = r(-\cos\theta + i\sin\theta) = -r(\cos\theta - i\sin\theta)~\therefore~r = -\overline{w}$
+\end{frame}
+\begin{frame}{Problem 30}
+  \textbf{30.} If $x - iy = \sqrt{\frac{a - ib}{c - id}}$ then prove that $(x^2 + y^2) = \frac{a^2 + b^2}{c^2 + d^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 30}
+  \textbf{Solution:} $x - iy = \sqrt{\frac{a - ib}{c - id}} \Rightarrow x^2 - y^2 - 2ixy = \frac{a - ib}{c - id} = \frac{(a - ib)(c + id)}{c^2 + d^2}$\\
+  \vspace*{0.2cm}
+  $x^2 - y^2 - 2ixy = \frac{(ac + bd) -i(bc - ad)}{c^2 + d^2}$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get $x^2 - y^2 = \frac{ac + bd}{c^2 + d^2}, 2xy = \frac{bc - ad}{c^2 + d^2}$\\
+  \vspace*{0.2cm}
+  $(x^2 + y^2)^2 = (x^2 - y^2)^2 + 4x^2y^2 = \frac{(ac + bd)^2 + (bc - ad)^2}{(c^2 + d^2)} = \frac{a^2c^2 + b^2d^2 + b^2c^2 + a^2d^2}{(c^2 + d^2)^2}$\\
+  \vspace*{0.2cm}
+  $= \frac{a^2 + b^2}{c^2 + d^2}$
+\end{frame}
+\end{document}

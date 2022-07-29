@@ -1,0 +1,117 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 31-40}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Important Identities Related to Cube Root of Unity}
+  \begin{itemize}
+  \item $x^2 + x + 1 = (x - \omega)(x - \omega^2)$
+  \item $x^2 - x + 1 = (x + \omega)(x + \omega^2)$
+  \item $x^2 + xy + y^2 = (x - y\omega)(x - y\omega^2)$
+  \item $x^2 - xy + y^2 = (x + y\omega)(x + y\omega^2)$
+  \item $x^3 + y^3 = (x + y)(x + y\omega)(x + y\omega^2)$
+  \item $x^3 - y^3 = (x - y)(x - y\omega)(x - y\omega^2)$
+  \item $x^2 + y^2 + z^2 - xy - yz - zx = (x + y\omega + z\omega^2)(x + y\omega^2 + z\omega) \text{~or~} (x\omega + y\omega^2 + z)(x\omega^2 + y\omega + z)
+    \text{~or~}(x\omega + y + z\omega^2)(x\omega^2 + y + z\omega)$
+  \item $x^3 + y^3 + z^3 - 3xyz = (x + y + z)(x + y\omega + z\omega^2)(x+ y\omega^2 + z\omega)$
+  \end{itemize}
+\end{frame}
+\begin{frame}{Problem 31}
+  \textbf{31.} Find the square root of $7 + 8i.$
+\end{frame}
+\begin{frame}{Solution of Problem 31}
+  \textbf{Solution:} Let $z = x + iy = \sqrt{7 + 8i}, \Rightarrow (x^2 - y^2) + 2ixy = 7 + 8i$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $x^2 - y^2 = 7, 2xy = 8 \Rightarrow x^2 + y^2 = \sqrt{(x^2 - y^2)^2 + 4x^2y^2} = \sqrt{49 + 64} = \sqrt{113}[\because x, y \in R, x^2 + y^2 > x^2 - y^2 \Rightarrow x^2+ y^2\neq -\sqrt{113}]$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2x^2 = 7 + \sqrt{113}\Rightarrow x = \pm\sqrt{\frac{7 + \sqrt{113}}{2}}$\\
+  \vspace*{0.2cm}
+  $2y^2 = \sqrt{113} - 7 \Rightarrow y = \pm\sqrt{\frac{\sqrt{113} - 7}{2}}$
+\end{frame}
+\begin{frame}{Problem 32}
+  \textbf{32.} Find the square root of $a^2 - b^2 + 2iab~\forall~a, b\in R.$
+\end{frame}
+\begin{frame}{Solution of Problem 32}
+  \textbf{Solution:} Let $z = x + iy = \sqrt{a^2 - b^2 + 2iab}\Rightarrow x^2 - y^2 + 2ixy = a^2 - b^2 + 2iab$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.7cm}
+  $\Rightarrow x^2 - y^2 = a^2 - b^2, 2xy = 2ab \Rightarrow x^2 + y^2 = \sqrt{(a^2 - b^2)^2 + 4a^2b^2} = a^2 + b^2[\because x,y \in R, x^2 + y^2 > x^2 - y^2 \Rightarrow x^2 + y^2 \neq -(a^2 + b^2)]$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2x^2 = 2a^2 \Rightarrow x = \pm a$ and similarly, $y = \pm b$
+\end{frame}
+\begin{frame}{Problem 33}
+  \textbf{33.} Find the square root of $\frac{x^2}{y^2} + \frac{y^2}{x^2} + \frac{1}{2i}\left(\frac{x}{y} + \frac{y}{x}\right) + \frac{31}{16}.$
+\end{frame}
+\begin{frame}{Solution of Problem 34}
+  \textbf{Solution:} Given equation can be rewritten as $\frac{x^2}{y^2} + \frac{y^2}{x^2} -2.\frac{i}{4}\left(\frac{x}{y} + \frac{y}{z}\right) + \frac{i^2}{4^2} - \frac{i^2}{4^2} + \frac{31}{16}$\\
+  \vspace*{0.2cm}
+  $= \frac{x^2}{y^2} + \frac{y^2}{x^2} -2.\frac{i}{4}\left(\frac{x}{y} + \frac{y}{z}\right) + \frac{i^2}{4^2} + \frac{1}{16} + \frac{31}{16}$\\
+  \vspace*{0.2cm}
+  $= \frac{x^2}{y^2} + \frac{y^2}{x^2} -2.\frac{i}{4}\left(\frac{x}{y} + \frac{y}{z}\right) + \frac{i^2}{4^2} + 2.\frac{x}{y}.\frac{y}{x}$\\
+  \vspace*{0.2cm}
+  $= \left(\frac{x}{y} + \frac{y}{x} - \frac{i}{4}\right)^2$\\
+  \vspace*{0.2cm}
+  Therefore, square root is $\pm\left(\frac{x}{y} + \frac{y}{x} - \frac{i}{4}\right)$
+\end{frame}
+\begin{frame}{Problem 35}
+  \textbf{35.} Find the square root of $\frac{x^2}{y^2} + \frac{y^2}{x^2} - \frac{1}{i}\left(\frac{x}{y} - \frac{y}{x}\right) - \frac{9}{4}$
+\end{frame}
+\begin{frame}{Solution of Problem 35}
+  \textbf{Solution:} Like prevous problem the given equation can be rewritten as $\frac{x^2}{y^2} + \frac{y^2}{x^2} + 2.\frac{i}{2}\left(\frac{x}{y} - \frac{y}{x}\right) + \frac{i^2}{2^2} - \frac{i^2}{2^2} - \frac{9}{4}$\\
+  \vspace*{0.2cm}
+  $= \frac{x^2}{y^2} + \frac{y^2}{x^2} + 2.\frac{i}{2}\left(\frac{x}{y} - \frac{y}{x}\right) + \frac{i^2}{2^2} - 2$\\
+  \vspace*{0.2cm}
+  $= \frac{x^2}{y^2} + \frac{y^2}{x^2} + 2.\frac{i}{2}\left(\frac{x}{y} - \frac{y}{x}\right) + \frac{i^2}{2^2} - 2.\frac{x}{y}.\frac{y}{x}$\\
+  \vspace*{0.2cm}
+  $= \left(\frac{x}{y} - \frac{y}{x} + \frac{i}{2}\right)^2$\\
+  \vspace*{0.2cm}
+  Therefore, square root is $\pm\left(\frac{x}{y} - \frac{y}{x} + \frac{i}{2}\right)$
+\end{frame}
+\begin{frame}{Problem 36}
+  \textbf{36.} Find the square root of $x^2 + \frac{1}{x^2} + 4i\left(x - \frac{1}{x}\right) - 6$
+\end{frame}
+\begin{frame}{Solution of Problem 36}
+  \textbf{Solution:} Given equation can be written as $x^2 + \frac{1}{x^2} + 2.2i\left(x - \frac{1}{x}\right) + (2i)^2 - (2i)^2 - 6$\\
+  \vspace*{0.2cm}
+  $= x^2 + \frac{1}{x^2} + 2.2i\left(x - \frac{1}{x}\right) + 4i^2 - 2 = x^2 + \frac{1}{x^2} + 2.2i\left(x - \frac{1}{x}\right) + 4i^2 - 2.x.\frac{1}{x}$\\
+  \vspace*{0.2cm}
+  $= \left(x - \frac{1}{x} + 2i\right)^2$\\
+  \vspace*{0.2cm}
+  Thus square root is $\pm\left(x - \frac{1}{x} + 2i\right)$
+\end{frame}
+\begin{frame}{Problrm 37}
+  \textbf{37.} Find the minimum value of $|z| + |z - 2|$
+\end{frame}
+\begin{frame}{Solution of Problem 37}
+  \textbf{Solution:} We know that for two complex numbers $z_1$ and $z_2, |z_1| + |z_2|\geq |z_1 - z_2|$\\
+  \vspace*{0.2cm}
+  $|z| + |z - 2| \geq |z - (z - 2)| = |2| = 2$\\
+  \vspace*{0.2cm}
+  Therefore, minimum value is $2$.
+\end{frame}
+\end{document}
