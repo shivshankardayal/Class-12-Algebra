@@ -1,0 +1,133 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 41-50}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 41}
+  \textbf{41.} Simplify $\left(i^{17} + \frac{1}{i^{15}}\right)^3$ in the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 41}
+  \textbf{Solution:} Given, $\left(i^{17} + \frac{1}{i^{15}}\right)^3$\\
+  \vspace*{0.2cm}
+  $= i^{51} + 3.i^{34}\frac{1}{i^{15}} + 3i^{17}.\frac{1}{i^{30}} + \frac{1}{i^{45}}$\\
+  \vspace*{0.2cm}
+  $= i^{51} + 3.i^{19} + 3.\frac{1}{i^{13}} + \frac{1}{i^{45}}$\\
+  \vspace*{0.2cm}
+  $= i^3 + 3.i^3 + 3.\frac{1}{i} + \frac{1}{i}$\\
+  \vspace*{0.2cm}
+  $= -i -3i -3i - i = -8i$
+\end{frame}
+\begin{frame}{Problem 42}
+  \textbf{42.} Simplify $\frac{(1 + i)^2}{2 + 3i}$ in the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 42}
+  \textbf{Solution:} Given, $\frac{(1 + i)^2}{2 + 3i} = \frac{1 + i^2 + 2i}{2 + 3i} = \frac{2i}{2 + 3i}$\\
+  \vspace*{0.2cm}
+  $= \frac{2i}{2 + 3i}.\frac{2 - 3i}{2 - 3i} = \frac{6 - 4i}{2^2 + 3^2}$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{13}(6 - 4i)$
+\end{frame}
+\begin{frame}{Problem 43}
+  \textbf{43.} Simplify $\left(\frac{1}{1 + i} + \frac{1}{1 - i}\right)\frac{7 + 8i}{7 - 8i}$ the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 43}
+  \textbf{Solution:} $\frac{1}{1 + i} + \frac{1}{1 - i} = \frac{1 - i + 1 + i}{1 - i^2} = \frac{2}{2} = 1$\\
+  \vspace*{0.2cm}
+  $\frac{7 + 8i}{7 - 8i} = \frac{7 + 8i}{7 - 8i}.\frac{7 + 8i}{7 + 8i}$\\
+  \vspace*{0.2cm}
+  $= \frac{49 - 64 + 112i}{113} = \frac{-15 + 112i}{113}$
+\end{frame}
+\begin{frame}{Problem 44}
+  \textbf{44.} Simplify $\frac{(1 + i)^{4n + 7}}{(1 - i)^{4n - 1}}$ in the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 44}
+  \textbf{Solution:} $\frac{1 + i}{1 - i} = \frac{1 + i}{1 - i}.\frac{1 + i}{1 + i} = \frac{1 + i^2 + 2i}{2} = i$\\
+  \vspace*{0.2cm}
+  $\frac{(1 + i)^{4n + 7}}{(1 - i)^{4n - 1}} = \frac{(1 + i)^{4n - 1}}{(1 - i)^{4n - 1}}. (1 + i)^8 = i^{4n - 1}.(1 + i^2 + 2i)^4 = \frac{1}{i}.16i^4 = -16i$
+\end{frame}
+\begin{frame}{Problem 45}
+  \textbf{45.} Simplify $\frac{1}{1 - \cos\theta + i\sin\theta}$ in the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 45}
+  \textbf{Solution:} Given $\frac{1}{1 - \cos\theta + i\sin\theta} = \frac{1}{1 - \cos\theta + i\sin\theta}.\frac{1 - \cos\theta -i\sin\theta}{1 - \cos\theta - i\sin\theta}$\\
+  \vspace*{0.2cm}
+  $= \frac{1 - \cos\theta - i\sin\theta}{(1 - \cos\theta)^2 + \sin^2\theta} = \frac{1 - \cos\theta - i\sin\theta}{2 - 2\cos\theta}$\\
+  \vspace*{0.2cm}
+  $= \frac{2\sin^2\frac{\theta}{2} - 2i\sin\frac{\theta}{2}\cos\frac{\theta}{2}}{2.2\sin^2\frac{\theta}{2}}$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{2} - \frac{i}{2}\cot\frac{\theta}{2}$
+\end{frame}
+\begin{frame}{Problem 46}
+  \textbf{46.} Simplify $\frac{(\cos x + i\sin x)(\cos y + i\sin y)}{(\cot u + i)(i + \tan u)}$ in the form of $A + iB.$
+\end{frame}
+\begin{frame}{Solution of Problem 46}
+  \textbf{Solution:}Given fraction can be rewritten as $\frac{(\cos x\cos y - i\sin x\sin y) + i(\sin x\cos y + \cos x\sin y)}{\frac{(\cos u + i\sin u)(\sin v + i\cos v)}{\sin u\cos v}}$\\
+  \vspace*{0.2cm}
+  $= \sin u\cos v\frac{\cos(x + y) + i\sin(x + y)}{\sin(v - u) + i\cos(v- u)}$\\
+  \vspace*{0.2cm}
+  $= \sin u \cos v\frac{\cos(x + y) + i\sin(x + y)}{\sin(v - u) + i\cos(v- u)}.\frac{\sin(v - u) - i\cos(v - u)}{\sin(v - u) - i\cos(v - u)}$\\
+  \vspace*{0.2cm}
+  $= \sin u\cos v.[\sin(v - u + x + y) - i\cos(v - u + x + y)]$
+\end{frame}
+\begin{frame}{Problem 47}
+  \textbf{47.} Show that for $z\in C, |z| = 0$ if and only if $z = 0.$
+\end{frame}
+\begin{frame}{Solution of Problem 47}
+  \textbf{Solution:} If $|z| = 0$ then $\sqrt{x^2 + y^2} = 0 \Rightarrow x^2 + y^2 = 0$\\
+  \vspace*{0.2cm}
+  Above is possible if and only if $x = 0$ and $y = 0 \Rightarrow z = 0$
+\end{frame}
+\begin{frame}{Problem 48}
+  \textbf{48.} If $z_1$ and $z_2$ are $1 - i$ and $2 + 7i$ then find $Im\left(\frac{z_1z_2}{\overline{z_1}}\right).$
+\end{frame}
+\begin{frame}{Solution of Problem 48}
+  \textbf{Solution:} $\frac{z_1z_2}{\overline{z_1}} = \frac{(1 - i)(2 + 7i)}{1 + i} = \frac{2 + 7 -2i + 7i}{1 + i} = \frac{9 + 5i}{1 + i}$\\
+  \vspace*{0.2cm}
+  $= \frac{9 + 5i}{1 + i}.\frac{1 - i}{1 - i} = \frac{9 + 5 + 5i -9i}{2} = 7 - 2i$\\
+  \vspace*{0.2cm}
+  $\therefore Im\left(\frac{z_1z_2}{\overline{z_1}}\right) = -2$
+\end{frame}
+\begin{frame}{Problem 49}
+  \textbf{49.} Find $x$ and $y$ if $\frac{(1 + i)x - 2i}{3 + i} + \frac{(2 - 3i)+ i}{3 - i} = i.$
+\end{frame}
+\begin{frame}{Solution of Problem 49}
+  \textbf{Solution:} Given, $\frac{(1 + i)x - 2i}{3 + i} + \frac{(2 - 3i)y+ i}{3 - i} = i$\\
+  \vspace*{0.2cm}
+  $\frac{x + i(x - 2)}{3 + i} + \frac{2y + i(1 - 3y)}{3 - i} = i$\\
+  \vspace*{0.2cm}
+  $3x + (x - 2) + i[3(x - 2)- x] + 6y +(3y - 1) + i[3 - 9y + 2y] = 10i$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  $4x - 2 + 9y - 1 = 0, 2x - 6 + 3 - 7y = 10$\\
+  \vspace*{0.2cm}
+  $4x + 9y = 3, 2x - 7y = 13 \Rightarrow y = -1, x = 3$
+\end{frame}
+\begin{frame}{Problem 50}
+  \textbf{50.} If $|z - i| < 1,$ then prove that $|z + 12 - 6i| < 14.$
+\end{frame}
+\begin{frame}{Solution of Problem 50}
+  \textbf{Solution:} $|z + 12 - 6i| \leq |z - i| + |12 - 5i| < 1 + 13 = 14$
+\end{frame}
+\end{document}

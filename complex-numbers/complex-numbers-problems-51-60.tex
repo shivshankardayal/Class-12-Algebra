@@ -1,0 +1,158 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 51-60}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 51}
+  \textbf{51.} If $|z + 6| = |2z + 3|,$ then prove that $|z| = 3$
+\end{frame}
+\begin{frame}{Solution of Problem 51}
+  \textbf{Solution:} Given, $|z + 6| = |2z + 3|,$ let $z = x + iy$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x + 6)^2 + y^2 = (2x + 3)^2 + 4y^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x^2 + 12x + 36 + y^2 = 4x^2 + 12x + 9 + 4y^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 3x^2 + 2y^2 = 27 \Rightarrow x^2 + y^2 = 9 \Rightarrow |z| = 3$
+\end{frame}
+\begin{frame}{Problem 52}
+  \textbf{52.} If $\sqrt{a - ib} = x - iy,$ then prove that $\sqrt{a + ib} = x + iy$
+\end{frame}
+\begin{frame}{Solution of Problem 52}
+  \textbf{Solution:} Given $\sqrt{a - ib} = x - iy,$ squaring we get\\
+  \vspace*{0.2cm}
+  $a - ib = x^2 - y^2 - 2ixy$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $a = x^2 - y^2, b = 2xy \Rightarrow a + ib = x^2 - y^2 + 2ixy = x^2 +i^2y^2 + 2ixy$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sqrt{a + ib} = x + iy$
+\end{frame}
+\begin{frame}{Problem 53}
+  \textbf{53.} If $x_r = \cos\frac{\pi}{2^r} + i\sin\frac{\pi}{2^r},$ then find the value of $x_1x_2x_3\ldots \text{~to~}\infty.$
+\end{frame}
+\begin{frame}{Solution of Problem 53}
+  \textbf{Solution:} $x_1x_2x_3\ldots\infty = \left(\cos\frac{\pi}{2} + i\sin\frac{\pi}{2}\right)\left(\cos\frac{\pi}{2^2} + i\sin\frac{\pi}{2^2}\right) \ldots\infty$\\
+  \vspace*{0.2cm}
+  $= \cos\left(\frac{\pi}{2} + \frac{\pi}{2^2} + \ldots \infty\right) + i\sin\left(\frac{\pi}{2} + \frac{\pi}{2^2} + \ldots \infty\right)$\\
+  \vspace*{0.2cm}
+  $= \cos\frac{\pi}{2}.\frac{1}{1- \frac{1}{2}} + i\sin\frac{\pi}{2}.\frac{1}{1- \frac{1}{2}}$\\
+  \vspace*{0.2cm}
+  $= \cos\pi + i\sin\pi = -1$
+\end{frame}
+\begin{frame}{Problem 54}
+  \textbf{54.} Find the value of $\frac{(\cos\theta + i\sin\theta)^4}{(\sin\theta + i\cos\theta)^2}$
+\end{frame}
+\begin{frame}{Solutiobn of Problem 54}
+  \textbf{Solution:} Given, $\frac{(\cos\theta + i\sin\theta)^4}{(\sin\theta + i\cos\theta)^5}$\\
+  \vspace*{0.2cm}
+  $= \frac{(\cos\theta + i\sin\theta)^4}{i^5\left(\frac{1}{i}\sin\theta + \cos\theta\right)^5}$\\
+  \vspace*{0.2cm}
+  $= \frac{(\cos\theta + i\sin\theta)^4}{i(\cos\theta - i\sin\theta)^5}$\\
+  \vspace*{0.2cm}
+  $= \frac{(\cos\theta + i\sin\theta)^4}{i(\cos\theta + i\sin\theta)^{-5}}$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{i}(\cos\theta + i\sin\theta)^9 = \sin9\theta -i \cos9\theta$
+\end{frame}
+\begin{frame}{Problem 55}
+  \textbf{55.} If $z = \left(\frac{\sqrt{3}}{2}+ \frac{i}{2}\right)^5 + \left(\frac{\sqrt{3}}{2} - \frac{i}{2}\right)^5$ then find $Im(z).$
+\end{frame}
+\begin{frame}{Solution of Problem 55}
+  \textbf{Solution:} $z = \left[\cos\frac{\pi}{6} + i\sin\frac{\pi}{6}\right]^5 + \left[\cos\frac{\pi}{6} - i\sin\frac{\pi}{6}\right]^5$\\
+  \vspace*{0.2cm}
+  $= \cos\frac{5\pi}{6} + i\sin\frac{5\pi}{6} + \cos\frac{5\pi}{6} - i\sin\frac{5\pi}{6}$\\
+  \vspace*{0.2cm}
+  $= 2\cos\frac{5\pi}{6}~\therefore Im(z) = 0$
+\end{frame}
+\begin{frame}{Problem 56}
+  \textbf{56.} Find the product of all values of $\left(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}\right)^{\frac{3}{4}}$
+\end{frame}
+\begin{frame}{Solution of Problem 56}
+  \textbf{Solution:} $z = \left(\cos\frac{\pi}{3} + i\sin\frac{\pi}{3}\right)^{\frac{3}{4}}$\\
+  \vspace*{0.2cm}
+  $= \left(\cos\pi + i\sin\pi\right)^{\frac{1}{4}},$ thus general root is $\cos\frac{2n\pi + \pi}{4} + i\sin\frac{2n\pi + \pi}{4}$\\
+  \vspace*{0.2cm}
+  Thus, substituting $n = 0, 1, 2, 3$ we find four roots and the product is\\
+  \vspace*{0.2cm}
+  $\left(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4}\right)\left(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}\right)\left(\cos\frac{5\pi}{4} + i\sin\frac{5\pi}{4}\right)\left(\cos\frac{7\pi}{4} + i\sin\frac{7\pi}{4}\right)$\\
+  \vspace*{0.2cm}
+  $= \left(\frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}\right)\left(\frac{-1}{\sqrt{2}} + \frac{i}{\sqrt{2}}\right)\left(\frac{-1}{\sqrt{2}} - \frac{i}{\sqrt{2}}\right)\left(\frac{1}{\sqrt{2}} - \frac{i}{\sqrt{2}}\right)$\\
+  \vspace*{0.2cm}
+  $= \left(-\frac{1}{2} - \frac{1}{2}\right)\left(\frac{-1}{2} - \frac{1}{2}\right)$\\
+  \vspace*{0.2cm}
+  $= -1.-1 = 1$
+\end{frame}
+\begin{frame}{Problem 57}
+  \textbf{57.} If $z_1$ and $z_2$ are two non-zero complex numbers such that $|z_1 + z_2| = |z_1| + |z_2|,$ then find $arg(z_1) - arg(z_2).$
+\end{frame}
+\begin{frame}{Solution of Problem 57}
+  \textbf{Solution:} Let $z_1 = r_1(\cos x + i\sin x)$ and $z_2 = r_2(\cos y + i\sin y)$\\
+  \vspace*{0.2cm}
+  Then $(r_1\cos x + r_2\cos y)^2 + (r_1\sin x+ r_2\sin y)^2 = r_1^2 + r_2^2 + 2r_2r_2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2r_1r_2(\cos x\cos y + \sin x\sin y) = 2r_2r_2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \cos(x - y) = 1 \Rightarrow x - y = 0 \Rightarrow \arg(z_1) - arg(z_2) = 0$
+\end{frame}
+\begin{frame}{Problem 58}
+  \textbf{58.} If $z = 1 - \sin\alpha + i\cos\alpha,$ where $\alpha\in\left(0, \frac{\pi}{2}\right),$ then find the modulus and principal value of its argument.
+\end{frame}
+\begin{frame}{Solution of Problem 58}
+  \textbf{Solution:} Let $z = 1 - \sin\alpha + i\cos\alpha = r(\cos\theta + i\sin\theta),$ then\\
+  \vspace*{0.2cm}
+  $r = \sqrt{(1 - \sin\alpha)^2 + \cos^2\alpha} = \sqrt{2 - 2\sin\alpha}$\\
+  \vspace*{0.2cm}
+  $\tan\theta = \frac{\cos\alpha}{1 - \sin\alpha} = \frac{1 - \tan^2\frac{\alpha}{2}}{1 + \tan^2\frac{\alpha}{2} - 2\tan\frac{\alpha}{2}}$\\
+  \vspace*{0.2cm}
+  $= \frac{1 + \tan\frac{\alpha}{2}}{1 - \tan\frac{\alpha}{2}} = \tan\left(\frac{\pi}{4} - \frac{\alpha}{2}\right)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \theta = \frac{\pi}{4} - \frac{\alpha}{2}$
+\end{frame}
+\begin{frame}{Problem 59}
+  \textbf{59.} Find the value of expression $\left[\frac{1 + \sin\frac{\pi}{8} + i\cos\frac{\pi}{8}}{1 + \sin\frac{\pi}{8} - i\cos\frac{\pi}{8}}\right]^8.$
+\end{frame}
+\begin{frame}{Solution of Problem 59}
+  \textbf{Solution:} Let $z = \left[\frac{1 + \sin\frac{\pi}{8} + i\cos\frac{\pi}{8}}{1 + \sin\frac{\pi}{8} - i\cos\frac{\pi}{8}}\right]$\\
+  \vspace*{0.2cm}
+  $= \left[\frac{1 + \sin\frac{\pi}{8} + i\cos\frac{\pi}{8}}{1 + \sin\frac{\pi}{8} - i\cos\frac{\pi}{8}}\right]. \left[\frac{1 + \sin\frac{\pi}{8} + i\cos\frac{\pi}{8}}{1 + \sin\frac{\pi}{8} + i\cos\frac{\pi}{8}}\right]$\\
+  \vspace*{0.2cm}
+  $= \frac{\left(1 + \sin\frac{\pi}{8}\right)^2 - \cos^2\frac{\pi}{8} + 2i(1 + \sin\frac{\pi}{8})\cos\frac{\pi}{8}}{\left(1 + \sin\frac{\pi}{8}\right)^2 + \cos^2\frac{\pi}{8}}$\\
+  \vspace*{0.2cm}
+  $= \frac{2\sin\frac{\pi}{8} + 2\sin^2\frac{\pi}{8} + 2i(1 + \sin\frac{\pi}{8})\cos\frac{\pi}{8}}{2 + 2\sin\frac{\pi}{8}}$\\
+  \vspace*{0.2cm}
+  $= \sin\frac{\pi}{8} + i\cos\frac{\pi}{8} = i\left(\cos\frac{\pi}{8} - i\sin\frac{\pi}{8}\right)$\\
+  \vspace*{0.2cm}
+  $z^8 = i^8(\cos\pi - i\sin\pi) = -1$
+\end{frame}
+\begin{frame}{Problem 60}
+  \textbf{60.} If $z_r = \cos\frac{2r\pi}{5} + i\sin\frac{2r\pi}{5}, r = 0, 1, 2, 3, 4$ then find $z_1z_2z_3z_4z_5.$
+\end{frame}
+\begin{frame}{Solution of Problem 60}
+  \textbf{Solution:} $z_1z_2z_3z_4z_5 = \cos\left(\frac{2\pi}{5} + \frac{4\pi}{5} + \frac{6\pi}{5} + \frac{8\pi}{5} + \frac{10\pi}{5}\right) + i\sin\left(\frac{2\pi}{5} + \frac{4\pi}{5} + \frac{6\pi}{5} + \frac{8\pi}{5} + \frac{10\pi}{5}\right)$\\
+  \vspace*{0.2cm}
+  $= \cos\frac{30\pi}{5} + i\sin\frac{30\pi}{5} = \cos6\pi + i\sin6\pi = 1$
+\end{frame}
+\end{document}
