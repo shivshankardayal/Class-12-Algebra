@@ -1,0 +1,52 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 61-70}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 61}
+  \textbf{61.} If $z_n = \cos\frac{\pi}{(2n + 1)(2n + 3)} + i\sin\frac{\pi}{(2n + 1)(2n + 3)}$ then find $z_1z_2z_3\ldots\infty.$
+\end{frame}
+\begin{frame}{Solution of Problem 61}
+  \textbf{Solution:} $z_n = \cos\left(\frac{1}{2n + 1} - \frac{1}{2n + 3}\right).\frac{\pi}{2} + i\sin\left(\frac{1}{2n + 1} - \frac{1}{2n + 3}\right).\frac{\pi}{2}$\\
+  \vspace*{0.2cm}
+  $\therefore z_1z_2z_3\ldots\infty = \cos\left(\frac{1}{3} - \frac{1}{5} + \frac{1}{5} - \frac{1}{7} + \frac{1}{7} - \frac{1}{9}\ldots\infty\right).\frac{\pi}{2} + i\sin\left(\frac{1}{3} - \frac{1}{5} + \frac{1}{5} - \frac{1}{7} + \frac{1}{7} - \frac{1}{9}\ldots\infty\right).\frac{\pi}{2}$\\
+  \vspace*{0.2cm}
+  $= \cos\frac{\pi}{6} + i\sin\frac{\pi}{6}$
+\end{frame}
+\begin{frame}{Problem 62}
+  \textbf{62.} If $z_1, z_2$ be two complex numbers and $a,b$ are two real numbers, then prove that $|az_1 - bz_2|^2 + |bz_1 + az_2|^2 = (a^2 + b^2)(|z_1|^2 + |z_2|^2).$
+\end{frame}
+\begin{frame}{Solution of Problem 62}
+  \textbf{Solution:} Let $z_1 = x_1 + iy_1$ and $z_2 = x_2 + iy_2$\\
+  \vspace*{0.2cm}
+  $|az_1 - bz_2|^2 + |bz_1 + az_2|^2 = (ax_1 - bx_2)^2 + (ay_1 - by_2)^2 + (bx_1 + ax_2)^2 + (by_1 + ay_2)^2$\\
+  \vspace*{0.2cm}
+  $= a^2x_1^2 + b^2x_2^2 -2abx_1x_2 + a^2y_1^2 + b^2y_2^2 - 2aby_1y_2 + b^2x_1^2 + a^2x_2^2 + 2abx_1x_2 + b^2y_1^2 + a^2y_2^2 + 2aby_1y_2$\\
+  \vspace*{0.2cm}
+  $= (a^2 + b^2)(x_1^2 + y_1^2 + x_2^2 + y_2^2)$\\
+  \vspace*{0.2cm}
+  $= (a^2 + b^2)(|z_1|^2 + |z_2|^2)$
+\end{frame}
+\end{document}
