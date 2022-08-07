@@ -49,4 +49,120 @@
   \vspace*{0.2cm}
   $= (a^2 + b^2)(|z_1|^2 + |z_2|^2)$
 \end{frame}
+\begin{frame}{Problem 63}
+  \textbf{63.} Show that the equation $\frac{A^2}{x - a} + \frac{B^2}{x - b} + \ldots + \frac{H^2}{x - h} = x + l$ where $A, B, \ldots, H; a, b, \ldots, h$ and $l$ are real; cannot have imaginary roots.
+\end{frame}
+\begin{frame}{Solution of Problem 63}
+  \textbf{Solution:} Let $x = y + iz,$ then given expression becomes\\
+  \vspace*{0.2cm}
+  $\frac{A^2}{y + iz - a} + \frac{B^2}{y + iz - b} + \ldots + \frac{H^2}{y + iz - h} = y + iz + l$\\
+  \vspace*{0.2cm}
+  $\frac{A^2(y - a - iz)}{(y - a)^2 + z^2} + \frac{B(y - b - iz)}{(y - b)^2 + z^2} + \ldots + \frac{H^2(y - iz - h)}{(y - h)^2 + z^2} = y + iz + l$\\
+  \vspace*{0.2cm}
+  Comparing imaginary parts, we have\\
+  \vspace*{0.2cm}
+  $-iz\left[\frac{A^2}{(y - a)^2 + z^2} + \frac{B^2}{(y - a)^2 + z^2} + \ldots + \frac{H^2}{(y - a)^2 + z^2}\right] = iz$\\
+  \vspace*{0.2cm}
+  $iz\left[1 + \frac{A^2}{(y - a)^2 + z^2} + \frac{B^2}{(y - a)^2 + z^2} + \ldots + \frac{H^2}{(y - a)^2 + z^2}\right] = 0$\\
+  \vspace*{0.2cm}
+  Clearly the term inside brackets is non-zero. So $z = 0.$
+\end{frame}
+\begin{frame}{Problem 64}
+  \textbf{64.} Find all real numbers $x,$ such that $|1 + 4i - 2^{-x}|\leq 5.$
+\end{frame}
+\begin{frame}{Solution of Problem 64}
+  \textbf{Solution:} Let $2^{-x} = p,$ then\\
+  \vspace*{0.2cm}
+  $|1 + 4i - p|\leq 5 \Rightarrow (1 - p)^2 + 16 \leq 25$\\
+  \vspace*{0.2cm}
+  $1 - p \leq \pm3 \Rightarrow p \geq 4, -2 \Rightarrow x \geq -2~~\because p \nless 0$
+  \vspace*{0.2cm}
+  $\Rightarrow p \in [-2, \infty]$
+\end{frame}
+\begin{frame}{Problem 65}
+  \textbf{65.} Show that a unimodular complex number, not purely real can always be expressed as $\frac{c + i}{c - i}$ for some real $c.$
+\end{frame}
+\begin{frame}{Solution of Problem 65}
+  \textbf{65.} Since the number is unimodular $\Rightarrow |z| = 1,$ so let $z = \cos\theta + i\sin\theta.$\\
+  \vspace*{0.2cm}
+  Given, $\cos\theta + i\sin\theta = \frac{c + i}{c - i} = \frac{c + i}{c - i}.\frac{c + i}{c - i} = \frac{c^2 - 1 + 2ic}{c^2 + 1}$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $\cos\theta = \frac{c^2 - 1}{c^2 + 1} \Rightarrow c = \pm\cot\frac{\theta}{2}$\\
+  \vspace*{0.2cm}
+  and $\sin\theta = \frac{2c}{c^2 + 1} \Rightarrow c = \cot\frac{\theta}{2}, \tan\frac{\theta}{2}$\\
+  \vspace*{0.2cm}
+  So the common value is $c = \cot\frac{\theta}{2}.$
+\end{frame}
+\begin{frame}{Problem 66}
+  \textbf{66.} If $(z^3 + 3)^2 = -16,$ then find $|z|.$
+\end{frame}
+\begin{frame}{Solution of Problem 66}
+  \textbf{Solution:} $(z^3 + 3)^2 = -16 = 16i^2 \Rightarrow z^3 = -3 \pm 4i$\\
+  \vspace*{0.2cm}
+  $|z^3| = 5 \Rightarrow |z| = 5^{1/3}$
+\end{frame}
+\begin{frame}{Problem 67}
+  \textbf{67.} If $\frac{\sin\frac{x}{2} + \cos\frac{x}{2} - i\tan x}{1 + 2i\sin\frac{x}{2}}$ is real, the find the set of all possible values of $x.$
+\end{frame}
+\begin{frame}{Solution of Problem 67}
+  \textbf{Solution:}Let $z = \frac{\sin\frac{x}{2} + \cos\frac{x}{2} - i\tan x}{1 + 2i\sin\frac{x}{2}}$\\
+  \vspace*{0.2cm}
+  $= \frac{\sin\frac{x}{2} + \cos\frac{x}{2} - i\tan x}{1 + 2i\sin\frac{x}{2}}.\frac{1 - 2i\sin\frac{x}{2}}{1 - 2i\sin\frac{x}{2}}$\\
+  \vspace*{0.2cm}
+  Since it is real so imaginary part of this will be $0.$\\
+  \vspace*{0.2cm}
+  $\Rightarrow -\tan x -2\sin\frac{x}{2}\cos\frac{c}{2} -2\sin\frac{x}{2}\cos\frac{x}{2} = 0$\\
+  \vspace*{0.2cm}
+  $2\sin\frac{x}{2}\left(\sin\frac{x}{2} + \cos\frac{x}{2}\right) + \frac{2\sin\frac{x}{2}\cos\frac{x}{2}}{\cos x} = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sin\frac{x}{2} = 0 \Rightarrow x = 2n\pi$ where $n = 0,1,2,3\ldots$\\
+  \vspace*{0.2cm}
+  or $\left(\sin\frac{x}{2} + \cos\frac{x}{2}\right)\cos x + \cos\frac{x}{2} = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \tan^3\frac{x}{2} - \tan\frac{x}{2} - 2 = 0$\\
+  \vspace*{0.2cm}
+  If $\alpha$ is a solution of above then the set of possible values are $x = 2n\pi + 2\alpha$
+\end{frame}
+\begin{frame}{Problem 68}
+  \textbf{68.} Prove that $|z_1 + z_2|^2 + |z_1 - z_2|^2 = 2(|z_1|^2 + |z_2|^2)$
+\end{frame}
+\begin{frame}{Solution of Problem 68}
+  \textbf{Solution:} Let $z_1 = x_1 + iy_1$ and $z_2 = x_2 + iy_2$\\
+  \vspace*{0.2cm}
+  $|z_1 + z_2|^2 + |z_1 - z_2|^2 = (x_1 + x_2)^2 + (y_1 + y_2)^2 + (x_1 - x_2)^2 + (y_1 - y_2)^2$\\
+  \vspace*{0.2cm}
+  $= 2(x_1^2 + y_1^2 + x_2^2 + y_2^2)$\\
+  \vspace*{0.2cm}
+  $= 2(|z_1|^2 + |z_2|^2)$
+\end{frame}
+\begin{frame}{Problem 69}
+  \textbf{69.} If $x^2 - x + 1 = 0$ then find the value of $\sum_{n = 1}^5\left(x^n + \frac{1}{x^n}\right)^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 69}
+  \textbf{Solution:} Given, $x^2 - x + 1 = 0\Rightarrow x = -\omega, -\omega^2$\\
+  \vspace*{0.2cm}
+  $\sum_{n = 1}^5\left(x^n + \frac{1}{x^n}\right)^2 = \sum_{n = 1}^5\left(x^{2n} + \frac{1}{x^{2n}} + 2\right)$\\
+  \vspace*{0.2cm}
+  $= \left(x^2 + \frac{1}{x^2} + 2\right) + \left(x^4 + \frac{1}{x^4} + 2\right) + \left(x^6 + \frac{1}{x^6} + 2\right) + \left(x^8 + \frac{1}{x^8} + 2\right) + \left(x^{10} + \frac{1}{x^{10}} + 2\right)$\\
+  \vspace*{0.2cm}
+  $= (x^2 + x^4 + x^6 + x^8 + x^{10}) + \left(\frac{1}{x^2} + \frac{1}{x^4} + \frac{1}{x^6} + \frac{1}{x^8} + \frac{1}{x^{10}}\right) + 10$\\
+  \vspace*{0.2cm}
+  $= (\omega^2 + \omega^4 + \omega^6 + \omega^8 + \omega^{10}) + \left(\frac{1}{\omega^2} + \frac{1}{\omega^4} + \frac{1}{\omega^6} + \frac{1}{\omega^8} + \frac{1}{\omega^{10}}\right) + 10$\\
+  \vspace*{0.2cm}
+  $= -1 - 1 + 10 = 8$
+\end{frame}
+\begin{frame}{Problem 70}
+  \textbf{70.}  If $3^{49}(x + iy) = \left(\frac{3}{2} + \frac{\sqrt{3}}{2}i\right)^{100}$ then find $x$ and $y.$
+\end{frame}
+\begin{frame}{Solution of Problem 70}
+  \textbf{Solution:} $3^{49}(x + iy) = \left[i\sqrt{3}\left(\frac{1 - i\sqrt{3}}{2}\right)\right]^{100}$\\
+  \vspace*{0.2cm}
+  $= i^{100}3^{50}(-\omega)^{100} \Rightarrow 3^{49}(x + iy) = 3^{50}.\omega$\\
+  \vspace*{0.2cm}
+  $x + iy = -\frac{3}{2} + \frac{3\sqrt{3}}{2}i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = -\frac{3}{2}, y = \frac{3\sqrt{3}}{2}$
+\end{frame}
 \end{document}
