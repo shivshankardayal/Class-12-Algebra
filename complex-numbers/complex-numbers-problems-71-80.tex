@@ -25,4 +25,115 @@
 \begin{frame}
   \titlepage
 \end{frame}
+\begin{frame}{Problem 71}
+  \textbf{71.} For any two complex numbers $z_1$ and $z_2,$ prove that $|z_1 + z_2|^2 = |z_1|^2 + |z_2|^2 + 2Re(z_1\overline{z_2}) =
+  |z_1|^2 + |z_2|^2 + 2Re(\overline{z_1}z_2)$
+\end{frame}
+\begin{frame}{Solution of Problem 71}
+  \textbf{Solution:} $|z_1 + z_2|^2 = x_1^2 + x_2^2 + y_1^2 + y_2^2 + 2x_1x_2 + 2y_1y_2$\\
+  \vspace*{0.2cm}
+  $= |z_1|^2 + |z_2|^2 + 2(x_1x_2 + y_1y_2)$\\
+  \vspace*{0.2cm}
+  Now, $2Re(z_1\overline{z_2}) = 2Re[(x_1 + iy_1)(x_2 - iy_2)] = 2Re[x_1x_2 + y_1y_2 -i(x_1y_2 + x_2y_1)] = 2(x_1x_2 + y_1y_2)$\\
+  \vspace*{0.2cm}
+  Similalry, $2Re(\overline{z_1}z_2) = 2(x_1x_2 + y_1y_2)$\\
+  \vspace*{0.2cm}
+  Thus, we have desired result.
+\end{frame}
+\begin{frame}{Problem 72}
+  \textbf{72.} If $|z_1| = |z_2| = 1,$ then prove that $|z_1 + z_2| = \left|\frac{1}{z_1} + \frac{1}{z_2}\right|.$
+\end{frame}
+\begin{frame}{Solution of Problem 72}
+  \textbf{Solution:} R.H.S. = $\left|\frac{1}{z_1} + \frac{1}{z_2}\right| = \left|\frac{z_2 + z_1}{z_1z_2}\right|$\\
+  \vspace*{0.2cm}
+  Since $|z_1| = |z_2| = 1 \therefore |z_1z_2| = 1$ and thus $|z_1 + z_2| = \left|\frac{1}{z_1} + \frac{1}{z_2}\right|.$
+\end{frame}
+\begin{frame}{Problem 73}
+  \textbf{73.} If $|z - 2| = 2|z - 1|,$ then show that $|z|^2 = \frac{4}{3}Re(z)$
+\end{frame}
+\begin{frame}{Solution of Problme 73}
+  \textbf{Solution:} Let $z = x + iy,$ then $x^2 - 4x + 4 + y^2 = 4x^2 - 8x + 4 + 4y^2 \Rightarrow 3x^2 + 3y^2 = 4x$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 3|z|^2 = 4Re(z) \Rightarrow |z|^2 = \frac{4}{3}Re(z)$
+\end{frame}
+\begin{frame}{Problem 74}
+  \textbf{74.} If $\sqrt[3]{a + ib} = x + iy,$ then prove that $\frac{a}{x} + \frac{b}{y} = 4(x^2 - y^2)$
+\end{frame}
+\begin{frame}{Solution of Problem 74}
+  \textbf{Solution:} Given $\sqrt[3]{a + ib} = x + iy \Rightarrow a + ib = (x + iy)^3 = x^3 - 3xy^2 + i(3x^2y - y^3)$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we have $a = x^3 - 3xy^2, b = 3x^2y - y^3 \Rightarrow \frac{a}{x} = x^2 - 3y^2, \frac{b}{y} =
+  3x^2- y^2$\\
+  \vspace*{0.2cm}
+  $\therefore \frac{a}{x} + \frac{b}{y} = 4(x^2 - y^2)$
+\end{frame}
+\begin{frame}{Problem 75}
+  \textbf{75.} If $x + iy = \sqrt{\frac{a + ib}{c + id}},$ then prove that $(x^2 + y^2)^2 = \frac{a^2 + b^2}{c^2 + d^2}$
+\end{frame}
+\begin{frame}{Solution of Problem 75}
+  \textbf{Solution:} $x + iy = \sqrt{\frac{a + ib}{c + id}} \Rightarrow (x + iy)^2 = \frac{a + ib}{c + id}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |(x + iy)^2| = \left|\frac{a + ib}{c + id}\right| = \frac{|a + ib|}{|c + id|}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x^2 + y^2)^2 = \frac{a^2 + b^2}{c + d^2}$
+\end{frame}
+\begin{frame}{Problem 76}
+  \textbf{76.} If $z_1, z_2, \ldots, z_n$ are cube roots of unity, then prove that $|z_k| = |z_{k + 1}| \forall k \in [1, n - 1]$
+\end{frame}
+\begin{frame}{Solution of Problem 76}
+  \textbf{Solution:} Let $z = 1 = \cos0^\circ + i\sin0^\circ = e^{i2r\pi} \forall i \in N \Rightarrow \sqrt[n]{z} =
+  e^{\frac{i.2r\pi}{n}}$\\
+  \vspace*{0.2cm}
+  Clearly, $|z_k| = |z_{k + 1}| = 1$
+\end{frame}
+\begin{frame}{77}
+  \textbf{77.} If $n$ is a positive integer greater than unity and $z$ is a complex number satisfying the equation $z^n = (z +
+  1)^n,$ then probve that $Re(z) < 0.$
+\end{frame}
+\begin{frame}{Solution of Problem 77}
+  \textbf{Solution:} $z^n  = (z + 1)^n \Rightarrow \frac{z}{z + 1} = 1^{1/n}$\\
+  \vspace*{0.2cm}
+  This means $\frac{z}{z + 1}$ is $n$th root of unity. $\Rightarrow \left|\frac{z}{z + 1}\right| = 1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z| = |z + 1| \Rightarrow x^2 + y^2 = x^2 + 2x + 1 + y^2 \Rightarrow x = -\frac{1}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow Re(z) < 0$
+\end{frame}
+\begin{frame}{Problem 78}
+  \textbf{78.} Prove that $x^{3m} + x^{3n - 1} + x^{3r - 2} \forall m, n, r \in N,$ is divisible by $1 + x + x^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 78}
+  \textbf{Solution:} Roots of $1 + x + x^2 = 0$ are $\omega$ and $\omega^2.$ Let $f(x) = x^{3m} + x^{3n - 1} + x^{3r - 2}$\\
+  \vspace*{0.2cm}
+  $f(x) = x^{3m} + \frac{x^{3n}}{x} + \frac{x^{3r}}{x^2} \Rightarrow f(\omega) = 1 + \frac{1}{\omega} + \frac{1}{\omega^2} =
+  \frac{1 + \omega + \omega^2}{\omega^2} = 0$\\
+  \vspace*{0.2cm}
+  Similarly $f(\omega^2) = 0$\\
+  \vspace*{0.2cm}
+  Thus, we see that $f(x)$ has same roots as $1 + x + x^2= 0.$ Hence, $f(x)$ will be divisible by $1 + x + x^2.$
+\end{frame}
+\begin{frame}{Problem 79}
+  \textbf{79.} If $(\sqrt{3} + i)^n = (\sqrt{3} - i)^n \forall n\in N,$ then prove that minimum value of $n$ is $6.$
+\end{frame}
+\begin{frame}{Solution of Problem 79}
+  \textbf{Solution:} $\sqrt{3} + i = 2\left(\frac{\sqrt{3}}{2} + i\frac{1}{2}\right) = 2\left(\cos\frac{\pi}{6} +
+  i\sin\frac{\pi}{6}\right) = 2e^{i\frac{\pi}{6}}$\\
+  \vspace*{0.2cm}
+  Similarly, $\sqrt{3} - i = 2e^{-i\frac{\pi}{6}}$\\
+  \vspace*{0.2cm}
+  Since imaginary part is what prevents equality we need to get rid of it and the least value for which it will happen is when
+  argument is $\pi.$ Thus, we need to raise to the power by $6$ making $n = 6.$
+\end{frame}
+\begin{frame}{Problem 80}
+  \textbf{80.} If $(\sqrt{3} - i)^n = 2^n, n\in I,$ the set of integers, then prove that $n$ is multiple of $12.$
+\end{frame}
+\begin{frame}{Solution of Problem 80}
+  \textbf{Solution:} $\sqrt{3} - i = 2.\left(\cos\frac{\pi}{6} - i\sin\frac{\pi}{6}\right)$\\
+  \vspace*{0.2cm}
+  Thus, $(\sqrt{3} - i)^n = 2^n \Rightarrow 2^n\left(\cos\frac{n\pi}{6} - i\sin\frac{\pi}{6}\right) = 2^n$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \cos\frac{n\pi}{6} - i\sin\frac{n\pi}{6} = 1 \Rightarrow \frac{n\pi}{6} = 2k\pi \forall k\in I \Rightarrow n = 12k$\\
+  \vspace*{0.2cm}
+  Thus, $n$ is a multiple of $12.$
+\end{frame}
 \end{document}
