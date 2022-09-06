@@ -17,12 +17,126 @@
 \newcounter{counter}
 % Author, Title, etc.
 
-\title{Complex Numbers Problems\\ 71-80}
+\title{Complex Numbers Problems\\ 81-90}
 
 \author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
 
 \begin{document}
 \begin{frame}
   \titlepage
+\end{frame}
+\begin{frame}{Problem 81}
+  \textbf{81.} If $z^4 + z^3 + 2z^2 + z + 1 = 0,$ then prove that $|z| = 1.$
+\end{frame}
+\begin{frame}{Solution of Problem 81}
+  \textbf{Solution:} Given, $z^4 + z^3 + 2z^2 + z + 1 = 0 \Rightarrow z^2(z^2 + z + 1) + z^2 + z + 1 = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z^2 + 1)(z^2 + z + 1) = 0$\\
+  \vspace*{0.2cm}
+  If $z^2 + 1 = 0 \Rightarrow z = i \Rightarrow |z| = 1$\\
+  \vspace*{0.2cm}
+  If $z^2 + z + 1 = 0 \Rightarrow z = \omega, \omega^2 \Rightarrow |z| = 1$
+\end{frame}
+\begin{frame}{Problem 82}
+  \textbf{82.} If $z = \sqrt[7]{-1},$ then find the value of $z^{86} + z^{175} + z^{289}.$
+\end{frame}
+\begin{frame}{Solution of Problem 82}
+  \textbf{Solution:} $\because z = \sqrt[7]{-1}\Rightarrow z^7 = -1$\\
+  \vspace*{0.2cm}
+  $z^{86} + z^{175} + z^{289} = (z^7)^{14}.z^2 + (z^7)^{25} + (z^7)^{41}z^2 = z^2 -1 -z^2 = -1$
+\end{frame}
+\begin{frame}{Problem 83}
+  \textbf{83.} If $z^3 + 2z^2 + 3z + 2 = 0,$ then find all the non-real, complex roots of this equation.
+\end{frame}
+\begin{frame}{Solution of Problem 83}
+  \textbf{Solution:} Given, $z^3 + 2z^2 + 3z + 2 = 0\Rightarrow z^3 + z^2 + 2z + z^2 + z + 2 = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z + 1)(z^2 + z + 2) = 0$\\
+  \vspace*{0.2cm}
+  If $z + 1 = 0 \Rightarrow z = -1,$ which is real and is of no interest for us.\\
+  \vspace*{0.2cm}
+  If $z^2 + z + 2 = 0 \Rightarrow z = \frac{-1 + i\sqrt{7}}{2}$ which are complex roots of the given equation.
+\end{frame}
+\begin{frame}{Problem 84}
+  \textbf{84.} If $z$ is a non-real root of $z = \sqrt[5]{1}$ then find the value of $2^{|1 + z + z^2 + z^{-2} - z^{-1}|}$
+\end{frame}
+\begin{frame}{Solution of Problem 84}
+  \textbf{Solution:} $z = \sqrt[5]{1} \Rightarrow z^5 = 1$\\
+  \vspace*{0.2cm}
+  $2^{|1 + z + z^2 + z^{-2} - z^{-1}|} = 2^{|1 + z + z^2 + z^3 - z^4|}[\because z^4 = 1 \Rightarrow z^{-1} = \frac{z^5}{z} = z^4]$\\
+  \vspace*{0.2cm}
+  $= 2^{|1 + z + z^2 + z^3 + z^4 - 2z^4|} = 2^{\left|\frac{1 - z^5}{1 - z} - 2z^4\right|} = 2^{|2z^4|} = 2^2 = 4[\because |z| = 1]$
+\end{frame}
+\begin{frame}{Problem 85}
+  \textbf{85.} If $z$ is a non-real root of unity then find the value of $1 + 3z + 5z^2 + \ldots + (2n - 1)z^{n - 1}.$
+\end{frame}
+\begin{frame}{Solution of Problem 85}
+  \textbf{Solution:} Let $S = 1 + 3z + 5z^2 + \ldots + (2n - 1)z^{n - 1}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow zS = z + 3z^2 + 5z^3 + \ldots + (2n - 3)z^{n - 1} + (2n - 1)z^n$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (1 - z)S = 1 + 2z + 2z^2 + 2z^3 + \ldots + 2z^{n - 1} + (2n - 1)z^n$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (1 - z)S = 1 + 2n - 1 + 2[z + z^2 + \ldots z^{n - 1}][\because z^n = 1]$\\
+  \vspace*{0.2cm}
+  $= 2n + 2.-1[\because 1 + z + z^2 + \ldots + z^{n - 1} = 0] \Rightarrow S = \frac{2(n - 1)}{1 - z}$
+\end{frame}
+\begin{frame}{Problem 86}
+  \textbf{86.} Find the value of $\sqrt{-1-\sqrt{-1-\sqrt{-1-\infty}}}.$
+\end{frame}
+\begin{frame}{Solution of Problem 86}
+  \textbf{Solution:} Let $z = \sqrt{-1-\sqrt{-1-\sqrt{-1-\infty}}} \Rightarrow z = \sqrt{-1 - z}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z^2 = -1 - z \Rightarrow z^2 + z + 1 = 0 \Rightarrow z = \frac{-1 \pm i\sqrt{3}}{2} \Rightarrow z = \omega, \omega^2$
+\end{frame}
+\begin{frame}{Problem 87}
+  \textbf{87.} If $z = e^{\frac{i2\pi}{n}},$ then find the vaule of $(11 - z)(11 - z^2)\ldots(11 - z^{n - 1}).$
+\end{frame}
+\begin{frame}{Solution of Problem 87}
+  \textbf{Solution:} Given, $z = e^{\frac{i2\pi}{n}},$ which is nth root of unity.\\
+  \vspace*{0.2cm}
+  $\therefore x^n - 1 = (x - 1)(x - z)(x - z^2 (x - z^3) ... (x - z^{n - 1})$\\
+  \vspace*{0.2cm}
+  Putting $x = 11, (11 - z)(11 - z^2)\ldots(11 - z^{n - 1}) = \frac{11^n - 1}{10}$
+\end{frame}
+\begin{frame}{Problem 88}
+  \textbf{88.} If $\frac{3}{2 + \cos\theta + i\sin\theta} = a + ib,$ then prove that $a^2 + b^2 = 4a - 3.$
+\end{frame}
+\begin{frame}{Solution of Problem 88}
+  \textbf{Solution:} Given, $\frac{3}{2 + \cos\theta + i\sin\theta} = a + ib \Rightarrow a + ib  \frac{3(2 + \cos\theta - i\sin\theta)}{5 + 4\cos\theta}$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  $a = \frac{6 + 3\cos\theta}{5 + 4\cos\theta}, b = \frac{-3\sin\theta}{5 + 4\cos\theta}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a^2 + b^2 = \frac{36 + 36\cos\theta + 9\cos^2\theta + 9\sin^2\theta}{(5 + 4\cos\theta)^2}$\\
+  \vspace*{0.2cm}
+  $= \frac{45 + 36\cos\theta}{(5 + \cos\theta)^2} = \frac{9(5 + 4\cos\theta)}{(5 + 4\cos\theta)^2} = \frac{9}{5 + 4\cos\theta}$\\
+  \vspace*{0.2cm}
+  $4a - 3 = \frac{24 + 12\cos\theta - 15 - 12\cos\theta}{5 + 4\cos\theta} = \frac{9}{5 + 4\cos\theta}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a^2 + b^2 = 4a - 3$
+\end{frame}
+\begin{frame}{Problem 89}
+  \textbf{89.} If $|2z - 1| = |z - 2|,$ then prove that $|z| = 1.$
+\end{frame}
+\begin{frame}{Solution of Problem 89}
+  \textbf{Solution:} Let $z = x + iy, \Rightarrow |(2x - 1) + 2iy| = |(x - 2) + iy|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 4x^2 - 4x + 1 + 4y^2 = x^2 - 4x + 4 + y^2 \Rightarrow 3x^2 + 3y^2 = 3$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x^2 + y^2 = 1\Rightarrow |z| = 1$
+\end{frame}
+\begin{frame}{Problem 90}
+  \textbf{90.} If $x$ is real and $\frac{1 -ix}{1 + ix} = m + in,$ then prove that $m^2 + n^2 = 1.$
+\end{frame}
+\begin{frame}{Solution of Problem 90}
+  \textbf{Solution:} Given, $\frac{1 -ix}{1 + ix} = m + in \Rightarrow m + in = \frac{1 - ix}{1 + ix}.\frac{1 - ix}{1 - ix}$\\
+  \vspace*{0.2cm}
+  $m + in = \frac{1 - x^2 - 2ix}{1 + x^2}$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  $m = \frac{1 - x^2}{1 + x^2}, n = \frac{-2x}{1 + x^2}$\\
+  \vspace*{0.2cm}
+  $m^2 + n^2 = \frac{(1 - x^2)^2 + 4x^2}{(1 + x^2)^2} = 1$
 \end{frame}
 \end{document}

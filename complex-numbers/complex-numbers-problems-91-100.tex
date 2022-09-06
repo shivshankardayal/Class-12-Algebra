@@ -1,0 +1,203 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 91-100}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 91}
+  \textbf{91.} Find the general equation of the straight line joining the points $z_1 = 1 + i$ and $z_1 = 1 - i.$
+\end{frame}
+\begin{frame}{Solution of Problem 91}
+  \textbf{Solution:} We know that equation of the straight line is given by\\
+  \vspace*{0.2cm}
+  $\begin{vmatrix}z & \overline{z} & 1\\z_1 & \overline{z_1} & 1\\ z_2 & \overline{z_2} & 1\end{vmatrix} = 0$\\
+    \vspace*{0.2cm}
+    $\Rightarrow z(\overline{z_1} - \overline{z_2}) - \overline{z}(z_1 - z_2) + z_1\overline{z_2} - \overline{z_1}z_2 = 0$\\
+    \vspace*{0.2cm}
+    $\Rightarrow z(1 + i - 1 - i) - \overline{z}(1 + i -1 + i) + (1 + i)^2 - (1 - i)^2 = 0$\\
+    \vspace*{0.2cm}
+    $\Rightarrow z + \overline{z} - 2 = 0$
+\end{frame}
+\begin{frame}{Problem 92}
+  \textbf{92.} If $z_1, z_2, z_3$ are three complex numbers such that $5z_1 - 13z_2 + 8z_3 = 0,$ then prove that\\
+  $\begin{vmatrix}z_1 & \overline{z_1} & 1\\z_2 & \overline{z_2} & 1\\ z_3 & \overline{z_3} & 1\end{vmatrix} = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 92}
+  \textbf{Solution:} Given, $5z_1 - 13z_2 + 8z_3 = 0 \Rightarrow z_2 = \frac{5z_1 + 8z_3}{5 + 8}$\\
+  \vspace*{0.2cm}
+  This means $z_1$ divides the line segment joining $z_1$ and $z_2$ in the ratio of $5:8$ which also implies that these three
+  points are collinear. Thus,\\
+  \vspace*{0.2cm}
+  $\begin{vmatrix}z_1 & \overline{z_1} & 1\\z_2 & \overline{z_2} & 1\\ z_3 & \overline{z_3} & 1\end{vmatrix} = 0$
+\end{frame}
+\begin{frame}{Problem 93}
+  \textbf{93.} Find the length of perpedicular from $P(2 - 3i)$ to the line $(3 + 4i)z + (3 - 4i)\overline{z} + 9 = 0.$
+\end{frame}
+\begin{frame}{Solution of Problem 93}
+  \textbf{Solution:} We know that length of perpendicular from $z_1$ to $\overline{a}z + a\overline{z} + b = 0$ is given by
+  $\frac{|\overline{a}z_1 + a\overline{z_1} + b|}{2|a|}.$\\
+  \vspace*{0.2cm}
+  Thus desired length $= \frac{|(2 - 3i)(3 + 4i) + (2 + 3i)(3 - 4i) + 9|}{2|3 - 4i|}$\\
+  \vspace*{0.2cm}
+  $= \frac{45}{10} = \frac{9}{2}$
+\end{frame}
+\begin{frame}{Problem 94}
+  \textbf{94.} If a point $z_1$ is a reflection of a point $z_2$ through the line $b\overline{z} + \overline{b}z = c, b\neq 0$ in
+  the argand plane, then prove that $\overline{b}z_2 + b\overline{z_1} = c.$
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 94}
+  \textbf{Solution:} \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw((-1, 0) -- (1, 0), arrow=Arrows);
+      draw((0, -1) -- (0, 1), arrow=Arrows);
+      label("$z_1$", (0, -1), align=S);
+      label("$z_2$", (0, 1), align=N);
+      label("$\frac{z_1 + z_2}{R}$", (0, 0), align=NE);
+      label("$b\overline{z} + \overline{b}z = c$", (0,0), align=SE);
+    \end{asy}
+  \end{center}
+  Since mid-point lies on the given line, therefore $b\left(\frac{\overline{z_1} + \overline{z_2}}{2}\right) +
+  \overline{b}\left(\frac{z_1 + z_2}{2}\right) = c$\\
+  \vspace*{0.2cm}
+  Since line segment joining $z_1$ and $z_2$ is perpedicular to the given line therefore, Slope of $z_1z_2$ + Slope of line = 0\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_2 - z_1}{\overline{z_2} - \overline{z_1}} - \frac{b}{\overline{b}} = 0$\\
+  \vspace*{0.2cm}
+  Solving these two equations, we get $\overline{b}z_2 + b\overline{z_1} = c.$
+\end{frame}
+\begin{frame}{Problem 95}
+  \textbf{95.} The point represented by the complex number $2 - i$ is rotated about origin by an angle $\pi/2$ in the anti-clockwise
+  direction. Find the new coordinates.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 95}
+  \textbf{Solution:} \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(0.5cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw((-2, 0) -- (2, 0), arrow=Arrows);
+      draw((0, -2) -- (0, 2), arrow=Arrows);
+      label("$x$", (2, 0), align=E);
+      label("$y$", (0, 2), align=N);
+      draw((0, 0) -- (2, -1), arrow=Arrow);
+      draw((0, 0) -- (1, 2), arrow=Arrow);
+      label("$P$", (2, -1), align=SE);
+      label("$P'$", (1, 2), align=NE);
+      markangle("$\pi/2$", radius=10, (2, -1), (0, 0), (1, 2));
+    \end{asy}
+  \end{center}
+  Let $z = 2 - i$ then after rotation new point would be $z.e^{i\pi/2} = (2 - i)\left(\cos\frac{\pi}{2} +
+  i\sin\frac{\pi}{2}\right)$\\
+  \vspace*{0.2cm}
+  $= (2 - i)i = 1 + 2i$
+\end{frame}
+\begin{frame}{Problem 96}
+  \textbf{96.} A particle $P$ starts from the point $z_0 = 1 + 2i.$ It first moves horizantally away from origin by $5$ units and
+  then vertically away from origin by $3$ units to reach a point $z_1.$ From $z_1,$ the particle moves $\sqrt{2}$ units in the
+  direction of vector $\hat{i} + \hat{j}$ and it then rotaes about origin in anti-clockwise direction for an angle $\pi/2$
+  to reach $z_2.$ Find the coordinates of $z_2.$
+\end{frame}
+\begin{frame}{Solution of Problem 96}
+  \textbf{Solution:} Coordinate of $z_0$ after moving $5$ points horizontally and $3$ points vertically away from origin would be
+  $6 + 5i.$\\
+  \vspace*{0.2cm}
+  It then moves in the direction of vecor $\hat{i} + \hat{j}$ for $\sqrt{2}$ units. This vector makes angle $\pi/4$ with
+  $x$-axis. So new coordinate would be $6 + \sqrt{2}\cos\pi/4 + 5 + \sqrt{2}\sin\pi/4 = 7 + 6i.$\\
+  \vspace*{0.2cm}
+  It then rotates by angle $\pi/2$ so new coordinate would be $(7 + 6i)e^{i\pi/2} = (7 + 6i)i = -6 + 7i$
+\end{frame}
+\begin{frame}{Problem 97}
+  \textbf{97.} A man walks a distance of $3$ units from the origin in North-East direction. Then he walks $4$ units in North-West
+  direction. Find the final coordinates.
+\end{frame}
+\begin{frame}{Solution of Problem 97}
+  \textbf{Solution:} North-East direction makes angle of $\pi/4$ with $x$-axis. So coordinates of point $3$ units from origin in
+  North-East direction $= 3.e^{i\pi/4} = 3\left(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4}\right) = \frac{3}{\sqrt{2}} +
+  i\frac{3}{\sqrt{2}}$\\
+  \vspace*{0.2cm}
+  North-West direction makes angle of $3\pi/4$ with $x$-axis. A disaplacement of $4$ units in this direction will mean a shift in
+  coordinates by $4.e^{i3\pi/4} = 4\left(\cos\frac{3\pi}{4} + i\sin\frac{3\pi}{4}\right) = -\frac{4}{\sqrt{2}} +
+  i\sin\frac{4}{\sqrt{2}}$\\
+  \vspace*{0.2cm}
+  Thus, final coordiate would be sum of the above two i.e. $-\frac{1}{\sqrt{2}} + i\frac{7}{\sqrt{2}}$
+\end{frame}
+\begin{frame}{Problem 98}
+  \textbf{98.} If three complex numbers satisfty the relationship $\frac{z_1 - z_3}{z_2 - z_3} = \frac{1 - i\sqrt{3}}{2},$ then
+  prove that $z_1, z_2$ and $z_3$ form an equilateral triangle.
+\end{frame}
+\begin{frame}{Solution of Problem 98}
+  \textbf{Solution:} Given, $\frac{z_1 - z_3}{z_2 - z_3} = \frac{1 - i\sqrt{3}}{2} = \frac{1 - i\sqrt{3}}{2}.\frac{1 +
+    i\sqrt{3}}{2}$\\
+  \vspace*{0.2cm}
+  $= \frac{1 + 3}{2(1 + i\sqrt{3})}= \frac{2}{1 + i\sqrt{3}}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_2 - z_3}{z_1 - z_3} = \frac{1 + i\sqrt{3}}{2} = \cos\frac{\pi}{3} + i\sin\frac{\pi}{3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left|\frac{z_2 - z_3}{z_1 - z_3}\right| = 1$ and $arg\left(\frac{z_2 - z_3}{z_1 - z_3}\right) = \frac{\pi}{3}$\\
+  \vspace*{0.2cm}
+  Hence, the triangle is equilateral.
+\end{frame}
+\begin{frame}{Problem 99}
+  \textbf{99.} If $z_1, z_2$ and $z_3$ form an equilateral triangle then prove that $z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3
+  +z_3z_1.$ and hence $\frac{1}{z_1 - z_2} + \frac{1}{z_2 - z_3} + \frac{1}{z_3 - z_1} = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 99}
+  \textbf{99.} Since sides of an equilateral triangle make an angle of $60^\circ$ with each other, therefore\\
+  \vspace*{0.2cm}
+  $\frac{z_3 - z_1}{z_2 - z_1} = \cos60^\circ \pm \sin60^\circ = \frac{1 \pm i\sqrt{3}}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2z_3 - 2z_1 + z1 - z_2 = \pm i(z_2 - z_1)\sqrt{3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (2z_3 - z_1 - z_2)^2 = 3(z_2 - z_1)^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 +z_3z_1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1z_2 + z_2z_3 + z_3z_1 - z_z^2 - z_2^2 - z_3^2 + z_1z_2 - z_1z_2 + z_2z_3 - z_2z_3 + z_1z_3 - z_1z_3 = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 - z_2)(z_2 - z_3) + (z_2 - z_3)(z_3 - z_1) + (z_3 - z_1)(z_1 - z_2) = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{1}{z_1 - z_2} + \frac{1}{z_2 - z_3} + \frac{1}{z_3 - z_1} = 0$
+\end{frame}
+\begin{frame}{Problem 100}
+  \textbf{100.} If $z_1, z_2$ and $z_3$ are vertices of an equilateral triangle and $z_0$ is the circumcenter then prove that
+  $3z_0^2 = z_1^2 + z_2^2 + z_3^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 100}
+  \textbf{Solution:} Since it is an equilateral triangle centroid and circumcenters would be identical. $\therefore z_0 = \frac{z_1
+    + z_2 + z_3}{3}$\\
+  \vspace*{0.2cm}
+  Since it is an equilateral triangle, we have just proven that $z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 +z_3z_1$\\
+  \vspace*{0.2cm}
+  From first equation, we have $\Rightarrow 9z_0^2 = z_1^2 + z_2^2 + z_3^2 + 2(z_1z_2 + z_2z_3 +z_3z_1)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 9z_0^2 = z_1^2 + z_2^2 + z_3^2 + 2(z_1^2 + z_2^2 + z_3^2)\Rightarrow 3z_0^2 = z_1^2 + z_2^2 + z_3^2$
+\end{frame}
+\end{document}

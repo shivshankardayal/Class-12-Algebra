@@ -1,0 +1,23 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+settings.inlinetex=true;
+deletepreamble();
+defaultfilename="complex-numbers-problems-91-100-1";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+import geometry;
+import fontsize;
+unitsize(1cm);
+defaultpen(fontsize(6pt));
+defaultpen(linewidth(0.3));
+draw((-1, 0) -- (1, 0), arrow=Arrows);
+draw((0, -1) -- (0, 1), arrow=Arrows);
+label("$z_1$", (0, -1), align=S);
+label("$z_2$", (0, 1), align=N);
+label("$\frac{z_1 + z_2}{R}$", (0, 0), align=NE);
+label("$b\overline{z} + \overline{b}z = c$", (0,0), align=SE);
