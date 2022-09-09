@@ -1,0 +1,172 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 101-110}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 101}
+  \textbf{101.} If $z_1, z_2$ and $z_3$ form a right-angled, isosceles triangle with right angle at $z_3,$ then prove that $(z_1 -
+  z_2)^2 = 2(z_1 - z_3)(z_3 - z_2).$
+\end{frame}
+\begin{frame}{Solution of Problem 101}
+  \textbf{Solution:} Since right angle is at $z_3,$ therefore $\frac{z_2 - z_3}{z_1 - z_3} = e^{i\pi/2} = i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_2 - z_3)^2 = -(z_1 - z_3)^2 \Rightarrow z_2^2 + z_3^2 - 2z_2z_3 = -z_1^2 - z_3^2 + 2z_1z_3$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1^2 + z_2^2 - 2z_1z_2 = -2z_3^2 + 2z_2z_3 + 2z_1z_3 - 2z_1z_2$\\
+  \vspace*{0.2cm}
+  $(z_1 - z_2)^2 = 2(z_1 - z_3)(z_3 - z_2)$
+\end{frame}
+\begin{frame}{Problem 102}
+  \textbf{102.} Find the equation of the circle whose center is $z_0$ and radius is $r.$
+\end{frame}
+\begin{frame}{Solution of Problem 102}
+  \textbf{Solution:} Clearly, $|z - z_0|^2 = r^2 \Rightarrow (z - z_0)(\overline{z - z_0}) = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z - z_0)(\overline{z} - \overline{z_0}) = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z\overline{z} - \overline{z}z_0 - z\overline{z_0} + z_0\overline{z_0} = r^2$
+\end{frame}
+\begin{frame}{Problem 103}
+  \textbf{103.} If $z = 1 - t + i\sqrt{t^2 + t + 2},$ where $t$ is a real parameter. Prove that locus of $z$ in argand plane is a
+  hyperbola.
+\end{frame}
+\begin{frame}{Solution of Problem 103}
+  \textbf{Solution:} Given, $z = 1 - t + i\sqrt{t^2 + t + 2};$ comparing real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $x = 1 - t, y = \sqrt{t^2 + t + 1} \Rightarrow y^2 = t^2 + t + 2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow y^2 = (1 - x)^2 + (1 - x) + 2 = \left(x - \frac{3}{2}\right)^2 + \frac{7}{4}$\\
+  \vspace*{0.2cm}
+  which is equation of a parabola.
+\end{frame}
+\begin{frame}{Problem 104}
+  \textbf{104.} Find the locus of $z$ if $\overline{z} = \overline{a} + \frac{r^2}{z - a}.$
+\end{frame}
+\begin{frame}{Solution of Problem 104}
+  \textbf{Solution:} Given, $\overline{z} = \overline{a} + \frac{r^2}{z - a}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (\overline{z} - \overline{a})(z - a) = r^2$\\
+  \vspace*{0.2cm}
+  which is equation of a circle with center at $a$ and radius $r.$
+\end{frame}
+\begin{frame}{Problem 105}
+  \textbf{105.} If the equation $|z - z_1|^2 + |z - z_2|^2 = k$ represents the equation of a cirlce, where $z_1 = 2 + 3i, z_2 = 4 +
+  3i$ are the ends of a diameter, then find the value of $k.$
+\end{frame}
+\begin{frame}{Solution of Problem 105}
+  \textbf{Solution:} Since $z_1$ and $z_2$ are ends of diameter\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z - z_1|^2 + |z - z_2|^2 = |z_1 - z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow k = |z_1 - z_2|^2 = |2 + 3i - 4 - 3i|^2 = 4$
+\end{frame}
+\begin{frame}{Problem 106}
+  \textbf{106.} If $|z + 1| = \sqrt{2}|z - 1|,$ then show that locus of $z$ is a circle.
+\end{frame}
+\begin{frame}{Solution of Problem 106}
+  \textbf{Solution:} $z = x + iy,$ then $|(x + 1) + iy| = \sqrt{2}|(x - 1) + iy|$\\
+  \vspace*{0.2cm}
+  Squaring both sides, we get\\
+  \vspace*{0.2cm}
+  $(x + 1)^2 + y^2 = 2[(x - 1)^2 + y^2] \Rightarrow x^2 + y^2 - 6x + 1 = 0$\\
+  \vspace*{0.2cm}
+  which is equation of a circle.
+\end{frame}
+\begin{frame}{Problem 107}
+  \textbf{107.} Prove that the locus of $z$ given by $\left|\frac{z - 1}{z - i}\right| = 1$ is a straight line.
+\end{frame}
+\begin{frame}{Solution of Problem 107}
+  \textbf{Solution:} Given, $\left|\frac{z - 1}{z - i}\right| = 1 \Rightarrow |z - 1| = |z - i|$\\
+  \vspace*{0.2cm}
+  Let $z = x + iy,$ then we have\\
+  \vspace*{0.2cm}
+  $|(x - 1) + iy| = |x + i(y - 1)|$\\
+  \vspace*{0.2cm}
+  Squaring both sides, we get\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 1)^2 + y^2 = x^2 + (y - 1)^2 \Rightarrow 2x = 2y \Rightarrow x = y$\\
+  \vspace*{0.2cm}
+  which is equation of a straight line.
+\end{frame}
+\begin{frame}{Problem 108}
+  \textbf{108.} Find the condition for four complex numbers $z_1, z_2, z_3$ and $z_4$ to lie on a cyclic quadrilateral.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 108}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(1cm);
+      defaultpen(fontsize(6pt));
+      defaultpen(linewidth(0.3));
+      draw(circle((0,0), 1));
+      draw((.707, .707) -- (.707, -.707));
+      draw((-.707, .707) -- (-.707, -.707));
+      draw((.707, .707) -- (-.707, .707));
+      draw((-.707, -.707) -- (.707, -.707));
+      label("$A(z_1)$", (-.707, -.707), align=SW);
+      label("$B(z_2)$", (.707, -.707), align=SE);
+      label("$C(z_3)$", (.707, .707), align=NE);
+      label("$D(z)$", (-.707, .707), align=NW);
+    \end{asy}
+  \end{center}
+  $\angle z_1 = \arg\left(\frac{z_1 - z_2}{z_1 - z_4}\right),$
+  $\angle z_2 = \arg\left(\frac{z_3 - z_2}{z_1 - z_2}\right),$
+  $\angle z_3 = \arg\left(\frac{z_3 - z_4}{z_3 - z_2}\right),$ and
+  $\angle z_4 = \arg\left(\frac{z_1 - z_4}{z_3 - z_4}\right)$\\
+  \vspace*{0.2cm}
+  $\angle z_1 + \angle z_3 = \pi \Rightarrow \arg {\frac {z_1 - z_2} {z_1 - z_4} } + \arg \left( {\frac {z_3 - z_4} {z_3
+      - z_2} }\right) = \pi$
+  \\\vspace*{0.2cm}
+  $\Rightarrow \arg\left(\frac{(z_1 - z_2)(z_3 - z_4)}{(z_1 - z_4)(z_3 - z_2)}\right) = \pi$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{(z_1 - z_2)(z_3 - z_4)}{(z_1 - z_4)(z_3 - z_2)}$ is real number.
+\end{frame}
+\begin{frame}{Problem 109}
+  \textbf{109.} If $z_1, z_2$ and $z_3$ are complex numbers, such that $\frac{2}{z_1} = \frac{1}{z_2} + \frac{1}{z_3},$ then show
+  that these points lie on a circle passing through origin.
+\end{frame}
+\begin{frame}{Solution of Problem 109}
+  \textbf{Solution:} Given, $\frac{2}{z_1} = \frac{1}{z_2} + \frac{1}{z_3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_2 - z_1}{z_3 - z_1} = -\frac{z_2}{z_3}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \arg\left(\frac{z_2 - z_1}{z_3 - z_1}\right) = \pi - \arg\frac{z_3}{z_2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \arg\left(\frac{z_2 - z_1}{z_3 - z_1}\right) + arg\left(\frac{z_3 - 0}{z_2 - 0}\right) = \pi$\\
+  \vspace*{0.2cm}
+  Thus, the given points and origin are concyclic.
+\end{frame}
+\begin{frame}{Problem 110}
+  \textbf{110.} If $|z - \omega|^2 + |z - \omega^2|^2 = r^2,$ where $r$ is radius and $\omega, \omega^2$ are cube roots of unity
+  and ends of diameter of the circle then find radius.
+\end{frame}
+\begin{frame}{Solution of Problem 110}
+  \textbf{Solution:} From the equation of circle, $r^2 = |\omega - \omega^2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow r^2 = |i\sqrt{3}|^2 = 3 \Rightarrow r = \sqrt{3}$
+\end{frame}
+\end{document}

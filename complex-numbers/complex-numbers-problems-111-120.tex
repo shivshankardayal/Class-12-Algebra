@@ -1,0 +1,143 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 111-120}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 111}
+  \textbf{111.} Find the region represented by $|z - 4| < |z - 2|.$
+\end{frame}
+\begin{frame}{Solution of Problem 111}
+  \textbf{Solution:} Let $z = x + iy$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 4)^2 + y^2 < (x - 2)^2 + y^2 \Rightarrow x^2 - 8x + 16 < x^2 - 4x + 4$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 4x > 12 \Rightarrow x > 3$
+\end{frame}
+\begin{frame}{Problem 112}
+  \textbf{112.} If $2z_1 - 3z_2 + z_3 = 0,$ then find the geometrical relationship between them.
+\end{frame}
+\begin{frame}{Solution of Problem 112}
+  \textbf{Solution:} Given, $2z_1 - 3z_2 + z_3 = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_2 = \frac{2z_1 + z_3}{3} = \frac{2z_1 + z_3}{2 + 1}$\\
+  \vspace*{0.2cm}
+  Thus, $z_1$ divides the line segement $z_1z_3$ in the ratio of $2:1$ i.e. all three points are collinear.
+\end{frame}
+\begin{frame}{Problem 113}
+  \textbf{113.} If $z = x + iy,$ such that $|z + 1| = |z - 1|$ and $\arg\frac{z - 1}{z + 1} = \frac{\pi}{4},$ find $x$ and $y.$
+\end{frame}
+\begin{frame}{Solution of Problem 113}
+  \textbf{Solution:} Given, $|z + 1| = |z - 1| \Rightarrow (x + 1)^2 + y^2 = (x - 1)^2 + y^2 \Rightarrow x = 0$\\
+  \vspace*{0.2cm}
+  Also, given that $\arg\frac{z - 1}{z + 1} = \frac{\pi}{4}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z - 1 = (z + 1)e^{i\pi/4} \Rightarrow -1 + iy = (1 + iy)\left(\cos\frac{\pi}{4} + i\sin\frac{\pi}{4}\right)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow -1 + iy = (1 + iy)\left(\frac{1}{\sqrt{2}} + i\frac{1}{\sqrt{2}}\right)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow y = \sqrt{2} + 1$
+\end{frame}
+\begin{frame}{Problem 114}
+  \textbf{114.} If $|z|^8 = |z - 1|^8,$ then prove that roots of this equation are collinear.
+\end{frame}
+\begin{frame}{Solution of Problem 114}
+  \textbf{Solution:} Given, $|z|^8 = |z - 1|^8 \Rightarrow |z| = |z - 1|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x^2 + y^2 = (x - 1)^2 + y^2 \Rightarrow x = \frac{1}{2}, y\in(\infty, infty)$\\
+  \vspace*{0.2cm}
+  which is equation of straight line parallel to $y$-axis at $x = 1/2.$
+\end{frame}
+\begin{frame}{Problem 115}
+  \textbf{115.} Prove that $z\overline{z} + a\overline{z} + \overline{a}z + b = 0,$ represents a circle if $|a|^2 > b.$
+\end{frame}
+\begin{frame}{Solution of Problem 115}
+  \textbf{Solution:} Given, $z\overline{z} + a\overline{z} + \overline{a}z + b = 0$\\
+  \vspace*{0.2cm}
+  $z\overline{z} + a\overline{z} + \overline{a}z + a\overline{a} = a\overline{a} - b$\\
+  \vspace*{0.2cm}
+  $(z + a)(\overline{z} + \overline{a}) = |a|^2 - b$\\
+  \vspace*{0.2cm}
+  which is equation of a circle if $|a|^2 - b > 0 \Rightarrow |a|^2 > b.$
+\end{frame}
+\begin{frame}{Problem 116}
+  \textbf{116.} If $z = (\lambda + 3) + i\sqrt{3 - lambda^2},$ where $|\lambda| < \sqrt{3},$ then prove that it represents a circle.
+\end{frame}
+\begin{frame}{Solution of Problem 116}
+  \textbf{Solution:} Let $z = x + iy,$ comparing real and imaginary part gives us\\
+  \vspace*{0.2cm}
+  $x = \lambda + 3, y = \sqrt{3 - \lambda^2} \Rightarrow y^2 = 3 - \lambda^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 3)^2 + y^2 = 3$\\
+  \vspace*{0.2cm}
+  which is equation of a circle with center $(3, 0)$ and radius $\sqrt{3}.$
+\end{frame}
+\begin{frame}{Problem 117}
+  \textbf{117.} If $z$ is a complex number such that $|Re(z)| + |Im(z)| = k,~\forall k\in R,$ then find the locus of $z.$
+\end{frame}
+\begin{frame}{Solution of Problem 117}
+  \textbf{Solution:} Let $z = x + iy,$ then $|Re(z)| + |Im(z)| = k$ will give us four equations.\\
+  \vspace*{0.2cm}
+  $x + y = k, x - y = k, -x + y = k$ and $-x - y = k$\\
+  \vspace*{0.2cm}
+  These lines will intersect at $(k, 0), (0, k), (-k, 0), (0 -k)$ giving us a square as locus of $z.$
+\end{frame}
+\begin{frame}{Problem 118}
+  \textbf{118.} Consider a sequence of complex numbers such that $z_{n + 1} = z_n^2 + i,~\forall n\geq 1,$ where $z_1 = 0.$ Find $z_{111}.$
+\end{frame}
+\begin{frame}{Solution of Problem 118}
+  \textbf{Solution:} $z_2 = z_1^2 + i = i, z_3 = z_2^2 + i = i - 1, z_4 = z_3^2 + i = (i - 1)^2 + i = -i$\\
+  \vspace*{0.2cm}
+  $z_5 = z_4^2 + i = i - 1, z_6 = z_5^2 + i = -i$\\
+  \vspace*{0.2cm}
+  Thus, we see that it is a cycle between $-i$ and $i - 1$ starting at $z_3.$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_{111} = z_3 = i - 1 \Rightarrow |z_{111}| = \sqrt{2}$
+\end{frame}
+\begin{frame}{Problem 119}
+  \textbf{119.} The complex numbers whose real and imaginary parts are integers and satisfy the relation $z\overline{z}^3 +
+  z^3\overline{z} = 350,$ forms a rectangle in the argand plane. Find length of its diagonals.
+\end{frame}
+\begin{frame}{Solution of Problem 119}
+  \textbf{Solution:} Given, $z\overline{z}^3 + z^3\overline{z} = 350 \Rightarrow z\overline{z}(\overline{z}^2 + z^2) = 350$\\
+  \vspace*{0.2cm}
+  Let $z = x + iy,$ then given equation becomes $2(x^2 + y^2)(x^2 - y^2) = 350 \Rightarrow (x^2 + y^2)(x^2 - y^2) = 175$\\
+  \vspace*{0.2cm}
+  Prime factors of $175$ are $5, 5, 7$ so the only solution which yields integers for $x$ and $y$ are $x^2 + y^2 = 25, x^2-y^2 =
+  7$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = \pm 4, y = \pm 3$ which gives a rectangle with four points and digonal with a length of $10$ units.
+\end{frame}
+\begin{frame}{Problem 120}
+  \textbf{120.} If $z_1, z_2$ are two complex numbers and $\arg\frac{z_1 + z_2}{z_1 - z_2}$ but $|z_1 + z_2|\neq |z_1 - z_2|$ then
+  find the figure formed by $0, z_1, z_2$ and $z_1 + z_2.$
+\end{frame}
+\begin{frame}{Solution of Problem 120}
+  \textbf{Solution:} We know that $z_1 + z_2$ and $z_1 - z_2$ are the diagonals of a quadrilateral. Now diagonals of a parallelogram
+  does not intersect at angle $\pi/2$ and diagonals of a square and rectangle are equal. Only rhombus satisfies the given criteria
+  of diagonals meeting at right angle and having different lengths.\\
+  \vspace*{0.2cm}
+  Thus, the given conditions represent a rhombus but not a square.
+\end{frame}
+\end{document}
