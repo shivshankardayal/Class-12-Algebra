@@ -1,0 +1,178 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 121-130}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 121}
+  \textbf{121.} If $z_1$ and $z_2$ are complex numbers such that $a|z_1| = b|z_2|, a, b\in R,$ then prove that $\frac{az_1}{bz_2} +
+  \frac{bz_2}{az_1}$ lies on the segment $[-2, 2]$ of the real axis.
+\end{frame}
+\begin{frame}{Solution of Problem 121}
+  \textbf{Solution:} Let $\arg(z_1) = \theta, \arg(z_2) = \theta + \alpha$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{az_1}{bz_2} = \frac{a|z_1|e^{i\theta}}{b|z_2|e^{i(\theta + \alpha)}} = e^{-i\alpha}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{bz_2}{az_1} = e^{i\alpha}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{az_1}{bz_2} + \frac{bz_2}{az_1} = e^{i\alpha} + e^{-i\alpha} = 2\cos\alpha$
+  \vspace*{0.2cm}
+  Thus, it will lie on the line segment $[-2, 2]$ of the real axis.
+\end{frame}
+\begin{frame}{Problem 122}
+  \textbf{122.} If $z_1, z_2, z_3$ are roots of the equation $z^3 + 3\alpha z^2 + 3\beta z + \gamma = 0,$ such that they form an
+  equilateral triangle then prove that $\alpha^2 = \beta.$
+\end{frame}
+\begin{frame}{Solution of Problem 122}
+  \textbf{Solution:} Since $z_1, z_2, z_3$ are roots of the equation $z^3 + 3\alpha z^2 + 3\beta z + \gamma = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1 + z_2 + z_3 = -3\alpha, z_1z_2 + z_2z_3 + z_3z_1 = 3\beta, z_1z_2z_3 = \gamma$\\
+  \vspace*{0.2cm}
+  We know that for a triangle to be equilateral
+  $z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 + z_2 + z_3)^2 = 3(z_1z_2 + z_2z_3 + z_3z_1)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 9\alpha^2 = 3.3\beta \Rightarrow \alpha^2 = \beta$
+\end{frame}
+\begin{frame}{Problem 123}
+  \textbf{123.} If $z_1^2 + z_2^2 + 2z_1z_2\cos\theta = 0,$ then prove that $z_1, z_1$ and the origin form an isosceles triangle.
+\end{frame}
+\begin{frame}{Solution of Problem 123}
+  \textbf{Solution:} Given, $z_1^2 + z_2^2 + 2z_1z_2\cos\theta = 0$\\
+  \vspace*{0.2cm}
+  Dividing both sides with $z_2^2,$ we get $\left(\frac{z_1}{z_2}\right)^2 + 1 + 2\frac{z_1}{z_2}\cos\theta = 0$\\
+  \vspace*{0.2cm}
+  The above equation is a quadratic equation in $\frac{z_1}{z_2}, \therefore \frac{z_1}{z_2} = \frac{-2\cos\theta
+    \pm\sqrt{4\cos^2\theta - 1}}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_1}{z_2} = -\cos\theta \pm i\sin\theta \Rightarrow \left|\frac{z_1}{z_2}\right| = 1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z_1| = |z_2| \Rightarrow |z_1 - 0| = |z_2 - 0|$\\
+  \vspace*{0.2cm}
+  Thus, $z_1, z_1$ and the origin form an isosceles triangle.
+\end{frame}
+\begin{frame}{Problem 124}
+  \textbf{124.} $A, B$ and $C$ represent $z_1, z_2$ and $z_3$ on argnad plane. The circumcenter of this triangle lies on the
+  origin. If the altitude $AD$ meets circumcircle again at $P,$ then find the complex number representing $P.$
+\end{frame}
+\begin{frame}{Solution of Problem 124}
+  \textbf{Solution:} Since origin is circumcenter $\Rightarrow |z_1| = |z_2| = |z_3| = |z|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1\overline{z_1} = z_2\overline{z_2} = z_3\overline{z_3} = z\overline{z}$\\
+  \vspace*{0.2cm}
+  $\because~~AP\perp BC \therefore~~\frac{z - z_1}{\overline{z} - \overline{z_1}} + \frac{z_2 - z_3}{\overline{z_2} -
+    \overline{z_3}} = 0$
+  \\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z - z_1}{\frac{z\overline{z_1}}{z} - \overline{z_1}} + \frac{z_2 - z_3}{\frac{z_3\overline{z_3}}{z} -
+    \overline{z_3}} = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z(z - z_1)}{z_1\overline{z_1} - z\overline{z_1}} + \frac{z_2(z_2 - z_3)}{z_3\overline{z_3} -
+    z_2\overline{z_3}} = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{-z(z_1 - z)}{\overline{z_1}(z_1 - z)} - \frac{z_2(z_3 - z_2)}{\overline{z_3}(z_3 - z_2)} = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{-z}{z_1} - \frac{z_2}{z_3} = 0 \Rightarrow z = -\frac{z_1z_2}{z_3}$
+\end{frame}
+\begin{frame}{Problem 125}
+  \textbf{125.} If $z_1$ and $z_2$ are the roots of the equation $z^2 + pz + q = 0,$ where $p,q$ can be complex numbers. Let $A, B$
+  represent $z_1, z_2$ in the complex plane. If $\angle AOB = \alpha \neq 0$ and $OA = OB,$ where $O$ is the origin then find $p^2.$
+\end{frame}
+\begin{frame}{Solution of Problem 125}
+  \textbf{Solution:} Given $OA = OB, \Rightarrow |z_1| = |z_2| = l$ (let).\\
+  \vspace*{0.2cm}
+  Also given, $\arg(z_1) = \alpha + \arg(z_2) \Rightarrow z_1 = le^{i(\alpha + \arg(z_2))} = le^{i\arg(z_2)}.e^{i\alpha} =
+  z_2e^{i\alpha}$\\
+  \vspace*{0.2cm}
+  Now, $z_1z_2 = q \Rightarrow z_2^2e^{i\alpha} = q$ and $z_1 + z_2 = -p \Rightarrow z_2(1 + e^{i\alpha}) = -p$\\
+    \vspace*{0.2cm}
+    $\Rightarrow 2z_2\cos\frac{\alpha}{2}.e^{i\alpha/2} = -p \Rightarrow p^2 = 4z_2^2\cos^2\frac{\alpha}{2}.e^{i\alpha}$\\
+    \vspace*{0.2cm}
+    $\Rightarrow p^2 = 4q\cos^2\frac{\alpha}{2}$
+\end{frame}
+\begin{frame}{Problem 126}
+  \textbf{126.} If $Re\left(\frac{z + 4}{2x - 1}\right) = \frac{1}{2}$ then prove that locus of $z$ is a straight line.
+\end{frame}
+\begin{frame}{Solution of Problem 126}
+  \textbf{Solution:} Let $z + iy,$ then $Re\left(\frac{z + 4}{2x - i}\right) = Re\left(\frac{x + 4 + iy}{2x + i(2y - 1)}\right)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow Re\left(\frac{[(x + 4) + iy][(2x - i(2y - 1))]}{4x^2 + (2y - 1)^2}\right) = \frac{1}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{2x(x + 4) + y(2y - 1)}{4x^2 + (2y - 1)^2} = \frac{1}{2} \Rightarrow 16x + 2y - 1= 0$\\
+  \vspace*{0.2cm}
+  which is equation of a straight line.
+\end{frame}
+\begin{frame}{Problem 127}
+  \textbf{127.} If $z_1, z_2$ and $z_3$ are vertices of an equilateral triangle inscribed in the circle $|z| = 2.$ If $z_1, z_2,
+  z_3$ are in clockwise sense then find $z_2$ and $z_3.$
+\end{frame}
+\begin{frame}{Solution of Problem 127}
+  \textbf{Solution:} Since the circle is inscribed in $|z| = 2$ so center is origin. Also, since $z_1, z_2$ and $z_3$ are in
+  clockwise direction $z_2 = z_1e^{-i120^\circ}, z_3 = z_2e^{-i120^\circ}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_2 = (1 + \sqrt{3}i)[(\cos. -120^\circ + i.\sin -120^\circ)] = 1-\sqrt{3}i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_3 = -2$
+\end{frame}
+\begin{frame}{Problem 128}
+  \textbf{128.} If $z_1 = \frac{a}{1 - i}, z_2 = \frac{b}{2 + i}, z_3 = a - bi$ for $a, b\in R$ and $z_1 - z_2 = 1.$ Then find the
+  centroid of the triangle formed by $z_1, z_2$ and $z_3.$
+\end{frame}
+\begin{frame}{Solution of Problem 128}
+  \textbf{Solution:} Given $z_1 = \frac{a}{1 - i} \Rightarrow z_1 = \frac{a + ia}{2}, z_2 = \frac{b}{2 + i} = \frac{2b - ib}{5}$\\
+  \vspace*{0.2cm}
+  Also given, $z_1 - z_2 = 1 \Rightarrow 5a + i5a - 4b + i2b = 10$\\
+  \vspace*{0.2cm}
+  Comparing real and imaginary parts, we get $5a - 4b = 10, 5a + 2b = 0 \Rightarrow a = \frac{2}{3}, b = -\frac{5}{3}$\\
+  \vspace*{0.2cm}
+  Cnetroid is $\frac{z_1 + z_2 + z_3}{3} = \frac{1}{3}(1 + 7i)$
+\end{frame}
+\begin{frame}{Pronlem 129}
+  \textbf{129.} If $\lambda \in R.$ If the origin and the non-real roots of $2z^2 + 2z + \lambda = 0$ form three vertices of an
+  equilateral triangle in the argand plane, then find $\lambda.$
+\end{frame}
+\begin{frame}{Solution of Problem 129}
+  \textbf{Solution:} From the quadratic equation we have $z_1 + z_2 = -1$ and $z_1z_2 = \frac{\lambda}{2}$\\
+  \vspace*{0.2cm}
+  Since $0, z_1, z_2$ form an equilateral triangle, $\Rightarrow z_1z_2 + z_2.0 + z_1.0 = z_1^2 + z_2^2 + 0^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 + z_2)^2 = 3z_1z_2 \Rightarrow (-1)^2 = 3.\frac{\lambda}{2}\Rightarrow \lambda = \frac{2}{3}$
+\end{frame}
+\begin{frame}{Problem 130}
+  \textbf{130.} If $a, b, c$ and $u, v, w$ are complex numbers such that $c = (1 - r)a + rb$ and $w = (1 - r)u + rv,$ where $r$ is
+  a complex number then prove that the triangles are similar.
+\end{frame}
+\begin{frame}{Solution of Problem 130}
+  \textbf{Solution:} Let $A, B, C$ represent $a,b,c$ and $U, V, W$ represent $u, v, w.$\\
+  \vspace*{0.2cm}
+  $\Rightarrow AB = b - c, BC = c - b = (a - b)(1 - r), CA = a - c = r(a - b)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow UV = v - u, VW = w - v = (u - v)(1 - r), WU = u - w = r(u - v)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{AB}{UV} = \frac{BC}{VW} = \frac{CA}{WU}$\\
+  \vspace*{0.2cm}
+  Thus, the triangles are similar.
+\end{frame}
+\end{document}
