@@ -1,0 +1,163 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 131-140}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 131}
+  \textbf{131.} Find the intercept made by the circle $z\overline{z} + \overline{\alpha}z + \alpha\overline{z} + r = 0$ on real
+  axis on the complex plane.
+\end{frame}
+\begin{frame}{Solution of Problem 131}
+  \textbf{Solution:} Let $z_1$ and $z_2$ be points on real axis which circle cuts with. Since these are on real axis and if $z$
+  represents this points then $z = \overline{z}[\because z = x + i.0]$\\
+  \vspace*{0.2cm}
+  Substituting $z = \overline{z}$ in the equation of the circle, we get $z^2 + (\overline{\alpha} + \alpha)z + r = 0$\\
+  \vspace*{0.2cm}
+  Since $z_1, z_2$ are the roots $\therefore z_1 + z_2 = -\alpha, z_1z_2 = r$\\
+  \vspace*{0.2cm}
+  Length of intercept $=|z_1 - z_2| = \sqrt{(z_1 - z_2)^2} = \sqrt{(z_1 + z_2)^2 - 4z_1z_2} = \sqrt{(\overline{\alpha} + \alpha)^2
+    - 4r}$
+\end{frame}
+\begin{frame}{Problem 132}
+  \textbf{132.} If $a = \cos\alpha +i\sin\alpha, b = \cos\beta + i\sin\beta, c = \cos\gamma + i\sin\gamma$ and $\frac{a}{b} +
+  \frac{b}{c} + \frac{c}{a} = 1,$ then find the value of $\cos(\alpha - \beta) + \cos(\beta - \gamma) + \cos(\gamma - \alpha).$
+\end{frame}
+\begin{frame}{Solution of Problem 132}
+  \textbf{Solution:} Clearly, $a = e^{i\alpha}, b = e^{i\beta}, c= e^{i\gamma}$\\
+  \vspace*{0.2cm}
+  Also given, $\frac{a}{b} + \frac{b}{c} + \frac{c}{a} = 1\Rightarrow e^{i(\alpha - \beta)} + e^{i(\beta - \gamma)} + e^{i(\gamma -
+    \alpha)} = 1$\\
+  \vspace*{0.2cm}
+  Comparing real parts, we get $\cos(\alpha - \beta) + \cos(\beta - \gamma) + \cos(\gamma - \alpha) = 1$
+\end{frame}
+\begin{frame}{Problem 133}
+  \textbf{133.} Find the locus of the center of a circle which touches the circles $|z - z_1| = a$ and $|z - z_2| = b$ externally.
+\end{frame}
+\begin{frame}{Solution of the Problem 133}
+  \textbf{Solution:} Let $A(z_1), B(z_2)$ be the centers of given circles and $P$ be the center of the variable circle which
+  touches given circles externally, then\\
+  \vspace*{0.2cm}
+  $|AP| = a + r$ and $|BP| = b + r$ where $r$ is the radius of the variable circle. Clearly,\\
+  \vspace*{0.2cm}
+  $|AP| - |BP| = a - b \Rightarrow ||AP| - |BP|| = |a - b| = $a constant.\\
+  \vspace*{0.2cm}
+  Hence, locus of $P$ is a right bisector if $a = b,$ a hyperbola if $|a - b| < |AB|$ an empty set of $|a - b|>|AB|,$ set of all
+  points on line $AB$ except those which lie between $A$ and $B$ if $|a - b| = |AB|\neq 0.$
+\end{frame}
+\begin{frame}{Problem 134}
+  \textbf{134.} Prove that $\tan\left[i\log\left(\frac{a - ib}{a + ib}\right)\right] = \frac{2ab}{a^2 - b^2}$.
+\end{frame}
+\begin{frame}{Solution of Problem 134}
+  \textbf{Solution:} Let $a + ib = re^{i\theta}, r^2 = a^2 + b^2 \Rightarrow a - ib = e^{-i\theta}, \tan\theta = \frac{b}{a}$\\
+  \vspace*{0.2cm}
+  $\frac{a - ib}{a + ib} = e^{-2i\theta} \Rightarrow i\log\left(\frac{a - ib}{a + ib}\right) = i\log e^{-2i\theta} = 2\theta$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \tan\left[i\log\left(\frac{a - ib}{a + ib}\right)\right] = \tan2\theta = \frac{2\tan\theta}{1 - \tan^2\theta}$\\
+  \vspace*{0.2cm}
+  $= \frac{2b/a}{1 - b^2/a^2} = \frac{2ab}{a^2 - b^2}$.
+\end{frame}
+\begin{frame}{Pronlem 135}
+  \textbf{135.} $z_1 = a + ib$ and $z_2 = c + id$ are complex numbers such that $|z_1| = |z_2| = 1$ and $Re(z_1\overline{z_2}) =
+  0.$ Also, $w_1 = a + ic, w_2 = b + id$ then prove that $|w_1| = |w_2| = 1$ and $Re(w_1\overline{w_2}) = 0.$
+\end{frame}
+\begin{frame}{Solution of Problem 135}
+  \textbf{Solution:} Given, $|z_1| = |z_2| = 1\Rightarrow a^2 + b^2 = c^2 + d^2 = 1$\\
+  \vspace*{0.2cm}
+  $Re(z_1\overline{z_2}) = 0 \Rightarrow Re[(a + ib)(c - id)] = 0 \Rightarrow ac + bd = 0$\\
+  \vspace*{0.2cm}
+  $a^2 + b^2 = c^2 + d^2 \Rightarrow (a + ic)^2 = (d - ib)^2[\because ac = =bd] \Rightarrow a + ic = d - ib or -d + ib$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a = d$ and $c = -b$ or $a = -d, c = b$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a^2 + c^2 = b^2 + d^2 = 1 \Rightarrow |w_1| = |w_2| = 1$\\
+  \vspace*{0.2cm}
+  $Re(w_1\overline{w2}) = Re[(a + ic)(b - id)] = ab + cd = 0$
+\end{frame}
+\begin{frame}{Problem 136}
+  \textbf{136.} If $\left|\frac{z_1}{z_2}\right| = 1$ and $\arg(z_1z_2) = 0,$ then prove that $|z_2|^2 = z_1z_2$.
+\end{frame}
+\begin{frame}{Solution of Problem 136}
+  \textbf{Solution:} Let $z_1 = r(\cos\theta + i\sin\theta)$. Given, $\left|\frac{z_1}{z_2}\right| = 1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z_1| = |z_2| = r$. Also given, $\arg(z_1z_2) = 0 \Rightarrow \arg(z_1) + \arg(z_2) = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \arg(z_2) = -\theta \Rightarrow z_2 = r[\cos(-\theta) + i\sin(-\theta)] = r[\cos\theta - i\sin\theta] = \overline{z_1}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{z_2} = z_1 \Rightarrow |z_2|^2 = z_1z_2$.
+\end{frame}
+\begin{frame}{Problem 137}
+  \textbf{137.} Find the value of the expression $2\left(1 + \frac{1}{\omega}\right)\left(1 + \frac{1}{\omega^2}\right) + 3\left(2
+  + \frac{1}{\omega}\right)\left(2 + \frac{1}{\omega^2}\right) + 4\left(3 + \frac{1}{\omega}\right)\left(3 +
+  \frac{1}{\omega^2}\right) + \ldots + (n + 1)\left(n + \frac{1}{\omega}\right)\left(n + \frac{1}{\omega^2}\right)$.
+\end{frame}
+\begin{frame}{Solution of Problem 137}
+  \textbf{Solution:} $t_n = (n + 1)\left(n + \frac{1}{\omega}\right)\left(n + \frac{1}{\omega^2}\right)$\\
+  \vspace*{0.2cm}
+  $= n^3 + n^2\left(1 + \frac{1}{\omega} + \frac{1}{\omega^2}\right) + n\left(1 + \frac{1}{\omega} + \frac{1}{\omega^2}\right) +
+  1$\\
+  \vspace*{0.2cm}
+  $= n^3 + n^2(1 + \omega + \omega^2) + n(1 + \omega + \omega^2) + 1 = n^3 + 1$\\
+  \vspace*{0.2cm}
+  $\therefore S_n = \sum_{i = 1}^nt_i = \sum_{i = 1}(i^3 + 1) = \frac{n^2(n + 1)^2}{4} + 1$.
+\end{frame}
+\begin{frame}{Problem 138}
+  \textbf{138.} If $z_1$ and $z_2$ are two complex numbers satisfying the equation $\left|\frac{z_1 + iz_2}{z_1 -
+    iz_2}\right| = 1$, then prove that $\frac{z_1}{z_2}$ is purely real.
+\end{frame}
+\begin{frame}{Solution of Problem 138}
+  \textbf{Solution:} Given $|z_1 + iz_2| = |z_1 - iz_2|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 + iz_2)(\overline{z_1} - i\overline{z_2}) = (z_1 - iz_2)(\overline{z_1 + i\overline{z_2}})$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{z_1}z_2 = z_1\overline{z_2} \Rightarrow \frac{z_1}{z_2} = \frac{\overline{z_1}}{\overline{z_2}}$\\
+  \vspace*{0.2cm}
+  Thus, $\frac{z_1}{z_2}$ is purely real.
+\end{frame}
+\begin{frame}{Problem 139}
+  \textbf{139.} If $z = -2 + 2\sqrt{3}i,$ then find values of $z^{2n} + 2^{2n}z^n + 2^{4n}$.
+\end{frame}
+\begin{frame}{Solution of Problem 139}
+  \textbf{Solution:} $z = -2 + 2\sqrt{3}i = 4\omega$\\
+  \vspace*{0.2cm}
+  $z^{2n} + 2^{2n}z^n + 2^{4n} = 4^{2n}[\omega^{2n} + \omega^n + 1]$\\
+  \vspace*{0.2cm}
+  The above expression has value of $0$ if $n$ is not a multiple of $3$ and $3.4^{2n}$ if $n$ is multiple of $3$.
+\end{frame}
+\begin{frame}{Problem 140}
+  \textbf{140.} If $2\cos\theta = x + \frac{1}{x}$ and $2\cos\phi = y + \frac{1}{y},$ then find the values of $\frac{x}{y} +
+  \frac{y}{x}, xy + \frac{1}{xy}$.
+\end{frame}
+\begin{frame}{Solution of Problem 140}
+  \textbf{Solution:} $x + \frac{1}{x} = 2\cos\theta, \Rightarrow x^2 - 2\cos\theta x + 1 = 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = \frac{2\cos\theta \pm \sqrt{4\cos^2\theta - 1}}{2} = \cos\theta \pm i\sin\theta = e^{\pm i\theta}$\\
+  \vspace*{0.2cm}
+  Similarly, $y = e^{\pm i\phi}$\\
+  \vspace*{0.2cm}
+  $\frac{x}{y} + \frac{y}{z} = 2\cos(\theta - \phi)$\\
+  \vspace*{0.2cm}
+  and $xy + \frac{1}{xy} = 2\cos(\theta + \phi)$
+\end{frame}
+\end{document}
