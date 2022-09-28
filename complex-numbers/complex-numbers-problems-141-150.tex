@@ -1,0 +1,174 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setmathfont{Inconsolata}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 141-150}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 141}
+  \textbf{141.} The complex numbers $z_1$ and $z_2$ such that $z_1\neq z_2$ and $|z_1| = |z_2|$. If $z_1$ has positive real part
+  and $z_2$ has negative imaginary part, prove that $\frac{z_1 + z_2}{z_1 - z_2}$ is purely imaginary.
+\end{frame}
+\begin{frame}{Solution of Problem 141}
+  \textbf{Solution:} Given, $|z_1| = |z_2|, Re(z_1) > 0$ and $Im(z_1) < 0$\\
+  \vspace*{0.2cm}
+  $Re\left(\frac{z_1 + z_2}{z_1 - z_2}\right) = \frac{1}{2}\left(\frac{z_1 + z_2}{z_1 - z_2} + \frac{\overline{z_1} +
+    \overline{z_2}}{\overline{z_1} - \overline{z_2}}\right)$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{2}\left(\frac{2(|z_1|^2 - |z_2|^2)}{|z_1 - z_2|^2}\right) = 0$\\
+  \vspace*{0.2cm}
+  Thus, $\frac{z_1 + z_2}{z_1 - z_2}$ is purely imaginary.
+\end{frame}
+\begin{frame}{Problem 142}
+  \textbf{142.} If $A(z_1), B(z_1)$ and $C(z_3)$ are the vertices of a $\triangle ABC$ in which $\angle ABC = \frac{\pi}{4}$ and
+  $\frac{AB}{BC} = \sqrt{2},$ then prove that the value of $z_2 = z_3 + i(z_1 - z_3)$.
+\end{frame}
+\begin{frame}{Solution of Problem 142}
+  \textbf{Solution:} Given, $\frac{AB}{BC} = \sqrt{2} \Rightarrow \frac{z_1 - z_2}{z_3 - z_2} = \frac{|z_1 - z_2|}{|z_3 - z_2|}.e^{i\pi/4}$\\
+  \vspace*{0.2cm}
+  $= \frac{AB}{BC}.e^{i\pi/4} = \sqrt{2}\left(\frac{1}{\sqrt{2}} + \frac{i}{\sqrt{2}}\right) = 1 + i$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1 - z_2 = (1 + i)(z_3 - z_2) \Rightarrow z_2 = z_3 + i(z_1 - z_3)$
+\end{frame}
+\begin{frame}{Problem 143}
+  \textbf{143.} If $z_1z_2\in C, z_1^2 + z_2^2 \in R, z_1(z_1^2 - 3z_2^2) = 2$ and $z_2(3z_1^2 - z_2^2) = 11$, then find the value
+  of $z_1^2 + z_2^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 143}
+  \textbf{Solution:} Given, $z_1(z_1^2 - 3z_2^2) = 2$ and $z_2(3z_1^2 - z_2^2) = 11$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1^3 - 3z_1z_2^2 + iz_2(3z_1^2 - z_2^2) = 2 + 11i \Rightarrow (z_1 + iz_2)^3 = 2 + 11i$ and\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1^3 - 3z_1z_2^2 - iz_2(3z_1^2 - z_2^2) = 2 - 11i \Rightarrow (z_1 - iz_2)^3 = 2 - 11i$\\
+  \vspace*{0.2cm}
+  Multiplying above equations, we get\\
+  \vspace*{0.2cm}
+  $(z_1^2 + z_2^2)^3 = 4 + 121 = 125 \Rightarrow z_1^2 + z_2^2 = 5$
+\end{frame}
+\begin{frame}{Problem 144}
+  \textbf{144.} If $\sqrt{1 - c^2} = nc - 1$ and $z = e^{i\theta}$, then find the value of $\frac{c}{2n}(1 + nz)\left(1 + \frac{n}{z}\right)$.
+\end{frame}
+\begin{frame}{Solution of Problem 144}
+  \textbf{Solution:} Given $\sqrt{1 - c^2} = nc - 1 \Rightarrow 1 - c^2 = n^2c^2 - 2nc + 1 \Rightarrow \frac{c}{2n} = \frac{1}{1 +
+    n^2}$\\
+  \vspace*{0.2cm}
+  $\frac{c}{2n}(1 + nz)\left(1 + \frac{n}{z}\right) = \frac{1}{1 + n^2}\left[1 + n^2 + n\left(z + \frac{1}{z}\right)\right]$\\
+  \vspace*{0.2cm}
+  $= \frac{1}{1 + n^2}\left[1 + n^2 + 2\cos\theta + n\right] = 1 + \frac{2n}{1 + n^2}\cos\theta = 1 + c\cos\theta$
+\end{frame}
+\begin{frame}{Problem 145}
+  \textbf{145.} Consider an eclipse having its foci at $A(z_1)$ and $B(z_2)$ in the argand plane. If the eccentricity of the
+  ellipse is $e$ and it is known that origin is an interior point of the ellipse, then prove that $e\in \left(0, \frac{|z_1 -
+    z_2|}{|z_1| + |z_2|}\right)$
+\end{frame}
+\begin{frame}{Solution of Problem 145}
+  \textbf{Solution:} If $P(z)$ is any point of the ellipse, then equation of ellipse is given by\\
+  \vspace*{0.2cm}
+  $|z - z_1| + |z- z_2| = \frac{|z_1 - z_2|}{e}$\\
+  \vspace*{0.2cm}
+  If we put $z_1$ or $z_2$ in the above equation then L.H.S. becomes $|z_1 - z_2|$.\\
+  \vspace*{0.2cm}
+  Thus, for any interior point of the ellipse, we have $|z - z_1| + |z - z_2| < \frac{|z_1 - z_2|}{e}$\\
+  \vspace*{0.2cm}
+  If $P(z)$ lies on the ellipse, we have $|z - z_1| + |z- z_2| = \frac{|z_1 - z_2|}{e}$\\
+  \vspace*{0.2cm}
+  It is given that origin is an internal point, so
+  $|0 - z_1| + |0 - z_2| < \frac{|z_1 - z_2|}{e}$\\
+  \vspace*{0.2cm}
+  $e\in\left(0, \frac{|z_1 - z_2|}{|z_1| + |z_2|}\right)$
+\end{frame}
+\begin{frame}{Problem 146}
+  \textbf{146.} If $|z - 2 -i| = |z|\left|\sin\left(\frac{\pi}{4} - \arg(z)\right)\right|$, then find the locus of $z$.
+\end{frame}
+\begin{frame}{Solution of Problem 146}
+  \textbf{Solution:} Let $z = x + iy$, then we have\\
+  \vspace*{0.2cm}
+  $|(x - 2) + i(y - 1)| = |z|\left|\frac{1}{\sqrt{2}}\cos\theta - \frac{1}{\sqrt{2}}\sin\theta\right|$\\
+  \vspace*{0.2cm}
+  whhere, $\theta = \arg(z)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sqrt{(x - 2)^2 + (y - 1)^2} = \frac{1}{\sqrt{2}}|x - y|$\\
+  \vspace*{0.2cm}
+  which is equation of a parabola.
+\end{frame}
+\begin{frame}{Problem 147}
+  \textbf{147.} Find the maximum area of the triangle formed by the complex coordinates $z z_1$ and $z_2$, which satisfy the
+  relation $|z - z_1| = |z - z_2|$ and $\left|z - \frac{z_1 + z_2}{2}\right|\leq r$, where $r > |z_1 - z_2|$.
+\end{frame}
+\begin{frame}{Solution of Problem 147}
+  \textbf{Solution:} Since $|z - z_1| = |z - z_2|$, therefore $z$ will be one of the vertices of the isosceles triangle where base
+  will be formed by $z_1$ and $z_2$.\\
+  \vspace*{0.2cm}
+  Also, since $\left|z - \frac{z_1 + z_2}{2}\right|\leq r$ so $z$ will lie on the circle whose center is $\frac{z_1 + z_2}{2}$ and
+  radius is $r$. Thus, the distance between segment $z_1z_2$ will be $r$.\\
+  \vspace*{0.2cm}
+  Thus, the maximum area of the triangle will be $\frac{1}{2}|z_1 - z2|.r$
+\end{frame}
+\begin{frame}{Problem 148}
+  \textbf{148.} If $z_1 = a_1 + ib_1$ and $z_2 = a_2 + ib_2$ are complex numbers such that $|z_1| = 1, |z_1| = 2$ and $Re(z_1z_2) =
+  0,$ and $\omega_1 = a_1 + \frac{ia_2}{2}$ and $\omega_2 = 2b_1 + ib2$, then prove that $|\omega_1| = 1, |\omega_2| = 2$ and
+  $Re(\omega_1\omega_2) = 0$.
+\end{frame}
+\begin{frame}{Solution of Problem 148}
+  \textbf{Solution:} Given $|z_1| = 1 \Rightarrow a_1^2 + b_1^2 = 1, |z_2| = 2 \Rightarrow a_2^2 + b_2^2 = 4$.\\
+  \vspace*{0.2cm}
+  Also given $Re(z_1z_2) = 0 \Rightarrow a_1a_2 - b_1b_2 = 0 \Rightarrow a_1a_2 = b_1b_2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a_2^2 + b_2^2 = 4a_1^2 + 4b_1^2 \Rightarrow a_2^2 - 4a_1^2 = 4b_1^2 - b_2^2 \Rightarrow a_2^2 - 4a_1^2 + 4ia_1a_2 =
+  4b_1^2 - b_2^2 + 4ib_1b_2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (a_2 + 2ia_1)^2 = (2b_1 + ib_2)^2 \Rightarrow a_2 = \pm 2b_1$\\
+  \vspace*{0.2cm}
+  $\omega_1 = a_1 + \frac{ia_2}{2} = a_1 \pm b_1 \Rightarrow |\omega_1| = \sqrt{a_1^2 + b_1^2} = 1$\\
+  \vspace*{0.2cm}
+  $\omega_2 = 2b_1 + ib_2 = \pm a_2 + ib_2 \Rightarrow |\omega_2| = \sqrt{a_2^2 + b_2^2} = 2$\\
+  \vspace*{0.2cm}
+  $Re(\omega_1\omega_2) = 2a_1b_1 - 2a_2b_2 = 0$
+\end{frame}
+\begin{frame}{Problem 149}
+  \textbf{149.} Let $z$ be a complex number and $a$ be $a$ be a real number such that $z^2 + az + a^2 = 0,$ then prove that i)
+  locus of $z$ is a pair of straight lines ii) $\arg(z) = \pm\frac{2\pi}{3}$ iii) $|z| = |a|$
+\end{frame}
+\begin{frame}{Solution of Problem 149}
+  \textbf{Solution:} Given $z^2 + az + a^2 = 0 \Rightarrow z = a\omega, a\omega^2$ where $\omega$ is cube-root of unity.\\
+  \vspace*{0.2cm}
+  Thus, it represents a pair of straight lines and $|z| = |a|$\\
+  \vspace*{0.2cm}
+  $\arg(z) = \arg(a) + \arg(\omega)$ or $\arg(a) + \arg(\omega^2) = \pm \frac{2\pi}{3}$
+\end{frame}
+\begin{frame}{Problem 150}
+  \textbf{150.} If $x + \frac{1}{x} = 1$ and $p = x^{4000} + \frac{1}{x^{4000}}$ and $q$ is the the digit at units place in
+  $2^{2^n} + 1, n\in N$ and $n > 1$, then find $p + q$.
+\end{frame}
+\begin{frame}{Solution of Problem 150}
+  \textbf{Solution:} Given $x + \frac{1}{x} = 1 \Rightarrow x^2 - x + 1 = 0 \therefore x = -\omega, -\omega^2$\\
+  \vspace*{0.2cm}
+  Now, for $x = -\omega, p = \omega^{4000} + \frac{1}{\omega^{4000}} = \omega + \frac{1}{\omega} = -1$\\
+  \vspace*{0.2cm}
+  Similarly, for $x = -\omega^2, p = -1$\\
+  \vspace*{0.2cm}
+  $2^{2^n} = 2^{4k} = 16^k =$ a number with last digit as $6 \Rightarrow q = 6 + 1 = 7$\\
+  \vspace*{0.2cm}
+  $\Rightarrow p + q = -1 + 7 = 6$.
+\end{frame}
+\end{document}
