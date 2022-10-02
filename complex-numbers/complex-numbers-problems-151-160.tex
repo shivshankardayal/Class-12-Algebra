@@ -72,6 +72,126 @@
   $= |(1 - \alpha)(1 - \alpha^2)\ldots(1 - \alpha^{n - 1})|$\\
   Since $1, \alpha, \alpha^2, \ldots, \alpha^{n - 1}$ are roots of $z^n - 1 = 0$\\
   \vspace*{0.2cm}
-  $\Rightarrow |(1 - \alpha)(1 - \alpha^2)\ldots(1 - \alpha^{n - 1})| = n \Rightarrow \frac{a}{b} = 2$
+  $(z - 1)(z - \alpha)(z - \alpha^2)\ldots(z - \alpha^{n - 1}) = z^n - 1$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z - \alpha)(z - \alpha^2)\ldots(z - \alpha^{n - 1}) = \frac{z^n - 1}{z - 1} = 1 + z + z^2 + \ldots + z^{n - 1}$\\
+  \vspace*{0.2cm}
+  Putting $z = 1$, we get\\
+  \vspace*{0.2cm}
+  $|(1 - \alpha)(1 - \alpha^2)\ldots(1 - \alpha^{n - 1})| = n \Rightarrow \frac{a}{b} = 2$
+\end{frame}
+\begin{frame}{Problem 153}
+  \textbf{153.} If $\left(1 + i\frac{x}{a}\right)\left(1+ i\frac{x}{b}\right)\left(1 + i\frac{x}{c}\right)\ldots = A + iB$, then
+  prove that $\left(1 + \frac{x^2}{a^2}\right)\left(1 + \frac{x^2}{b^2}\right)\left(1 + \frac{x^2}{c^2}\right)\ldots = A^2 + B^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 153}
+  \textbf{Solution:} Let $L.H.S. = z_1$ and $R.H.S. = z_2$ then $\overline{z_1} = \overline{z_2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1\overline{z_1} = z_2\overline{z_2} \Rightarrow z_1^2 = z_2^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left(1 + \frac{x^2}{a^2}\right)\left(1 + \frac{x^2}{b^2}\right)\left(1 + \frac{x^2}{c^2}\right)\ldots = A^2 + B^2$.
+\end{frame}
+\begin{frame}{Problem 154}
+  \textbf{154.} Find the range of real number $\alpha$ for which the equations $z+\alpha|z−1|+2i=0;z=x+iy$ has a solution. Also,
+  find the solution.
+\end{frame}
+\begin{frame}{Solution of Problem 154}
+  \textbf{Solution:} Given, $x + iy + \alpha\sqrt{(x - 1)^2 + y^2} + 2i = 0$\\
+  \vspace*{0.2cm}
+  Equating real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $y + 2 = 0 \Rightarrow y = -2$ and $x + \alpha\sqrt{(x - 1)^2 + y^2} = 0$\\
+  \vspace*{0.2cm}
+  Substituting the value of $y$, we get
+  $\alpha\sqrt{x^2 - 2x + 5} = -x \Rightarrow (\alpha^2 - 1)x^2 - 2\alpha^2x +5\alpha^2 = 0$\\
+  \vspace*{0.2cm}
+  Because $x$ is real, the discriminant has to be greater than zero.
+  \vspace*{0.2cm}
+  $\Rightarrow 4\alpha^4 - 20\alpha^2(\alpha^2 - 1) \geq 0$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \alpha^2 - 5\alpha^2 + 5 \geq 0 \Rightarrow -\frac{\sqrt{5}}{2}\leq\alpha\leq \frac{\sqrt{5}}{2}$
+\end{frame}
+\begin{frame}{Problem 155}
+  \textbf{155.} For every real number $a\geq0$, find all the complex numbers satisfying the equation $2|z|−4az+1+ia=0$.
+\end{frame}
+\begin{frame}{Solution of Problem 155}
+  \textbf{Solution:} Let $z = x + iy \Rightarrow 2\sqrt{x^2 + y^2} - 4a(x + iy) + 1 + ia = 0$\\
+  \vspace*{0.2cm}
+  Equating real and imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $2\sqrt{x^2 + y^2} - 4ax + 1 = 0$ and $-4ay + a = 0 \Rightarrow y = \frac{1}{4}$\\
+  \vspace*{0.2cm}
+  $2\sqrt{x^2 + \frac{1}{16}} - 4ax + 1 = 0 \Rightarrow 4\left(x^2 + \frac{1}{16}\right) = 16a^2x^2 - 8ax + 1$\\
+  \vspace*{0.2cm}
+  $x^2(4 - 16a^2) + 8ax - \frac{3}{4} = 0 \Rightarrow x = \frac{-a}{1 - 4a^2} \pm \frac{1}{4}\frac{\sqrt{4a^2 + 3}}{1 - 4a^2}$
+\end{frame}
+\begin{frame}{Problem 156}
+  \textbf{156.} Show that $(x^2 + y^2)^5 = (x^5 - 10x^3y^2 + 5xy^4) + (5x^4y - 10x^2y^3 + y^5)^2$
+\end{frame}
+\begin{frame}{Solution of Problem 156}
+  \textbf{Solution:} $(x + iy)^5 = (x^5 - 10x^3y^2 + 5xy^4) + i(5x^4y - 10x^2y^3 + y^5)$\\
+  \vspace*{0.2cm}
+  Taking modulus and squaring, we get\\
+  \vspace*{0.2cm}
+  $(x^2 + y^2)^5 = (x^5 - 10x^3y^2 + 5xy^4) + (5x^4y - 10x^2y^3 + y^5)^2$
+\end{frame}
+\begin{frame}{Problem 157}
+  \textbf{157.} Express $(x^2+a^2)(x^2+b^2)(x^2+c^2)$ as sum of two squares.
+\end{frame}
+\begin{frame}{Solution of Problem 157}
+  \textbf{Solution:} $(x + ia)(x + ib)(x + ic) = [(x^2 - ab) + i(a + b)x](x + ic) = (x^3 - abx - acx - bcx) + i(cx^2 - abc + ax^2 +
+  bx^2)$\\
+  \vspace*{0.2cm}
+  Taking modulus and squaring, we get\\
+  \vspace*{0.2cm}
+  $(x^2 + a^2)(x^2 + b^2)(x^2 + c^2) = [x^3 -(ab + bc + ca)x] + [(a + b + c)x^2 - abc]^2$
+\end{frame}
+\begin{frame}{Problem 158}
+  \textbf{158.} If $(1 + x)^n = a_0 + a_1x + a_2x^2 + \ldots + a_nx^n$, then prove that $2^n = (a_0 - a_2 + a_4 - \ldots)^2 + (a_1
+  - a_3 + a_5 - \ldots)^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 158}
+  \textbf{Solution:} Given, $(1 + x)^n = a_0 + a_1x + a_2x^2 + \ldots + a_nx^n$\\
+  \vspace*{0.2cm}
+  Substituting $x = i$,we get\\
+  \vspace*{0.2cm}
+  $(1 + i)^n = a_o + ia_1 - a_2 - ia_3 + a_4 + \ldots = (a_0 - a_2 + a_4 - \ldots) + i(a_1 - a_3 + a_5 - \ldots)$\\
+  \vspace*{0.2cm}
+  Taking modulus and squaring, we get\\
+  \vspace*{0.2cm}
+  $2^n = (a_0 - a_2 + a_4 - \ldots)^2 + (a_1 - a_3 + a_5 - \ldots)^2$
+\end{frame}
+\begin{frame}{Problem 159}
+  \textbf{159.} Dividing $f(z)$ by $z−i$, we get $i$ as remainder and if we divide by $z+i$, we get $1+i$ as remainder. Find the
+  remainder upon division of $f(z)$ by $z^2+1$.
+\end{frame}
+\begin{frame}{Solution of Problem 159}
+  \textbf{Solution:} Let $f(z) = m(z - i) + i$ and $f(z) = n(z + i) + 1 + i$ where $m$ and $n$ are quotients upon division.\\
+  \vspace*{0.2cm}
+  Substituting $z = i$ in the first equation and $z = -i$ in the second we obtain $f(i) = i$ and $f(-i) = 1 + i$.\\
+  \vspace*{0.2cm}
+  Let $g(z)$ be the quotient and $az + b$ be the remainder upong division of $f(z)$ by $z^2 + 1.$ Hence we have\\
+  \vspace*{0.2cm}
+  $f(z) = g(z)(z^2 + 1) + az + b.$ Substituting $z = i$ and $z = -i,$ we get\\
+  \vspace*{0.2cm}
+  $f(i) = i = ai + b$ and $f(-i) = 1 + i = -ai + b$\\
+  \vspace*{0.2cm}
+  Adding, we get $2b = 1 + 2i \Rightarrow b = \frac{1 + 2i}{2} \Rightarrow ai = i - \frac{1 + 2i}{2}$
+\end{frame}
+\begin{frame}{Problem 160}
+  \textbf{160.} If $|z|\leq 1, |w|\leq 1,$ show that $|z - w|^2 \leq (|z| - |w|)^2 + [\arg(z) - \arg(w)]^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 160}
+  \textbf{Solution:} Let $z = r_1e^{i\theta_1}, w = r_2e^{i\theta_2}$. $\because |z|\leq 1$ and $|w|\leq 1 \Rightarrow r_1\leq 1$
+  and $r_2\leq 1$\\
+  \vspace*{0.2cm}
+  $|z - w|^2 = (r_1\cos\theta_1 - r_2\cos\theta_2)^2 + (r_1\sin\theta_1 - r_2\sin\theta_2)^2$\\
+  \vspace*{0.2cm}
+  $= r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2) = (r_1 - r_2)^2 + 2r_2r_2 - 2r_2r_2\cos(\theta_1 - \theta_2)$\\
+  \vspace*{0.2cm}
+  $= (r_1 - r_2)^2 + 4r_1r_2\sin\left(\frac{\theta_1 - \theta_2}{2}\right)^2\leq (r_1 - r_2)^2 + (\theta_1 - \theta_2)^2[\because
+    r_1, r_2\leq 1$ and $\sin\theta \leq \theta]$\\
+    \vspace*{0.2cm}
+    $= (|z| - |w|)^2 + [\arg(z) - \arg(w)]^2$.
 \end{frame}
 \end{document}
