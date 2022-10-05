@@ -1,0 +1,223 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 161-170}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 161}
+  \textbf{161.} If $z$ is any complex number, then show that $\left|\frac{z}{|z|} - 1\right| \leq |arg(z)|$
+\end{frame}
+\begin{frame}{Solution of Problem 161}
+  \textbf{Solution:} Let $z = re^{i\theta}$, then $\frac{z}{|z|} = e^{i\theta} = \cos\theta + i\sin\theta$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left|\frac{z}{|z|} - 1\right| = |(\cos\theta - 1) + i\sin\theta| = \sqrt{\cos\theta^2 - 2\cos\theta + 1 +
+    \sin^2\theta}$\\
+  \vspace*{0.2cm}
+  $= \sqrt{2 - 2\cos\theta} = \sqrt{4\sin^2\frac{\theta}{2}} = 2\sin\frac{\theta}{2}\leq \theta$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left|\frac{z}{|z|} - 1\right| \leq |arg(z)|$
+\end{frame}
+\begin{frame}{Problem 162}
+  \textbf{162.} If $z$ is any complex number, then show that $|z−1| \leq ||z|−1|+|z||argz|$
+\end{frame}
+\begin{frame}{Solution of Problem 162}
+  \textbf{Solution:} Clearly, $|z - 1| = |z - |z| + |z| - 1|\leq |z - |z|| + ||z| - 1|$\\
+  \vspace*{0.2cm}
+  $= |z|\left|\frac{z}{|z|} - 1\right| + ||z| - 1|$\\
+  \vspace*{0.2cm}
+  Using the result of previous problem, we get\\
+  \vspace*{0.2cm}
+  $|z−1| \leq ||z|−1|+|z||argz|$
+\end{frame}
+\begin{frame}{Problem 163}
+  \textbf{163.} If $\left|z + \frac{1}{z}\right| = a$, where $z$ is a complex number and $a > 0$, find the greatest and least
+  values of $|z|$.
+\end{frame}
+\begin{frame}{Solution of Problem 163}
+  \textbf{Solution:} Let $z = r(\cos\theta + i\sin\theta)$, then $\frac{1}{z} = \frac{1}{r}(\cos\theta - i\sin\theta)$\\
+  \vspace*{0.2cm}
+  $\left|z + \frac{1}{z}\right| = \left|\left(r + \frac{1}{r}\right)\cos\theta + i\left(r - \frac{1}{r}\right)\sin\theta\right|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left(r + \frac{1}{r}\right)^2\cos^2\theta + i\left(r - \frac{1}{r}\right)^2\sin^2\theta = a^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left(r - \frac{1}{r}\right)^2 = a^2 - 4\cos^2\theta$\\
+  \vspace*{0.2cm}
+  $r$ will be greatest when $r - \frac{1}{r}$ will be greatets i.e. $\cos\theta= 0 \Rightarrow r - \frac{1}{r} = a$\\
+  \vspace*{0.2cm}
+  $\Rightarrow r_{max} = \frac{a + \sqrt{a^2 + 4}}{2}$\\
+  \vspace*{0.2cm}
+  Similarly, for lowest value of $r, \cos\theta = 1 \Rightarrow r - \frac{1}{r} = a^2 - 4 \Rightarrow r^2 - (a^2 - 4)r - 1 = 0$\\
+  \vspace*{0.2cm}
+  $r_{min} = \frac{a^2- 4 - \sqrt{a^4 - 8a^2 + 20}}{2}$
+\end{frame}
+\begin{frame}{Problem 164}
+  \textbf{164.} If $z_1, z_2$ be complex numebrs and $c$ is a positive number, prove that $|z_1 + z_2|^2 < (1 + c)|z_1|^2 + \left(1
+  + \frac{1}{c}\right)|z_2|^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 164}
+  \textbf{Solution:} We have to prove that $|z_1 + z_2|^2 < (1 + c)|z_1|^2 + \left(1 + \frac{1}{c}\right)|z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 + z_2)(\overline{z_1} + \overline{z_2}) < (1 + c)|z_1|^2 + \left(1 + \frac{1}{c}\right)|z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z_1|^2 + z_1\overline{z_2} + z_2\overline{z_1} + |z_1|^2 < (1 + c)|z_1|^2 + \left(1 + \frac{1}{c}\right)|z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1\overline{z_2} + z_2\overline{z_1} < (1 + c)|z_1|^2 + \left(1 + \frac{1}{c}\right)|z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x_1 + iy_1)(x_2 - iy_2) + (x_2 + iy_2)(x_1 - iy_1) < \frac{1}{c}[c^2(x_1^2 + y_1^2) + (x_2^2 + y_2^2)]$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2cx_1x_2 + 2cy_1y_2 < c^2x_1^2 + c^2y_1^2 + x_2^2 + y_2^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (cx_1 - x_2)^2 + (cy_1 - y_2)^2 > 0$ which is true.
+\end{frame}
+\begin{frame}{Problem 165}
+  \textbf{165.} If $z_1$ and $z_2$ are two complex numbers such that $\left|\frac{z_1 - z_2}{z_1 + z_2}\right| = 1$, prove that
+  $\frac{iz_1}{z_2} = x$ where $x$ is a real number. Find the angle between the lines from origin to the points $z_1 + z_2$ and
+  $z_1 - z_2$ in terms of $x$.
+\end{frame}
+\begin{frame}{Solution of Problem 165}
+  \textbf{Solution:} Given $\left|\frac{z_1 - z_2}{z_1 + z_2}\right| = 1 \Rightarrow |z_1 - z_2|^2 = |z_1 + z_2|^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_1 - z_2)(\overline{z_1} - \overline{z_2}) = (z_1 + z_2)(\overline{z_1} + \overline{z_2})$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2z_1\overline{z_2} = -2z_2\overline{z_1} \Rightarrow \overline{\left(\frac{z_1}{z_2}\right)} = -\frac{z_1}{z_2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_1}{z_2} = $ purely imaginary $\Rightarrow i\frac{z_1}{z_2} =$ real $= x$\\
+  \vspace*{0.2cm}
+  Now $\frac{z_1 + z_2}{z_1 - z_2} = \frac{z_1/z_2 + 1}{z_1/z_2 - 1} = \frac{-ix + 1}{-ix - 1} = \frac{-1 + x^2 + 2ix}{1 + x^2}$\\
+  \vspace*{0.2cm}
+  If $\theta$ is the angle between given lines then\\
+  \vspace*{0.2cm}
+  $\tan\theta = \arg\frac{z_1 + z_2}{z_1 - z_2} = \frac{2x}{x^2 - 1}$
+\end{frame}
+\begin{frame}{Problem 166}
+  \textbf{166.} Let $z_1, z_2$ be any two complex numbers and $a, b$ be two real numbers such that $a^2 + b^2 \neq 0$. Prove that
+  $|z_1|^2 + |z_2|^2 - |z_1^2 + z_2^2| \leq 2\frac{|az_1 + bz_2|^2}{a^2 + b^2}\leq |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|$
+\end{frame}
+\begin{frame}{Solution of Problem 166}
+  \textbf{Solution:} Let $z_1 = r_1(\cos\theta_1 + i\sin\theta_1), z_2 = r_2(\cos\theta_2 + i\sin\theta_2)$. Also let $a =
+  r\cos\alpha, b = r\sin\alpha$\\
+  \vspace*{0.2cm}
+  $|az_1 + bz_2|^2 = |rr_1(\cos\theta_1 + i\sin\theta_1)\cos\alpha + rr_2(\cos\theta_2 + i\sin\theta_2)\sin\alpha|^2$\\
+  \vspace*{0.2cm}
+  $= r^2(r1\cos\theta_1\cos\alpha + r_2\cos\theta_2\sin\alpha)^2 + r^2(r_1\sin\theta_1\cos\alpha + r_2\sin\theta_2\sin\alpha)^2$\\
+  \vspace*{0.2cm}
+  $= r^2[r_1^2\cos^2\alpha + r_2^2\sin^2\alpha + 2r_1r_2\cos\alpha\sin\alpha\cos(\theta_1 - \theta_2)]$\\
+  \vspace*{0.2cm}
+  $= \frac{r^2}{2}[r_1^2(1 + \cos2\alpha) + r_2^2(1 - \cos2\alpha) + 2r_1r_2\sin2\alpha\cos(\theta_1 - \theta_2)]$\\
+  \vspace*{0.2cm}
+  $\frac{2|az_1 + bz_2|^2}{a^2 - b^2}= r_1^2 + r_2^2 + (r_1^2 - r_2^2)\cos2\alpha + 2r_2r_2\cos(\theta_1 - \theta_2)\sin2\alpha$\\
+  \vspace*{0.2cm}
+  $= A + B\cos2\alpha + C\sin2\alpha$ where $A = r_1^2 + r_2^2, B = r_1^2- r_2^2, C = 2r_1r_2\cos(\theta_1 - \theta_2)$\\
+  \vspace*{0.2cm}
+  Clearly, $-\sqrt{B^2 + C^2}\leq B\cos2\alpha + C\sin2\alpha \leq \sqrt{B^2 + C^2}$\\
+  \vspace*{0.2cm}
+  $\therefore A -\sqrt{B^2 + C^2}\leq A + B\cos2\alpha + C\sin2\alpha \leq A + \sqrt{B^2 + C^2}$\\
+  \vspace*{0.2cm}
+  $\therefore A -\sqrt{B^2 + C^2}\leq  \frac{2|az_1 + bz_2|^2}{a^2 + b^2}\leq A + \sqrt{B^2 + C^2}$\\
+  \vspace*{0.2cm}
+  Now $B^2 + C^2 = r_1^4 + r_2^4 - 2r_1^2r_2^2 + 4r_1^2r_2^2\cos^2(\theta_1 - \theta_2)$
+\end{frame}
+\begin{frame}{Solution contd.}
+  Again $|z_1^2 + z_2^2| = |r_1^2(\cos2\theta_1 + i\sin2\theta_1) + r_2^2(\cos2\theta_2 + i\sin2\theta_2)|$\\
+  \vspace*{0.2cm}
+  $= \sqrt{(r_1^2\cos2\theta_1 + r_2^2\cos2\theta_2)^2 + (r_1^2\sin2\theta_1 + r_2^2\sin2\theta_2)^2}$\\
+  \vspace*{0.2cm}
+  $= \sqrt{r_1^4 + r_2^4 + 2r_1^2r_2^2\cos2(\theta_1 - \theta_2)}$\\
+  \vspace*{0.2cm}
+  $= \sqrt{r_1^4 + r_2^4 + 2r_1^2r_2^2[2\cos^2(\theta_1 - \theta_2) - 1]} = \sqrt{B^2 + C^2}$\\
+  \vspace*{0.2cm}
+  $A = r_1^2 + r_2^2 = |z_1|^2 + |z_2|^2$\\
+  \vspace*{0.2cm}
+  Hence, $|z_1|^2 + |z_2|^2 - |z_1^2 + z_2^2| \leq 2\frac{|az_1 + bz_2|^2}{a^2 + b^2}\leq |z_1|^2 + |z_2|^2 + |z_1^2 + z_2^2|$.
+\end{frame}
+\begin{frame}{Problem 167}
+  \textbf{167.} If $b + ic = (1 + a)z$ and $a^2 + b^2 + c^2 = 1$, prove that $\frac{a + ib}{1 + c} = \frac{1 + iz}{1 - iz}$, where
+  $a, b,c$ are real numbers and $z$ is a complex number.
+\end{frame}
+\begin{frame}{Solution of Problem 167}
+  \textbf{Solution:} Given $z = \frac{b + ic}{1 + a} \therefore iz = \frac{-c + ib}{1 + a} \Rightarrow \frac{1}{iz} = \frac{1 +
+    a}{-c + ib}$\\
+  \vspace*{0.2cm}
+  Using componendo and dividendo, we get\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{1 + iz}{1 - iz} = \frac{1 + a - c + ib}{1 + a + c - ib}$\\
+  \vspace*{0.2cm}
+  Also, given $a^2 + b^2 + c^2 = 1 \Rightarrow a^2 + b^2 = 1 - c^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (a + ib)(a - ib) = (1 + c)(1 - c)\Rightarrow \frac{a + ib}{1 - c} = \frac{1 + c}{a - ib} = \frac{1}{u}$(say)\\
+  \vspace*{0.2cm}
+  $\therefore \frac{1 + iz}{1 - iz} = \frac{a + ib + 1 - c}{1 + c + a - ib} = \frac{a + ib + u(a + ib)}{1 + c + u(1 + c)}$\\
+  \vspace*{0.2cm}
+  $= \frac{a + ib}{1 + c}$
+\end{frame}
+\begin{frame}{Problem 168}
+  \textbf{168.} If $a, b, c, \ldots, k$ are all $n$ real roots of the equation $x^n + p_1x^{n - 1} + p_2x^{n - 2} + \ldots + p_{n -
+  1}x + p_n = 0w$, where $p_1, p_2, \ldots, p_n$ are real, show that $(1 + a^2)(1 + b^2)\ldots (1 + k^2) = (1 - p_2 + p_4 +
+  \ldots)^2 + (p_1 - p_3 + \ldots)^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 168}
+  \textbf{Solution:} We can write that $(x - a)(x - b)\ldots (x - k) = x^n + p_1x^{n - 1} + p_2x^{n - 2} + \ldots + p_{n - 1}x +
+  p_n$\\
+  \vspace*{0.2cm}
+  Substituting $x = i$, we get\\
+  \vspace*{0.2cm}
+  $(i - a)(i - b)\ldots (i - k) = i^n + p_1i^{n - 1} + p_2i^{n - 2} + \ldots + p_{n - 1}i +  p_n$\\
+  \vspace*{0.2cm}
+  Dividing both sides by $i^n$, we get
+  $(1 + ia)(1 + ib)\ldots(1 + ik) = 1 + \frac{p_1}{i} + \frac{p_2}{i^2} + \ldots$\\
+  \vspace*{0.2cm}
+  Taking modulus and squarin, we get\\
+  \vspace*{0.2cm}
+  $(1 + a^2)(1 + b^2)\ldots (1 + k^2) = (1 - p_2 + p_4 + \ldots)^2 + (p_1 - p_3 + \ldots)^2$
+\end{frame}
+\begin{frame}{Problem 169}
+  \textbf{169.} If $f(x) = x^4 - 8x^3 + 4x^2 + 4x + 39$ and $f(3 + 2i) = a + ib$,
+  find $a:b$.
+\end{frame}
+\begin{frame}{Solution of Problem 169}
+  \textbf{Solution:} $3 + 2i$ is one value of $x$ for which $f(3 + 2i) = a + ib$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x = 3 + 2i \Rightarrow x^2 - 6x + 13 = 0$\\
+  \vspace*{0.2cm}
+  $f(x) = x^4 - 8x^3 + 4x^2 + 4x + 39 = (x^2 - 6x + 13)(x^2 - 2x -21) -96x + 312$\\
+  \vspace*{0.2cm}
+  $\Rightarrow f(3 + 2i) = -96(3 + 2i) + 312 = 24 - 192i = a + ib$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a:b = 1:-8$
+\end{frame}
+\begin{frame}{Problem 170}
+  \textbf{170.} Let $A$ and $B$ be two complex numbers such that $\frac{A}{B} + \frac{B}{A}= 1$, prove that the triangle formed by
+  origin and these two points is equilateral.
+\end{frame}
+\begin{frame}{Solution of Problem 170}
+  \textbf{Solution:} Given $\frac{A}{B} + \frac{B}{A} = 1 \Rightarrow A^2 - AB + B^2 = 0$\\
+  \vspace*{0.2cm}
+  $A = \frac{B \pm \sqrt{3}iB}{2} = -\omega B, -\omega^2B\Rightarrow |A| = |B|$\\
+  \vspace*{0.2cm}
+  $|A - B| = |-\omega B - B|$ or $|-\omega^2B - B| = |\omega^2 B|$ or $|\omega B|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |A - B| = |B|$\\
+  \vspace*{0.2cm}
+  Thus, $|A| = |B| = |A - B|$ making the triangle equilateral.
+\end{frame}
+\end{document}
