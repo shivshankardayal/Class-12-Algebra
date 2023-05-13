@@ -1,0 +1,25 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+settings.inlinetex=true;
+deletepreamble();
+defaultfilename="complex-numbers-problems-191-200-2";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+import geometry;
+import fontsize;
+unitsize(0.5cm);
+defaultpen(fontsize(6pt));
+pair c = (1,0);
+path circle = circle(c, 1);
+draw(circle);
+draw((-0.5, 0) -- (3, 0), Arrow);
+draw((0, -1.5) -- (0, 1.5), Arrow);
+label("$x$", (3, 0), align=E);
+label("$y$", (0, 1.5), align=N);
+label("$O$", (0,0), align=SW);
+label("$C(1, 0)$", c, align=S);

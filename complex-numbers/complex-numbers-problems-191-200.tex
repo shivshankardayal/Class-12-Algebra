@@ -1,0 +1,239 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+\usepackage{tikz}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 191-200}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 191}
+  \textbf{191.} If $z - 6 - 8i\leq 4$, then find the least and greatest value of $z$.
+\end{frame}
+\begin{frame}{Solution of Problem 191}
+  \textbf{Solution:} $|z - 6 - 8i|\leq |4| \Rightarrow -4 \leq ||z| - |6 + 8i|| \leq 4$\\
+  \vspace*{0.2cm}
+  $\Rightarrow -4 \leq |z| - 10 \leq 10 \Rightarrow 6\leq |z|\leq 14$
+\end{frame}
+\begin{frame}{Problem 192}
+  \textbf{192.} If $z - 25i\leq 15$ then find the least positive value of $\arg(z)$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 192}
+  \textbf{Solution:} The diagram is given below:
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(0.5cm);
+      defaultpen(fontsize(6pt));
+      pair c = (0,2.5);
+      path circle = circle(c, 1.5);
+      draw(circle);
+      draw((-0.5, 0) -- (4, 0), Arrow);
+      draw((0, -0.5) -- (0, 5), Arrow);
+      label("$x$", (4, 0), align=E);
+      label("$y$", (0, 5), align=N);
+      label("$O$", (0,0), align=SW);
+      draw((0,0) -- (3, 4));
+      draw((0, 2.5) -- (1.2, 1.6));
+      label("$C(0, 25)$", c, align=W);
+      label("$P$", (1.2, 1.6), align=E);
+      markangle("$\theta$", radius=10, (1,0), (0, 0), (3,4));
+      markangle("$\theta$", radius=10, (0,0), c, (1.2,1.6));
+    \end{asy}
+  \end{center}
+  Given $z - 26 \leq 15$, which represents a circle having center $(0 25)$ and a radius
+  $15$.\\
+  \vspace*{0.2cm}
+  Let $OP$ be tangent to the circle at point $P$, then $\angle XOP$ will represent least
+  value of $\arg(z)$.\\
+  \vspace*{0.2cm}
+  Let $\angle XOP = \theta$ then $\angle OCP = \theta$. Now $OC = 25, CP = 15 \therefore OP = 20$\\
+  \vspace*{0.2cm}
+  $\therefore \tan\theta = \frac{OP}{CP} = \frac{4}{3}$. $\therefore$ Least value of $\arg(z) = \theta = \tan^{-1}\frac{4}{3}$
+\end{frame}
+\begin{frame}{Problem 193}
+  \textbf{193.} Show that the equation $|z - z_1|^2 + |z - z_2|^2 = k$ where $k\in R$ will
+  represent a circle if $k\geq \frac{1}{2}|z_1 - z_2|^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 193}
+  \textbf{193.} Given, $|z - z_1|^2 + |z - z_2|^2 = k$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z|^2 + |z_1|^2 - 2z\overline{z_1} + |z|^2 + |z_2|^2 - 2z\overline{z_2} = k$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2|z|^2 - 2z(\overline{z_1} + \overline{z_2}) = k - (|z_1|^2 + |z_2|^2)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z|^2 - 2z\left(\frac{\overline{z_1 + z_2}}{2}\right) + \frac{1}{4}|z_1 + z_2|^2 = \frac{k}{2} + \frac{1}{4}[|z_1 + z_2|^2 - 2|z_1|^2 -2|z_2|^2]$\\
+  $\Rightarrow \left|z - \frac{z_1 + z_2}{2}\right|^2 = \frac{1}{2}\left[k - \frac{1}{2}|z_1 - z_2|^2\right]$\\
+  \vspace*{0.2cm}
+  The above equation represents a circle with center at $\frac{z_1 + z_2}{2}$ and radius $\frac{1}{2}\sqrt{2k - |z_1 - z_2|^2}$
+  provided $k\geq \frac{|z_1 - z_2|^2}{2}$.
+\end{frame}
+\begin{frame}{Problem 194}
+  \textbf{194.} If $|z - 1| = 1$, prove that $\frac{z - 2}{z} = i\tan[\arg(z)]$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 194}
+  \textbf{Solution:} Since $|z - 1| = 1, z$ represents a circle with center $(1, 0)$ and a radius of of $1$. It is shown below:
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(0.5cm);
+      defaultpen(fontsize(6pt));
+      pair c = (1,0);
+      path circle = circle(c, 1);
+      draw(circle);
+      draw((-0.5, 0) -- (3, 0), Arrow);
+      draw((0, -1.5) -- (0, 1.5), Arrow);
+      label("$x$", (3, 0), align=E);
+      label("$y$", (0, 1.5), align=N);
+      label("$O$", (0,0), align=SW);
+      label("$C(1, 0)$", c, align=S);
+    \end{asy}
+  \end{center}
+  Now $|z - 1| = 1$. Let $z = x + iy$ then $x^2 + y^2 = 2x$. Also,\\
+  \vspace*{0.2cm}
+  $$\frac{z - 2}{z} = \frac{x - 2 + iy}{x + iy} = \frac{x^2 - 2x + y^2 + 2iy}{x^2 + y^2} = i\frac{y}{x}$$\\
+  \vspace*{0.2cm}
+  \noindent\textbf{Case I.} When $z$ lies in the first quadrant. This implies $\arg(z) = \theta$, where $\tan\theta = \frac{y}{x}
+  \therefore i\tan[\arg(z)] = i\tan\theta = i\frac{y}{x}$.\\
+  \vspace*{0.2cm}
+  \noindent\textbf{Case II.} When $z$ lies in the fourth quadrant. Thus, $\arg(z) = 2\pi - \theta$, where $\tan\theta =
+  \frac{-y}{x}$\\
+  \vspace*{0.2cm}
+  $\therefore i\tan[\arg(z)] = i\tan(2\pi - \theta) = i\frac{y}{x}$.
+\end{frame}
+\begin{frame}{Problem 195}
+  \textbf{195.} Findthe local of $z$ if $\arg\left(\frac{z - 1}{z + 1}\right) = \frac{\pi}{4}$.
+\end{frame}
+\begin{frame}{Solution of Problem 195}
+  \textbf{Solution:} Let $z = x + iy$. Now we have $\frac{z - 1}{z + 1} = \frac{(x^2 - 1) + y^2}{(x + 1)^2 + y^2} + i\frac{2y}{(x +
+    1)^2 + y^2}$\\
+  \vspace*{0.2cm}
+  $\therefore \arg\left(\frac{z - 1}{z + 1}\right) = \frac{\pi}{4}\Rightarrow \tan\left(\arg\left(\frac{z - 1}{z + 1}\right)\right)
+  = \frac{2y}{x^2 - 1 + y^2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow x^2 + y^2 - 1 -2 y = 0 \Rightarrow x^2 + (y - 1)^2 = 2$, which is equation of a circle having center at $(0, 1)$ and
+  radius $\sqrt{2}$.
+\end{frame}
+\begin{frame}{Probem 196}
+  \textbf{196.} If $\alpha$ is real and $z$ is a complex number and $u$ and $v$ be the real and imaginary parts of $(z -
+  1)(\cos\alpha -i\sin\alpha) + (z - 1)^{-1}(\cos\alpha + i\sin\alpha)$. Prove that the locus of the points represneting the
+  complex numbers such that $v = 0$ is a circl of unit radius with center at a point $(1, 0)$ and a straight line passing through
+  the center of the circle.
+\end{frame}
+\begin{frame}{Solution of Problem 196}
+  \textbf{Solution:} Let $z = x + iy$. Now, $u + iv = (z - 1)(\cos\alpha - i\sin\alpha) + \frac{1}{z - 1}(\cos\alpha + i\sin\alpha)$\\
+  \vspace*{0.2cm}
+  $= (x - 1)\cos\alpha + y\sin\alpha + i[y\cos\alpha - (x - 1)\sin\alpha] + \frac{x - 1 - iy}{(x - 1)^2 + y^2}(\cos\alpha +
+  i\sin\alpha) = 0$\\
+  \vspace*{0.2cm}
+  Equating imaginary parts, we get\\
+  \vspace*{0.2cm}
+  $v = y\cos\alpha - (x - 1)\sin\alpha + \frac{(x - 1)\sin\alpha - y\cos\alpha}{(x - 1)^2 + y^2} = 0\Rightarrow [y\cos\alpha - (x -
+    1)\sin\alpha][(x - 1)^2 + y^2] = 0$\\
+  \vspace*{0.2cm}
+  $\therefore $ Either $y\cos\alpha - (x - 1)\sin\alpha = 0 \Rightarrow y = \tan\alpha(x - 1)$, which is a straight line passing
+  through $(1, 0)$ or $(x - 1)^2 + y^2 - 1 = 0$ which is a circle with center $(1, 0)$ and unit radius.
+\end{frame}
+\begin{frame}{Problem 197}
+  \textbf{197.} If $|a_n| < 2$ for $n = 1, 2, 3, \ldots$ and $1 + a_1z + a_2z^2 + \cdots + a_nz^n = 0$, show that $z$ does not lie
+  in the interior of the circle $|z| = \frac{1}{3}$.
+\end{frame}
+\begin{frame}{Solution of Problem 197}
+  \textbf{197.} Given, $1 + a_1z + a_2z^2 + \cdots + a_nz^n = 0 \Rightarrow |a_1z| + |a_2z^2| + \cdots + |a_nz^b|\geq 1$and\\
+  \vspace*{0.2cm}
+  L.H.S. $ < 2|z| + 2|z|^2 + \cdots$ to $\infty[\because |a_n|] < 2$.\\
+  \vspace*{0.2cm}
+  Let $|z| < 1$ then $\frac{2|z|}{1 - |z|} < 1 \Rightarrow |z| > \frac{1}{3}$\\
+  \vspace*{0.2cm}
+  When $|z|> 1$, clearly $|z| > \frac{1}{3}$; hence, $z$ does not lie in the interior of the circle with radius $\frac{1}{3}$.
+\end{frame}
+\begin{frame}{Problem 198}
+  \textbf{198.} Show that all the roots of the equation $z^n\cos\theta_0 + z^{n - 1}\cos\theta_1 + \cdots + \cos\theta_n = 2$,
+  where $\theta_0, \theta_1, \ldots, \theta_n\in R$ lie outside the circle $|z| = \frac{1}{2}$.
+\end{frame}
+\begin{frame}{Solution of Problem 198}
+  \textbf{Solution:} Given, $z^n\cos\theta_0 + z^{n - 1}\cos\theta_1 + \cdots + \cos\theta_n = 2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2 = |z^n\cos\theta_0 + z^{n - 1}\cos\theta_1 + \cdots + \cos\theta_n|$\\
+  \vspace*{0.2cm}
+  $< |z^n\cos\theta_0| + |z^{n - 1}\cos\theta_1| + \cdots + |\cos\theta_n|$\\
+  \vspace*{0.2cm}
+  $= |z^n||\cos\theta_0| + |z^{n - 1}||\cos\theta_1| + \cdots + |\cos\theta_n|$\\
+  \vspace*{0.2cm}
+  $\leq |z|^n + |z|^{n - 1}  + \cdots + 1 < 1 + |z| + |z|^2 + \cdots$ to $\infty$\\
+  \vspace*{0.2cm}
+  $\Rightarrow 2 = \frac{1}{1 - |z|} \Rightarrow |z| > \frac{1}{2} [$ when $|z| < 1]$\\
+  \vspace*{0.2cm}
+  Hence $z$ lies outside the circle $|z| = \frac{1}{2}$.\\
+  \vspace*{0.2cm}
+  Thus all roots of the given equation lie outside the circle $|z| = \frac{1}{2}$.
+\end{frame}
+\begin{frame}{Problem 199}
+  \textbf{199.} $z_1, z_2, z_3$ are non-zero, non-collinear complex numbers such that $\frac{2}{z_1} = \frac{1}{z_2} +
+  \frac{1}{z_3}$. Show that $z_1, z_2, z_3$ lie on a circle passing through origin.
+\end{frame}
+\begin{frame}{Solution of Problem 199}
+  \textbf{Solution:} Recall that points $z_1, z_2, z_3$ are concyclic if $\left(\frac{z_2 - z_4}{z_1 - z_4}\right)\left(\frac{z_1 -
+  z_3}{z_2 - z_3}\right)$ is real. We assume that $z_4$ is origin.\\
+  \vspace*{0.2cm}
+  Given, $\frac{2}{z_1} = \frac{1}{z_2} + \frac{1}{z_3} = \frac{z_2 + z_3}{z_2z_3} \therefore z_1 = \frac{2z_2z_3}{z_1+z_3}$.\\
+  \vspace*{0.2cm}
+  Putting the value of $z_1$ and $z_4$ in the concyclic condition expression we obtain\\
+  \vspace*{0.2cm}
+  $\left(\frac{z_2 - z_4}{z_1 - z_4}\right)\left(\frac{z_1 - z_3}{z_2 - z_3}\right) = \frac{1}{2}$.\\
+  \vspace*{0.2cm}
+  Thus, $z_1, z_2, z_3$ lie on a circle passing through origin.
+\end{frame}
+\begin{frame}{Problem 200}
+  \textbf{200.} $A, B, C$ are the points representing the complex numbers $z_1, z_2, z_3$ respectively on the complex plane and the
+  circumcenter of the $\triangle ABC$ lies on the origin. If the altitude of the triangle through vertex $A$ meets the circle again
+  at $P$, prove that $P$ represents the complex number $\frac{z_2z_3}{z_1}$.
+\end{frame}
+\begin{frame}{Solution of Problem 200}
+  \textbf{Solution:} The origin $O$ is the circumcenter of $\triangle ABC$ and $AP$ is perpendiculse to $BC$. Let $P = z$.
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (0, 0) circle(1);
+        \draw (.866, -.5) -- (-.866, -.5) -- (.5, .866) -- cycle;
+        \draw (.5, .866) -- (.5, -.866);
+        \filldraw (0, 0) circle(1pt);
+        \draw (0, 0) node[anchor=north] {$O$};
+        \draw (.866, -.5) node[anchor=north west] {$C(z_3)$} (-.866, -.5)
+        node[anchor=north east] {$B(z_2)$} (.5, .866) node[anchor=south]
+        {$A(z_1)$} (.5, -.866) node[anchor=north] {$P(z)$};
+    \end{tikzpicture}
+  \end{center}
+  We have $OP=OA=OB=OC \therefore |z| = |z_1| = |z_2| = |z_3| \Rightarrow |z|^2 = |z_1|^2 = |z_2|^2 = |z_3|^2 \Rightarrow
+  z\overline{z} = z_1\overline{z_1} = z\overline{z_2} = z\overline{z_3}$.\\
+  \vspace*{0.2cm}
+  Since $AP$ is perpendicular to $BC$, therefore\\
+  \vspace*{0.2cm}
+  $\arg\left(\frac{z_1 - z}{z_2 - z_3}\right) = \frac{\pi}{2}$ or $\frac{-\pi}{2}\Rightarrow \frac{z_1 - z}{z_2 - z_3}$ is purely
+  imaginary.\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{\left(\frac{z_1 - z}{z_2 - z_3}\right)} = -\frac{z_1 - z}{z_2 - z_3}$\\
+  \vspace*{0.2cm}
+  Solving the above equation gives $z = \frac{z_2z_3}{z_1}$.
+\end{frame}
+\end{document}

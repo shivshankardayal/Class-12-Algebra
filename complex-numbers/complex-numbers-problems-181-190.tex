@@ -1,0 +1,346 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 181-190}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 181}
+  \textbf{181.} If the vertices of a $\triangle ABC$ are represented by $z_1, z_2, z_3$ respectively, then show that the
+  orthocenter of $\triangle ABC$ is $\frac{z_1a\sec A + z_2b\sec B + z_3c\sec C}{a\sec A + b\sec B + c\sec C}$ or $\frac{z_1\tan A
+    + z_2\tan B + z_3\tan C}{\tan A + \tan B + \tan C}$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 181}
+  \textbf{Solution:} The diagram is given below:
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(2cm);
+      defaultpen(fontsize(6pt));
+      pair a = (0,2);
+      pair b = (-1,0);
+      pair c = (0.5,0);
+      show(triangle(a, b, c), 0.5*green);
+      pair p = orthocentercenter(triangle(a, b, c));
+      dot(p, 0.5*green);
+      pair l = intersectionpoint(line(a, p), line(b, c));
+      draw(a -- l);
+      pair m = intersectionpoint(line(b, p), line(a, c));
+      draw(b -- m);
+      draw("$L$", l, align= S, 0.5*green);
+      draw("$M$", m, align= E, 0.5*green);
+      draw("$H$", p, align= W, 0.5*green);
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}
+  Let $AL$ be perpendicular on $BC$ and $H$ be orthocenter of the $\triangle ABC$.\\
+  \vspace*{0.2cm}
+  $\frac{BL}{LC} = \frac{c\cos B}{b\cos C} = \frac{c\sec C}{b\sec B}$, thus $L$ divides $BC$ internally in the ratio of $c\sec
+  C:b\sec B$\\
+  $L = \frac{z_3c\sec C + z_2b\sec B}{c\sec C + b\sec B}$\\
+  \vspace*{0.2cm}
+  $\frac{AH}{HL} = \frac{\Delta ABH}{\Delta HBD} = \frac{\frac{1}{2}AB.BH\sin\angle ABM}{\frac{1}{2}BL.LH.\sin\angle MBC} = \frac{c\cos A}{c\cos B\cos C}[\because \angle ABM = 90^\circ - A, \angle MBC = 90^\circ - B]$\\
+  $= \frac{a\cos A}{a\cos B\cos C} = \frac{(b\cos C + c\cos B)\cos A}{a\cos B\cos C} = \frac{b\sec B + c\sec C}{a\sec A}$\\
+  \vspace*{0.2cm}
+  $H = \frac{z_1a\sec A + z_2b\sec B + z_3c\sec C}{a\sec A + b\sec B + c\sec C}$\\
+  \vspace*{0.2cm}
+  Since the above expression is similar w.r.t. $A, B$ and $C$, therefore it will also lie on the perpendiculars from $B$ and $C$ to
+  opposing sides as well.\\
+  \vspace*{0.2cm}
+  Thus, orthocenter $H = \frac{z_1a\sec A + z_2b\sec B + z_3c\sec C}{a\sec A + b\sec B + c\sec C}$\\
+  \vspace*{0.2cm}
+  $H = \frac{z_1k\sin A\sec A + z_2k\sin B\sec B + z_3k\sin C\sec C}{k\sin A\sec A + k\sin B\sec B + k\sin C\sec C}$\\
+  \vspace*{0.2cm}
+  $H = \frac{z_1\tan A + z_2\tan B + z_3\tan C}{\tan A + \tan B + \tan C}$
+\end{frame}
+\begin{frame}{Problem 182}
+  \textbf{182.} If the vertices of a $\triangle ABC$ are represented by $z_1, z_2$ and $z_3$ respectively, show that its
+  circumcenter is $\frac{z_1\sin 2A + z_2\sin 2B + z_3\sin 2C}{\sin 2A + \sin 2B + \sin 2C}$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 182}
+  \textbf{Solution:} The diagram is given below:
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(2cm);
+      defaultpen(fontsize(6pt));
+      pair a = (0,2);
+      pair b = (-1,0);
+      pair c = (0.5,0);
+      show(triangle(a, b, c), 0.5*green);
+      path p = circumcircle(a, b, c);
+      draw(p, 0.5*green);
+      pair o = circumcenter(a,b,c);
+      dot(o, 0.5*blue);
+      draw(a -- intersectionpoint(line(a, o), line(b,c)));
+      label("$D$", intersectionpoint(line(a, o), line(b,c)), align=S, 0.5*green);
+      draw(b -- o);
+      draw(c -- o);
+      pair l = intersectionpoint(line(a, o), line(b,c));
+      draw(o -- intersectionpoint(perpendicular(o, line(b, c)), line(b, c)));
+      draw("$L$", intersectionpoint(perpendicular(o, line(b, c)), line(b, c))-(0,.1), align= S, 0.5*green);
+      markangle("$2B$", radius=5, c, o, a, 0.5*green);
+      markangle("$2C$", radius=5, a, o, b, 0.5*green);
+      markangle("$\pi - 2C$", radius=10, b, o, l, 0.5*red);
+      markangle("$\pi - 2B$", radius=10, l, o, c, 0.5*blue);
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}{Solution of Problem 182}
+  \textbf{Solution:} Let $O$ be the circumcenter of $\triangle ABC$ where $A=z_1, B=z_2$ and $C=z_3$.\\
+  \vspace*{0.2cm}
+  $\frac{BD}{DC} = \frac{\frac{1}{2}BD.OL}{\frac{1}{2}DC.OL} = \frac{\Delta BOD}{\Delta COD}$\\
+  \vspace*{0.2cm}
+  $= \frac{\frac{1}{2}OB.OD.\sin(\pi - 2C)}{\frac{1}{2}OC.OD\sin(\pi - 2C)} = \frac{\sin2C}{\sin2B}$\\
+  \vspace*{0.2cm}
+  Thus, $D$ divides $BC$ internally in the ratio $\sin2C:\sin2B \Rightarrow D = \frac{z_3\sin2C + z_2\sin2B}{\sin2C + \sin2B}$\\
+  \vspace*{0.2cm}
+  The complex number dividing $AD$ internally in the ratio $\sin2B+\sin2C:\sin2A$ is\\
+  \vspace*{0.2cm}
+  $\frac{z_1\sin 2A + z_2\sin 2B + z_3\sin 2C}{\sin 2A + \sin 2B + \sin 2C}$\\
+  \vspace*{0.2cm}
+  Since the above expression is similar w.r.t. $A, B$ and $C$, therefore it will also lie on the perpendicular bisectors on $AC$
+  and $AB$ as well.\\
+  \vspace*{0.2cm}
+  Let $BO$ produced meet $AC$ at $E$ and $CO$ produced meet $AB$ at $F$. We can show that, the complex numner representing
+  the point dividing the line segment $BE$ internally in the ratio $(\sin2C + \sin2A):\sin2B$ and the complex number representing
+  the point dividing the line segment $CF$ internally in the ratio $(\sin2A+ \sin2B):\sin2C$ will be each
+  $= \frac{z_1\sin 2A + z_2\sin 2B + z_3\sin 2C}{\sin 2A + \sin 2B + \sin 2C}$\\
+  \vspace*{0.2cm}
+  Thus, circumcenter is $\frac{z_1\sin 2A + z_2\sin 2B + z_3\sin 2C}{\sin 2A + \sin 2B + \sin 2C}$
+\end{frame}
+\begin{frame}{Problem 183}
+  \textbf{183.} Show that the circumcenter of the triangle whose vertices are given by the complex numbers $z_1, z_2, z_3$ is given
+  by $z = \frac{\sum z_1\overline{z_1}(z_2 - z_3)}{\sum \overline{z_1}(z_2 - z_3)}$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 183}
+  \textbf{Solution:} Consider the diagram given below:
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(2cm);
+      defaultpen(fontsize(6pt));
+      pair a = (0,2);
+      pair b = (-1,0);
+      pair c = (0.5,0);
+      show(triangle(a, b, c), 0.5*green);
+      path p = circumcircle(a, b, c);
+      draw(p, 0.5*green);
+      pair o = circumcenter(a,b,c);
+      dot(o);
+      draw(a -- o, dashed);
+      draw(b -- o, dashed);
+      draw(c -- o, dashed);
+      defaultpen(fontsize(6pt));
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}{Contd}
+  Let $z$ be the circumcenter of the triangle represented by $A(z_1), B(z_2)$ and $C(z_3)$ respectively, then\\
+  \vspace*{0.2cm}
+  $|z - z_1| = |z - z_2| = |z - z_3|$ so we have $|z - z_1| = |z - z_2|$\\
+  \vspace*{0.2cm}
+  $\Rightarrow |z - z_1|^2 = |z - z_2|^2 \Rightarrow (z - z_1)(\overline{z} - \overline{z_1}) = (z - z_2)(\overline{z} - \overline{z_2})$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z\overline{z} + z_1\overline{z_1} - \overline{z}z_1 - z\overline{z_1} = z\overline{z} + z_2\overline{z_1} - \overline{z}z_2 -
+  z\overline{z_2}$
+  \begin{flalign}
+    \Rightarrow z(\overline{z_1} - \overline{z_2})+ \overline{z}(z_1 - z_2) = z_1\overline{z_1} - z_2\overline{z_2}&&
+  \end{flalign}
+  Similarly considering $|z - z_1| = |z - z_3|$, we will have
+  \begin{flalign}
+    \Rightarrow z(\overline{z_1} - \overline{z_3})+ \overline{z}(z_1 - z_3) = z_1\overline{z_1} - z_3\overline{z_3}&&
+  \end{flalign}
+  We have to eliminate $\overline{z}$ from equation (1) and (2) i.e. multiplying equation (1) with $(z_1 - z_3)$ and (2) with $(z_1
+  - z_2)$, we get following\\
+  \vspace*{0.2cm}
+  $z[\overline{z_1}(z_2 - z_3) + \overline{z_2}(z_3 - z_1) + \overline{z_3}(z_1 - z_2)] = z_1\overline{z_1}(z_2 - z_3) +
+  z_2\overline{z_2}(z_3 - z_1) + z_3\overline{z_3}(z_1 - z_2)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z = \frac{\sum z_1\overline{z_1}(z_2 - z_3)}{\sum \overline{z_1}(z_2 - z_3)}$
+\end{frame}
+\begin{frame}{Problem 184}
+  \textbf{184.} Find the orthocenter of the triangle with vertices $z_1, z_2, z_3$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 184}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import olympiad;
+      import fontsize;
+      unitsize(2cm);
+      defaultpen(fontsize(6pt));
+      pair a = (0,2);
+      pair b = (-1,0);
+      pair c = (0.5,0);
+      show(triangle(a, b, c), 0.5*green);
+      pair o = orthocentercenter(a,b,c);
+      dot(o);
+      draw(a -- intersectionpoint(perpendicular(a, line(b, c)), line(b, c)));
+      draw(b -- intersectionpoint(perpendicular(b, line(a, c)), line(a, c)));
+      draw(c -- intersectionpoint(perpendicular(c, line(a, b)), line(a, b)));
+      label("$H$", o, align=NE);
+      pair p = intersectionpoint(perpendicular(a, line(b, c)), line(b, c));
+      draw(rightanglemark(a, p, b, 1.5));
+    \end{asy}
+  \end{center}
+\end{frame}
+\begin{frame}{Contd}
+  Let $z$ be the orthocenter of $\triangle A(z_1)B(z_2)C(z_3)$ i.e. the intersection point of perpendiculars on sides from opposite
+  vertices.\\
+  \vspace*{0.2cm}
+  Since $AH\perp BC \therefore \arg\left(\frac{z_1 - z}{z_3 - z_2}\right) = \pm\frac{\pi}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_1 - z}{z_3 - z_2}$ is purely imaginary.\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{\left(\frac{z_1 - z}{z_3 - z_2}\right)} = -\left(\frac{z_1 - z}{z_3 - z_2}\right)\Rightarrow
+  \frac{\overline{z_1} - \overline{z}}{\overline{z_3} - \overline{z_2}} = \frac{z - z_1}{z_3 - z_2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{z_1} - \overline{z} = \frac{(z - z_1)(\overline{z_3} - \overline{z_2})}{z_3 - z_2}$
+  \vspace*{0.2cm}
+  Similarly for $BH\perp AC, \overline{z_2} - \overline{z} = \frac{(z - z_2)(\overline{z_1} - \overline{z_2})}{z_1 - z_3}$\\
+  \vspace*{0.2cm}
+  Eliminating $\overline{z}$ like last problem we arrive at the desired result.
+\end{frame}
+\begin{frame}{Problem 185}
+  \textbf{185.} $ABCD$ is a rhombus described in clockwise direction. Suppose that the vertices $A, B, C, D$ are given by $z_1,
+  z_2, z_3, z_4$ respectively and $\angle CBA = 2\pi/3$. Show that $2\sqrt{3}z_2 = (\sqrt{3} - i)z_1 + (\sqrt{3} + i)z_3$ and
+  $2\sqrt{3}z_4 = (\sqrt{3} + i)z_1 + (\sqrt{3} - i)z_3$.
+\end{frame}
+\begin{frame}{Solution of Problem 185}
+  \textbf{Solution:} We have $\angle CBA =\frac{2\pi}{3}$, therefore\\
+  \vspace*{0.2cm}
+  $\frac{z_3 - z_2}{z_1 - z_2} = \frac{|z_3 - z_2|}{|z_1 - z_2|}\left[\cos\frac{2\pi}{3} + i\sin\frac{2\pi}{3}\right]$\\
+  \vspace*{0.2cm}
+  $\frac{z_3 - z_2}{z_1 - z_2} = -\frac{1}{2} + \frac{i\sqrt{3}}{2}[\because BC = AB]$\\
+  \vspace*{0.2cm}
+  $z_3 + \left(\frac{1}{2} - \frac{i\sqrt{3}}{2}\right)z_1 = \left(\frac{3}{2} - \frac{i\sqrt{3}}{2}\right)z_2$\\
+  \vspace*{0.2cm}
+  Solving this yields $2\sqrt{3}z_2 = (\sqrt{3} - i)z_1 + (\sqrt{3} + i)z_3$\\
+  \vspace*{0.2cm}
+  Also, since diagonals bisect each other $\Rightarrow \frac{z_1 + z_3}{2} = \frac{z_2 + z_4}{2}$\\
+  \vspace*{0.2cm}
+  $z_4 = z_1 + z_3 - z_2$\\
+  \vspace*{0.2cm}
+  Substituting the value of $z_2$, we get\\
+  \vspace*{0.2cm}
+  $2\sqrt{3}z_4 = (\sqrt{3} + i)z_1 + (\sqrt{3} - i)z_3$
+\end{frame}
+\begin{frame}{Problem 186}
+  \textbf{186.} The points $P, Q$ and $R$ represent the numbers $z_1, z_2$ and $z_3$ respectively and the angles of the $\triangle
+  PQR$ at $Q$ and $R$ are both $\frac{1}{2}(\pi - \alpha)$. Prove that $(z_3 - z_2)^2 = 4(z_3 - z_1)(z_1 -
+  z_2)\sin^2\frac{\alpha}{2}$.
+\end{frame}
+\begin{frame}{Solution of Problem 186}
+  \textbf{Solution:} Since $\angle PQR = \angle PRQ = \frac{1}{2}(\pi - \alpha) \therefore PQ = PR$ Also, $\angle QPR = \pi -
+  2\left(\frac{\pi}{2} - \frac{\alpha}{2}\right) = \alpha$\\
+  \vspace*{0.2cm}
+  $\therefore arg\frac{z_3 - z_1}{z_2 - z_1} = \alpha \Rightarrow \frac{z_3 - z_1}{z_2 - z_1} = \frac{PR}{RQ}(\cos\alpha +
+  i\sin\alpha)$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \frac{z_3 - z_1}{z_2 - z_1} -1 = (\cos\alpha - 1) + i\sin\alpha \Rightarrow \frac{z_3 - z_2}{z_2 - z_1} =
+  -2\sin^2\frac{\alpha}{2} + i2\sin\frac{\alpha}{2}\cos\frac{\alpha}{2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \left(\frac{z_3 - z_2}{z_2 - z_1}\right)^2 = -4\sin^2\frac{\alpha}{2}\left[\cos\frac{\alpha}{2} +
+    i\sin\frac{\alpha}{2}\right]^2 = -4\sin^2\frac{\alpha}{2}[\cos\alpha + i\sin\alpha] = -4\sin^2\frac{\alpha}{2}.\frac{z_3 -
+    z_1}{z_2 - z_1}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (z_3 - z_2)^2 = 4(z_3 - z_1)(z_1 - z_2)\sin^2\frac{\alpha}{2}$
+\end{frame}
+\begin{frame}{Problem 187}
+  \textbf{187.} Points $z_1$ and $z_2$ are adjacent vertices of a regular polygon of $n$ sides. Find the vertex $z_3$ adjacent to
+  $z_2(z_1\neq z_3)$.
+\end{frame}
+\begin{frame}{Solution of Problem 187}
+  \textbf{Solution:} Let $C$ be the center of a regular polygon of $n$ sides. Let $A_1(z_1), A_2(z_2)$ and $A_3(z_3)$ be its three
+  consecutive vertices.\\
+  \vspace*{0.2cm}
+  $\angle CA_2A_1 = \frac{1}{2}\left(\pi - \frac{2\pi}{n}\right) \therefore A_1A_2A_3 = \pi - \frac{2\pi}{n}$\\
+  \vspace*{0.2cm}
+  \textbf{Case I:} When $z_1, z_2, z_3$ are in anticlockwise order. $\Rightarrow z_1 - z_2 = (z_3 - z_2)e^{i\left(\pi -
+    2\pi/n\right)}[\because A_1A_2 = A_3A_2]$\\
+  \vspace*{0.2cm}
+  $z_1 - z_2 = (z_2 - z_3)e^{-i2\pi/n}[\because e^{i\pi} = -1] \Rightarrow z_3 = z_2 - (z_1 - z_2)e^{i2\pi/n}$\\
+  \vspace*{0.2cm}
+  \textbf{Case II:} When $z_1, z_2, z_3$ are in clockwise order. $\Rightarrow z_3 - z_2 = (z_1 - z_2)e^{i\left(\pi -
+    i2\pi/n\right)}$\\
+  \vspace*{0.2cm}
+  $z_3 = z_2 + (z_2 - z_1)e^{-i2\pi/n}$
+\end{frame}
+\begin{frame}{Problem 188}
+  \textbf{188.} Let $A_1, A_2, \ldots, A_n$ be the vertices of an $n$ sided regular polygon such that $\frac{1}{A_1A_2} =
+  \frac{1}{A_1A_3} + \frac{1}{A_1A_4}$, find the value of $n$.
+\end{frame}
+\begin{frame}{Solution of Problem 188}
+  \textbf{Solution:} Let $O$ be the origin and the complex number representing $A_1$ be $z$, then $A_2, A_3, A_4$ will be
+  represented by $ze^{i2\pi/n}, ze^{i4\pi/n}, ze^{i6\pi/n}$. Let $|z| = a$\\
+  \vspace*{0.2cm}
+  $A_1A_2 = \left|z - ze^{i2\pi/n}\right| = |z|\left|1 - \cos\frac{2\pi}{n} - i\sin\frac{2\pi}{n}\right|$\\
+  \vspace*{0.2cm}
+  $= a\sqrt{\left(1 - \cos\frac{2\pi}{n}\right)^2 + \sin^2\frac{2\pi}{n}} = a\sqrt{2\left(1 - \cos\frac{2\pi}{n}\right)} =
+  2a\sin\frac{\pi}{n}$\\
+  \vspace*{0.2cm}
+  Similarly, $A_1A_3 = 2a\sin\frac{2\pi}{n}$ and $A_1A_4 = 2a\sin\frac{3\pi}{n}$\\
+  \vspace*{0.2cm}
+  Given $\frac{1}{A_1A_2} = \frac{1}{A_1A_3} + \frac{1}{A_1A_4}\therefore \frac{1}{2a\sin\frac{\pi}{n}} =
+  \frac{1}{2a\sin\frac{2\pi}{n}} + \frac{1}{2a\sin\frac{3\pi}{n}}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sin\frac{\pi}{n}\left(\sin\frac{3\pi}{n} + \sin\frac{2\pi}{n}\right) = \sin\frac{2\pi}{n}\sin\frac{3\pi}{n}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sin\frac{3\pi}{n} + \sin\frac{2\pi}{n} = 2\cos\frac{2\pi}{n}\sin\frac{3\pi}{n} = \sin\frac{4\pi}{n} +
+  \sin\frac{2\pi}{n}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \sin\frac{3\pi}{n} = \sin\frac{4\pi}{n}\Rightarrow \frac{3\pi}{n} = m\pi + (-1)^n\frac{4\pi}{n}, m = 0,\pm1,
+  \pm2,\ldots$\\
+  \vspace*{0.2cm}
+  If $m = 0\Rightarrow \frac{3\pi}{n} = \frac{4\pi}{n} \Rightarrow 3 = 4$ (not possible)\\
+  \vspace*{0.2cm}
+  If $m = 1\Rightarrow \frac{3\pi}{n} = \pi - \frac{4\pi}{n}\Rightarrow n = 7$\\
+  \vspace*{0.2cm}
+  If $m = 2,3 \ldots, -1, -2,\ldots$ gives values of $n$ which are not possible. Thus $n = 7$.
+\end{frame}
+\begin{frame}{Problem 189}
+  \textbf{189.} If $|z| = 2$, then show that the points representing the complex numbers $-1 + 5z$ lie on a circle.
+\end{frame}
+\begin{frame}{Solution of Problem 189}
+  \textbf{Solution:} Given, $|z| = 2$. Let $z_1 = -1 + 5z \Rightarrow z_1 + 1 = 5z$\\
+  \vspace*{0.2cm}
+  $|z_1 + 1| = |5z| = 5|z| = 10$\\
+  \vspace*{0.2cm}
+  $\Rightarrow z_1$ lies on a circle with center $(-1, 0)$ having radius $10$.
+\end{frame}
+\begin{frame}{Problem 190}
+  \textbf{190.} If $|z - 4 + 3i|\leq 2,$ find the least and tghe greatest values of $|z|$ and hence find the limits between which
+  $|z|$ lies.
+\end{frame}
+\begin{frame}{Solution of Problem 190}
+  \textbf{Solution:} Given, $|z - 4 + 3i|\leq 2 \Rightarrow ||z| - |4 - 3i||\leq 2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow ||z| - 5|\leq 2 \Rightarrow -2 \leq |z| - 5\leq 2 \Rightarrow 3\leq |z|\leq 7$
+\end{frame}
+\end{document}

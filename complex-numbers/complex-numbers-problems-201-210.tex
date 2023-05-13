@@ -1,0 +1,102 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+\usepackage{tikz}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 201-210}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 201}
+  \textbf{201.} Two different non-parallel lines cut the circle $|z| = r$ at points $a, b, c, d$ respectively. Prove that these two
+  lines meet at point given by $\frac{a^{-1} + b^{-1} + c^{-1} + d^{-1}}{a^{-1}b^{-1}c^{-1}d^{-1}}$.
+\end{frame}
+\begin{frame}{Solution of Problem 201}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (2, 0) circle(1);
+      \draw (0, -0.2) -- (3.2, -0.2);
+      \draw (0, -0.2) -- (3.2, 0.8);
+      \draw (5, 0) circle(1);
+      \draw (3.8, -.6) -- (6.2, .6);
+      \draw (3.8, .8) -- (6.2, -0.8);
+      \draw (0.9, -0.4) node {$A$};
+      \draw (3.1, -0.4) node {$B$};
+      \draw (-0.2, -0.2) node {$P$};
+      \draw (0.9, 0.3) node {$C$};
+      \draw (2.9, 0.85) node {$D$};
+      \draw (4, -0.6) node {$A$};
+      \draw (4.95, -0.2) node {$P$};
+      \draw (5.95, 0.65) node {$B$};
+      \draw (4.15, 0.75) node {$C$};
+      \draw (5.85, -0.75) node {$D$};
+    \end{tikzpicture}
+  \end{center}
+  Let $P(z)$ be the point of intersection and $A, B, C, D$ represent points $a, b, c, d$ respectively. Clearly, $P, A, B$ are
+  collinear. Thus,\\
+  \vspace*{0.2cm}
+  $\begin{vmatrix}z & \overline{z} & 1\\a & \overline{a} & 1\\b & \overline{b} & 1\end{vmatrix} = 0 \Rightarrow z(\overline{a} -
+    \overline{b}) - \overline{z}(a - b) + (a\overline{b} - \overline{a}b) = 0$\\
+    \vspace*{0.2cm}
+    Similarly, $P, C, D$ are collinear and thus\\
+    \vspace*{0.2cm}
+    $\Rightarrow z(\overline{c} - \overline{d}) - \overline{z}(c - d) + (c\overline{d} - \overline{c}d) = 0$\\
+    \vspace*{0.2cm}
+    Eliminating $\overline{z}$ because we have to find $z$, we have\\
+    \vspace*{0.2cm}
+    $z(\overline{a} - \overline{b})(c - d) - z(\overline{c} - \overline{d})(a - b) = (c\overline{d} - \overline{c}d)(a - b) -
+    (a\overline{b} - \overline{a}b)(c - d)$
+\end{frame}
+\begin{frame}
+  $\because a, b, c, d$ lie on the circle. $|a| = |b| = |c| = |d| = r \Rightarrow a^2 = b^2 = c^2 = d^2 = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a\overline{a} = b\overline{b} = c\overline{c} = d\overline{d} = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{a} = \frac{r^2}{a}, \overline{b} = \frac{r^2}{b}, \overline{c} = \frac{r^2}{c}, \overline{d} =
+  \frac{r^2}{d}$\\
+  \vspace*{0.2cm}
+  Putting these values in the equation we had obtained,
+  $z\left(\frac{r^2}{a} - \frac{r^2}{b}\right)(c - d) - z\left(\frac{r^2}{c} - \frac{r^2}{d}\right)(a - b) = \left(\frac{cr^2}{d} -
+  \frac{dr^2}{c}\right)(a - b) - \left(\frac{ar^2}{b} - \frac{br^2}{a}\right)(c - d)$\\
+  \vspace*{0.2cm}
+  Solving this for $z$, we arrive at desired answer.
+\end{frame}
+\begin{frame}{Problem 202}
+  \textbf{202.} If $z = 2 + t + i\sqrt{3 - t^2}$, where $t$ is real and $t^2 < 3$, show that $\left|\frac{z + 1}{z - 1}\right|$ is
+  independent of $t$. Also, show that the locus of point $z$ for different values of $t$ is a circle and find its center and
+  radius.
+\end{frame}
+\begin{frame}{Solution of Problem 202}
+  \textbf{Solution:} $\frac{z + 1}{z - 1} = \frac{3 + t + i\sqrt{3 - t^2}}{1 + t + i\sqrt{3 - t^2}} \Rightarrow \left|\frac{z +
+    1}{z - 1}\right|^2 = \frac{(3 + t)^2 + (3 - t^2)}{(1 + t)^2 + (3 - t^2)} = \frac{6(t + 2)}{2(t + 2)} = 3$\\
+  \vspace*{0.2cm}
+  Thus, $\left|\frac{z + 1}{z - 1}\right|$ is independent of $t$.\\
+  \vspace*{0.2cm}
+  Let $z = x + iy = 2 + t + i\sqrt{3 - t^2} \Rightarrow x = t + 2, y = \sqrt{3 - t^2} = \sqrt{3 - (x - 2)^2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 2)^2 + y^2 = 3$, which is equation of a circle with center at $(2,  0)$ having radius $\sqrt{3}$ units.
+\end{frame}
+\begin{frame}{Problem 203}
+  \textbf{203.}
+\end{frame}
+\end{document}
