@@ -1,0 +1,278 @@
+\documentclass[aspectratio=169,8pt]{beamer}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+\usepackage{tikz}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 201-210}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 201}
+  \textbf{201.} Two different non-parallel lines cut the circle $|z| = r$ at points $a, b, c, d$ respectively. Prove that these two
+  lines meet at point given by $\frac{a^{-1} + b^{-1} + c^{-1} + d^{-1}}{a^{-1}b^{-1}c^{-1}d^{-1}}$.
+\end{frame}
+\begin{frame}{Solution of Problem 201}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{tikzpicture}
+      \draw (2, 0) circle(1);
+      \draw (0, -0.2) -- (3.2, -0.2);
+      \draw (0, -0.2) -- (3.2, 0.8);
+      \draw (5, 0) circle(1);
+      \draw (3.8, -.6) -- (6.2, .6);
+      \draw (3.8, .8) -- (6.2, -0.8);
+      \draw (0.9, -0.4) node {$A$};
+      \draw (3.1, -0.4) node {$B$};
+      \draw (-0.2, -0.2) node {$P$};
+      \draw (0.9, 0.3) node {$C$};
+      \draw (2.9, 0.85) node {$D$};
+      \draw (4, -0.6) node {$A$};
+      \draw (4.95, -0.2) node {$P$};
+      \draw (5.95, 0.65) node {$B$};
+      \draw (4.15, 0.75) node {$C$};
+      \draw (5.85, -0.75) node {$D$};
+    \end{tikzpicture}
+  \end{center}
+  Let $P(z)$ be the point of intersection and $A, B, C, D$ represent points $a, b, c, d$ respectively. Clearly, $P, A, B$ are
+  collinear. Thus,\\
+  \vspace*{0.2cm}
+  $\begin{vmatrix}z & \overline{z} & 1\\a & \overline{a} & 1\\b & \overline{b} & 1\end{vmatrix} = 0 \Rightarrow z(\overline{a} -
+    \overline{b}) - \overline{z}(a - b) + (a\overline{b} - \overline{a}b) = 0$\\
+    \vspace*{0.2cm}
+    Similarly, $P, C, D$ are collinear and thus\\
+    \vspace*{0.2cm}
+    $\Rightarrow z(\overline{c} - \overline{d}) - \overline{z}(c - d) + (c\overline{d} - \overline{c}d) = 0$\\
+    \vspace*{0.2cm}
+    Eliminating $\overline{z}$ because we have to find $z$, we have\\
+    \vspace*{0.2cm}
+    $z(\overline{a} - \overline{b})(c - d) - z(\overline{c} - \overline{d})(a - b) = (c\overline{d} - \overline{c}d)(a - b) -
+    (a\overline{b} - \overline{a}b)(c - d)$
+\end{frame}
+\begin{frame}
+  $\because a, b, c, d$ lie on the circle. $|a| = |b| = |c| = |d| = r \Rightarrow a^2 = b^2 = c^2 = d^2 = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow a\overline{a} = b\overline{b} = c\overline{c} = d\overline{d} = r^2$\\
+  \vspace*{0.2cm}
+  $\Rightarrow \overline{a} = \frac{r^2}{a}, \overline{b} = \frac{r^2}{b}, \overline{c} = \frac{r^2}{c}, \overline{d} =
+  \frac{r^2}{d}$\\
+  \vspace*{0.2cm}
+  Putting these values in the equation we had obtained,
+  $z\left(\frac{r^2}{a} - \frac{r^2}{b}\right)(c - d) - z\left(\frac{r^2}{c} - \frac{r^2}{d}\right)(a - b) = \left(\frac{cr^2}{d} -
+  \frac{dr^2}{c}\right)(a - b) - \left(\frac{ar^2}{b} - \frac{br^2}{a}\right)(c - d)$\\
+  \vspace*{0.2cm}
+  Solving this for $z$, we arrive at desired answer.
+\end{frame}
+\begin{frame}{Problem 202}
+  \textbf{202.} If $z = 2 + t + i\sqrt{3 - t^2}$, where $t$ is real and $t^2 < 3$, show that $\left|\frac{z + 1}{z - 1}\right|$ is
+  independent of $t$. Also, show that the locus of point $z$ for different values of $t$ is a circle and find its center and
+  radius.
+\end{frame}
+\begin{frame}{Solution of Problem 202}
+  \textbf{Solution:} $\frac{z + 1}{z - 1} = \frac{3 + t + i\sqrt{3 - t^2}}{1 + t + i\sqrt{3 - t^2}} \Rightarrow \left|\frac{z +
+    1}{z - 1}\right|^2 = \frac{(3 + t)^2 + (3 - t^2)}{(1 + t)^2 + (3 - t^2)} = \frac{6(t + 2)}{2(t + 2)} = 3$\\
+  \vspace*{0.2cm}
+  Thus, $\left|\frac{z + 1}{z - 1}\right|$ is independent of $t$.\\
+  \vspace*{0.2cm}
+  Let $z = x + iy = 2 + t + i\sqrt{3 - t^2} \Rightarrow x = t + 2, y = \sqrt{3 - t^2} = \sqrt{3 - (x - 2)^2}$\\
+  \vspace*{0.2cm}
+  $\Rightarrow (x - 2)^2 + y^2 = 3$, which is equation of a circle with center at $(2,  0)$ having radius $\sqrt{3}$ units.
+\end{frame}
+\begin{frame}{Problem 203}
+  \textbf{203.} Let $z_1, z_2, z_3$ be three non-zero complex numbers such that $z_2 \ne 1, |z_1| = a, |z_2| = b$ and $|z_3| =
+  c$. Let $$\begin{vmatrix}a & b & c\\b & c & a\\c & a & b\end{vmatrix} = 0,$$
+    then show that $\arg\left(\frac{z_3}{z_2}\right) = \arg\left(\frac{z_3 - z_1}{z_2 - z_1}\right)^2$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 203}
+  \textbf{Solution:} Given $\begin{vmatrix}a & b & c\\b & c & a\\c & a & b\end{vmatrix} = 0$
+    \vspace*{0.2cm}
+    $\Rightarrow a^3 + b^3 + c^3 - 3abc = 0\Rightarrow (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca) = 0$
+    \\\vspace*{0.2cm}
+    $\because z_1, z_2, z_3$ are three non-zero complex numbers, hence $a^2 + b^2 + c^2 - ab - bc - ca = 0$
+    \\\vspace*{0.2cm}
+    $\Rightarrow (a - b)^2 + (b - c)^2 + (c - a)^2 = 0 \Rightarrow a = b = c$. This can be represented by following diagram
+    \vspace*{0.2cm}
+    \begin{center}
+      \begin{asy}
+        import geometry;
+        import fontsize;
+        unitsize(0.5cm);
+        defaultpen(fontsize(6pt));
+        pair o = (0,0);
+        path circle = circle(o, 2);
+        draw(circle);
+        pair a = (0, 2);
+        pair b = (1.414, -1.414);
+        pair c = (-1.414, -1.414);
+        draw (a -- b -- c -- cycle);
+        draw (b -- o);
+        draw (c -- o);
+        label("$A$", a, align=N);
+        label("$B$", b, align=E);
+        label("$C$", c, align=W);
+        label("$O$", o, align=N);
+        markangle("", radius=10, c, o, b);
+      \end{asy}
+    \end{center}
+    Now $OA=OB=OC$, where $O$ is the origin and $A, B$ and $C$ are the points representing $z_1, z_2$ and $z_3$ respectively.
+    $\therefore O$ is the circumcenter of $\triangle ABC$.
+    \\\vspace*{0.2cm}
+    Now $\arg\left(\frac{z_3}{z_2}\right) = \angle BOC = 2\angle BAC = \arg\left(\frac{z_3 - z_1}{z_2 - z_1}\right)^2$.
+\end{frame}
+\begin{frame}{Problem 204}
+  \textbf{204.} $P$ is such a point that on a circle with $OP$ as diameter, two points $Q$ and $R$ are taken such that $\angle POQ
+  = \angle QOR = \theta$. If $O$ is the origin and $P, Q$ and $R$ are represented by complex numbers $z_1, z_2$ and $z_3$
+  respectively, show that $z_2^2\cos2\theta = z_1z_3\cos^2\theta$.
+\end{frame}
+\begin{frame}[fragile]{Solution of Problem 204}
+  \textbf{Solution:}
+  \begin{center}
+    \begin{asy}
+      import geometry;
+      import fontsize;
+      unitsize(0.5cm);
+      defaultpen(fontsize(6pt));
+      pair o1 = (2, 0);
+      path circle = circle(o1, 2);
+      draw(circle);
+      pair o = (0, 0);
+      pair p = (4, 0);
+      pair q = (3, 1.732);
+      pair r = (1, 1.732);
+      draw (o -- p);
+      draw (o -- q);
+      draw (o -- r);
+      draw (p -- q);
+      draw (p -- r);
+      markangle("$\theta$", radius=8, p, o, q);
+      markangle("$\theta$", radius=10, q, o, r);
+      markangle("$90^\circ$", radius=5, o, q, p);
+      markangle("$90^\circ$", radius=5, o, r, p);
+      label("$O$", o, align=W);
+      label("$P(z_1)$", p, align=E);
+      label("$Q(z_2)$", q, align=N);
+      label("$R(z_3)$", r, align=N);
+    \end{asy}
+  \end{center}
+  $z_2 = \frac{OQ}{OP}z_1e^{i\theta} = \cos\theta z_1e^{i\theta}$ and $z_3 = \frac{OR}{OP}z_1e^{i2\theta} =
+  \cos2\theta z_1e^{i2\theta}$
+  \\\vspace*{0.2cm}
+  $\Rightarrow z_2^2 = \cos^2\theta z_1^2e^{i2\theta} \Rightarrow z_2^2\cos2\theta = z_1z_3\cos^2\theta$
+\end{frame}
+\begin{frame}{Problem 205}
+  \textbf{205.} Find the equation in complex variables of all the circles which are orthogonal to $|z| = 1$ and $|z - 1| = 4$.
+\end{frame}
+\begin{frame}{Solution of Problem 205}
+  \textbf{Solution:} Given circles are $|z| = 1 \Rightarrow x^2 + y^2 - 1 = 0$ and $|z - 1| = 4 \Rightarrow x^2 - 2x + y^2 - 15 =
+  0$.
+  \\\vspace*{0.2cm}
+  Let the circles cut by these two orthogonally is $x^2 + y^2 + 2gx + 2fy + c = 0$
+  \\\vspace*{0.2cm}
+  Since first circle cuts this family of circles orthoginally, therefore
+  \\\vspace*{0.2cm}
+  $2g.0 + 2f.0 = c - 1 \Rightarrow c = 1$ and $2g(-1) + 2f.0 = c - 15 \Rightarrow g = 7$
+  \\\vspace*{0.2cm}
+  Thus, required circles are $x^2 + y^2 + 14x + 2fy + 1 = 0 \Rightarrow |z + 7 + if| = \sqrt{48 + f^2}$
+\end{frame}
+\begin{frame}{Problem 206}
+  \textbf{206.} Find the real values of the parameter $t$ for which there is at least one complex number $z = x + iy$ satisfying
+  the condition $|z + 3| = t^2 - 2it + 6$ and the inequality $z - 3\sqrt{3}i < t^2$.
+\end{frame}
+\begin{frame}{Solution of Problem 206}
+  \textbf{Solution:} Given, $|z + 3| = t^2 - 2t + 6$ which is equation of a circle having center $(-3, 0)$ and radius $t^2 - 2t +
+  6$. Let $A = (-3, 0)$ and $r_1 = t^2 - 2t + 6$. In this case $z$ lies on the circle.
+  \\\vspace*{0.2cm}
+  Also, $|z - 3\sqrt{3}i| < t^2$ implies $z$ lies on the interior of the circle having center $(0, 3\sqrt{3})$ and radius $t^2$.
+  Let $B = (0, 3\sqrt{3})$ and $r_2 = t^2$. $AB = \sqrt{3^2 + 27} = 6$. $r_2 - r_1 = 2(t - 3)$
+  \\\vspace*{0.2cm}
+  Clearly, when the two circles are disjoint or touching each other no solution is possible. This leads to following cases:
+  \\\vspace*{0.2cm}
+  \textbf{Case I:} When $t > 3$ i.e. $r2 > r_1$
+  \\\vspace*{0.2cm}
+  In this case at least one $z$ is possible if $AB < r_1 + r_2 \Rightarrow 6 < 2(t^2 - t + 3)\Rightarrow t < 0$ or $t > 1$
+  $\Rightarrow 3 < t <\infty$
+  \\\vspace*{0.2cm}
+  \textbf{Case II:} When $t \leq 3$ i.e. $r_1 > r_2$
+  \\\vspace*{0.2cm}
+  In this case at least one $z$ will be possible if $|r_1 - r_2| \leq AB < r_1 + r_2$
+  \\\vspace*{0.2cm}
+  $2(3 - t)\leq 6 < 2(t^2 - t + 3)$ i.e. $t \leq 0$ and $t < 0$ or $t > 1$
+  \\\vspace*{0.2cm}
+  Combining all solutions we gace $1 < t < \infty$
+\end{frame}
+\begin{frame}{Problem 207}
+  \textbf{207.} If $a, b, c$ and $d$ are real values and $ad > bc$, show that the imginary parts of the complex number $z$ and
+  $\frac{az + b}{cz + d}$ have the same sign.
+\end{frame}
+\begin{frame}{Solution of Problem 207}
+  \textbf{Solution:} Let $z = x + iy$. $\frac{az + b}{cz + d} = \frac{ax + b + iay}{cx + d + icy} = \frac{(ax + b + iay)(cx + d -
+    icy)}{(cx + d)^2 + c^2y^2}$
+  \\\vspace*{0.2cm}
+  $\Im\left(\frac{az + b}{cz + d}\right) = \frac{ay(cx + d) - cy(ax + b)}{(cx + d)^2 + c^2y^2} = \frac{ady - bcy}{(cx + d)^2 +
+    c^2y^2}$
+  \\\vspace*{0.2cm}
+  $\because ad > bc$, therfore the signs of imaginary parts of $z$ and $\frac{az + b}{cz + d}$ are the same.
+\end{frame}
+\begin{frame}{Problem 208}
+  \textbf{208.} If $z_1 = x_1 + iy_1, z_2 = x_2 + iy_2$ and $z_1 = \frac{i(z_2 + 1)}{z_2 - 1}$,  prove that
+    $$x_1^2 + y_1^2 - x_1 = \frac{x_2^2 + y_2^2 + 2x_2 - 2y_2 + 1}{(x_2 - 1)^2 + y_2^2}$$
+\end{frame}
+\begin{frame}{Solution of Problem 208}
+  \textbf{Solution:} Given, $z_1 = \frac{i(z_2 + 1)}{z_2 - 1} \Rightarrow x_1 + iy_1 = \frac{-y_2 + i(x_2 + 1)}{(x_2 - 1) + iy_2}
+  = \frac{[-y_2 + i(x_2 + 1)][(x_2 - 1) + iy_2]}{(x_2 - 1)^2 + y_2^2}$
+  \\\vspace*{0.2cm}
+  Comparing real and imaginary parts, we have
+  \\\vspace*{0.2cm}
+  $x_1 = \frac{-y_2(x_2 - 1) -(x_2 + 1)y_2}{(x_2 - 1)^2 + y_2^2} = \frac{-2x_2y_2}{(x_2 - 1)^2 + y_2^2}$ and $y_1 = \frac{x_2^2 - 1
+    - y_2^2}{(x_2 - 1)^2 + y_2^2}$
+  \\\vspace*{0.2cm}
+  Substituting for $x_1$ and $y_1$ in $x_1^2 + y_1^2 - x_1$ we will arrive at the desired result.
+\end{frame}
+\begin{frame}{Problem 209}
+  \textbf{209.} Simplify the following:
+  $$\frac{(\cos3\theta - i\sin3\theta)^6(\sin\theta - i\cos\theta)^3}{(\cos2\theta + i\sin2\theta)^5}.$$
+\end{frame}
+\begin{frame}{Solution of Problem 209}
+  \textbf{Solution:} $(\cos3\theta - i\sin3\theta)^6 = (e^{-i3\theta})^6 = e^{-i18\theta}$
+  \\\vspace*{0.2cm}
+  $(\cos2\theta + i\sin2\theta)^5 = (e^i2\theta)^5 = e^{i10\theta}$
+  \\\vspace*{0.2cm}
+  $(\sin\theta - i\cos\theta)^3 = [(-i)^3(\cos\theta + i\sin\theta)^3] = i.e^{i\theta}$
+  \\\vspace*{0.2cm}
+  $\frac{(\cos3\theta - i\sin3\theta)^6(\sin\theta - i\cos\theta)^3}{(\cos2\theta + i\sin2\theta)^5} = i.e^{-i25\theta}$
+  \\\vspace*{0.2cm}
+  $= \sin25\theta + i\cos25\theta$
+\end{frame}
+\begin{frame}{Problem 210}
+  \textbf{210.} Find all complex numbers such that $z^2 + |z| = 0$.
+\end{frame}
+\begin{frame}{Solution of Problem 210}
+  \textbf{Solution:} Let $z = x + iy$, then we have $x^2 - y^2 + 2ixy + \sqrt{x^2 + y^2} = 0$
+  \\\vspace*{0.2cm}
+  Equating imaginary parts, we have $2xy = 0$ i.e. either $x = 0$ or $y = 0$.
+  \\\vspace*{0.2cm}
+  If $x = 0$, then $-y^2 + \sqrt{y^2} = 0 \Rightarrow y^4 + y^2 = 0 \Rightarrow y = 0, y = \pm i$.
+  \\\vspace*{0.2cm}
+  If $y = 0$, then $x^2 + \sqrt{x^2} = 0$ Since $x$ is real only one solution is possible i.e. $x = 0$.
+  \\\vspace*{0.2cm}
+  Hence, $z = 0, \pm i$.
+\end{frame}
+\end{document}

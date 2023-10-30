@@ -1,0 +1,28 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+settings.inlinetex=true;
+deletepreamble();
+defaultfilename="complex-numbers-problems-181-190-3";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+import geometry;
+import fontsize;
+unitsize(2cm);
+defaultpen(fontsize(6pt));
+pair a = (0,2);
+pair b = (-1,0);
+pair c = (0.5,0);
+show(triangle(a, b, c), 0.5*green);
+path p = circumcircle(a, b, c);
+draw(p, 0.5*green);
+pair o = circumcenter(a,b,c);
+dot(o);
+draw(a -- o, dashed);
+draw(b -- o, dashed);
+draw(c -- o, dashed);
+defaultpen(fontsize(6pt));
