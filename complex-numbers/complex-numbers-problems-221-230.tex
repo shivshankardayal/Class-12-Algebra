@@ -1,0 +1,181 @@
+% -*- mode: latex; -*-
+\documentclass[aspectratio=169,8pt]{beamer}
+\usetheme{metropolis}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+\usepackage{tikz}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 221-230}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 221}
+  \textbf{221.} Find the common roots of the equation $z^3 + 2z^2 + 2z + 1 = 0$ and $z^{1985} + z^{100} + 1
+  = 0$.
+\end{frame}
+\begin{frame}{Solution of Problem 221}
+  \textbf{Solution:} $z^3 + 2z^2 + 2z + 1 = 0 \Rightarrow (z + 1)(z^2 + z + 1) = 0\Rightarrow z = -1,
+  \omega,\omega^2$.
+
+  If $z = -1, z^{1985} + z^{100} + 1 = -1 + 1 + 1 = 1\neq 0$, if $z = \omega, z^{1985} + z^{100} + 1 =
+  \omega^2 + \omega + 1 = 0$ and if $z = \omega^2, z^{1985} + z^{100} + 1 = \omega + \omega^2 + 1 = 0$.
+
+  Hence $\omega$ and $\omega^2$ are the common roots.
+\end{frame}
+\begin{frame}{Problem 222}
+  \textbf{222.} If $z_1 + z_2 + z_3 = \alpha, z_1 + z_2\omega + z_3\omega^2 = \beta$ and $z_1 + z_2\omega^2 +
+  z_3\omega = \gamma$, express $z_1, z_2, z_3$ in terms of $\alpha, \beta, \gamma$. Hence prove that
+  $|\alpha|^2 + |\beta|^2 + |\gamma|^2 = 3(|z_1|^2 + |z_2|^2 + |z_3|^2)$.
+\end{frame}
+\begin{frame}{Solution of Problem 222}
+  \textbf{Solution:} Adding all equations $\alpha + \beta + \gamma = 3z_1 \Rightarrow z_1 = \frac{\alpha + \beta +
+    \gamma}{3}$. Similarly, multiplying second equatin with $\omega$ and third equation with $\omega^2$, and
+  then adding we have $z_3 = \frac{\alpha + \beta\omega + \gamma\omega^2}{3}$. Similarly, $z_2 =
+  \frac{\alpha + \beta\omega^2 + \gamma\omega}{3}$.
+
+  $|\alpha|^2 = \alpha\overline{\alpha} = (z_1 + z_2 + z_3)(\overline{z_1} + \overline{z_2} +
+  \overline{z_3}), |\beta|^2 = \beta\overline{\beta} = (z_1 + z_2\omega + z_3\omega^2)(\overline{z_1} +
+  \overline{z_2}\omega^2 + \overline{z_3}\omega)$ and $|\gamma|^2 = \gamma\overline{\gamma} = (z_1 +
+  z_2\omega^2 + z_3\omega)(\overline{z_1} + \overline{z_2}\omega + \overline{z_3}\omega^2)\;[\because
+  \overline{\omega} = \omega^2\ \&\ \overline{\omega^2} = \omega]$
+
+  $\Rightarrow |\alpha|^2 + |\beta|^2 + |\gamma|^2 = 3(|z_1|^2 + |z_2|^2 + |z_3|^2) + z_1[\overline{z_2}(1 +
+  \omega + \omega^2) + \overline{z_3}(1 + \omega + \omega^2)] + z_2[\overline{z_1}(1 + \omega + \omega^2)
+  + \overline{z_2}(1 + \omega + \omega^2)] + z_3[\overline{z_1}(1 + \omega + \omega^2) + \overline{z_2}(1
+  + \omega + \omega^2)] = 3(|z_1|^2 + |z_2|^2 + |z_3|^2) =$ R.H.S.
+\end{frame}
+\begin{frame}{Problem 223}
+  \textbf{223.} If $n$ is an odd integer greater than $3$, but not a multiple of $3$, prove that $x^3 + x^2
+  + x$ is a factor of $(x + 1)^n - x^n - 1$.
+\end{frame}
+\begin{frame}{Solution of Problem 223}
+  \textbf{Solution:} Let $f(x) = (x + 1)^n - x^n - 1.\ x^3 + x^2 + x = 0 \Rightarrow x(x^2 + x + 1) =
+  0\Rightarrow x = 0, \omega, \omega^2$. So for $x^3 + x^2 + x$ to be a factor of $f(x), f(0) = 0, f(\omega)
+  = 0, f(\omega^2) = 0$.
+
+  $f(0) = 1^n - 1 = 0, f(\omega) = (\omega + 1)^n - \omega^n - 1 = -\omega^{2n} - \omega^n - 1\;[\because n$
+  is odd. $] = -(1 + \omega^n + \omega^{2n}) = 0$. Similarly, $f(\omega^2) = 0$. Hence proved.
+\end{frame}
+\begin{frame}{Problem 224}
+  \textbf{224.} If $n$ is an odd integer greater than $3$, but not a multiple of $3$, prove that $(x + y)^n
+  - x^n - y^n$ is divisible by $xy(x + y)(x^2 + xy + y^2)$.
+\end{frame}
+\begin{frame}{Solution of Problem 224}
+  \textbf{Solution:} Let $f(x, y) = (x + y)^n - x^n - y^n.\ xy(x + y)(x^2 + xy + y^2) = 0 \Rightarrow x = 0,
+  y = 0, x = -y, y = x\omega, y = x\omega^2$. When $x = 0, f(x, y) = 0; y = 0, f(x, y) = 0; y = -x
+  \Rightarrow f(x, y) = -x^n -(-x)^n = 0 [\because n = 2m + 1\;\forall\;m\in\mathbb{I}], y = xw \Rightarrow
+  f(x, y) = [x^n(1 + \omega)^n - x^n - x^n\omega^n] = -x^n\omega^{2n} - x^n - x^n\omega^n = 0$, and
+  similarly when $y = x\omega^2, f(x, y) = 0$. Hence proved.
+\end{frame}
+\begin{frame}{Problem 225}
+  \textbf{225.} If $|z_1| = |z_1| = \cdots = |z_n| = 1$, prove that $|z_1 + z_2 + \cdots + z_n| =
+  \left|\frac{1}{z_1} + \frac{1}{z_2} + \cdots + \frac{1}{z_n}\right|$.
+\end{frame}
+\begin{frame}{Solution of Problem 225}
+  \textbf{Solution:} R.H.S. $= \left|\frac{1}{z_1} + \frac{1}{z_2} + \cdots + \frac{1}{z_n}\right| =
+  \left|\frac{\overline{z_1}}{|z_1|^2} + \frac{\overline{z_2}}{|z_2|^2} + \cdots +
+    \frac{\overline{z_n}}{|z_n|^2}\right|$
+
+  $= |\overline{z_1} + \overline{z_2} + \cdots + \overline{z_n}| = |\overline{z_1 + z_2 + \cdots + z_n}| =
+  |z_1 + z_2 + \cdots + z_n| =$ L.H.S.
+\end{frame}
+\begin{frame}{Problem 226}
+  \textbf{226.} If $\alpha, \beta \in\mathbb{C}$, show that $|\alpha + \sqrt{\alpha^2 - \beta^2}| + |\alpha
+  - \sqrt{\alpha^2 - \beta^2}| = |\alpha + \beta| + |\alpha - \beta|$.
+\end{frame}
+\begin{frame}{Solution of Problem 226}
+  \textbf{Solution:} For any two complex numbers $z_1$ and $z_2$, we know that $|z_1 + z_2|^2 + |z_1 -
+  z_2|^2 = 2|z_1|^2 + 2|z_2|^2$. Let $z_1 = \alpha + \sqrt{\alpha^2 - \beta^2}$ and $z_2 = \alpha -
+  \sqrt{\alpha^2 - \beta^2}$.
+
+  Now $(|z_1| + |z_2|)^2 = |z_1|^2 + |z_2|^2 + 2|z_1||z_2| = 2|\alpha|^2 + 2|\alpha^2 - \beta^2| +
+  2|\beta|^2 = |\alpha + \beta|^2 + |\alpha - \beta|^2 + 2|\alpha + \beta||\alpha -\beta|$
+
+  $= (|\alpha + \beta| + |\alpha - \beta|)^2\Rightarrow |z_1| + |z_2| = |\alpha + \beta| + |\alpha - \beta|
+  =$ R.H.S.
+\end{frame}
+\begin{frame}{Problem 227}
+  \textbf{227.} If $z_1 = a + ib$ and $z_2 = c + id$ are complex numbers such that $|z_1| = |z_2| = 1$ and
+  $\Re(z_1\overline{z_2}) = 0$, then show that the pair of complex numbers $\omega_1 = a + ic$ and $\omega_2
+  = b + id$ satisfy i. $|\omega_1| = 1$ ii. $|\omega_2| = 1$ iii. $\Re(\omega_1\overline{\omega_2}) = 0$.
+\end{frame}
+\begin{frame}{Solution of Problem 227}
+  \textbf{Solution:} $|z_1| = |z_1| = 1 \Rightarrow a^2 + b^2 = c^2 + d^2 = 1, z_1\overline{z_2} = ac + bd + i(bc -
+  ad)\;\because\;\Re(z_1\overline{z_2}) = 0 \Rightarrow ac + bd = 0 \Rightarrow \frac{a}{d} = -\frac{b}{c} =
+  k$ (say). $\therefore a = kd, b = -kc$.
+
+  $\therefore k^2d^2 + k^2c^2 = 1 \Rightarrow k^2 = 1 \Rightarrow k = \pm 1$. Now $|\omega_1| = \sqrt{a^2 +
+    c^2} = \sqrt{a^2 + b^2} = 1, |\omega_2| = \sqrt{b^2 + d^2} = \sqrt{a^2 + b^2} = 1,
+  \omega_1\overline{\omega_2} = (a + ic)(b - id)\;\therefore\;\Re(\omega\overline{\omega_2}) = ab + cd = 0$.
+\end{frame}
+\begin{frame}{Problem 228}
+  \textbf{228.} Prove that $\left|\frac{z_1 - z_2}{1 - \overline{z_1}z_2}\right| < 1$ if $|z_1| < 1, |z_2| <
+  1$.
+\end{frame}
+\begin{frame}{Solution of Problem 228}
+  \textbf{Solution:} Given, $\left|\frac{z_1 - z_2}{1 - \overline{z_1}z_2}\right|< 1\Leftrightarrow
+  \left|\frac{z_1 - z_2}{1 - \overline{z_1}z_2}\right|^2 < 1 \Leftrightarrow |z_1 - z_2|^2 < |1 -
+  \overline{z_1}z_2|^2$
+
+  $\Leftrightarrow (z_1 - z_2)\overline{(z_1 - z_2)} < (1 - \overline{z_1}z_2)\overline{(1 -
+  \overline{z_1}z_2)} \Leftrightarrow (z_1 - z_2)(\overline{z_1} - \overline{z_2}) < (1 -
+  \overline{z_1}z_2)((1 - z_1\overline{z_2}))$
+
+  $\Leftrightarrow |z_1|^2 + |z_2|^2 > 1 + |z_1|^2|z_2|^2 \Leftrightarrow 1 - |z_1|^2 - |z_2|^2 +
+  |z_1|^2|z_2|^2 > 0 \Leftrightarrow (1 - |z_1|^2)(1 - |z_2|^2) > 0 \Rightarrow (1 + |z_1|)(1 - |z_1|)(1 +
+  |z_2|)(1 - |z_2|) > 0$
+
+  $\Leftrightarrow (1 - |z_1|)(1 - |z_2|) > 0$ which is true as $|z_1| < 1$ and $|z_2| < 1$.
+\end{frame}
+\begin{frame}{Problem 229}
+  \textbf{229.} Let $z_1 = 10 + 6i$ and $z_2 = 4 + 6i$. If $z$ is any complex number such that the argument
+  of $\frac{z - z_1}{z - z_2}$ is $\frac{\pi}{2}$, then prove that $|z - 7 - 9i| = 3\sqrt{2}$.
+\end{frame}
+\begin{frame}{Solution of Problem 229}
+  \textbf{Solution:} Let $z = x + iy$ then $\frac{z - z_1}{z - z_2} = \frac{(x - 10) + i(y - 6)}{(x - 4) +
+    i(y - 6)}$. Rationalizing $\frac{x^2 - 14x + 40 + (y - 6)^2}{(x - 4)^2 + (y - 6)^2} + \frac{i6(y -
+    6)}{(x - 4)^2 + (y - 6)^2} = a + ib$ (say)
+
+  $\because \arg(a + ib) = \frac{\pi}{4}\Rightarrow x^2 - 14x + 40 + (y - 6)^2 = 6(y - 6)\Rightarrow x^2 +
+  y^2 - 14x - 18y + 112 = 0 \Rightarrow |z - 7 - 9i|^2 = 18$. Hence proved.
+\end{frame}
+\begin{frame}{Problem 230}
+  \textbf{230.} Find all complex numbers $z$ for which $\arg\left(\frac{3z - 6 - 3i}{2z - 8 - 6i}\right) =
+  \frac{\pi}{4}$ and $|z - 3 + i| = 3$.
+\end{frame}
+\begin{frame}{Solution of Problem 230}
+  \textbf{Solution:} Let $z = x + iy$ then $\frac{3z - 6 - 3i}{2z - 8 - 6i} = \frac{x - 6 + i(3y - 3)}{2x -
+    8 + i(2y - 6)}$.
+
+  Rationalizing $\frac{6x^2 + 6y^2 - 36x - 24y + 66 + i(12x - 12y - 12)}{(2x - 8)^2 + (2y
+    - 6)^2} = a + ib$ (let)
+
+  $\because\arg(a + ib) = \frac{\pi}{4} \Rightarrow 6x^2 + 6y^2 - 36x - 24y + 66 = 12x - 12y - 12
+  \Rightarrow x^2 + y^2 - 8x - 2y + 13 = 0$. Also given, $|z - 3 + i| = 3 \Rightarrow x = -2y +
+  6$.
+
+  Substituting this in previously obtained equation, we have
+
+  $5y^2 - 10y + 1 = 0 \Rightarrow y = 1 \pm\frac{2}{\sqrt{5}}\Rightarrow x = 4\mp\frac{4}{\sqrt{5}}$. Hence
+  we have our $z$.
+\end{frame}
+\end{document}
