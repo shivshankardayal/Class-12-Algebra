@@ -1,0 +1,140 @@
+% -*- mode: latex; -*-
+\documentclass[aspectratio=169,8pt]{beamer}
+\usetheme{metropolis}
+
+% Standard packages
+
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+%\usepackage{times}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage[]{unicode-math}
+\setsansfont{Roboto}
+\usepackage{amsmath}
+
+% Setup asymptote
+\usepackage[inline]{asymptote}
+\usepackage{tikz}
+
+\newcounter{counter}
+% Author, Title, etc.
+
+\title{Complex Numbers Problems\\ 211-220}
+
+\author[Shiv Shankar Dayal]{Shiv Shankar Dayal}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+\begin{frame}{Problem 211}
+  \textbf{211.} Solve the equation $z^2 + z|z| + |z|^2 = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 211}
+  \textbf{Solution:} Clearly $z = 0$ is one of the solutions. For other solutions divide both sides by $|z|^2$ which gives us $t^2
+  + t + 1 = 0$ where $t = \frac{z}{|z|}$.
+  \\\vspace*{0.2cm}
+  The equation $t^2 + t + 1 = 0$ has two roots i.e. $t = \omega, \omega^2 \Rightarrow \frac{z}{|z|} = \omega, \omega^2$
+  \\\vspace*{0.2cm}
+  $\Rightarrow z = k\omega, k\omega^2$ where $k = |z|$ is a non-negative real number.
+\end{frame}
+\begin{frame}{Problem 212}
+  \textbf{212.} Solve the equation $2z = |z| + 2i$ in complex numbers.
+\end{frame}
+\begin{frame}{Solutiion of Problem 212}
+  \textbf{Solution:} Let $z = x + iy$, then $2x + 2iy = \sqrt{x^2 + y^2} + 2i$. Comparing real and imaginary parts, we get
+  \\\vspace*{0.2cm}
+  $2y = 2 \Rightarrow y = 1$ and $2x = \sqrt{x^2 + y^2} \Rightarrow 4x^2 = x^2 + 1 \Rightarrow x = \pm\frac{1}{\sqrt{3}}$
+  \\\vspace*{0.2cm}
+  $\Rightarrow z = \pm\frac{1}{\sqrt{3}} + i$.
+\end{frame}
+\begin{frame}{Problem 213}
+  \textbf{213.} If $a > 0$ and $z|z| + az + 1 = 0$, show that $z$ is a negative real number.
+\end{frame}
+\begin{frame}{Solution of Problem 213}
+  \textbf{Solution:} Let $z = x + iy$, then $(x + iy)\sqrt{x^2 + y^2} + a(x + iy) + 1 = 0$.
+  \\\vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  \\\vspace*{0.2cm}
+  $y\sqrt{x^2 + y^2} + ay = 0 \Rightarrow y = 0~~\because \sqrt{x^2 + y^2} + a \neq 0~~[\because a > 0]$ and
+  \\\vspace*{0.2cm}
+  $\therefore x\sqrt{x^2 + 0} + ax + 1 = 0 \Rightarrow x^2 + ax + 1 = 0 \Rightarrow x = \frac{-a \pm\sqrt{a^2 - 4}}{2}$
+  \\\vspace*{0.2cm}
+  Clearly, both the values of $x$ are negative, so $z$ is a negative real number.
+\end{frame}
+\begin{frame}{Problem 214}
+  \textbf{214.} For every real number $a > 0$, find all complex numbers $z$ satisfying the equation $z|z| + az + i = 0$.
+\end{frame}
+\begin{frame}{Solution of Problem 214}
+  \textbf{Solution:} Let $z = x + iy$, then $(x + iy)\sqrt{x^2 + y^2} + ax + aiy + i = 0$
+  \\\vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  \\\vspace*{0.2cm}
+  $x\sqrt{x^2 + y^2} + ax = 0\Rightarrow x = 0~~\because \sqrt{x^2 + y^2} + a\neq 0 ~~[\because a > 0]$ and
+  \\\vspace*{0.2cm}
+  $y\sqrt{x^2 + y^2} + ay + 1 = 0\Rightarrow y^2 + ay + 1 = 0 \Rightarrow y = \frac{-a \pm \sqrt{a^2 - 4}}{2}$
+\end{frame}
+\begin{frame}{Problem 215}
+  \textbf{215.} For evert real number $a > 0$, determine the complex numbers $z$, which will satisfy the equation $|z|^2 - 2iz +
+  2a(1 + i) = 0$
+\end{frame}
+\begin{frame}{Solution of Problem 215}
+  \textbf{Solution:} Let $z = x + iy$, then $x^2 + y^2 - 2i(x + iy) + 2a(1 + i) = 0$
+  \\\vspace*{0.2cm}
+  Comparing real and imaginary parts, we get
+  \\\vspace*{0.2cm}
+  $x^2 + y^2 + 2y + 2a = 0 \Rightarrow x^2 + (y - 1)^2 = 1 - 2a$ and $-2x + 2a = 0 \Rightarrow x = a$
+  \\\vspace*{0.2cm}
+  $\Rightarrow (y - 1)^2 = 1 - 2a - a^2 \Rightarrow y = 1 \pm \sqrt{1 - 2a - a^2}$
+  \\\vspace*{0.2cm}
+  Howoever $1 - 2a - a^2 > 0$. Roots of equivalent quadratic equation is $a = \frac{2 \pm \sqrt{8}}{-2} \Rightarrow -1\pm \sqrt{2}$
+  but $a > 0$ so the range for $a$ is $0 < a < \sqrt{2} - 1$.
+\end{frame}
+\begin{frame}{Problem 216}
+  \textbf{216.} If $\alpha$ and $\beta$ are two complex numbers, show that $|\alpha + \beta|^2 = |\alpha|^2 + |\beta|^2 +
+  \Re(\alpha\overline{\beta}) + \Re(\overline{\alpha}\beta)$.
+\end{frame}
+\begin{frame}{Solution of Problem 216}
+  \textbf{Solution:} Let $\alpha = a + ib$ and $\beta = c + id$ then $|\alpha + \beta|^2 = (a + c)^2 + (b + d)^2$
+  \\\vspace*{0.2cm}
+  $|\alpha|^2 = a^2 + b^2, |\beta|^2 = c^2 + d^2, \Re(\alpha\overline{\beta}) = \Re[(a + ib)(c - id)] = ac + bd,
+  \Re(\overline{\alpha}\beta) = \Re[(a - ib)(c + id)] = ac + bd$
+  \\\vspace*{0.2cm}
+  Thus, $|\alpha + \beta|^2 = |\alpha|^2 + |\beta|^2 + \Re(\alpha\overline{\beta}) + \Re(\overline{\alpha}\beta)$.
+\end{frame}
+\begin{frame}{Problem 217}
+  \textbf{217:} Find the integral solution of the equation $(3 + 4i)^x = 5^{\frac{x}{2}}$.
+\end{frame}
+\begin{frame}{Solution of Problem 217}
+  \textbf{Solution:} Let $z = 3 + 4i$ then $|z| = 5$, so the given equation becomes $z^x = |z|^{\frac{x}{2}} \Rightarrow z^{2x} =
+  |z|^x$
+  \\\vspace*{0.2cm}
+  $\left(\frac{(3 + 4i)^2}{5}\right)^x = 1 \Rightarrow \left(\frac{3 - 16 + 24i}{5}\right)^x = 1$
+  $\Rightarrow \left(\frac{-7 + 24i}{5}\right)^x = 1$ which is possible only if $x = 0$.
+\end{frame}
+\begin{frame}{Problem 218}
+  \textbf{218.} Find the integral solution of the equation $(1 - i)^x = 2^x$
+\end{frame}
+\begin{frame}{Solution of Problem 218}
+  \textbf{Solution:} Given, $(1 - x)^x = 2^x \Rightarrow \left(\frac{1 - i}{2}\right)^x = 1$ which is possible only if $x = 0$.
+\end{frame}
+\begin{frame}{Problem 219}
+  \textbf{219.} Find the integral solution of the equation $(1 - i)^x = (1 + i)^x$.
+\end{frame}
+\begin{frame}{Solution of Problem 219}
+  \textbf{Solution:} Given, $(1- i)^x = (1 + i)^x \Rightarrow \left(\frac{1 - i}{1 + i}\right)^x = \left(\frac{(1 - i)^2}{(1 + i)(1
+    - i)}\right)^x = \left(\frac{-2i}{2}\right)^x = (-i)^x = 1 \Rightarrow x = 4n~\forall n\in I$.
+\end{frame}
+\begin{frame}{Problem 220}
+  \textbf{220.} Prove that $|1 - \overline{z_1}z_2|^2 - |z_1 - z_2|^2 = (1 - |z_1|^2)(1 - |z_2|^2)$.
+\end{frame}
+\begin{frame}{Solution of Problem 220}
+  \textbf{Solution:} L.H.S. $= |1 - \overline{z_1}z_2|^2 - |z_1 - z_2|^2 = (1 - \overline{z_1}z_2)(1 - z_1\overline{z_2}) - (z_1 -
+  z_2)(\overline{z_1} - \overline{z_2})[\because |z|^2 = z\overline{z}]$
+  \\\vspace*{0.2cm}
+  $= (1 - \overline{z_1}z_2 - z_1\overline{z_2} + |z_1|^2|z_2|^2) - (|z_1|^2 - \overline{z_1}z_2 - z_1\overline{z_2} + |z_2|^2)$
+  \\\vspace*{0.2cm}
+  $= (1 - |z_1|^2 - |z_2|^2 + |z_1|^2|z_2|^2) = (1 - |z_1|^2)(1 - |z_2|^2) =$ R.H.S.
+\end{frame}
+\end{document}

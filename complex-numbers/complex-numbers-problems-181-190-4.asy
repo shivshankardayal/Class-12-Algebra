@@ -1,5 +1,5 @@
 if(!settings.multipleView) settings.batchView=false;
-settings.tex="xelatex";
+settings.tex="pdflatex";
 settings.inlinetex=true;
 deletepreamble();
 defaultfilename="complex-numbers-problems-181-190-4";
